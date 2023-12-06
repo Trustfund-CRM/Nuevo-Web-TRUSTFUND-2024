@@ -1,0 +1,51 @@
+.containerSlide {
+    height: 15vh;
+    position: absolute;
+    top: 100vh;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.containerSlideCalculador {
+    height: 15vh;
+    position: absolute;
+    top: 100vh;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.Slide {
+    color: #004993;
+    font-size: 70px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 20px 15px 20px 15px;
+
+    display: inline-block;
+    animation: 10s slide infinite linear;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 500px){
+    .containerSlide{
+        top: 190vh;
+    }
+
+    .containerSlideCalculador {
+        top: 280vh;
+    }
+}
+

@@ -1,0 +1,112 @@
+.navbarPrincipal{
+    background-color: transparent;
+    height: 10vh !important;
+    padding: 0px !important;
+    z-index: 999;
+    width: 75%;
+}
+.FotoLogoNavbar {
+    scale: 130%;
+}
+.navLink{
+    color: white !important;
+    font-weight: 500;
+    font-size: 14px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    width: 250px;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: 0.3s;
+    text-align: -webkit-center;
+}
+.navLink:hover{
+    background-color: #7FA4C8;
+}
+.subNavLinks{
+    column-gap: 20px !important;
+    height: 94px !important;
+    align-items: center;
+    z-index: 2;
+}
+.container{
+    /* width: 90% !important; */
+    height: 100% !important;
+    padding: 0px !important;
+}
+
+.active {
+  background-color: #7FA4C8;
+}
+.BoxButtonCrm{
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.buttonCrm{
+    border-radius: 20px !important;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+}
+.buttonCrm:hover{
+    background-color: #7FA4C8;
+    border-color: #004994;
+}
+.OffCanvasPrincipal{
+    background-color: #004994 !important;
+}
+
+
+@media (min-width:768px) {
+    .navbarPrincipal{
+        height: 15vh !important;
+    }
+    .subNavLinks{
+        height: 85px !important;
+        width: 100px !important;
+     }
+}
+
+@media (max-width: 991px) {
+    .navbarPrincipal{
+        height: auto !important;
+    }
+    .FotoLogoNavbar{
+        width: 160px;
+        height: auto;
+        scale: 100%;
+    }
+    .subNavLinks{
+        height: 400px !important;
+        padding-left: 20px;
+        row-gap: 15px;
+        margin-top: 20px;
+     }
+     .BoxButtonCrm{
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: absolute;
+     }
+     .navLink{
+        justify-content: center;
+        width: -webkit-fill-available;
+        align-items: center;
+     }
+     .textNav{
+        text-align: center;
+        color: #fff;
+     }
+}
+
+@media (max-height: 765px) and (max-width: 992) {
+    .subNavLinks {
+        height: 85px !important;
+    }
+}

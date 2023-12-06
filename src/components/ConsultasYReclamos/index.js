@@ -1,0 +1,1 @@
+export { default as SeccionCollapseRight } from './SeccionCollapseRight'; 

@@ -1,0 +1,858 @@
+.boxPrincipalCalculador {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white !important;
+    margin-top: -15%;
+    overflow: hidden;
+}
+
+.subBoxPrincipal {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.subBoxPrincipalInputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.boxCalculador {
+    width: 55%;
+    height: 135%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    z-index: 1;
+}
+
+.boxFoto {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    align-items: center
+}
+
+.foto {
+    height: 68%;
+    scale: 50%;
+    position: relative;
+    left: 200px;
+}
+
+.tituloCalculador {
+    color: #004994;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 24px;
+}
+
+.subtituloCalculador {
+    color: #646464;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.labelCalculador {
+    color: #79747E;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.labelCalculadorActivo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.valorGarantíaContado {
+    color: #79747E;
+    font-size: 16px;
+    line-height: 19px
+}
+
+.valorGarantíaContadoActivo {
+    color: #fff;
+    font-size: 16px;
+    line-height: 19px
+}
+
+.valorGarantíaContado:hover {
+    color: #fff;
+}
+
+.descuentoContado {
+    color: #004994;
+    font-size: 14px;
+    font-weight: 600
+}
+
+.descuentoContadoActivo {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600
+}
+
+.boxPrincipalInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+.datosActivos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+
+.boxInputCalculador {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 150px;
+    height: 100px;
+    row-gap: 10px;
+}
+
+.boxButtonCalculador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    height: 100px;
+    align-items: center;
+
+}
+
+
+.buttonCalculador {
+    background-color: #004994 !important;
+    border: #004994 !important;
+    border-radius: 20px !important;
+    padding: 10px 24px !important;
+    color: white !important;
+    letter-spacing: 0.1px !important;
+    transition: 0.3s;
+}
+
+.buttonCalculador:hover {
+    background-color: #7FA4C8 !important;
+    border: #7FA4C8;
+}
+
+.buttonCalculador:disabled {
+    background-color: grey !important;
+    border: grey;
+}
+
+.InputCaculador {
+    border: 1px solid #004994;
+    height: 40px;
+    border-radius: 5px;
+    color: #646464 !important;
+    font-weight: 700;
+    font-size: 12px;
+    background-image: url(../../styles/assets/$.png);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    text-indent: 23px;
+    background-color: white;
+    outline: none;
+}
+
+.boxResultadoCalculador {
+    height: 40px;
+    border-radius: 5px;
+    color: #646464 !important;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+    width: max-content;
+}
+
+.boxResultadoCuotas {
+    border-radius: 5px;
+    color: #646464 !important;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    row-gap: 15px;
+    flex-direction: column;
+}
+
+.InputCaculadorSelect {
+    border: 1px solid #004994;
+    height: 40px;
+    border-radius: 5px;
+    color: #646464 !important;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: white;
+}
+
+.OptionStyle {
+    color: #646464 !important;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.ContenedorCuadrosStep2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+.BoxInfoCalculador {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.BoxButtonSolicitar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    column-gap: 20px;
+}
+
+.ContenedorInfo {
+    background-color: #fff;
+    border: 1px solid #004994;
+    border-radius: 10px;
+    padding: 10px;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 18vh;
+    justify-content: space-between;
+}
+
+.labelCalculadorBox {
+    color: #79747E;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.ContenedorInfo:hover {
+    background-color: #004994;
+}
+
+.ContenedorInfo:hover .tituloBoxCalculador {
+    color: #fff;
+}
+
+.ContenedorInfo:hover .labelCalculadorBox {
+    color: #fff;
+}
+
+.ContenedorInfo:hover .valorGarantíaContado {
+    color: #fff;
+}
+
+.ContenedorInfo:hover .SubtituloDatoCalculador {
+    color: #fff;
+}
+
+.ContenedorInfo:hover .InfoAzul {
+    color: #fff;
+}
+
+.ContenedorInfo:hover .descuentoContado {
+    color: #fff;
+}
+
+.activo {
+    border: 1px solid #004994;
+    border-radius: 10px;
+    padding: 10px;
+    height: -webkit-fill-available;
+    background-color: #004994;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: space-between;
+    width: 18vh;
+}
+
+.tituloBoxCalculadorActivo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.tituloBoxCalculador {
+    color: #000;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.tituloBoxCalculador:hover {
+    color: #fff;
+}
+
+.BoxCalculadorGarantía {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    row-gap: 20px;
+}
+
+.BoxDatosGarantía {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    width: 50%;
+    height: 50px;
+}
+
+.InfoAzul {
+    color: #004994;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+}
+
+.InfoAzulActivo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+}
+
+.SubtituloDatoCalculador {
+    color: #004994;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 19px;
+}
+
+.SubtituloDatoCalculadorActivo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 19px;
+}
+
+.boxCosto {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    width: max-content;
+}
+
+.ErrosInputs {
+    color: red;
+    font-size: 12px;
+    text-indent: 10px;
+    margin-top: -5px;
+}
+
+.ButtonTextVolverCalcular {
+    background-color: #004994 !important;
+    color: #fff !important;
+    border: 0px !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    line-height: 24px !important;
+    font-family: 'Roboto', sans-serif !important;
+    border-radius: 20px !important;
+    letter-spacing: 0.1px !important;
+    transition: 0.4s;
+    padding: 10px 24px !important;
+}
+
+.ButtonTextVolverCalcular:hover {
+    opacity: 0.5;
+}
+
+.ParrafoCelesteCalculador {
+    color: #5499DF;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    width: 70%;
+}
+
+@media (max-width: 1250px) {
+    .subBoxPrincipal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxFoto {
+        height: 47%;
+        align-items: unset;
+    }
+
+    .boxPrincipalCalculador {
+        height: 117vh;
+        margin-top: 0%;
+    }
+
+    .boxCalculador {
+        width: 90%;
+        padding-top: 50px;
+    }
+
+    .boxPrincipalInputs {
+        flex-direction: column;
+    }
+
+    .boxInputCalculador {
+        width: 100%;
+    }
+
+    .boxButtonCalculador {
+        height: auto;
+
+    }
+
+    .subBoxPrincipalInputs {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .ContenedorCuadrosStep2 {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 45vh;
+    }
+
+    .ContenedorInfo {
+        padding: 35px;
+    }
+
+    .activo {
+        padding: 35px;
+    }
+
+    .labelCalculadorActivo {
+        font-size: 12px;
+    }
+
+    .buttonCalculador {
+        font-size: 14px !important;
+        padding: 7px 15px !important;
+    }
+
+    .tituloCalculador {
+        line-height: 40px;
+        font-size: 25px;
+    }
+
+    .boxPrincipalCalculador {
+        height: auto;
+        margin-top: 0%;
+    }
+
+    .subBoxPrincipal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxFoto {
+        width: 100%;
+        height: 63vh;
+    }
+
+    .foto {
+        left: 150px;
+        height: 0%;
+    }
+
+    .FotoStePrincipal {
+        width: auto;
+        height: auto;
+        margin-top: 1%;
+        overflow: hidden;
+        position: inherit;
+        left: 350px;
+    }
+
+    .BoxInfoCalculador {
+        width: 40% !important;
+        justify-content: space-between !important;
+    }
+
+    .labelCalculador {
+        font-size: 12px !important;
+    }
+
+    .labelCalculadorBox {
+        font-size: 12px !important;
+    }
+
+    .ButtonTextVolverCalcular {
+        font-size: 12px !important;
+    }
+
+    .InfoAzul {
+        font-size: 12px !important;
+    }
+
+    .InfoAzulActivo {
+        font-size: 12px !important;
+    }
+
+    .ParrafoCelesteCalculador {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*
+@media (min-width:768px) and (max-width: 999px) {
+    .boxPrincipalCalculador{
+        height: 70vh;
+        margin-top: -12%;
+    }
+    .FotoStePrincipal{
+        width: 130%;
+        height: auto;
+        margin-left: -12%;
+        margin-top: 230px;
+        overflow: hidden;
+    }
+    .boxFoto{
+        justify-content: unset;
+        width: 45%;
+    }
+    .boxCalculador{
+        row-gap: 10px;
+    }
+    .boxPrincipalInputs{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .boxInputCalculador{
+        width: 80%;
+        height: auto;
+    }
+    .tituloCalculador{
+        font-size: 20px;
+    }
+    .subtituloCalculador{
+        font-size: 18px;
+    }
+    .boxButtonCalculador{
+        height: auto;
+        width: 80%;
+    }
+    .InputCaculadorSelect{
+        height: 35px;
+    }
+    .InputCaculador{
+        height: 35px;
+    }
+    .ContenedorDatosSeccion1{
+        row-gap: 10px;
+    }
+    .ParrafoCelesteCalculador{
+        display: none;
+    }
+    .boxResultadoCalculador{
+        height: 20px;
+    }
+    .buttonCalculador{
+        padding: 3px 23px !important;
+    }
+}
+*/
+@media (max-width: 648px) {
+    .boxFoto {
+        width: 100%;
+        height: 47vh;
+    }
+
+    .foto {
+        left: 117px;
+        scale: 37%;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 1199px) {
+
+    .boxFoto {
+        width: 45%;
+    }
+
+    .InputCaculadorSelect {
+        height: 35px;
+    }
+
+    .InputCaculador {
+        height: 35px;
+    }
+
+    .ContenedorDatosSeccion1 {
+        row-gap: 10px;
+    }
+
+    .buttonCalculador {
+        padding: 3px 23px !important;
+    }
+}
+
+@media (min-width: 1251px) and (max-width: 1659px) {
+    .boxPrincipalCalculador {
+        /* height: 130vh; */
+        height: 80vh
+    }
+
+    .boxCalculador {
+        height: 130%;
+        scale: 80%;
+        width: 68%;
+    }
+
+    .labelCalculador {
+        font-size: 11px !important;
+        width: inherit;
+    }
+
+    .boxInputCalculador {
+        width: 120px;
+        height: auto;
+    }
+
+    .foto {
+        scale: 40%;
+    }
+
+}
+
+@media (min-width: 1361px) and (max-height: 850px) {
+    .boxPrincipalCalculador {
+        height: 106vh;
+    }
+
+    .ContenedorInfo {
+        width: 24vh;
+    }
+
+    .activo {
+        width: 24vh;
+    }
+}
+
+@media (min-width:1660px) and (max-width: 1800px) {
+
+    .labelCalculador {
+        font-size: 11px !important;
+        width: inherit;
+    }
+
+    .boxInputCalculador {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media (min-height: 640px) and (max-height: 660px) {
+    .boxFoto {
+        height: 90vh;
+        width: 45%;
+    }
+
+    .FotoStePrincipal {
+        margin-top: 0%;
+    }
+}
+
+@media (min-width: 1660px) and (max-width: 1880px) {
+
+    /*
+    .boxCalculador {
+        height: 110%;
+        width: 70%;
+    }
+*/
+    .boxFoto {
+        height: 90vh;
+    }
+
+    /*
+    .subBoxPrincipal {
+        width: 83%;
+    }
+*/
+    .foto {
+        left: 365px;
+
+    }
+}
+
+@media (max-width: 775px) {
+    .ContenedorCuadrosStep2 {
+        height: 85vh;
+    }
+
+    .BoxInfoCalculador {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .BoxDatosGarantía {
+        justify-content: space-between;
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 630px) {
+    .BoxCalculadorGarantía {
+        width: 80%;
+    }
+
+    .boxResultadoCalculador {
+        width: -webkit-fill-available;
+        justify-content: space-between;
+    }
+
+    .boxResultadoCuotas {
+        width: -webkit-fill-available;
+    }
+}
+
+/*
+@media (max-height: 880px) {
+    .ContenedorCuadrosStep2 {
+        height: 125vh;
+    }
+}
+*/
+
+@media (max-height: 915px) and (max-width: 430px) {
+    .boxCalculador {
+        width: 90%;
+        padding-top: 0px;
+    }
+
+    .boxPrincipalCalculador {
+        height: 145vh;
+        margin-top: 0px;
+    }
+
+    .boxPrincipalCalculadorActivo {
+        height: 290vh;
+        margin-top: 0px;
+    }
+
+    .ContenedorCuadrosStep2 {
+        height: 140vh;
+    }
+
+    .boxFoto {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .foto {
+        left: 47px;
+        scale: 25%;
+    }
+}
+
+@media (max-width: 412px) and (max-height: 600px) {
+    .boxPrincipalCalculador {
+        height: 157vh;
+        margin-top: 0px;
+    }
+    .boxPrincipalCalculadorActivo {
+        height: 330vh;
+        margin-top: 0px;
+    }
+    .ContenedorCuadrosStep2 {
+        height: 150vh;
+    }
+    .boxFoto {
+        width: 100%;
+        height: 51vh;
+    }
+    .boxCosto {
+        flex-direction: column;
+    }
+}
+/*
+@media (min-height: 700px) and (max-height: 916px) {
+    .boxCalculador {
+        width: 90%;
+        padding-top: 0px;
+    }
+
+    .boxPrincipalCalculador {
+        height: 125vh;
+        margin-top: 0px;
+    }
+
+    .boxPrincipalCalculadorActivo {
+        height: 255vh;
+        margin-top: 0px;
+    }
+    
+    .ContenedorCuadrosStep2 {
+        height: 120vh;
+    }
+
+    .boxFoto {
+        width: 100%;
+        height: 38vh;
+    }
+
+    .foto {
+        left: 47px;
+        scale: 25%;
+    }
+}
+*/
+
+@media (min-width: 2088px) {
+    .foto {
+        height: 47%;
+        scale: 50%;
+        left: 100px;
+    }
+}

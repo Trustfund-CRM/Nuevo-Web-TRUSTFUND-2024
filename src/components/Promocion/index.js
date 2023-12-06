@@ -1,0 +1,1 @@
+export { default as Promocion } from '../Promocion/Promocion'; 

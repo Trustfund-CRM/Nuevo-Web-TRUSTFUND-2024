@@ -1,0 +1,132 @@
+.ContainerFAQ {
+    height: 100vh;
+    position: relative;
+    top: 260vh;
+    background-color: #0076B9;
+}
+
+.TitleFAQ {
+    border-bottom: 1px solid #F9FAFB;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Title {
+    color: #F9FAFB;
+    font-size: 49px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.ContainerSubTitle {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    align-items: center;
+    height: 15vh;
+    justify-content: space-between;
+}
+
+.ButtonsInquiProp {
+    display: flex;
+    flex-direction: row;
+    color: #54B3CD;
+}
+
+.ButtonInqui {
+    /* color: #F9FAFB; */
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 25px 25px 25px 0px;
+    border-right: 1px solid #FFFFFF;
+}
+
+.ButtonInquiActivo {
+    color: #F9FAFB;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 25px 25px 25px 0px;
+    border-right: 1px solid #FFFFFF;
+}
+
+.ButtonProp {
+    /* color: #F9FAFB; */
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 25px;
+}
+
+.ButtonPropActivo {
+    color: #F9FAFB;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    padding: 25px;
+}
+
+.flechaInquiProp {
+    padding: 15px;
+    background-color: #F9FAFB;
+    border-radius: 30px;
+    scale: 130%;
+}
+
+.ContainerBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ContainerPreguntas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75vh;
+    padding-left: 7%;
+}
+
+.ContainerPregunta {
+    display: flex;
+    justify-content: space-between;
+    height: -webkit-fill-available;
+    padding: 10px;
+    border-bottom: 1px solid #F9FAFB;
+    padding: 25px 0px 25px 0px;
+}
+
+.FAQ {
+    width: 82%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Pregunta {
+    color: #F9FAFB;
+    font-size: 31px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.Respuesta {
+    color: white;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.VerRespuesta {
+    color: #A0E838;
+    font-size: 39px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+/* .ImageInquilinoProp {} */

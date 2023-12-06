@@ -1,0 +1,1385 @@
+.containerPrincipalGarantia {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+}
+
+.containerPrincipalInmoYPropietarios {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.subContenedorPrincipalGarantia {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.subContenedorPrincipalInmobiliariaYPropietarios {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 0px;
+}
+
+.BoxComentsGoogle {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Box1 {
+    width: 50%;
+    /* height: 100px; */
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+}
+
+.Box2 {
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px; */
+}
+
+.ParrafoGarantia {
+    margin: 0px;
+    width: 80%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #1E1E1E;
+}
+
+.BoxButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+.TituloComents {
+    color: #004994;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.BoxBeneficios {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.TituloBeneficios {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #004994;
+}
+
+.TituloBeneficiosCeleste {
+    color: #5499DF;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.ContenedorCardsBeneficios {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.CardBeneficios {
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    /* padding: 15px; */
+}
+
+.CardBeneficiosInmoYPropie {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    padding: 15px;
+}
+
+.BoxCardsCollapse {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxCardsCollapseInmoYPropietarios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.boxButton {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ButtonAzul {
+    background-color: #004994 !important;
+    border: #004994 !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    transition: 0.3s;
+}
+
+.ButtonAzul:hover {
+    background-color: #7FA4C8 !important;
+    border: #7FA4C8;
+}
+
+.ButtonBorder {
+    border-radius: 20px !important;
+    border-color: #004994 !important;
+    color: #004994 !important;
+    padding: 10px 20px !important;
+}
+
+.ButtonBorder:hover {
+    background-color: #004994;
+    color: white !important;
+}
+
+.BoxFormAccordion {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+
+.ContainerAccordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.ContainerAccordionInmoYPropie {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 15px;
+}
+
+.Accordion {
+    width: 50%;
+}
+
+.AccordionInmoYPropie {
+    width: 90%;
+}
+
+.Select {
+    width: 35%;
+    height: 40px;
+    border: 1px solid #004994;
+    border-radius: 5px;
+}
+
+.SelectInmoYPropie {
+
+    height: 50px;
+    border: 1px solid #004994 !important;
+    border-radius: 5px;
+    text-indent: 15px;
+    color: #646464 !important;
+    font-weight: 400;
+    width: 95%;
+    margin: 10px;
+    line-height: 6ex;
+}
+
+.BoxSelect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.BoxSelectInmoYPropie {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.BoxSelectProvinciaYLocalidad {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-right: 2.5%;
+}
+
+.BoxSelectReclamo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.BoxSelectConsulta {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.BoxTituloConsulta {
+    width: 100%;
+    margin-top: 2%;
+    flex-direction: row;
+}
+
+.BoxNombreConsulta {
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.BoxContactoConsulta {
+    width: 100%;
+    margin-top: 0.25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.BoxInformeConsulta {
+    width: 100%;
+    margin-top: 0.25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.ButtonBuscar {
+    background-color: #004994;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    /* width: 100px; */
+    border: 0px;
+    transition: 0.3s;
+}
+
+.ButtonBuscar:hover {
+    background-color: #7FA4C8;
+}
+
+.ContenedorCardsInmobiliarias {
+    width: 100%;
+    height: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.ContenedorCardsInmobiliarias::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+.ContenedorCardsInmobiliarias::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.ContenedorCardsInmobiliarias::-webkit-scrollbar-thumb {
+    background-color: #004994;
+    outline: 1px solid slategrey;
+}
+
+
+
+
+
+.Card {
+    width: 175px;
+    height: 158px;
+    background: white;
+    border-radius: 5px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.boxCardsCollapse {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tituloAccordion {
+    color: #004994;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.Accordion.accordion-item:first-of-type .accordion-button {
+    background-color: transparent !important;
+}
+
+.AccordionItem {
+    background-color: transparent !important;
+    border: 0px !important;
+}
+
+.AccordionItem:not(.collapsed) {
+    background-color: transparent !important;
+}
+
+.AccordionHeader button {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: transparent !important;
+    color: #004994 !important;
+    font-size: 20px !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #004994 !important;
+    padding: 15px 15px 15px 0px;
+    border-radius: 0px !important;
+}
+
+.AccordionHeader button::after {
+    background-image: url(../../styles/assets/flechaInicio2.png) !important;
+    font-size: 18px !important;
+}
+
+.ContainerPadreAccordionInmobiYPropietarios {
+    width: 100%;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.AccordionBodyInmoYPropie {
+    /* height: 550px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.BoxButtonEnd {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 2.5%;
+}
+
+.Slide {
+    width: 650px;
+    height: 335px;
+}
+
+.tituloBeneficioPropie {
+    margin: 0px !important;
+    color: #004994;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.parrafoCardBeneficioPropie {
+    color: #1E1E1E;
+    margin: 0px !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.parrafoCardBeneficioPropieCeleste {
+    color: #5499DF;
+    margin: 0px !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.boxInfoCards {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.subContenedorPrincipalConsultas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0px;
+    overflow: hidden;
+}
+
+.ContenedorEfecctCollapseRight {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.ContenedorEfecctCollapseLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.CollapseActivo {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ContenedorButtonCollapseRight {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.ContenedorButtonCollapseLeft {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.ContenedorPrincipalCollapseRight {
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContenedorPrincipalCollapseLeft {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BoxPrincipalCards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 80px;
+    column-gap: 50px;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.ContenedorFotoCollapseRight {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 0px;
+    background: none;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+
+.ContenedorFotoCollapseRight:hover {
+    width: 85%;
+}
+
+.ButtonCollapsedPropie {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 0px;
+    background: none;
+    float: Left;
+    translate: 65%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 1;
+}
+
+.ButtonCollapsedPropie:hover {
+    translate: 15%;
+}
+
+.ButtonCollapsedInqui {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 0px;
+    background: none;
+    float: Left;
+    translate: -50%;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 1;
+}
+
+.ButtonCollapsedInqui:hover {
+    translate: 0%;
+}
+
+.FotoCollapseInqui {
+    width: 80%;
+    height: auto;
+}
+
+.FotoCollapsePropie {
+    width: 80%;
+    height: auto;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: right;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.ContenedorFotoCollapseLeft {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 0px;
+    background: none;
+    transition-property: width;
+    transition-duration: 0.5s;
+}
+
+.ContenedorFotoCollapseLeft:hover {
+    width: 85%;
+}
+
+.collapseInactivoRight {
+    width: 300px;
+    height: 337px;
+    object-fit: scale-down;
+}
+
+.collapseInactivoLeft {
+    width: 300px;
+    height: 337px;
+    object-fit: scale-down;
+}
+
+.CollapsedRight {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 0px;
+    background: none;
+    position: left -80%;
+    transition-property: position;
+    transition-duration: 0.5s;
+}
+
+.CollapsedRight:hover {
+    position: left 50%;
+}
+
+.textRowButtonInqui {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.textRowButtonPropie {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 20px;
+}
+
+.fotoFlechaPropietarios {
+    scale: 80%;
+    transform: scaleX(-1);
+}
+
+.fotoFlechaInquilino {
+    scale: 80%;
+}
+
+.collapsedText {
+    color: #004994;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.ButtonPolygon {
+    width: 300px;
+    height: 150px;
+    padding: 6px 15px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    line-height: 26px;
+    background-color: #004994;
+    position: relative;
+    clip-path: polygon(4% 20%, 89% 20%, 100% 51%, 88% 78%, 4% 78%, 4% 89%, 0 89%, 0 51%, 0 10%, 4% 10%);
+}
+
+
+.ButtonPolygon:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(110deg, rgba(227, 227, 227, 0) 0%, rgba(227, 227, 227, 0) 40%, rgba(227, 227, 227, 0.5) 50%, rgba(227, 227, 227, 0) 60%, rgba(227, 227, 227, 0) 100%);
+    animation: gradient-animation_2 2s linear infinite;
+}
+
+@keyframes gradient-animation_2 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.ButtonPolygon:hover {
+    background-color: #5499DF;
+}
+
+.ButtonPolygonCeleste {
+    width: 300px;
+    height: 150px;
+    border: 0px;
+    padding: 6px 15px;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    line-height: 26px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #5499DF;
+    position: relative;
+    clip-path: polygon(4% 20%, 89% 20%, 100% 51%, 88% 78%, 4% 78%, 4% 89%, 0 89%, 0 51%, 0 10%, 4% 10%);
+}
+
+.ButtonPolygonCeleste:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(110deg, rgba(227, 227, 227, 0) 0%, rgba(227, 227, 227, 0) 40%, rgba(227, 227, 227, 0.5) 50%, rgba(227, 227, 227, 0) 60%, rgba(227, 227, 227, 0) 100%);
+    animation: gradient-animation_2 2s linear infinite;
+}
+
+.ButtonPolygonCeleste:hover {
+    background-color: #5499DF;
+}
+
+.tituloCollapseRight {
+    color: #004994;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tituloCollapseLeft {
+    color: #004994;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.parrafoCollapseRight {
+    color: #004994;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.parrafoCollapseLeft {
+    color: #004994;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.cardCollapseRight {
+    width: 35%;
+    height: 130px;
+    border: 0px !important;
+    row-gap: 10px;
+}
+
+.cardCollapseLeft {
+    width: 35%;
+    height: 130px;
+    border: 0px !important;
+    row-gap: 10px;
+}
+
+.ContenedorModal {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.BoxModalImagen {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.BoxModalImagenObteneTuGarantia {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #7FB7EF;
+}
+
+
+
+.BoxModalInfo {
+    width: 70%;
+    height: 100%;
+    background-color: #004994;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.BoxModalInfoCeleste {
+    width: 70%;
+    height: 100%;
+    background-color: #004994;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.BoxModalInfoBlanco {
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.SubBoxInfoModal {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+}
+
+.buttonModal {
+    border-radius: 20px !important;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: #004994;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.buttonModal:hover {
+    background-color: #7FA4C8;
+    border-color: #004994;
+}
+
+.TituloModal {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.TituloModalAzul {
+    color: #004994;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+
+.SubtituloModal {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.CerrarIconModal {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.ImagenInmobiliarias {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    border-radius: 5px;
+}
+
+.Swiper {
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SwiperSlide {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.swiperImg {
+    width: 95%;
+    height: auto;
+}
+
+.ModalBody {
+    padding: 50px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    row-gap: 20px !important;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.BoxAnexos {
+    display: flex !important;
+    flex-direction: column !important;
+    row-gap: 20px !important;
+    padding: 60px 60px 60px 60px;
+}
+
+.BoxFooterModal {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+.FotoModalReclamo {
+    width: 100%;
+    height: 100%;
+}
+
+.FotoModalInmo {
+    width: 100%;
+    height: 100%;
+}
+
+.FotoModalGarantiza {
+    width: 100%;
+    height: 100%;
+}
+
+.FotoConsultaPropie {
+    width: 90%;
+    height: auto;
+    margin-left: 120px;
+}
+
+.FotoConsultaInqui {
+    width: 90%;
+    height: auto;
+    margin-right: 120px;
+}
+
+@media (max-width: 600px) {
+    .BoxBeneficios {
+        row-gap: 60px;
+    }
+
+    .boxCardsCollapseInmoYPropietarios {
+        row-gap: inherit;
+    }
+}
+
+@media (max-width: 767px) {
+    .BoxComentsGoogle {
+        height: auto;
+        flex-direction: column;
+        row-gap: 20px;
+        margin-top: 80px;
+    }
+
+    .Box1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .Box2 {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .CardBeneficios {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .ContenedorCardsBeneficios {
+        flex-direction: column;
+    }
+
+    .Accordion {
+        width: 100%;
+    }
+
+    .Card {
+        width: 150px;
+        height: 140px;
+    }
+
+    .ContenedorCardsInmobiliarias {
+        padding-top: 20px;
+        height: auto;
+        row-gap: 10px;
+        justify-content: center !important;
+    }
+
+    .BoxSelect {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .Select {
+        width: 100%;
+    }
+
+    .ParrafoGarantia {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .TituloBeneficios {
+        font-size: 18px;
+    }
+/*
+    .tituloBeneficioPropie {
+        font-size: 14px;
+    }
+*/
+    .parrafoCardBeneficioPropie {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .FotoIconosBeneficios {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tituloAccordion {
+        font-size: 18px;
+    }
+
+    .AccordionHeader button {
+        font-size: 16px !important;
+    }
+
+    .ContenedorEfecctCollapseRight {
+        width: auto;
+    }
+
+    .ContenedorEfecctCollapseLeft {
+        width: auto;
+    }
+
+    .subContenedorPrincipalConsultas {
+        height: auto;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .ButtonPolygon {
+        width: auto;
+        height: 120px;
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+    .ButtonPolygonCeleste {
+        width: auto;
+        height: 120px;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .FotoConsultaPropie {
+        height: auto;
+    }
+
+    .ButtonAzul {
+        font-size: 14px !important;
+        padding: 5px 20px !important;
+    }
+
+    .ButtonBorder {
+        font-size: 14px !important;
+        padding: 5px 10px !important;
+    }
+
+    .subContenedorPrincipalInmobiliariaYPropietarios {
+        flex-direction: column !important;
+        row-gap: 25px;
+    }
+
+    .BoxBeneficios {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .TituloBeneficiosCeleste {
+        font-size: 18px;
+    }
+
+    .ContainerPadreAccordionInmobiYPropietarios {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .ContainerAccordionInmoYPropie {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .BoxSelectInmoYPropie {
+        flex-direction: column;
+    }
+
+    .BoxSelectProvinciaYLocalidad {
+        flex-direction: column;
+    }
+
+    .BoxSelectReclamo {
+        flex-direction: column;
+    }
+
+    .BoxSelectConsulta {
+        flex-direction: column;
+    }
+
+    .BoxTituloConsulta {
+        flex-direction: column;
+    }
+
+    .BoxNombreConsulta {
+        flex-direction: column;
+    }
+
+    .BoxContactoConsulta {
+        flex-direction: column;
+    }
+
+    .BoxInformeConsulta {
+        flex-direction: column;
+    }
+
+    .SelectInmoYPropie {
+        margin: 10px 0px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .BoxButtonEnd {
+        justify-content: center;
+    }
+
+    .ButtonBuscar {
+        font-size: 14px;
+    }
+
+    .Slide {
+        width: 100%;
+        height: auto;
+    }
+
+    .CardBeneficiosInmoYPropie {
+        padding: 55px 10px 55px 10px;
+    }
+
+    .AccordionInmoYPropie {
+        width: 95%;
+    }
+
+    .BoxFormAccordion {
+        row-gap: 15px;
+    }
+
+    .cardCollapseRight {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .cardCollapseLeft {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .ContenedorPrincipalCollapseRight {
+        height: auto;
+    }
+
+    .ContenedorPrincipalCollapseLeft {
+        height: auto;
+    }
+
+    .BoxPrincipalCards {
+        justify-content: center;
+        width: 80%;
+    }
+
+    .parrafoCollapseLeft {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 991px) {
+    .ContenedorModal {
+        height: 500px;
+    }
+
+    .BoxModalImagenObteneTuGarantia {
+        display: none;
+    }
+
+    .SubBoxInfoModal {
+        width: 87%;
+    }
+
+    .BoxModalInfoBlanco {
+        width: 90%;
+    }
+
+    .BoxModalImagen {
+        display: none;
+    }
+
+    .BoxModalInfoCeleste {
+        width: 100%;
+        border-radius: 1%;
+    }
+
+    .BoxModalInfo {
+        width: 100%;
+        border-radius: 1%;
+    }
+
+}
+
+@media (min-width:768px) and (max-width: 1200px) {
+    .BoxComentsGoogle {
+        height: 60vh;
+
+    }
+
+    .Box1 {
+        row-gap: 50px;
+    }
+
+    .CardBeneficios {
+        padding: 0px;
+    }
+
+    .ButtonPolygon {
+        width: 250px;
+        height: 110px;
+    }
+
+    .ButtonPolygonCeleste {
+        width: 260px;
+        height: 110px;
+    }
+
+    .subContenedorPrincipalConsultas {
+        height: 31vh;
+        row-gap: 30px;
+    }
+
+    .ContenedorPrincipalCollapseRight {
+        height: 320px;
+    }
+
+    .ContenedorPrincipalCollapseLeft {
+        width: 80%;
+        position: relative;
+        right: 110px;
+    }
+
+    .cardCollapseLeft {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .cardCollapseRight {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .BoxPrincipalCards {
+        margin-bottom: 10%;
+        width: 80%;
+    }
+
+    .CardBeneficiosInmoYPropie {
+        height: 230px;
+        margin-top: 20px;
+    }
+
+    .TituloBeneficios {
+        text-align: start;
+    }
+
+    .TituloBeneficiosCeleste {
+        text-align: center;
+    }
+
+    .subContenedorPrincipalInmobiliariaYPropietarios {
+        margin-top: 50px;
+    }
+
+    .ParrafoGarantia {
+        width: 100%;
+    }
+
+    .Swiper {
+        height: 32vh;
+    }
+}
+
+
+@media (min-width:1200px) and (max-width: 1500px) {
+    .BoxComentsGoogle {
+        height: 60vh !important;
+
+    }
+}
+
+@media (max-height: 800px) {
+    .Swiper {
+        height: 45vh;
+    }
+}

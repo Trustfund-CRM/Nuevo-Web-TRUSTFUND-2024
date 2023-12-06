@@ -1,0 +1,108 @@
+.ContainerScrollVentajas {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    position: absolute;
+    top: 214vh;
+    justify-content: space-between;
+    background-color: #009FBB;
+    width: -webkit-fill-available;
+    height: 100%;
+}
+
+.ContainerTop {
+    color: #D3D5DA;
+    font-size: 49px;
+    font-family: Montserrat;
+    font-weight: 500;
+    height: 40%;
+    /* width: 60%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #D3D5DA;
+}
+
+.TitleVentajas {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 50px;
+    width: 82%;
+}
+
+.ContainerBottom {
+    height: -webkit-fill-available;
+    width: 82%;
+    align-self: center;
+}
+
+.subContainerBottom {
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 80px;
+}
+
+.subTitle {
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: center;
+    gap: 135px;
+}
+
+.subTextLeft {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Montserrat;
+    color: #D3D5DA;
+    width: 32%;
+}
+
+.subTextRight {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Montserrat;
+    color: #D3D5DA;
+    width: 27%;
+}
+
+.buttonVerMas {
+    scale: 200%;
+    border: 1px solid #D3D5DA;
+    border-radius: 60px;
+    padding: 15px;
+    background-color: #D3D5DA;
+}
+
+.ContainerScrollingText {
+    width: 88%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.preText {
+    font-size: 49px;
+    font-weight: 700;
+    font-family: Montserrat;
+    color: #D3D5DA;
+}
+
+.ScrollingText {
+    font-size: 49px;
+    font-weight: 700;
+    font-family: Montserrat;
+    color: #A0E838;
+}
+
+@media (max-width: 500px){
+    .ContainerScrollVentajas{
+        top: 320vh;
+    }
+}

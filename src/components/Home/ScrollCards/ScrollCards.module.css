@@ -1,0 +1,105 @@
+.ContainerGeneral {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    position: absolute;
+    top: 114vh;
+    justify-content: space-between;
+    background-color: #D3D5DA;
+    width: -webkit-fill-available;
+    height: 100%;
+}
+
+.ContainerHeader {
+    color: #4D4D4D;
+    background-color: #D3D5DA;
+    font-size: 49px;
+    font-family: Montserrat;
+    font-weight: 500;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TextHeader {
+    width: 70%;
+    position: relative;
+    top: 40px;
+}
+
+.ScrollCards {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+    width: 80%;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Carrousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Card {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0px 50px 0px;
+
+    translate: none;
+    rotate: none;
+    scale: none;
+}
+
+.Card:nth-of-type(even) {
+    transform: translateY(-65%) scale(0.8, 0.8);
+}
+
+.Card.show {
+    transform: translateY(0) scale(0.8, 0.8);
+}
+
+.TextoCard {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.TitleCard {
+    color: #414141;
+    font-size: 39px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.DescripcionCard {
+    color: black;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 400;
+    width: 90%;
+}
+
+.ImagenCard {
+    scale: 150%;
+    border: 1px solid #004993;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/* .flechaFooterCard {} */
+
+@media (max-width: 500px){
+    .ContainerGeneral{
+        top: 220vh;
+    }
+}

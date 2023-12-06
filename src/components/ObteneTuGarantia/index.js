@@ -1,0 +1,1 @@
+export { default as ObteneTuGrantiaPrincipal } from '../ObteneTuGarantia/ObteneTuGrantiaPrincipal'; 

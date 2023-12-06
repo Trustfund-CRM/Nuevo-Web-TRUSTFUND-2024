@@ -1,0 +1,1 @@
+export { default as CalculadorPromocion } from './CalculadorPromocion';

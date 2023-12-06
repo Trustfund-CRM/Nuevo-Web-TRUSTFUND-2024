@@ -1,0 +1,281 @@
+.boxPrincipal {
+    /* height: 95px; */
+    width: 100%;
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 50vh;
+    position: relative;
+    top: 260vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lateralIzq {
+    opacity: 50%;
+    margin-right: 50px;
+    transform: scaleX(-1);
+    margin-top: 84px;
+}
+
+.lateralDer {
+    opacity: 50%;
+    margin-left: 50px;
+    margin-top: 84px;
+}
+
+.subBoxFooter {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxDireccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 10px;
+    height: 100%;
+}
+
+.boxRedes {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.subBoxRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+}
+
+.iconRedes {
+    background: none;
+    display: flex;
+    scale: 200%;
+    width: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.FotoRedes {
+    scale: 70%;
+}
+
+.FotoRedes:hover {
+    opacity: 0.6;
+}
+
+.subContainerFooter {
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    justify-content: space-between;
+    padding-top: 75px;
+}
+
+.ContainerIzqFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    height: 20vh;
+}
+
+.Suscribite {
+    color: #1A1A1A;
+    font-size: 31px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.imgArrowSuscribite {
+    scale: 130%;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #004993;
+}
+
+.ContainerDerFooter {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    justify-content: space-between;
+}
+
+.ContainerRedes {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 10px;
+}
+
+.subContainerRedes {
+    display: flex;
+    width: 35vh;
+    justify-content: space-between;
+}
+
+.buttonSolicitar {
+    color: #F9FAFB;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 400;
+    background-color: #004993;
+    border-radius: 30px;
+    border: none;
+    padding: 13px 36px 13px 36px;
+}
+
+.ContainerContacto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Direccion {
+    width: 30%;
+    color: #1A1A1A;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.Contacto {
+    width: 40%;
+    color: #1A1A1A;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.textoFooter {
+    color: #999999;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.bannerFooter {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #F9FAFB;
+    justify-content: center;
+}
+
+.subBannerFooter {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerDelSud {
+    display: flex;
+    width: 32vh;
+    justify-content: space-between;
+}
+
+.textoDelSud {
+    display: flex;
+    align-items: center;
+    color: #999999;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.logoDelSud {
+    display: flex;
+    align-self: center;
+}
+
+.botonesFooter {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.botonFooter {
+    display: flex;
+    align-items: center;
+    color: #999999;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+@media (max-width: 968px) {
+    .titulosFooter {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .boxDireccion {
+        align-items: center;
+    }
+
+    .FotoRedes {
+        width: 35px;
+        height: auto;
+        color: #004A92;
+    }
+
+    .titulosFooter {
+        font-size: 12px;
+    }
+
+    .boxRedes {
+        height: auto;
+    }
+
+    .boxDireccion {
+        row-gap: 0px;
+        height: auto;
+        width: 135%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .boxPrincipal {
+        width: auto;
+        height: 17vh;
+    }
+
+    .subBoxFooter {
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .lateralIzq {
+        opacity: 50%;
+        transform: scaleX(-1);
+        position: relative;
+        top: 12px;
+        right: 15px;
+        width: 20%;
+        margin-top: 0px;
+    }
+
+    .lateralDer {
+        opacity: 50%;
+        position: relative;
+        top: 12px;
+        left: 15px;
+        width: 20%;
+        margin-top: 0px;
+    }
+}

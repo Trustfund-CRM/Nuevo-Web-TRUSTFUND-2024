@@ -1,0 +1,470 @@
+/* :global {
+    @import 'animate.css';
+} */
+
+.ContainerModalCalculador {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: 1122px;
+    height: 351px;
+    display: flex;
+    flex-direction: column;
+
+    animation: slideInUp 1s ease-in-out;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 99;
+    padding: 0px 0px 28px 0px;
+    left: 40vh;
+    bottom: 25vh;
+}
+
+.ContainerCruzModal {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.ContainerModalCalculadorResultado {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    width: 1122px;
+    height: 674px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    position: absolute;
+    z-index: 99;
+    padding: 28px 0px 28px 0px;
+    left: 40vh;
+    bottom: 10vh;
+}
+
+.TitleCalculador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Title {
+    color: #004993;
+    font-size: 39px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.subTextCalculador {
+    color: #1A1A1A;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+    width: 548px;
+    height: 47px;
+}
+
+.ContainerInputs {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.ContainerValores {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    padding: 18px 18px 18px 0px;
+    width: 435px;
+}
+
+.input1 {
+    padding-left: 18px;
+    width: 222px;
+    border: none;
+    background-color: #F9FAFB;
+    border-right: 1px solid #004993;
+}
+
+.input2 {
+    padding-left: 18px;
+    width: 222px;
+    border: none;
+    background-color: #F9FAFB;
+}
+
+.flechaCalcula {
+    background-color: #004993;
+    border: none;
+    border-radius: 30px;
+    padding: 18px;
+}
+
+.ContainerPasos {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-self: center;
+    background-image: url('../../styles/assets/bg_Modal.png');
+    color: #F2F2F2;
+    border-radius: 20px;
+}
+
+.Paso {
+    display: flex;
+    align-items: center;
+    width: -webkit-fill-available;
+    height: 44px;
+    border: 2px solid #F9FAFB;
+    margin: 15px;
+    border-radius: 15px;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.ContainerCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 95%;
+    align-self: center;
+}
+
+.ExtraContainerCards {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardCuota {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin: 25px 0px 25px 0px;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.activo {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 5px;
+    background-color: #004994;
+    border-radius: 20px;
+    margin: 25px 0px 25px 0px;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.titleCard {
+    color: #004993;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 700;
+    border-bottom: 1px solid #D3D5DA;
+}
+
+.titleCardActiva {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 700;
+    border-bottom: 1px solid #D3D5DA;
+}
+
+.subtitleCard {
+    border-bottom: 1px solid #D3D5DA;
+}
+
+.anticipoCard {
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.anticipoCardActiva {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.descuentoCard {
+    color: #4D4D4D;
+    font-size: 10px;
+    font-family: Montserrat;
+    font-size: italic;
+    font-weight: 700;
+}
+
+.descuentoCardActiva {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-family: Montserrat;
+    font-size: italic;
+    font-weight: 700;
+}
+
+.anticipo {
+    color: #4D4D4D;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.pago {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.cuotas {
+    display: flex;
+    align-items: center;
+    color: #4D4D4D;
+    font-size: 12px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.cuotasActiva {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: Montserrat;
+    font-weight: 400;
+}
+
+.valorCuotas {
+    color: #004993;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.valorCuotasActiva {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.flechaCard {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    left: 0px;
+    transition: 1s;
+    background-color: #FFFFFF;
+}
+
+.flechaCardActiva {
+    padding: 6px;
+    /* border: 1px solid #FFFFFF; */
+    /* border-radius: 30px; */
+    scale: 80%;
+}
+
+.flechaSolicitar {
+    padding: 10px;
+    border: 2px solid #004993;
+    border-radius: 30px;
+    display: flex;
+    align-self: center;
+    scale: 150%;
+}
+
+.containerButtonCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.buttonSolicitar {
+    color: #F2F2F2;
+    font-size: 22px;
+    font-family: Montserrat;
+    font-weight: 700;
+    background-color: #004993;
+    padding: 13px 36px 13px 36px;
+    border-radius: 30px;
+    border: none;
+}
+
+.buttonSolicitarDisabled {
+    color: #F2F2F2;
+    font-size: 22px;
+    font-family: Montserrat;
+    font-weight: 700;
+    background-color: #004993;
+    padding: 13px 36px 13px 36px;
+    border-radius: 30px;
+    border: none;
+}
+
+.buttonSolicitar:hover {
+    background-color: #0076B9;
+}
+
+.cardCuota:hover {
+    cursor: pointer;
+}
+
+.textSeleccionar {
+    display: none;
+    z-index: 1;
+    width: 0%;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.textSeleccionado {
+    display: flex;
+    z-index: 1;
+    width: 90%;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.ButtonSeleccionar {
+    border: 1px solid #004993;
+    border-radius: 30px;
+    width: 17%;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ButtonSeleccionado {
+    border: 1px solid #004993;
+    border-radius: 30px;
+    width: 70%;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.textoCalculador {
+    color: #F2F2F2;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.cardCuota:hover .ButtonSeleccionar {
+    padding: 0px 10px 0px 10px;
+    width: 60%;
+    background-color: #004993;
+}
+
+.cardCuota:hover .textSeleccionar {
+    display: flex;
+}
+
+.cardCuota:hover .flechaCard {
+    left: 98px;
+    background-color: #004993;
+    scale: 80%;
+    padding: 6px;
+}
+
+@media (max-width: 500px) {
+    .ContainerModalCalculador {
+        left: auto;
+        bottom: auto;
+        width: -webkit-fill-available;
+        height: 650px;
+        margin: 40px 15px 15px 15px;
+    }
+
+    .ContainerModalCalculadorResultado {
+        left: auto;
+        bottom: auto;
+        width: -webkit-fill-available;
+        height: auto;
+        margin: 40px 15px 15px 15px;
+    }
+
+    .ContainerCruzModal {
+        display: none;
+    }
+
+    .TitleCalculador {
+        flex-direction: column;
+        margin: 18px;
+        gap: 20px;
+    }
+
+    .subTextCalculador {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .ContainerInputs {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .ContainerValores {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .input1 {
+        border-right: none;
+        align-self: flex-start;
+        width: -webkit-fill-available;
+    }
+
+    .input2 {
+        align-self: flex-start;
+        width: -webkit-fill-available;
+    }
+
+    .flechaCalcula {
+        margin-top: 35px;
+    }
+
+    .ContainerPasos {
+        display: none;
+    }
+
+    .ExtraContainerCards {
+        gap: 40px;
+    }
+
+    .ContainerCards {
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .cardCuota {
+        width: 65%;
+        padding: 20px 50px 20px 50px;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .activo {
+        width: 65%;
+        padding: 20px 50px 20px 50px;
+        margin: 20px 0px 0px 0px;
+    }
+}

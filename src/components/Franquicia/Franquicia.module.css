@@ -1,0 +1,308 @@
+.boxPrincipalFranquicia {
+    width: 100%;
+    height: 80vh;
+    background-color: white !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* position: sticky; */
+    top: 0px;
+}
+
+.imageScroll {
+    width: 100%;
+    height: 100%;
+}
+
+.boxImagen {
+    width: 50%;
+    height: 100%;
+}
+
+.boxTexto {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.BoxCajaScroll {
+    width: 50%;
+    height: 100%;
+}
+
+.contenedorScroll {
+    width: 100%;
+    height: 73vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white !important;
+}
+
+.subContenedorScroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.BoxScrollDerecha {
+    width: 50%;
+    /*height: 65%;*/
+    display: flex;
+    justify-content: flex-end;
+    /*
+    position: absolute;
+    left: 674px;
+    overflow: hidden;
+    */
+}
+
+.BoxScrollIzquierda {
+    width: 80%;
+    height: auto;
+    position: relative;
+    left: 130px;
+}
+
+.boxParrafo {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+.headerParrafo {
+    color: #004994;
+    padding-bottom: 2%;
+}
+
+.imagenScroll {
+    margin-top: 5%;
+    position: relative;
+    left: 20px;
+    /*
+    width: auto;
+    height: 100%;
+    margin-top: 2%;
+    */
+}
+
+.ButtonAzul {
+    background-color: #004994 !important;
+    border: #004994 !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    transition: 0.3s;
+}
+
+.ButtonAzul:hover {
+    background-color: #7FA4C8 !important;
+    border: #7FA4C8;
+}
+
+.ButtonBorder {
+    border-radius: 20px !important;
+    border-color: #004994 !important;
+    color: #004994 !important;
+    padding: 10px 20px !important;
+}
+
+.ButtonBorder:hover {
+    background-color: #004994;
+    color: white !important;
+}
+
+
+@media (min-width:768px) and (max-width: 1200px) {
+    .boxParrafo {
+        width: 86%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 15px;
+        font-size: 11px;
+    }
+
+    .parrafo {
+        margin: 0px !important;
+        line-height: 25px;
+        font-weight: 500;
+        font-size: initial;
+    }
+
+}
+
+
+@media (max-height: 800px) {
+    .contenedorScroll {
+        height: 105vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contenedorScroll {
+        height: 175vh;
+        flex-direction: row;
+    }
+
+    .subContenedorScroll {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BoxScrollIzquierda {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        left: 0px;
+        top: 30px;
+    }
+
+    .BoxScrollDerecha {
+        position: relative;
+        left: 0px;
+        top: 115px;
+        width: 58%;
+        justify-content: center;
+    }
+
+    .imagenScroll {
+        position: relative;
+        top: 34px;
+        object-fit: contain;
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 767px) {
+    .boxPrincipalFranquicia {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .BoxCajaScroll {
+        width: 90% !important;
+    }
+
+    .boxParrafo {
+        width: 86%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 15px;
+        font-size: 11px;
+    }
+
+    .parrafo {
+        margin: 0px !important;
+        line-height: 25px;
+        font-weight: 500;
+        font-size: initial;
+    }
+
+    .subContenedorScroll {
+        width: 80%;
+        height: 110%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .BoxScrollIzquierda {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        left: 0px;
+        height: 50%;
+    }
+
+    .BoxScrollDerecha {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .imagenScroll {
+        position: relative;
+        object-fit: contain;
+        width: 93%;
+        margin-top: 0%;
+        height: auto;
+        left: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .contenedorScroll {
+        height: 160vh;
+    }
+}
+
+@media (max-width: 415px) {
+    .contenedorScroll {
+        height: 110vh;
+    }
+
+    .imagenScroll {
+        margin-top: 20%;
+    }
+}
+
+@media (min-height: 700px) and (max-height: 916px) {
+    .contenedorScroll {
+        height: 135vh;
+    }
+
+    .BoxScrollDerecha {
+        position: relative;
+        left: 0px;
+        top: 20px;
+        width: 90%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedorScroll {
+        height: 125vh;
+    }
+
+    .imagenScroll {
+        margin-top: 35%;
+    }
+}
+
+@media (max-width: 380px) {
+    .contenedorScroll {
+        height: 160vh;
+    }
+
+    .imagenScroll {
+        margin-top: 35%;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 600px) {
+    .contenedorScroll {
+        height: 185vh;
+    }
+}
