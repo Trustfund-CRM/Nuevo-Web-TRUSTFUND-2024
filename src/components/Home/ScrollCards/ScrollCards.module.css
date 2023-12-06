@@ -124,7 +124,8 @@
     }
 
     .ContainerGeneralResultados {
-        top: 295vh;
+        top: 291vh;
+        height: 279vh;
     }
 
     .ContainerHeader {

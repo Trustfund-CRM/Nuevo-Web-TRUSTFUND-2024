@@ -213,5 +213,6 @@
 
     .ContainerSubFooterCalculador {
         height: 181vh;
+        width: -webkit-fill-available;
     }
 }
