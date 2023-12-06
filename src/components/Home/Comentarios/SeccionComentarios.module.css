@@ -1,7 +1,8 @@
 .ContainerGeneralSection {
     position: relative;
-    top: 260vh;
+    top: 233vh;
     background-color: #ffffff;
+    width: 100%;
 }
 
 .ContainerGeneralSectionResultados {
@@ -201,10 +202,10 @@
 
 @media (max-width: 500px){
     .ContainerGeneralSection {
-        top: 205vh;
+        top: 381vh;
     }
 
     .ContainerGeneralSectionResultados {
-        top: 214vh;
+        top: 260vh;
     }
 }

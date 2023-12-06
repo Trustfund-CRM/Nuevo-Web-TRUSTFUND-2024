@@ -34,10 +34,6 @@ export default function ScrollCards() {
     const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
     useEffect(() => {
-        console.log(resultadoCalc)
-    }, [resultadoCalc])
-
-    useEffect(() => {
         const handleScroll = () => {
             // Update translate value based on scroll position or any other logic
             if (window.scrollY > 1080 && window.scrollY < maxVerticalCoordinate) {
@@ -125,7 +121,7 @@ export default function ScrollCards() {
 
     return (
         <div className={`${resultadoCalc ? style.ContainerGeneralResultados : style.ContainerGeneral}`}>
-            <div style={{ width: '100%', borderBottom: '1px solid #4D4D4D', height: '40%', display: 'flex' }}>
+            <div className={style.ExtraContainerHeader}>
                 <div className={style.ContainerHeader}>
                     <div className={style.TextHeader}>Protegemos todas las necesidades
                         en el proceso de alquiler. </div>
