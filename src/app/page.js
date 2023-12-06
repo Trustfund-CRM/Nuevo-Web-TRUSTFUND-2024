@@ -11,8 +11,6 @@ import TextoSlide from '@/components/Home/TextoSlide/TextoSlide';
 import ScrollVentajas from '@/components/Home/ScrollVentajas/ScrollVentajas';
 import SeccionComentarios from '@/components/Home/Comentarios/SeccionComentarios';
 import PreguntasFrecuentes from '@/components/Home/FAQ/PreguntasFrecuentes';
-//import { ParallaxProvider } from 'react-scroll-parallax';
-
 
 export default function Home() {
 
