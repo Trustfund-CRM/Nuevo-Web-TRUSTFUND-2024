@@ -1,8 +1,9 @@
 .ContainerFAQ {
     height: 100vh;
     position: relative;
-    top: 260vh;
+    top: 229vh;
     background-color: #0076B9;
+    width: 100%;
 }
 
 .ContainerFAQResultados {
@@ -140,10 +141,10 @@
 
 @media (max-width: 500px){
     .ContainerFAQ{
-        top: 205vh;
+        top: 377vh;
     }
 
     .ContainerFAQResultados{
-        top: 214vh;
+        top: 386vh;
     }
 }

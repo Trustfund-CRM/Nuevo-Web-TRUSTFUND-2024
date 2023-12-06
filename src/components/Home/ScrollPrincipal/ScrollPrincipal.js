@@ -29,7 +29,7 @@ export default function ScrollPrincipal() {
     }
 
     return (
-        <div>
+        <div className={style.ExtraContainerScrollPrincipal}>
             <div className={style.ContainerScrollPrincipal} >
                 <div className={style.ContainerTitle}>
                     <div className={style.Intro}>Somos Trust Fund</div>

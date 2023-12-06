@@ -36,8 +36,7 @@ export default function NavbarPrincipal() {
 
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-
+    <div className={style.navContainer}>
       <Navbar expand="lg" className={style.navbarPrincipal}>
         <Container fluid className={style.container}>
           <Navbar.Brand >

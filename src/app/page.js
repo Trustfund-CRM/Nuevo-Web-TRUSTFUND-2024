@@ -1,6 +1,7 @@
 "use client";
 
 import '../utils/bootstrap';
+import { Footer, NavbarPrincipal } from '@/components';
 import ScrollPrincipal from '@/components/Home/ScrollPrincipal/ScrollPrincipal';
 import { CalculadorPrincipal } from '@/components/CalculadorPrincipal';
 import { Conocenos } from '@/components/Conocenos';
@@ -17,18 +18,19 @@ import PreguntasFrecuentes from '@/components/Home/FAQ/PreguntasFrecuentes';
 export default function Home() {
 
   return (
-      <main
-      >
-        <section>
-          <ScrollPrincipal />
-          <TextoSlide />
-          <ScrollCards />
-          <ScrollVentajas />
-          <SeccionComentarios />
-          <PreguntasFrecuentes />
-          <ButtonWsp />
-        </section>
-      </main>
+
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
+      <NavbarPrincipal />
+      <ScrollPrincipal />
+      <TextoSlide />
+      <ScrollCards />
+      <ScrollVentajas />
+      <SeccionComentarios />
+      <PreguntasFrecuentes />
+      <ButtonWsp />
+      <Footer />
+    </div>
+
   )
 }
 
