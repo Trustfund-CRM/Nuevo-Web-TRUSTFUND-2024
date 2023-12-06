@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import style from './PreguntasFrecuentes.module.css'
 import { Button } from "react-bootstrap";
 import { imgInquilinos, imgPropietarios, flechaModalBlue } from "@/styles";
@@ -8,6 +9,8 @@ export default function PreguntasFrecuentes() {
 
     const [inquilinosOPropietarios, setInquilinosOPropietarios] = useState('inquilinos');
     const [displayRespuesta, setDisplayRespuesta] = useState(0);
+
+    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
     const handleDisplayRespuesta = (value) => {
         if (displayRespuesta !== 0) {
@@ -29,7 +32,7 @@ export default function PreguntasFrecuentes() {
     }
 
     return (
-        <div className={style.ContainerFAQ}>
+        <div className={`${resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ}`}>
             <div className={style.TitleFAQ}>
                 <div style={{ width: '84%' }}>
                     <div className={style.Title}>Preguntas frecuentes</div>

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import style from './ScrollVentajas.module.css';
 import { flechaModalBlue } from "@/styles";
+import { useSelector } from "react-redux";
 
 export default function ScrollVentajas() {
+
+    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
     const scrollingText = [
         'con firma electrónica.',
@@ -13,7 +16,7 @@ export default function ScrollVentajas() {
     ]
 
     return (
-        <div className={style.ContainerScrollVentajas}>
+        <div className={`${resultadoCalc ? style.ContainerScrollVentajasResultados : style.ContainerScrollVentajas}`}>
             <div className={style.ContainerTop}>
                 <div className={style.TitleVentajas}>Ventajas de utilizar Trust Fund</div>
             </div>

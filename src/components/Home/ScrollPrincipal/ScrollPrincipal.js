@@ -4,24 +4,25 @@ import { backgroundHome, flechaCirculo, scroll } from "@/styles";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
+import { useSelector } from "react-redux";
 
 export default function ScrollPrincipal() {
 
     const [calculador, setCalculador] = useState(false);
 
-    var datosCalculador = {};
+    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador)
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
+        console.log(resultadoCalc)
 
-            datosCalculador = JSON.parse(localStorage.getItem('datosCalculador'));
+        if (typeof window !== 'undefined') {
 
             if (window?.innerWidth < 1200) {
                 console.log(window?.innerWidth)
                 setCalculador(true)
             }
         }
-    }, [])
+    }, [resultadoCalc])
 
     const handleCalculador = () => {
         setCalculador(true)
@@ -52,7 +53,7 @@ export default function ScrollPrincipal() {
 
             {
                 calculador ?
-                    <div className={`${datosCalculador.resultado ? style.ContainerSubFooterCalculador : style.ContainerSubFooter}`}>
+                    <div className={`${resultadoCalc ? style.ContainerSubFooterCalculador : style.ContainerSubFooter}`}>
                         <ModalCalculador setCalculador={setCalculador} />
                     </div>
                     : null

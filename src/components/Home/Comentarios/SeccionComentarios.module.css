@@ -4,6 +4,12 @@
     background-color: #ffffff;
 }
 
+.ContainerGeneralSectionResultados {
+    position: relative;
+    top: 260vh;
+    background-color: #ffffff;
+}
+
 .ContainerComentarios {
     height: 75vh;
     display: flex;
@@ -192,3 +198,13 @@
 /* .Partner {}
 
 .Slider {} */
+
+@media (max-width: 500px){
+    .ContainerGeneralSection {
+        top: 205vh;
+    }
+
+    .ContainerGeneralSectionResultados {
+        top: 214vh;
+    }
+}
