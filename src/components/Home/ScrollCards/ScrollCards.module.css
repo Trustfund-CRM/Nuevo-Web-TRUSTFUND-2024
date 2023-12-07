@@ -139,6 +139,10 @@
         align-self: center;
     }
 
+    .ScrollCards {
+        width: 100%;
+    }
+
     .TextHeader {
         width: auto;
         padding: 45px 0px 45px 0px;
@@ -147,10 +151,30 @@
     .Carrousel {
         justify-content: space-evenly;
         height: 180vh;
+        width: -webkit-fill-available;
     }
 
     .Card {
         margin: 25px 0px 25px 0px;
         flex-direction: column;
+        border-radius: 20px;
+        width: 81%;
+    }
+
+    .TextoCard {
+        gap: 32px;
+        width: 75%;
+    }
+
+    .TitleCard {
+        font-size: 28px;
+    }
+
+    .flechaFooterCard {
+        width: 350px;
+        height: 38%;
+        display: flex;
+        align-self: center;
+        border-radius: 0px 0px 20px 20px;
     }
 }
