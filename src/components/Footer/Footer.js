@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
 
       <div className={style.textoFooter}>
-        Trust Fund 2023©. Todos los derechos reservados. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus malesuada eros, et posuere urna porta
+        Trust Fund 2023©. Todos los derechos reservados.
       </div>
 
       <div className={style.bannerFooter}>

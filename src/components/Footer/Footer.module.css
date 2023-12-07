@@ -251,14 +251,30 @@
 
 @media (max-width: 600px) {
     .boxPrincipal {
-        width: auto;
-        height: 65vh;
+        width: -webkit-fill-available;
+        height: 100vh;
         top: 373vh;
+    }
+
+    .subContainerFooter {
+        flex-direction: column;
+        width: 85%;
+        gap: 70px;
     }
 
     .subBoxFooter {
         flex-direction: column;
         height: 90%;
+    }
+
+    .ContainerIzqFooter {
+        width: 95%;
+    }
+
+    .ContainerDerFooter {
+        width: auto;
+        flex-direction: column;
+        gap: 45px;
     }
 
     .lateralIzq {
@@ -279,4 +295,62 @@
         width: 20%;
         margin-top: 0px;
     }
+
+    .ContainerRedes {
+        flex-direction: column;
+        border-bottom: none;
+        gap: 25px;
+    }
+
+    .subContainerRedes {
+        width: 75%;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #999999;
+    }
+
+    .iconRedes {
+        scale: 130%;
+    }
+
+    .buttonSolicitar {
+        width: 57%;
+    }
+
+    .ContainerContacto {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .Direccion {
+        width: auto;
+    }
+
+    .Contacto {
+        width: auto;
+    }
+
+    .textoFooter {
+        width: 85%;
+    }
+
+    .bannerFooter {
+        height: 15vh;
+    }
+
+    .subBannerFooter {
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footerDelSud {
+        width: 85%;
+        align-self: center;
+    }
+    
+    .botonesFooter {
+        width: 85%;
+        align-self: center;
+    }
+
 }
