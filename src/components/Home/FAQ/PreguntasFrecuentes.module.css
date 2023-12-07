@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+.ContainerTitleFAQ {
+    width: 84%;
+}
+
 .Title {
     color: #F9FAFB;
     font-size: 49px;
@@ -142,9 +146,77 @@
 @media (max-width: 500px){
     .ContainerFAQ{
         top: 377vh;
+        height: 170vh;
+        overflow: hidden;
     }
 
     .ContainerFAQResultados{
         top: 386vh;
+        height: 170vh;
+        overflow: hidden;
+    }
+
+    .TitleFAQ {
+        border-bottom: none;
+    }
+
+    .ContainerTitleFAQ {
+        width: 80%;
+        border-bottom: 1px solid #F9FAFB;
+    }
+
+    .Title {
+        font-size: 36px;
+    }
+
+    .ButtonsInquiProp {
+        margin-top: 40px;
+    }
+
+    .ContainerSubTitle {
+        width: 80%;
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .ButtonInquiActivo {
+        align-self: center;
+    }
+
+    .flechaInquiProp {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .ContainerBottom {
+        flex-direction: column;
+    }
+
+    .ContainerPreguntas {
+        width: auto;
+        padding-left: 0px;
+    }
+
+    .ContainerPregunta {
+        padding: 25px 0px 25px 0px;
+        width: 85%;
+        align-self: center;
+    }
+
+    .FAQ {
+        width: auto;
+    }
+
+    .Pregunta {
+        font-size: 28px;
+    }
+
+    .Respuesta {
+        width: 85%;
+    }
+
+    .ImageInquilinoProp {
+        margin-top: 50px;
+        scale: 80%;
     }
 }

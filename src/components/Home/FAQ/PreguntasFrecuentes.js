@@ -34,7 +34,7 @@ export default function PreguntasFrecuentes() {
     return (
         <div className={`${resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ}`}>
             <div className={style.TitleFAQ}>
-                <div style={{ width: '84%' }}>
+                <div className={style.ContainerTitleFAQ}>
                     <div className={style.Title}>Preguntas frecuentes</div>
                 </div>
             </div>
