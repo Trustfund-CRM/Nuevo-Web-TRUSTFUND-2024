@@ -121,4 +121,67 @@
     .ContainerScrollVentajasResultados {
         top: 570vh;
     }
+
+    .ContainerTop {
+        font-size: 36px;
+        width: 81%;
+        display: flex;
+        align-self: center;
+    }
+
+    .TitleVentajas {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .ContainerBottom {
+        height: -webkit-fill-available;
+        width: 80%;
+        align-self: center;
+    }
+
+    .subContainerBottom {
+        flex-direction: column;
+    }
+
+    .subTitle {
+        height: 51%;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        margin-top: 47px;
+    }
+
+    .subTextLeft {
+        width: 90%;
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .subTextRight {
+        width: 90%;
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .buttonVerMas {
+        scale: 150%;
+        align-self: flex-start;
+        margin-left: 10px;
+    }
+
+    .ContainerScrollingText {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 75px;
+    }
+
+    .preText {
+        font-size: 29px;
+    }
+
+    .ScrollingText {
+        font-size: 29px;
+    }
+
 }
