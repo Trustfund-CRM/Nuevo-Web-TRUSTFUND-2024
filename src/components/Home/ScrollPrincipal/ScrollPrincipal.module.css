@@ -173,6 +173,10 @@
         padding-left: 30px;
     }
 
+    .Titulo {
+        width: auto;
+    }
+
     .Intro {
         font-size: 14px;
         width: 60%;

@@ -302,10 +302,14 @@
         gap: 25px;
     }
 
+    .ExtraSubContainerRedes {
+        width: 100%;
+        border-bottom: 1px solid #999999;
+    }
+
     .subContainerRedes {
         width: 75%;
         padding-bottom: 25px;
-        border-bottom: 1px solid #999999;
     }
 
     .iconRedes {
