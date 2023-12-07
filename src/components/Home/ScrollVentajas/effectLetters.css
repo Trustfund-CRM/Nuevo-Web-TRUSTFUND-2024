@@ -1,0 +1,71 @@
+.wrapper {
+  box-sizing: content-box;
+  height: 65px;
+  display: flex;
+}
+
+.words {
+  overflow: hidden;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  animation: spin_words 10s infinite;
+  font-size: 49px;
+  font-weight: 700;
+  font-family: Montserrat;
+}
+
+.word.primary {
+  color: #A0E838;
+}
+
+.word.secondary {
+  color: #16222E;
+}
+
+.word.terciary {
+  color: #F9FAFB;
+}
+
+.word.fourty {
+  color: #04417F;
+}
+
+@keyframes spin_words {
+
+  0% { 
+    transform: translateY(0%);
+  }
+
+  10% {
+    transform: translateY(-115%);
+  }
+
+  25% {
+    transform: translateY(-100%);
+  }
+
+  35% {
+    transform: translateY(-212%);
+  }
+
+  50% {
+    transform: translateY(-200%);
+  }
+
+  60% {
+    transform: translateY(-312%);
+  }
+
+  75% {
+    transform: translateY(-300%);
+  }
+
+  85% {
+    transform: translateY(-412%);
+  }
+
+
+}
