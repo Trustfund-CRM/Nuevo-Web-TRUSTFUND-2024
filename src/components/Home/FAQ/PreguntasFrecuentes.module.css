@@ -154,6 +154,7 @@
         top: 386vh;
         height: 170vh;
         overflow: hidden;
+        width: -webkit-fill-available;
     }
 
     .TitleFAQ {
@@ -177,6 +178,10 @@
         width: 85%;
         flex-direction: column;
         height: 20vh;
+    }
+
+    .ButtonInqui {
+        align-self: center;
     }
 
     .ButtonInquiActivo {

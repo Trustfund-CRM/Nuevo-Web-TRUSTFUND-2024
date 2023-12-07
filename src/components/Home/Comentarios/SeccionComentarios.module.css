@@ -218,6 +218,7 @@
 
     .ContainerGeneralSectionResultados {
         top: 390vh;
+        width: -webkit-fill-available;
     }
 
     .ContainerComentarios {
