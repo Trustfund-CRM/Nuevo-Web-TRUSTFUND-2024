@@ -1,6 +1,14 @@
 .ContainerFAQ {
     height: 100vh;
     position: relative;
+    top: 229vh;
+    background-color: #0076B9;
+    width: 100%;
+}
+
+.ContainerFAQResultados {
+    height: 100vh;
+    position: relative;
     top: 260vh;
     background-color: #0076B9;
 }
@@ -56,7 +64,6 @@
 }
 
 .ButtonProp {
-    /* color: #F9FAFB; */
     font-size: 18px;
     font-family: Montserrat;
     font-weight: 500;
@@ -90,8 +97,11 @@
     justify-content: space-between;
     width: 75vh;
     padding-left: 7%;
+    height: fit-content;
+    gap: 24px;
 }
 
+/* 
 .ContainerPregunta {
     display: flex;
     justify-content: space-between;
@@ -127,6 +137,14 @@
     font-size: 39px;
     font-family: Montserrat;
     font-weight: 400;
-}
+} */
 
-/* .ImageInquilinoProp {} */
+@media (max-width: 500px) {
+    .ContainerFAQ {
+        top: 377vh;
+    }
+
+    .ContainerFAQResultados {
+        top: 386vh;
+    }
+}

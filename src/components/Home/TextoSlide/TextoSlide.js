@@ -1,16 +1,17 @@
+import { useEffect } from 'react'
 import style from './TextoSlide.module.css'
-
+import { useSelector } from 'react-redux'
 
 export default function TextoSlide() {
 
-    var datosCalculador = {};
+    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador)
 
-    if (typeof window !== 'undefined') {
-        datosCalculador = JSON.parse(localStorage.getItem('datosCalculador'));
-    }
+    useEffect(() => {
+        console.log(resultadoCalc)
+    }, [resultadoCalc])
 
     return (
-        <div className={`${datosCalculador?.resultado ? style.containerSlideCalculador : style.containerSlide}`}>
+        <div className={`${resultadoCalc ? style.containerSlideCalculador : style.containerSlide}`}>
             <div className={style.Slide}>
                 TRUST FUND GARANTÍAS DE ALQUILER
             </div>

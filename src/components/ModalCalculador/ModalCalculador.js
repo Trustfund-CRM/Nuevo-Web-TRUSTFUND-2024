@@ -7,6 +7,8 @@ import { useState } from "react";
 import { star, percentage, frame, flechaModal, flechaModalBlue, CruzModal } from "@/styles";
 import 'animate.css';
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { setResultadoCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function ModalCalculador({ setCalculador }) {
 
@@ -36,10 +38,12 @@ export default function ModalCalculador({ setCalculador }) {
 
     const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm();
 
+    const dispatch = useDispatch();
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
 
-            if (window?.innerWidth > 500) {
+            if (window?.innerWidth < 1200) {
                 console.log(window?.innerWidth)
                 setMobile(true)
             }
@@ -142,7 +146,8 @@ export default function ModalCalculador({ setCalculador }) {
 
         setInformacionStep1(data);
 
-        localStorage.setItem('dataCalculador', JSON.stringify(data));
+        dispatch(setResultadoCalculador(true))
+        // localStorage.setItem('dataCalculador', JSON.stringify(data));
 
     };
 

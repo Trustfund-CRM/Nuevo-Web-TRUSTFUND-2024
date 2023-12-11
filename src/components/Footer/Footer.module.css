@@ -9,7 +9,7 @@
     overflow: hidden;
     height: 50vh;
     position: relative;
-    top: 260vh;
+    top: 226vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -252,7 +252,8 @@
 @media (max-width: 600px) {
     .boxPrincipal {
         width: auto;
-        height: 17vh;
+        height: 65vh;
+        top: 373vh;
     }
 
     .subBoxFooter {

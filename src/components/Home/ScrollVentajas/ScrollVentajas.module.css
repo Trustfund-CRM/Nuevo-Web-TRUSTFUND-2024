@@ -3,6 +3,18 @@
     flex-direction: column;
     height: 10vh;
     position: absolute;
+    top: 227vh;
+    justify-content: space-between;
+    background-color: #009FBB;
+    width: -webkit-fill-available;
+    height: 100%;
+}
+
+.ContainerScrollVentajasResultados {
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    position: absolute;
     top: 214vh;
     justify-content: space-between;
     background-color: #009FBB;
@@ -16,7 +28,6 @@
     font-family: Montserrat;
     font-weight: 500;
     height: 40%;
-    /* width: 60%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,6 +114,10 @@
 
 @media (max-width: 500px){
     .ContainerScrollVentajas{
-        top: 320vh;
+        top: 480vh;
+    }
+
+    .ContainerScrollVentajasResultados {
+        top: 385vh;
     }
 }
