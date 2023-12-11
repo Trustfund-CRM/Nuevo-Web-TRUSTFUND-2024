@@ -1,11 +1,29 @@
 import Image from "next/image";
 import style from "./ScrollVentajas.module.css";
 import { flechaModalBlue } from "@/styles";
-import { useEffect, useRef } from "react";
 import "./effectLetters.css";
+import { useSelector } from "react-redux";
 export default function ScrollVentajas() {
+  const resultadoCalc = useSelector(
+    (state) => state.reducerInfoGarantia.calculador
+  );
+
+  const scrollingText = [
+    "con firma electrónica.",
+    // '100% Online.',
+    // 'en menos de 24hs.',
+    // 'con pagos a medida.',
+    // 'personalizada.'
+  ];
+
   return (
-    <div className={style.ContainerScrollVentajas}>
+    <div
+      className={`${
+        resultadoCalc
+          ? style.ContainerScrollVentajasResultados
+          : style.ContainerScrollVentajas
+      }`}
+    >
       <div className={style.ContainerTop}>
         <div className={style.TitleVentajas}>
           Ventajas de utilizar Trust Fund

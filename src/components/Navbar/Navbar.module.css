@@ -5,6 +5,16 @@
     z-index: 999;
     width: 75%;
 }
+.navContainer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 999999;
+    width: -webkit-fill-available;
+    background-color: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(10px);
+
+}
 .FotoLogoNavbar {
     scale: 130%;
 }

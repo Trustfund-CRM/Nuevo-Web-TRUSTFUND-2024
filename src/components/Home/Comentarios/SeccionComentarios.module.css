@@ -1,5 +1,12 @@
 .ContainerGeneralSection {
     position: relative;
+    top: 233vh;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.ContainerGeneralSectionResultados {
+    position: relative;
     top: 260vh;
     background-color: #ffffff;
 }
@@ -192,3 +199,13 @@
 /* .Partner {}
 
 .Slider {} */
+
+@media (max-width: 500px){
+    .ContainerGeneralSection {
+        top: 381vh;
+    }
+
+    .ContainerGeneralSectionResultados {
+        top: 260vh;
+    }
+}
