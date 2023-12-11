@@ -29,6 +29,11 @@
     border-bottom: 1px solid #004993;
 }
 
+.ContainerTitle {
+    width: 84%;
+    padding-bottom: 50px;
+}
+
 .Title {
     color: #1A1A1A;
     font-size: 49px;
@@ -156,8 +161,9 @@
     width: 75%;
     display: flex;
     align-self: center;
-    border-top: 1px solid;
+    border-top: 1px solid #999999;
     padding-top: 15px;
+    color: #999999;
 }
 
 .SeccionPartners {
@@ -166,6 +172,11 @@
     flex-direction: column;
     justify-content: flex-end;
     background-color: #ffffff;
+}
+
+.ContainerTitlePartners {
+    width: 84%;
+    padding-bottom: 50px;
 }
 
 .BottomPartners {
@@ -200,12 +211,146 @@
 
 .Slider {} */
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
     .ContainerGeneralSection {
         top: 381vh;
     }
 
     .ContainerGeneralSectionResultados {
-        top: 260vh;
+        top: 390vh;
+        width: -webkit-fill-available;
+    }
+
+    .ContainerComentarios {
+        height: 160vh;
+    }
+
+    .TitleComentarios {
+        border-bottom: none;
+        height: 15%;
+    }
+
+    .ContainerTitle {
+        width: 80%;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #004993;
+    }
+
+    .Title {
+        font-size: 36px;
+    }
+
+    .ContainerSlideComentarios {
+        width: 80%;
+        gap: 50px;
+    }
+
+    .ContainerSubText {
+        flex-direction: column;
+        width: 100%;
+        gap: 0px;
+        height: 51%;
+    }
+
+    .SubTexts {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .SubTextLeft {
+        width: auto;
+    }
+
+    .SubTextRight {
+        width: auto;
+    }
+
+    .flecha {
+        display: flex;
+        align-self: flex-start;
+        padding: 15px;
+    }
+
+    .ContainerSlideCards {
+        flex-direction: column-reverse;
+        gap: 33px;
+    }
+
+    .SlideCards {
+        flex-direction: column;
+    }
+
+    .SeccionPartners {
+        height: 85vh;
+    }
+
+    .CardComentario {
+        width: auto;
+        height: 224px;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .TopCard {
+        width: 80%;
+    }
+
+    .Calificaciones {
+        gap: 8px;
+    }
+
+    .Comentario {
+        width: 80%;
+    }
+
+    .Autor {
+        width: 80%;
+    }
+
+    .ContainerFlechas {
+        justify-content: center;
+    }
+
+    .ContainerTitlePartners {
+        width: 80%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid;
+    }
+
+    .ContainerSlidePartners {
+        width: 80%;
+        gap: 50px;
+    }
+
+    .BottomPartners {
+        overflow-y: hidden;
+    }
+
+    .ContainerPartners {
+        width: auto;
+    }
+}
+
+@media (max-height: 670px) {
+
+    .ContainerGeneralSection {
+        top: 524vh;
+    }
+
+    .ContainerComentarios {
+        height: 245vh;
+    }
+
+    .SeccionPartners {
+        height: 120vh;
+    }
+
+    .flecha {
+        padding: 15px;
+    }
+
+    .ContainerGeneralSectionResultados {
+        top: 509vh;
+        width: -webkit-fill-available;
     }
 }

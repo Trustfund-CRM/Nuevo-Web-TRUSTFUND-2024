@@ -51,10 +51,12 @@
     display: flex;
     flex-direction: column;
     height: -webkit-fill-available;
-    width: 80%;
+    width: 100%;
     align-self: center;
     align-items: center;
     overflow: hidden;
+    /* border: 1px solid red; */
+    overflow-y: scroll;
 }
 
 .Carrousel {
@@ -124,7 +126,8 @@
     }
 
     .ContainerGeneralResultados {
-        top: 295vh;
+        top: 291vh;
+        height: 279vh;
     }
 
     .ContainerHeader {
@@ -138,6 +141,10 @@
         align-self: center;
     }
 
+    .ScrollCards {
+        width: 100%;
+    }
+
     .TextHeader {
         width: auto;
         padding: 45px 0px 45px 0px;
@@ -146,10 +153,69 @@
     .Carrousel {
         justify-content: space-evenly;
         height: 180vh;
+        width: -webkit-fill-available;
     }
 
     .Card {
         margin: 25px 0px 25px 0px;
         flex-direction: column;
+        border-radius: 20px;
+        width: 81%;
+    }
+
+    .TextoCard {
+        gap: 32px;
+        width: 75%;
+    }
+
+    .TitleCard {
+        font-size: 28px;
+    }
+
+    .flechaFooterCard {
+        width: 350px;
+        height: 38%;
+        display: flex;
+        align-self: center;
+        border-radius: 0px 0px 20px 20px;
+    }
+}
+
+@media (max-height: 670px) {
+
+    .ContainerGeneral {
+        top: 246vh;
+        height: 340vh;
+    }
+
+    .ExtraContainerHeader {
+        height: 15%;
+        width: 90%;
+    }
+
+    .ScrollCards {
+        overflow: unset;
+        overflow-y: unset;
+        height: 300vh;
+    }
+
+    .Carrousel {
+        justify-content: space-evenly;
+        height: 230vh;
+        width: -webkit-fill-available;
+    }
+
+    .ContainerGeneral {
+        height: 354vh;
+        top: 246vh;
+    }
+
+    .flechaFooterCard {
+        width: -webkit-fill-available;
+    }
+    
+    .ContainerGeneralResultados {
+        top: 385vh;
+        height: 340vh;
     }
 }
