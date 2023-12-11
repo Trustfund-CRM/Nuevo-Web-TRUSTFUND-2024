@@ -8,6 +8,16 @@
     /* gap: 50px; */
 }
 
+.ExtraContainerScrollPrincipalResultado {
+    width: 100%;
+    height: auto;
+    /* height: 141vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .ContainerScrollPrincipal {
     display: flex;
     height: 91vh;

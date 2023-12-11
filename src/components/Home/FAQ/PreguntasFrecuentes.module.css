@@ -1,5 +1,5 @@
 .ContainerFAQ {
-    height: 100vh;
+    height: 112vh;
     position: relative;
     top: 229vh;
     background-color: #0076B9;
@@ -9,8 +9,9 @@
 .ContainerFAQResultados {
     height: 100vh;
     position: relative;
-    top: 260vh;
+    top: 126vh;
     background-color: #0076B9;
+    width: 100%;
 }
 
 .TitleFAQ {

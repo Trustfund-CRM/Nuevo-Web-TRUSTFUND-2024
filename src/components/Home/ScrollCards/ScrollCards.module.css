@@ -15,7 +15,7 @@
     flex-direction: column;
     height: 10vh;
     position: absolute;
-    top: 114vh;
+    top: 125vh;
     justify-content: space-between;
     background-color: #f2f5fb;
     width: -webkit-fill-available;
@@ -23,6 +23,13 @@
 }
 
 .ExtraContainerHeader {
+    width: 100%;
+    border-bottom: 1px solid #4D4D4D;
+    height: 40%;
+    display: flex;
+}
+
+.ExtraContainerHeaderResultados {
     width: 100%;
     border-bottom: 1px solid #4D4D4D;
     height: 40%;
@@ -141,6 +148,12 @@
         align-self: center;
     }
 
+    .ExtraContainerHeaderResultados {
+        height: 15%;
+        width: 79%;
+        align-self: center;
+    }
+
     .ScrollCards {
         width: 100%;
     }
@@ -185,11 +198,16 @@
 
     .ContainerGeneral {
         top: 246vh;
-        height: 340vh;
+        height: 465vh;
     }
 
     .ExtraContainerHeader {
-        height: 15%;
+        height: 12%;
+        width: 90%;
+    }
+
+    .ExtraContainerHeaderResultados {
+        height: 12%;
         width: 90%;
     }
 
@@ -206,7 +224,7 @@
     }
 
     .ContainerGeneral {
-        height: 354vh;
+        height: 480vh;
         top: 246vh;
     }
 
@@ -216,6 +234,6 @@
     
     .ContainerGeneralResultados {
         top: 385vh;
-        height: 340vh;
+        height: 465vh;
     }
 }

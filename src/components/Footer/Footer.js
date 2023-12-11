@@ -3,6 +3,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import style from "./Footer.module.css";
 import Image from "next/image";
 import { IconoFace, IconoIg, IconoYt, IconoLnkdn, FooterDelSud } from "@/styles/assets";
@@ -12,6 +13,8 @@ import { flechaModal } from "@/styles/assets";
 export default function Footer() {
 
   const [mobile, setMobile] = useState(false);
+
+  const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -24,7 +27,7 @@ export default function Footer() {
 
 
   return (
-    <div className={style.boxPrincipal}>
+    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`}>
 
       <div className={style.subContainerFooter}>
         <div className={style.ContainerIzqFooter}>
