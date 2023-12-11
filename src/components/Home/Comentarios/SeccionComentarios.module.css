@@ -268,6 +268,7 @@
     .flecha {
         display: flex;
         align-self: flex-start;
+        padding: 15px;
     }
 
     .ContainerSlideCards {
@@ -327,5 +328,29 @@
 
     .ContainerPartners {
         width: auto;
+    }
+}
+
+@media (max-height: 670px) {
+
+    .ContainerGeneralSection {
+        top: 524vh;
+    }
+
+    .ContainerComentarios {
+        height: 245vh;
+    }
+
+    .SeccionPartners {
+        height: 120vh;
+    }
+
+    .flecha {
+        padding: 15px;
+    }
+
+    .ContainerGeneralSectionResultados {
+        top: 509vh;
+        width: -webkit-fill-available;
     }
 }

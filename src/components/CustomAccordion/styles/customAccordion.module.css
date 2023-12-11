@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #F9FAFB;
+    padding: 0px 0px 24px 0px;
+}
+
+.FAQ {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Pregunta {
+    color: #F9FAFB;
+    font-family: Montserrat;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.Respuesta {
+    color: white;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 400;
+    overflow: hidden;
+    line-height: 150%;
+    margin-top: 24px;
+}
+
+.VerRespuesta {
+    color: #A0E838;
+    font-size: 39px;
+    font-family: Montserrat;
+    font-weight: 400;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.containerAnswer {
+    height: 0px;
+    overflow: hidden;
+    object-fit: contain;
+    animation: slideOut .5s ease-in-out;
+    /* margin-top: 12px; */
+}
+
+.containerAnswerOpen {
+    height: auto;
+    animation: slideIn .5s ease-in-out;
+    overflow: visible;
+    /* margin-top: 12px; */
+}
+
+@keyframes slideIn {
+    0% {
+        height: 0px;
+        overflow: hidden;
+    }
+
+    50% {
+        overflow: hidden;
+    }
+
+    100% {
+        overflow: visible;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        height: 70px;
+        overflow: hidden;
+
+    }
+
+    100% {
+        height: 0px;
+    }
+}
+
+@media (max-height: 670px) {
+
+    .ContainerAnswerOpen {
+        height: auto;
+    }
+}

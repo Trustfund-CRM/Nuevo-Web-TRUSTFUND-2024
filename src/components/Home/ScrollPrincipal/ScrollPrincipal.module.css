@@ -165,7 +165,8 @@
     }
 
     .ContainerScrollPrincipal {
-        height: 95vh;
+        /* height: 95vh; */
+        height: 780px;
     }
 
     .ContainerTitle {
@@ -207,7 +208,8 @@
     }
 
     .FotoScrollPrincipal {
-        height: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        height: inherit;
         object-fit: none;
     }
 
@@ -219,4 +221,21 @@
         height: 181vh;
         width: -webkit-fill-available;
     }
+}
+
+@media (max-height: 670px){
+    
+    .ContainerTitle {
+        top: 170px;
+    }
+
+    .ContainerSubFooter {
+        height: 110vh;
+    }
+
+    .ContainerSubFooterCalculador {
+        height: 250vh;
+        width: -webkit-fill-available;
+    }
+
 }
