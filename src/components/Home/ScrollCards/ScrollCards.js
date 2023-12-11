@@ -36,10 +36,10 @@ export default function ScrollCards() {
     },
   ];
 
-    const [translateValue, setTranslateValue] = useState(200);
-    const maxVerticalCoordinate = 1500;
+  const [translateValue, setTranslateValue] = useState(200);
+  const maxVerticalCoordinate = 1500;
 
-    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
+  const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,14 +90,14 @@ export default function ScrollCards() {
     }
   }, []);
 
-    return (
-        <div className={`${resultadoCalc ? style.ContainerGeneralResultados : style.ContainerGeneral}`}>
-            <div className={style.ExtraContainerHeader}>
-                <div className={style.ContainerHeader}>
-                    <div className={style.TextHeader}>Protegemos todas las necesidades
-                        en el proceso de alquiler. </div>
-                </div>
-            </div>
+  return (
+    <div className={`${resultadoCalc ? style.ContainerGeneralResultados : style.ContainerGeneral}`}>
+      <div className={`${resultadoCalc ? style.ExtraContainerHeaderResultados : style.ExtraContainerHeader}`}>
+        <div className={style.ContainerHeader}>
+          <div className={style.TextHeader}>Protegemos todas las necesidades
+            en el proceso de alquiler. </div>
+        </div>
+      </div>
 
       <div id="carousel-container" className={style.ScrollCards}>
         <div id="carousel" className={style.Carrousel}>

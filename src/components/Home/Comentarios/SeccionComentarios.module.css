@@ -7,8 +7,9 @@
 
 .ContainerGeneralSectionResultados {
     position: relative;
-    top: 260vh;
+    top: 130vh;
     background-color: #ffffff;
+    width: 100%;
 }
 
 .ContainerComentarios {
@@ -167,7 +168,7 @@
 }
 
 .SeccionPartners {
-    height: 58vh;
+    height: 84vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

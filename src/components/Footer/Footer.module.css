@@ -9,7 +9,22 @@
     overflow: hidden;
     height: 50vh;
     position: relative;
-    top: 226vh;
+    top: 211vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxPrincipalResultado {
+    width: 100%;
+    background-color: #EAEAEA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 50vh;
+    position: relative;
+    top: 123vh;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -256,6 +271,12 @@
         top: 373vh;
     }
 
+    .boxPrincipalResultado {
+        width: -webkit-fill-available;
+        height: 100vh;
+        top: 373vh;
+    }
+
     .subContainerFooter {
         flex-direction: column;
         width: 85%;
@@ -363,6 +384,11 @@
 @media (max-height: 670px) {
 
     .boxPrincipal {
+        top: 514vh;
+        height: 150vh;
+    }
+
+    .boxPrincipalResultado {
         top: 514vh;
         height: 150vh;
     }
