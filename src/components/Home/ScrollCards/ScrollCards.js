@@ -106,12 +106,15 @@ export default function ScrollCards() {
               <div
                 id={c.id}
                 className={style.Card}
-                // style={{ transform: `translateY(${translateValue}px)` }}
+              // style={{ transform: `translateY(${translateValue}px)` }}
               >
                 <div className={style.TextoCard}>
                   <div className={style.TitleCard}>{c.title}</div>
                   <div className={style.DescripcionCard}>{c.descripcion}</div>
-                  <Image className={style.ImagenCard} src={flechaModalBlue} />
+                  <div className={style.ContainerCardArrow}>
+                    <div className={style.TextCardArrow}>Ver más</div>
+                    <Image className={style.ImagenCard} src={flechaModalBlue} />
+                  </div>
                 </div>
                 <Image className={style.flechaFooterCard} src={c.image} />
               </div>

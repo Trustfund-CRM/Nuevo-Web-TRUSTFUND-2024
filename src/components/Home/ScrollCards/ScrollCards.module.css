@@ -85,7 +85,7 @@
 .Card {
     background-color: #FFFFFF;
     border-radius: 30px;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -127,14 +127,55 @@
     width: 90%;
 }
 
-.ImagenCard {
-    scale: 150%;
+.ContainerCardArrow {
+    cursor: pointer;
+    width: 20%;
     border: 1px solid #004993;
     border-radius: 30px;
-    padding: 10px;
 }
 
-/* .flechaFooterCard {} */
+.ImagenCard {
+    scale: 150%;
+    /* border: 1px solid #004993;
+    border-radius: 30px; */
+    padding: 10px;
+    transition: 1s;
+    position: relative;
+    left: 0px;
+}
+
+.TextCardArrow {
+    display: none;
+    z-index: 1;
+    width: 20%;
+    color: #FFFFFF;
+    font-weight: 500;
+    align-self: center;
+}
+
+.ContainerCardArrow:hover {
+    display: flex;
+    width: 40%;
+    background-color: #004993;
+}
+
+/* .ContainerCardArrow:hover .ContainerCardArrow{
+    cursor: pointer;
+    transition: 0.3s;
+} */
+
+.ContainerCardArrow:hover .ImagenCard {
+    /* left: 30px; */
+    /* background-color: #004993; */
+    padding: 10px 100px 10px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ContainerCardArrow:hover .TextCardArrow {
+    display: flex;
+    width: 21%;
+}
 
 @media (max-width: 500px) {
     .ContainerGeneral {
