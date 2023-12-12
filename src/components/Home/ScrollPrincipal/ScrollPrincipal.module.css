@@ -249,3 +249,22 @@
     }
 
 }
+
+@media (max-width: 321px) {
+    .Text1 {
+        font-size: 40px;
+    }
+
+    .Text2 {
+        font-size: 40px;
+    }
+
+    .subText {
+        width: 290px;
+    }
+
+    .ContainerSubFooterCalculador {
+        height: 275vh;
+        width: -webkit-fill-available;
+    }
+}

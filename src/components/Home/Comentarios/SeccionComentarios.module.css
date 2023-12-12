@@ -315,7 +315,7 @@
     .ContainerTitlePartners {
         width: 80%;
         padding-bottom: 20px;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid #004993;
     }
 
     .ContainerSlidePartners {
@@ -354,4 +354,49 @@
         top: 509vh;
         width: -webkit-fill-available;
     }
+
+    .ContainerTitle {
+        width: 85%;
+    }
+
+    .ContainerSlideCards {
+        width: 100%;
+    }
+
+    .ContainerSlideComentarios {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 321px) {
+
+    .ContainerGeneralSection {
+        top: 494vh;
+    }
+
+    .ContainerGeneralSectionResultados {
+        top: 498vh;
+    }
+
+    .ContainerComentarios {
+        height: 225vh;
+    }
+
+    .Title {
+        font-size: 30px;
+    }
+
+    .TitleComentarios {
+        height: 12%;
+    }
+
+    .SubTextLeft {
+        font-size: 16px;
+    }
+
+    .SubTextRight {
+        font-size: 16px;
+    }
+
 }

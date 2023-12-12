@@ -62,7 +62,17 @@
     align-self: center;
     align-items: center;
     overflow: hidden;
-    /* border: 1px solid red; */
+    overflow-y: scroll;
+}
+
+.ScrollCardsResultados {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
@@ -86,13 +96,13 @@
     scale: none;
 }
 
-.Card:nth-of-type(even) {
+/* .Card:nth-of-type(even) {
     transform: translateY(-65%) scale(0.8, 0.8);
 }
 
 .Card.show {
     transform: translateY(0) scale(0.8, 0.8);
-}
+} */
 
 .TextoCard {
     width: 60%;
@@ -158,6 +168,10 @@
         width: 100%;
     }
 
+    .ScrollCardsResultados {
+        width: 100%;
+    }
+
     .TextHeader {
         width: auto;
         padding: 45px 0px 45px 0px;
@@ -217,6 +231,12 @@
         height: 300vh;
     }
 
+    .ScrollCardsResultados {
+        overflow: unset;
+        overflow-y: unset;
+        height: 300vh;
+    }
+
     .Carrousel {
         justify-content: space-evenly;
         height: 230vh;
@@ -235,5 +255,41 @@
     .ContainerGeneralResultados {
         top: 385vh;
         height: 465vh;
+    }
+}
+
+@media (max-width: 321px) {
+
+    .ContainerGeneral {
+        height: 354vh;
+        top: 246vh;
+    }
+
+    .ContainerGeneralResultados {
+        height: 354vh;
+        top: 415vh;
+    }
+    
+    .ExtraContainerHeader {
+        height: 15%;
+        width: 90%;
+    }
+
+    .ExtraContainerHeaderResultados {
+        height: 15%;
+        width: 90%;
+    }
+    
+    .ScrollCards {
+        height: 265vh;
+    }
+
+    .ScrollCardsResultados {
+        /* height: 253vh; */
+        height: 270vh;
+    }
+
+    .ContainerHeader {
+        font-size: 30px;
     }
 }

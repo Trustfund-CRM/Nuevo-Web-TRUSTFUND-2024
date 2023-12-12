@@ -468,3 +468,17 @@
         margin: 20px 0px 0px 0px;
     }
 }
+
+@media (max-width: 321px) {
+    .subTextCalculador {
+        height: 125px;
+    }
+
+    .ButtonSeleccionar {
+        width: 20%;
+    }
+
+    .ButtonSeleccionado {
+        width: 80%;
+    }
+}

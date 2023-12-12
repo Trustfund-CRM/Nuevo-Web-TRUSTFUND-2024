@@ -62,3 +62,10 @@
     }
     
 }
+
+@media (max-width: 321px) {
+    .containerSlideCalculador {
+        top: 395vh;
+        height: 20vh;
+    }
+}
