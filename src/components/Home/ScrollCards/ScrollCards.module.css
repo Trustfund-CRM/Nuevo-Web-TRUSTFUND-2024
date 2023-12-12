@@ -62,7 +62,17 @@
     align-self: center;
     align-items: center;
     overflow: hidden;
-    /* border: 1px solid red; */
+    overflow-y: scroll;
+}
+
+.ScrollCardsResultados {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
@@ -75,7 +85,7 @@
 .Card {
     background-color: #FFFFFF;
     border-radius: 30px;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -86,13 +96,13 @@
     scale: none;
 }
 
-.Card:nth-of-type(even) {
+/* .Card:nth-of-type(even) {
     transform: translateY(-65%) scale(0.8, 0.8);
 }
 
 .Card.show {
     transform: translateY(0) scale(0.8, 0.8);
-}
+} */
 
 .TextoCard {
     width: 60%;
@@ -117,14 +127,55 @@
     width: 90%;
 }
 
-.ImagenCard {
-    scale: 150%;
+.ContainerCardArrow {
+    cursor: pointer;
+    width: 20%;
     border: 1px solid #004993;
     border-radius: 30px;
-    padding: 10px;
 }
 
-/* .flechaFooterCard {} */
+.ImagenCard {
+    scale: 150%;
+    /* border: 1px solid #004993;
+    border-radius: 30px; */
+    padding: 10px;
+    transition: 1s;
+    position: relative;
+    left: 0px;
+}
+
+.TextCardArrow {
+    display: none;
+    z-index: 1;
+    width: 20%;
+    color: #FFFFFF;
+    font-weight: 500;
+    align-self: center;
+}
+
+.ContainerCardArrow:hover {
+    display: flex;
+    width: 40%;
+    background-color: #004993;
+}
+
+/* .ContainerCardArrow:hover .ContainerCardArrow{
+    cursor: pointer;
+    transition: 0.3s;
+} */
+
+.ContainerCardArrow:hover .ImagenCard {
+    /* left: 30px; */
+    /* background-color: #004993; */
+    padding: 10px 100px 10px 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ContainerCardArrow:hover .TextCardArrow {
+    display: flex;
+    width: 21%;
+}
 
 @media (max-width: 500px) {
     .ContainerGeneral {
@@ -155,6 +206,10 @@
     }
 
     .ScrollCards {
+        width: 100%;
+    }
+
+    .ScrollCardsResultados {
         width: 100%;
     }
 
@@ -217,6 +272,12 @@
         height: 300vh;
     }
 
+    .ScrollCardsResultados {
+        overflow: unset;
+        overflow-y: unset;
+        height: 300vh;
+    }
+
     .Carrousel {
         justify-content: space-evenly;
         height: 230vh;
@@ -235,5 +296,41 @@
     .ContainerGeneralResultados {
         top: 385vh;
         height: 465vh;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .ContainerGeneral {
+        height: 354vh;
+        top: 246vh;
+    }
+
+    .ContainerGeneralResultados {
+        height: 354vh;
+        top: 415vh;
+    }
+    
+    .ExtraContainerHeader {
+        height: 15%;
+        width: 90%;
+    }
+
+    .ExtraContainerHeaderResultados {
+        height: 15%;
+        width: 90%;
+    }
+    
+    .ScrollCards {
+        height: 265vh;
+    }
+
+    .ScrollCardsResultados {
+        /* height: 253vh; */
+        height: 270vh;
+    }
+
+    .ContainerHeader {
+        font-size: 30px;
     }
 }

@@ -264,3 +264,68 @@
         height: 265vh;
     }
 }
+
+@media (max-width: 430px) {
+    .ImageInquilinoProp {
+        margin-top: 0px;
+        scale: 60%;
+        position: relative;
+        right: 45px;
+    }
+
+    .ContainerBottom {
+        width: 91%;
+    }
+
+    .ContainerFAQ {
+        top: 489vh;
+        height: 220vh;
+    }
+
+    .ContainerFAQResultados {
+        top: 493vh;
+        height: 220vh;
+    }
+
+    .TitleFAQ {
+        height: 35vh;
+    }
+
+    .Title {
+        font-size: 30px;
+        border-bottom: 1px solid;
+    }
+
+    .ButtonInqui {
+        font-size: 14px;
+    }
+
+    .ButtonInquiActivo {
+        font-size: 14px;
+    }
+
+    .ButtonProp {
+        font-size: 14px;
+    }
+
+    .ButtonPropActivo {
+        font-size: 14px;
+    }
+
+    .Pregunta {
+        font-size: 21px;
+    }
+
+    .Respuesta {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .ImageInquilinoProp {
+        margin-top: 0px;
+        scale: 60%;
+        position: relative;
+        right: 100px;
+    }
+}

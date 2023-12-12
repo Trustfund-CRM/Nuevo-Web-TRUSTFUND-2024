@@ -202,3 +202,33 @@
         height: 156vh;
     }
 }
+
+@media (max-width: 430px) {
+
+    .ContainerScrollVentajas {
+        top: 600vh;
+        height: 130vh;
+    }
+
+    .ContainerScrollVentajasResultados {
+        top: 769vh;
+        height: 130vh;
+    }
+
+    .ContainerTop {
+        font-size: 30px;
+        width: 91%;
+    }
+
+    .ContainerBottom {
+        width: 91%;
+    }
+
+    .subTextLeft {
+        font-size: 16px;
+    }
+
+    .subTextRight {
+        font-size: 16px;
+    }
+}

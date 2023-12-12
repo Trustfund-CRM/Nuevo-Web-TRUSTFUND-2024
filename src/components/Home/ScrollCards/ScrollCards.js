@@ -36,59 +36,59 @@ export default function ScrollCards() {
     },
   ];
 
-  const [translateValue, setTranslateValue] = useState(200);
-  const maxVerticalCoordinate = 1500;
+  // const [translateValue, setTranslateValue] = useState(200);
+  // const maxVerticalCoordinate = 1500;
 
   const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Update translate value based on scroll position or any other logic
-      if (window.scrollY > 1080 && window.scrollY < maxVerticalCoordinate) {
-        window.addEventListener(
-          "scroll",
-          function (e) {
-            console.log("entra preventDefault");
-            e.preventDefault();
-          },
-          false
-        );
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     // Update translate value based on scroll position or any other logic
+  //     if (window.scrollY > 1080 && window.scrollY < maxVerticalCoordinate) {
+  //       window.addEventListener(
+  //         "scroll",
+  //         function (e) {
+  //           console.log("entra preventDefault");
+  //           e.preventDefault();
+  //         },
+  //         false
+  //       );
 
-        const newTranslateValue = translateValue - window.scrollY * 0.5; // Adjust the multiplier as needed
-        setTranslateValue(newTranslateValue);
-        console.log(newTranslateValue);
+  //       const newTranslateValue = translateValue - window.scrollY * 0.5; // Adjust the multiplier as needed
+  //       setTranslateValue(newTranslateValue);
+  //       console.log(newTranslateValue);
 
-        const scrollY = window.scrollY || window.pageYOffset;
-        console.log(scrollY);
-      }
+  //       const scrollY = window.scrollY || window.pageYOffset;
+  //       console.log(scrollY);
+  //     }
 
-      // Si las coordenadas del scroll exceden el límite, ajusta la posición
+  //     // Si las coordenadas del scroll exceden el límite, ajusta la posición
 
-      if (scrollY > maxVerticalCoordinate) {
-        window.removeEventListener("scroll", handleScroll);
-        window.removeEventListener(
-          "scroll",
-          function (e) {
-            console.log("sale preventDefault");
-            e.preventDefault();
-          },
-          false
-        );
-      }
-    };
+  //     if (scrollY > maxVerticalCoordinate) {
+  //       window.removeEventListener("scroll", handleScroll);
+  //       window.removeEventListener(
+  //         "scroll",
+  //         function (e) {
+  //           console.log("sale preventDefault");
+  //           e.preventDefault();
+  //         },
+  //         false
+  //       );
+  //     }
+  //   };
 
-    const isClient = typeof window !== "undefined";
+  //   const isClient = typeof window !== "undefined";
 
-    if (isClient) {
-      // Add the scroll event listener if running on the client side
-      window.addEventListener("scroll", handleScroll);
+  //   if (isClient) {
+  //     // Add the scroll event listener if running on the client side
+  //     window.addEventListener("scroll", handleScroll);
 
-      // Clean up the event listener on component unmount
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, []);
+  //     // Clean up the event listener on component unmount
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll);
+  //     };
+  //   }
+  // }, []);
 
   return (
     <div className={`${resultadoCalc ? style.ContainerGeneralResultados : style.ContainerGeneral}`}>
@@ -99,19 +99,22 @@ export default function ScrollCards() {
         </div>
       </div>
 
-      <div id="carousel-container" className={style.ScrollCards}>
+      <div id="carousel-container" className={`${resultadoCalc ? style.ScrollCardsResultados : style.ScrollCards}`}>
         <div id="carousel" className={style.Carrousel}>
           {cards?.map((c) => {
             return (
               <div
                 id={c.id}
                 className={style.Card}
-                style={{ transform: `translateY(${translateValue}px)` }}
+              // style={{ transform: `translateY(${translateValue}px)` }}
               >
                 <div className={style.TextoCard}>
                   <div className={style.TitleCard}>{c.title}</div>
                   <div className={style.DescripcionCard}>{c.descripcion}</div>
-                  <Image className={style.ImagenCard} src={flechaModalBlue} />
+                  <div className={style.ContainerCardArrow}>
+                    <div className={style.TextCardArrow}>Ver más</div>
+                    <Image className={style.ImagenCard} src={flechaModalBlue} />
+                  </div>
                 </div>
                 <Image className={style.flechaFooterCard} src={c.image} />
               </div>
