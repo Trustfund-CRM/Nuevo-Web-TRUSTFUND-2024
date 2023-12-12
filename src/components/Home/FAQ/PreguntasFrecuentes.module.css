@@ -265,12 +265,12 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     .ImageInquilinoProp {
         margin-top: 0px;
         scale: 60%;
         position: relative;
-        right: 100px;
+        right: 45px;
     }
 
     .ContainerBottom {
@@ -318,5 +318,14 @@
 
     .Respuesta {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .ImageInquilinoProp {
+        margin-top: 0px;
+        scale: 60%;
+        position: relative;
+        right: 100px;
     }
 }
