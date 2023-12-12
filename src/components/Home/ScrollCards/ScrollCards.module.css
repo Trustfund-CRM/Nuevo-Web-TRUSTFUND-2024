@@ -258,7 +258,7 @@
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 400px) {
 
     .ContainerGeneral {
         height: 354vh;

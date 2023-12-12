@@ -63,7 +63,7 @@
     
 }
 
-@media (max-width: 321px) {
+@media (max-width: 400px) {
     .containerSlideCalculador {
         top: 395vh;
         height: 20vh;

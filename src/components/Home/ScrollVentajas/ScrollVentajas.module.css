@@ -203,7 +203,7 @@
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 400px) {
 
     .ContainerScrollVentajas {
         top: 600vh;
