@@ -6,6 +6,7 @@ import {
   inquilinos,
   propietarios,
   inmobiliarias,
+  flechaModal,
   flechaModalBlue,
 } from "@/styles";
 import { useSelector } from "react-redux";
@@ -35,6 +36,11 @@ export default function ScrollCards() {
       id: "card3",
     },
   ];
+
+  const [mouseOver, setMouseOver] = useState(false);
+  const [imageFlecha1, setImageFlecha1] = useState(flechaModalBlue)
+  const [imageFlecha2, setImageFlecha2] = useState(flechaModalBlue)
+  const [imageFlecha3, setImageFlecha3] = useState(flechaModalBlue)
 
   // const [translateValue, setTranslateValue] = useState(200);
   // const maxVerticalCoordinate = 1500;
@@ -90,6 +96,37 @@ export default function ScrollCards() {
   //   }
   // }, []);
 
+
+  const handleMouseOver = (value) => {
+    setMouseOver(true)
+
+    if (value === 'card1') {
+      setImageFlecha1(flechaModal);
+    }
+    if (value === 'card2') {
+      setImageFlecha2(flechaModal);
+    }
+    if (value === 'card3') {
+      setImageFlecha3(flechaModal);
+    }
+
+  };
+
+  const handleMouseOut = (value) => {
+    setMouseOver(false)
+
+    if (value === 'card1') {
+      setImageFlecha1(flechaModalBlue);
+    }
+    if (value === 'card2') {
+      setImageFlecha2(flechaModalBlue);
+    }
+    if (value === 'card3') {
+      setImageFlecha3(flechaModalBlue);
+    }
+  };
+
+
   return (
     <div className={`${resultadoCalc ? style.ContainerGeneralResultados : style.ContainerGeneral}`}>
       <div className={`${resultadoCalc ? style.ExtraContainerHeaderResultados : style.ExtraContainerHeader}`}>
@@ -106,14 +143,21 @@ export default function ScrollCards() {
               <div
                 id={c.id}
                 className={style.Card}
+                onMouseOver={() => handleMouseOver(c.id)}
+                onMouseOut={() => handleMouseOut(c.id)}
               // style={{ transform: `translateY(${translateValue}px)` }}
               >
                 <div className={style.TextoCard}>
                   <div className={style.TitleCard}>{c.title}</div>
                   <div className={style.DescripcionCard}>{c.descripcion}</div>
                   <div className={style.ContainerCardArrow}>
-                    <div className={style.TextCardArrow}>Ver más</div>
-                    <Image className={style.ImagenCard} src={flechaModalBlue} />
+                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                      <div className={style.TextCardArrow}>Ver</div>
+                      <div className={style.TextCardArrow}>más</div>
+                    </div>
+                    <Image
+                      className={style.ImagenCard}
+                      src={c.id === 'card1' ? imageFlecha1 : c.id === 'card2' ? imageFlecha2 : imageFlecha3} />
                   </div>
                 </div>
                 <Image className={style.flechaFooterCard} src={c.image} />
