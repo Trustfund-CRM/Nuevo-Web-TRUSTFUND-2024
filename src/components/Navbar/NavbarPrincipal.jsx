@@ -16,10 +16,10 @@ import "../../styles/globals.css";
 import { CruzModal } from '@/styles/assets'
 
 
-export default function NavbarPrincipal() {
+export default function NavbarPrincipal({ styleProp }) {
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(!show);
+  const handleShow = () => setShow(!show);
   const [activeNavItem, setActiveNavItem] = useState("");
   const [media, setMedia] = useState()
 
@@ -36,7 +36,7 @@ export default function NavbarPrincipal() {
 
 
   return (
-    <div className={style.navContainer}>
+    <div className={style.navContainer} style={styleProp ? styleProp : null}>
       <Navbar expand="lg" className={style.navbarPrincipal}>
         <Container fluid className={style.container}>
           <Navbar.Brand >
@@ -59,7 +59,7 @@ export default function NavbarPrincipal() {
             className={style.OffCanvasPrincipal}
           >
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
+              <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg" style={{ display: 'none' }}>
                 <Link href="/">
                   <Image
                     className={style.FotoLogoNavbar}
@@ -132,7 +132,7 @@ export default function NavbarPrincipal() {
                           <div className={style.textNav}>NUESTRAS REDES SOCIALES</div>
                           <div style={{ marginTop: "20px" }}>
                             <div className={style2.subBoxRedes}>
-                              <div style={{ columnGap: "20px" }}>
+                              <div style={{ columnGap: "20px", display: 'flex' }}>
                                 <a className={style2.iconRedes} href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F">
                                   <Image style={{ scale: "80%" }} alt="facebook" src={Facebook} />
                                 </a>

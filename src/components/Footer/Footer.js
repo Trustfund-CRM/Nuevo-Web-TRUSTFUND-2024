@@ -10,7 +10,7 @@ import { IconoFace, IconoIg, IconoYt, IconoLnkdn, FooterDelSud } from "@/styles/
 import { Button } from "react-bootstrap";
 import { flechaModal } from "@/styles/assets";
 
-export default function Footer() {
+export default function Footer({ styleProp }) {
 
   const [mobile, setMobile] = useState(false);
 
@@ -27,7 +27,7 @@ export default function Footer() {
 
 
   return (
-    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`}>
+    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`} style={styleProp ? styleProp : null}>
 
       <div className={style.subContainerFooter}>
         <div className={style.ContainerIzqFooter}>
