@@ -3,26 +3,54 @@ import style from "./ScrollVentajas.module.css";
 import { flechaModalBlue } from "@/styles";
 import "./effectLetters.css";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
+
 export default function ScrollVentajas() {
+
   const resultadoCalc = useSelector(
     (state) => state.reducerInfoGarantia.calculador
   );
 
-  const scrollingText = [
-    "con firma electrónica.",
-    // '100% Online.',
-    // 'en menos de 24hs.',
-    // 'con pagos a medida.',
-    // 'personalizada.'
-  ];
+
+  // const [scrollPosition, setScrollPosition] = useState(0);
+
+  // useEffect(() => {
+
+  //   if (typeof window !== 'undefined') {
+
+  //     const handleScroll = () => {
+  //       const currentPosition = window?.scrollY;
+  //       setScrollPosition(currentPosition);
+  //     };
+
+  //     // Attach the scroll event listener
+  //     window?.addEventListener('scroll', handleScroll);
+
+  //     // Clean up the event listener on component unmount
+  //     return () => {
+  //       window?.removeEventListener('scroll', handleScroll);
+  //     };
+  //   }
+
+  // }, []);
+
+  // Define a function to calculate the background color based on scroll position
+  // const calculateBackgroundColor = () => {
+  //   // Your logic to determine the background color based on scroll position
+  //   // For example, you can use conditional statements or a mathematical formula
+  //   // Here, we change the background color based on the scroll position
+  //   const hue = (scrollPosition / window?.innerHeight) * 360;
+  //   return `hsl(${hue}, 50%, 50%)`;
+  // };
 
   return (
     <div
-      className={`${
-        resultadoCalc
-          ? style.ContainerScrollVentajasResultados
-          : style.ContainerScrollVentajas
-      }`}
+      className={`${resultadoCalc
+        ? style.ContainerScrollVentajasResultados
+        : style.ContainerScrollVentajas
+        }`}
+      // style={ `${scrollPosition > 3000 ? { backgroundColor: '#009FBB' } : { backgroundColor: '#FFFFFF' } }`}
     >
       <div className={style.ContainerTop}>
         <div className={style.TitleVentajas}>
