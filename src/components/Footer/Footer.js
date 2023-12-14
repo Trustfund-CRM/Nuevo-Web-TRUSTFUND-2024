@@ -17,7 +17,7 @@ import { Button } from "react-bootstrap";
 import { flechaModal } from "@/styles/assets";
 import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
 
-export default function Footer({ styleProp }) {
+export default function Footer() {
 
   const [mobile, setMobile] = useState(false);
 
@@ -34,7 +34,7 @@ export default function Footer({ styleProp }) {
 
 
   return (
-    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`} style={styleProp ? styleProp : null}>
+    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`}>
 
       <div className={style.subContainerFooter}>
         <div className={style.ContainerIzqFooter}>

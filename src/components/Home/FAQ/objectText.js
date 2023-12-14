@@ -3,22 +3,21 @@ export const QuestionsInqui = [
     question: "¿Cuáles son los requisitos para solicitar la garantía?",
     answer: "Para adquirir tu garantía solo necesitás una foto de frente y dorso de tu DNI y completar el formulario online con los datos solicitados.",
     id: 'question01',
-    height: '75px'
+    styleCustom: '55px'
   },
   {
     question: "¿Pueden no aceptarme la garantía de alquiler?",
     answer:
       "No hay razón para que no acepten la garantía de alquiler Trust Fund ya que es válido en toda la Argentina y está contemplado dentro de la ley de alquileres.",
     id: 'question02',
-    height: '95px'
+    styleCustom: '95px'
   },
   {
     question: "¿Qué es una Garantía Pre-aprobada?",
     answer:
       "La garantía pre-aprobada es un documento descargable, el cual podrás presentar en la inmobiliaria o al propietario del inmueble al momento de alquilar como comprobante de que posees una garantía de alquiler en curso. Esto te permitirá agilizar el contrato de locación en el acto.",
     id: 'question03',
-    height: '95px'
-
+    styleCustom: '95px'
   },
 ];
 

@@ -1,13 +1,12 @@
 .ContainerGeneralSection {
     position: relative;
-    top: 233vh;
     background-color: #ffffff;
     width: 100%;
 }
 
 .ContainerGeneralSectionResultados {
     position: relative;
-    top: 130vh;
+    /* top: 130vh; */
     background-color: #ffffff;
     width: 100%;
 }
@@ -112,7 +111,6 @@
     border-radius: 100%;
     cursor: pointer;
 }
-
 
 .containerAux {
     display: flex;
@@ -223,18 +221,16 @@
 
 .Slider {} */
 
-@media (max-width: 500px) {
+ @media (max-width: 480px) {
     .ContainerGeneralSection {
-        top: 381vh;
     }
 
     .ContainerGeneralSectionResultados {
-        top: 390vh;
         width: -webkit-fill-available;
     }
 
     .ContainerComentarios {
-        height: 160vh;
+        height: 120vh;
     }
 
     .TitleComentarios {
@@ -253,12 +249,13 @@
     }
 
     .ContainerSlideComentarios {
-        width: 80%;
+        width: 90%;
         gap: 50px;
     }
 
     .ContainerSubText {
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
         gap: 0px;
         height: 51%;
@@ -288,8 +285,13 @@
         gap: 33px;
     }
 
+
+    .containerAux {
+        overflow-x: scroll;
+    }
+
     .SlideCards {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .SeccionPartners {
@@ -341,12 +343,12 @@
     .ContainerPartners {
         width: auto;
     }
-}
+} 
 
 @media (max-height: 670px) {
 
     .ContainerGeneralSection {
-        top: 524vh;
+        /* top: 524vh; */
     }
 
     .ContainerComentarios {
@@ -362,7 +364,7 @@
     }
 
     .ContainerGeneralSectionResultados {
-        top: 509vh;
+        /* top: 509vh; */
         width: -webkit-fill-available;
     }
 
@@ -380,46 +382,16 @@
 
 }
 
-@media (max-width: 430px) {
+
+
+@media (max-width: 480px) and (max-height: 800px) {
 
     .ContainerGeneralSection {
-        top: 494vh;
+        /* top: 387vh; */
     }
 
     .ContainerGeneralSectionResultados {
-        top: 498vh;
-    }
-
-    .ContainerComentarios {
-        height: 225vh;
-    }
-
-    .Title {
-        font-size: 30px;
-    }
-
-    .TitleComentarios {
-        height: 12%;
-    }
-
-    .SubTextLeft {
-        font-size: 16px;
-    }
-
-    .SubTextRight {
-        font-size: 16px;
-    }
-
-}
-
-@media (max-width: 430px) and (max-height: 800px) {
-
-    .ContainerGeneralSection {
-        top: 387vh;
-    }
-
-    .ContainerGeneralSectionResultados {
-        top: 397vh;
+        /* top: 397vh; */
     }
 
     .ContainerComentarios {

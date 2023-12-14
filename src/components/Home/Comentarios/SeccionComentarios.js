@@ -10,7 +10,7 @@ export default function SeccionComentarios() {
     return(
         <div className={`${resultadoCalc ? style.ContainerGeneralSectionResultados : style.ContainerGeneralSection}`}>
             <SeccionCards />
-            <SeccionPartners />
+            {/* <SeccionPartners /> */}
         </div>
     )
 }

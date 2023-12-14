@@ -17,15 +17,15 @@ export default function Home() {
 
   return (
 
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%' }}>
       <NavbarPrincipal />
       <ScrollPrincipal />
-      <TextoSlide />
-      <ScrollCards />
+       <TextoSlide />
+       <ScrollCards />
       <ScrollVentajas />
-      <SeccionComentarios />
+       <SeccionComentarios />
       <PreguntasFrecuentes />
-      <ButtonWsp />
+       <ButtonWsp />
       <Footer />
     </div>
 

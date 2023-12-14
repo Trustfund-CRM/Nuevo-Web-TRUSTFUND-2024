@@ -1,15 +1,11 @@
 .ContainerFAQ {
     height: 112vh;
-    position: relative;
-    top: 229vh;
     background-color: #0076B9;
     width: 100%;
 }
 
 .ContainerFAQResultados {
     height: 100vh;
-    position: relative;
-    top: 126vh;
     background-color: #0076B9;
     width: 100%;
 }
@@ -112,54 +108,18 @@
     gap: 24px;
 }
 
-/* 
-.ContainerPregunta {
-    display: flex;
-    justify-content: space-between;
-    height: -webkit-fill-available;
-    padding: 10px;
-    border-bottom: 1px solid #F9FAFB;
-    padding: 25px 0px 25px 0px;
-}
-
-.FAQ {
-    width: 82%;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.Pregunta {
-    color: #F9FAFB;
-    font-size: 31px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.Respuesta {
-    color: white;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.VerRespuesta {
-    color: #A0E838;
-    font-size: 39px;
-    font-family: Montserrat;
-    font-weight: 400;
-} */
-
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .ContainerFAQ {
-        top: 377vh;
-        height: 170vh;
+        height: auto;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .ContainerFAQResultados {
-        top: 386vh;
-        height: 170vh;
+        height: auto;
         overflow: hidden;
         width: -webkit-fill-available;
     }
@@ -170,7 +130,6 @@
 
     .ContainerTitleFAQ {
         width: 85%;
-        /* border-bottom: 1px solid #F9FAFB; */
     }
 
     .Title {
@@ -202,11 +161,14 @@
 
     .ContainerBottom {
         flex-direction: column;
+        align-items: center;
+        /* width: 90%; */
     }
 
     .ContainerPreguntas {
         width: auto;
-        padding-left: 0px;
+        padding: 0;
+        width: 90%;
     }
 
     .ContainerPregunta {
@@ -273,18 +235,15 @@
         right: 45px;
     }
 
-    .ContainerBottom {
+    /* .ContainerBottom {
         width: 91%;
     }
 
     .ContainerFAQ {
-        top: 489vh;
-        height: 220vh;
+        height: auto;
     }
 
     .ContainerFAQResultados {
-        top: 493vh;
-        height: 220vh;
     }
 
     .TitleFAQ {
@@ -318,7 +277,7 @@
 
     .Respuesta {
         font-size: 14px;
-    }
+    } */
 }
 
 @media (max-width: 400px) {

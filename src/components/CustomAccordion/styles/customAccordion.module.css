@@ -54,7 +54,7 @@
 }
 
 .containerAnswerOpen {
-    height: auto;
+    height: var(--additional-height);
     animation: slideIn .5s ease-in-out;
     overflow: visible;
 }
@@ -76,9 +76,8 @@
 
 @keyframes slideOut {
     0% {
-        height: 70px;
+        height: var(--additional-height);
         overflow: hidden;
-
     }
 
     100% {
@@ -86,19 +85,7 @@
     }
 }
 
-@media (max-height: 670px) {
 
-    .ContainerAnswerOpen {
-        height: auto;
-    }
-}
+@media only screen and (max-width: 480px) {
 
-@media (max-width: 430px) {
-    .Pregunta {
-        font-size: 24px;
-    }
-
-    .Respuesta {
-        font-size: 14px;
-    }
 }

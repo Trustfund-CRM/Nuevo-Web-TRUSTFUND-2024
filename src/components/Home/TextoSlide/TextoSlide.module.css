@@ -1,7 +1,8 @@
 .containerSlide {
     height: 15vh;
-    position: absolute;
-    top: 112vh;
+    /* display: flex; */
+    /* position: absolute;
+    top: 112vh; */
     background-color: #FFFFFF;
     overflow: hidden;
     white-space: nowrap;
@@ -10,8 +11,8 @@
 
 .containerSlideCalculador {
     height: 15vh;
-    position: absolute;
-    top: 111vh;
+    /* position: absolute;
+    top: 111vh; */
     background-color: #FFFFFF;
     overflow: hidden;
     white-space: nowrap;

@@ -1,53 +1,28 @@
 import { useState } from "react";
 import styles from "./styles/customAccordion.module.css";
 export const CustomAccordion = ({ object, custom }) => {
-
   const [open, setOpen] = useState(false);
-  const [displayRespuesta, setDisplayRespuesta] = useState('');
 
   const handleSetOpen = () => {
     setOpen(!open);
   };
 
-  const customStyle = {
-    ...custom,
-  };
-
-  const handleDisplayRespuesta = (value) => {
-    console.log(value)
-    if (displayRespuesta !== '') {
-      setDisplayRespuesta('');
-    } else {
-      if (value === 'question01') {
-        setDisplayRespuesta('question01');
-      }
-
-      if (value === 'question02') {
-        setDisplayRespuesta('question02');
-      }
-
-      if (value === 'question03') {
-        setDisplayRespuesta('question03');
-      }
-    }
-    setOpen(!open);
-
-  };
-
   return (
-    <div className={styles.container} style={customStyle} id={object.id}>
+    <div className={styles.container} id={object.id} style={{ '--additional-height' : object.styleCustom}}>
       <div className={styles.FAQ}>
         <div className={styles.Pregunta}>{object.question}</div>
-        <div className={styles.VerRespuesta} onClick={() => handleDisplayRespuesta(object.id)}>
+        <div className={styles.VerRespuesta} onClick={() => handleSetOpen()}>
           {open ? "-" : "+"}
         </div>
       </div>
       <div
-        className={`${displayRespuesta === object.id ? styles.containerAnswerOpen : styles.containerAnswer
-          }`}
+        className={`${
+          open ? styles.containerAnswerOpen : styles.containerAnswer
+        }`}
       >
-        <div className={styles.Respuesta}>{displayRespuesta === object.id ? object.answer : null}</div>
+        <div className={styles.Respuesta}>{object.answer}</div>
       </div>
     </div>
   );
 };
+
