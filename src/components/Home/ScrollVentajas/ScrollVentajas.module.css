@@ -1,25 +1,25 @@
 .ContainerScrollVentajas {
     display: flex;
     flex-direction: column;
-    height: 10vh;
-    position: absolute;
-    top: 227vh;
+    height: 747px;
+    /* position: absolute;
+    top: 227vh; */
     justify-content: space-between;
     background-color: #009FBB;
     width: -webkit-fill-available;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .ContainerScrollVentajasResultados {
     display: flex;
     flex-direction: column;
-    height: 10vh;
-    position: absolute;
-    top: 225vh;
+    height: 747px;
+    /* position: absolute; */
+    /* top: 225vh; */
     justify-content: space-between;
     background-color: #009FBB;
     width: -webkit-fill-available;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .ContainerTop {

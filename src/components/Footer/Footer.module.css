@@ -8,8 +8,8 @@
     align-items: center;
     overflow: hidden;
     height: 50vh;
-    position: relative;
-    top: 211vh;
+    /* position: relative; */
+    /* top: 211vh; */
     flex-direction: column;
     justify-content: space-between;
 }
@@ -23,8 +23,8 @@
     align-items: center;
     overflow: hidden;
     height: 50vh;
-    position: relative;
-    top: 123vh;
+    /* position: relative; */
+    /* top: 123vh; */
     flex-direction: column;
     justify-content: space-between;
 }
