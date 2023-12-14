@@ -31,10 +31,6 @@ export default function NavbarPrincipal({ styleProp }) {
 
   }, []);
 
-
-
-
-
   return (
     <div className={style.navContainer} style={styleProp ? styleProp : null}>
       <Navbar expand="lg" className={style.navbarPrincipal}>
