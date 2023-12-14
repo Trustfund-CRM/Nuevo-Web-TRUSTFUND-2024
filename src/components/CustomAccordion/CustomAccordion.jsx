@@ -7,12 +7,8 @@ export const CustomAccordion = ({ object, custom }) => {
     setOpen(!open);
   };
 
-  const customStyle = {
-    ...custom,
-  };
-
   return (
-    <div className={styles.container} style={customStyle} id={object.id}>
+    <div className={styles.container} id={object.id} style={{ '--additional-height' : object.styleCustom}}>
       <div className={styles.FAQ}>
         <div className={styles.Pregunta}>{object.question}</div>
         <div className={styles.VerRespuesta} onClick={() => handleSetOpen()}>

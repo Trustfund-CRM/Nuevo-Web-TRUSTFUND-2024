@@ -161,12 +161,14 @@
 
     .ContainerBottom {
         flex-direction: column;
+        align-items: center;
         /* width: 90%; */
     }
 
     .ContainerPreguntas {
         width: auto;
-        padding-left: 0px;
+        padding: 0;
+        width: 90%;
     }
 
     .ContainerPregunta {
