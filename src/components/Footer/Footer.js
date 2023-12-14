@@ -6,9 +6,16 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import style from "./Footer.module.css";
 import Image from "next/image";
-import { IconoFace, IconoIg, IconoYt, IconoLnkdn, FooterDelSud } from "@/styles/assets";
+import {
+  IconoFace,
+  IconoIg,
+  IconoYt,
+  IconoLnkdn,
+  FooterDelSud,
+} from "@/styles/assets";
 import { Button } from "react-bootstrap";
 import { flechaModal } from "@/styles/assets";
+import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
 
 export default function Footer({ styleProp }) {
 
@@ -31,8 +38,13 @@ export default function Footer({ styleProp }) {
 
       <div className={style.subContainerFooter}>
         <div className={style.ContainerIzqFooter}>
-          <div className={style.Suscribite}>Suscribite a nuestro newsletter.</div>
-          <Image className={style.imgArrowSuscribite} src={flechaModal} />
+          <div className={style.Suscribite}>
+            Suscribite a nuestro newsletter.
+          </div>
+          <ButtonSlider
+            text={"Ver más"}
+            customBackground={{ background: "#004993", color: "#F9FAFB" }}
+          />
         </div>
 
         <div className={style.ContainerDerFooter}>
@@ -53,7 +65,9 @@ export default function Footer({ styleProp }) {
                 </a>
               </div>
             </div>
-            <Button className={style.buttonSolicitar}>Solicitá tu garantía</Button>
+            <Button className={style.buttonSolicitar}>
+              Solicitá tu garantía
+            </Button>
           </div>
 
           <div className={style.ContainerContacto}>

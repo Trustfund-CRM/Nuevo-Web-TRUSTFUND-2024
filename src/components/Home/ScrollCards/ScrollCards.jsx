@@ -79,3 +79,26 @@ export default function ScrollCards() {
     </div>
   );
 }
+
+{
+  /* <div id="carousel-container" className={style.ScrollCards}>
+        <div id="carousel" className={style.Carrousel}>
+          {cards?.map((c) => {
+            return (
+              <div
+                id={c.id}
+                className={style.Card}
+                style={{ transform: `translateY(${translateValue}px)` }}
+              >
+                <div className={style.TextoCard}>
+                  <div className={style.TitleCard}>{c.title}</div>
+                  <div className={style.DescripcionCard}>{c.descripcion}</div>
+                  <Image className={style.ImagenCard} src={flechaModalBlue} />
+                </div>
+                <Image className={style.flechaFooterCard} src={c.image} />
+              </div>
+            );
+          })}
+        </div>
+      </div> */
+}

@@ -51,14 +51,12 @@
     overflow: hidden;
     object-fit: contain;
     animation: slideOut .5s ease-in-out;
-    /* margin-top: 12px; */
 }
 
 .containerAnswerOpen {
     height: auto;
     animation: slideIn .5s ease-in-out;
     overflow: visible;
-    /* margin-top: 12px; */
 }
 
 @keyframes slideIn {
