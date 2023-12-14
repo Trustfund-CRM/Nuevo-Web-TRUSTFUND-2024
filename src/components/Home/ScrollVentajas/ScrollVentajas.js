@@ -17,9 +17,8 @@ export default function ScrollVentajas() {
 
   return (
     <div
-      className={`${resultadoCalc
-        ? style.ContainerScrollVentajasResultados
-        : style.ContainerScrollVentajas
+      className={`${
+        style.ContainerScrollVentajas
         }`}
       // style={ `${scrollPosition > 3000 ? { backgroundColor: '#009FBB' } : { backgroundColor: '#FFFFFF' } }`}
     >

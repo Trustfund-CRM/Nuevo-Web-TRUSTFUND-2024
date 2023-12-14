@@ -8,7 +8,7 @@ export default function SeccionComentarios() {
     const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
 
     return(
-        <div className={`${resultadoCalc ? style.ContainerGeneralSectionResultados : style.ContainerGeneralSection}`}>
+        <div className={`${style.ContainerGeneralSection}`}>
             <SeccionCards />
             <SeccionPartners />
         </div>

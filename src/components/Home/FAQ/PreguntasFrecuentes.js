@@ -37,9 +37,8 @@ export default function PreguntasFrecuentes() {
 
   return (
     <div
-      className={`${
-        resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ
-      }`}
+      className={`${style.ContainerFAQ
+        }`}
     >
       <div className={style.TitleFAQ}>
         <div style={{ width: "84%" }}>

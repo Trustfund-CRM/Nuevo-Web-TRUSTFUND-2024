@@ -45,11 +45,8 @@ export default function ScrollCards() {
 
   return (
     <div
-      className={`${
-        resultadoCalc
-          ? style.ContainerGeneralResultados
-          : style.ContainerGeneral
-      }`}
+      className={`${style.ContainerGeneral
+        }`}
     >
       <div className={style.ExtraContainerHeader}>
         <div className={style.ContainerHeader}>

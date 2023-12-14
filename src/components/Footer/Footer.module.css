@@ -438,3 +438,14 @@
         align-self: center;
     }
 }
+
+@media (max-width: 330px) {
+    
+    .boxPrincipal {
+        height: 150vh;
+    }
+    
+    .bannerFooter {
+        height: 20vh;
+    }
+}

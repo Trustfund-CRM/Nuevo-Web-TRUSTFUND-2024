@@ -91,3 +91,9 @@
     font-size: 31px;
   }
 }
+
+@media (max-width: 330px) {
+  .wrapper {
+    height: 100px;
+  }
+}
