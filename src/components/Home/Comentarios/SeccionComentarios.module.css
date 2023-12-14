@@ -399,3 +399,9 @@
     }
 
 }
+
+@media (max-width: 330px) {
+    .ContainerSubText {
+        height: 55%;
+    }
+}
