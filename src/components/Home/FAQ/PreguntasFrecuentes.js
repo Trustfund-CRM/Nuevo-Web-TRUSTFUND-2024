@@ -5,7 +5,7 @@ import style from "./PreguntasFrecuentes.module.css";
 import { Button } from "react-bootstrap";
 import { imgInquilinos, imgPropietarios, flechaModalBlue } from "@/styles";
 import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
-import { Questions } from "./objectText";
+import { QuestionsInqui, QuestionsProp } from "./objectText";
 
 export default function PreguntasFrecuentes() {
   const [inquilinosOPropietarios, setInquilinosOPropietarios] =
@@ -36,9 +36,8 @@ export default function PreguntasFrecuentes() {
 
   return (
     <div
-      className={`${
-        resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ
-      }`}
+      className={`${resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ
+        }`}
     >
       <div className={style.TitleFAQ}>
         <div style={{ width: "84%" }}>
@@ -50,21 +49,19 @@ export default function PreguntasFrecuentes() {
         <div className={style.ContainerSubTitle}>
           <div className={style.ButtonsInquiProp}>
             <div
-              className={`${
-                inquilinosOPropietarios === "inquilinos"
-                  ? style.ButtonInquiActivo
-                  : style.ButtonInqui
-              }`}
+              className={`${inquilinosOPropietarios === "inquilinos"
+                ? style.ButtonInquiActivo
+                : style.ButtonInqui
+                }`}
               onClick={() => setInquilinosOPropietarios("inquilinos")}
             >
               Inquilinos
             </div>
             <div
-              className={`${
-                inquilinosOPropietarios === "propietarios"
-                  ? style.ButtonPropActivo
-                  : style.ButtonProp
-              }`}
+              className={`${inquilinosOPropietarios === "propietarios"
+                ? style.ButtonPropActivo
+                : style.ButtonProp
+                }`}
               onClick={() => setInquilinosOPropietarios("propietarios")}
             >
               Propietarios e Inmobiliarias
@@ -76,9 +73,15 @@ export default function PreguntasFrecuentes() {
 
         <div className={style.ContainerBottom}>
           <div className={style.ContainerPreguntas}>
-            {Questions.map((obj) => (
-              <CustomAccordion object={obj} />
-            ))}
+            {inquilinosOPropietarios === 'inquilinos' ?
+              QuestionsInqui.map((obj) => (
+                <CustomAccordion object={obj} />
+              ))
+              :
+              QuestionsProp.map((obj) => (
+                <CustomAccordion object={obj} />
+              ))
+            }
           </div>
 
           {inquilinosOPropietarios === "inquilinos" ? (
