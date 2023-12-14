@@ -61,6 +61,10 @@
     border-right: 1px solid #FFFFFF;
 }
 
+.ButtonInqui:hover {
+    cursor: pointer;
+}
+
 .ButtonInquiActivo {
     color: #F9FAFB;
     font-size: 18px;
@@ -75,6 +79,10 @@
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px;
+}
+
+.ButtonProp:hover {
+    cursor: pointer;
 }
 
 .ButtonPropActivo {
@@ -319,4 +327,64 @@
         right: 65px;
     }
 
+}
+
+@media (max-width: 330px) {
+
+    .ContainerFAQ {
+        top: 383vh;
+        height: -webkit-fill-available;
+    }
+
+    .ContainerFAQResultados {
+        top: 383vh;
+        height: -webkit-fill-available;
+    }
+
+    .TitleFAQ {
+        height: 30vh;
+    }
+
+    .SubTitleFAQ {
+        gap: 50px;
+    }
+
+    .ContainerSubTitle {
+        width: 50%;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .ButtonsInquiProp {
+        margin-top: 20px;
+    }
+
+    .ButtonProp {
+        padding: 15px;
+    }
+
+    .ButtonPropActivo {
+        padding: 15px;
+    }
+
+    .ButtonInqui {
+        padding: 15px 15px 15px 0px;
+    }
+
+    .ButtonInquiActivo {
+        padding: 15px 15px 15px 0px;
+    }
+
+    .ContainerPreguntas {
+        width: 80%;
+    }
+
+    .ContainerBottom {
+        width: 85%;
+    }
+
+    .ImageInquilinoProp {
+        right: -35px;
+        scale: 55%;
+    }
 }

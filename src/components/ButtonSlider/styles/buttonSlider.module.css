@@ -36,3 +36,9 @@
 .buttonSlider:hover .arrow {
     transform: rotate(360deg);
 }
+
+@media (max-width: 330px) {
+    .buttonSlider {
+        align-self: flex-start;
+    }
+}

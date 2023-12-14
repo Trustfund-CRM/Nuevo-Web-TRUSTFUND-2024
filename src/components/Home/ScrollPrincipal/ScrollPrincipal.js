@@ -12,24 +12,24 @@ export default function ScrollPrincipal() {
 
     const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador)
 
-    useEffect(() => {
-        console.log(resultadoCalc)
+    // useEffect(() => {
+    //     console.log(resultadoCalc)
 
-        if (typeof window !== 'undefined') {
+    //     if (typeof window !== 'undefined') {
 
-            if (window?.innerWidth < 1200) {
-                console.log(window?.innerWidth)
-                setCalculador(true)
-            }
-        }
-    }, [resultadoCalc])
+    //         if (window?.innerWidth < 1200) {
+    //             console.log(window?.innerWidth)
+    //             setCalculador(true)
+    //         }
+    //     }
+    // }, [resultadoCalc])
 
     const handleCalculador = () => {
         setCalculador(true)
     }
 
     return (
-        <div className={`${calculador ? style.ExtraContainerScrollPrincipalResultado : style.ExtraContainerScrollPrincipal}`}>
+        <div className={`${style.ExtraContainerScrollPrincipal}`}>
             <div className={style.ContainerScrollPrincipal} >
                 <div className={style.ContainerTitle}>
                     <div className={style.Intro}>Somos Trust Fund</div>
