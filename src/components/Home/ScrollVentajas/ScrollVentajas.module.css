@@ -251,3 +251,9 @@
     }
 
 }
+
+@media (max-width: 1500px) and (max-height: 800px) {
+    .ContainerTitle {
+        width: 920px;
+    }
+}

@@ -25,3 +25,4 @@ export const CustomAccordion = ({ object, custom }) => {
     </div>
   );
 };
+
