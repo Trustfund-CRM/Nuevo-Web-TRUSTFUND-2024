@@ -1,7 +1,7 @@
 .ContainerScrollVentajas {
     display: flex;
     flex-direction: column;
-    height: 747px;
+    height: 100vh;
     /* position: absolute;
     top: 227vh; */
     justify-content: space-between;
@@ -13,7 +13,7 @@
 .ContainerScrollVentajasResultados {
     display: flex;
     flex-direction: column;
-    height: 747px;
+    height: 100vh;
     /* position: absolute; */
     /* top: 225vh; */
     justify-content: space-between;

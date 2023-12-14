@@ -1,7 +1,7 @@
 .ContainerGeneral {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 200vh;
     /* position: absolute;
     top: 127vh; */
     justify-content: space-between;
@@ -80,17 +80,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+    height: -webkit-fill-available;
     gap: 32px;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+    /* overflow-y: scroll; */
+    /* scroll-behavior: smooth; */
     padding: 100px 0px;
 }
 
 .Card {
     background-color: #FFFFFF;
     border-radius: 30px;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

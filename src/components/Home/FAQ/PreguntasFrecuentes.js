@@ -89,11 +89,11 @@ export default function PreguntasFrecuentes() {
             }
           </div>
 
-          {/* {inquilinosOPropietarios === "inquilinos" ? (
+          {inquilinosOPropietarios === "inquilinos" ? (
             <Image className={style.ImageInquilinoProp} src={imgInquilinos} />
           ) : (
             <Image className={style.ImageInquilinoProp} src={imgPropietarios} />
-          )} */}
+          )}
         </div>
       </div>
     </div>
