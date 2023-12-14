@@ -23,13 +23,13 @@ export default function SeccionCards() {
     }
   };
 
-  return (
-    <div className={style.ContainerComentarios}>
-      <div className={style.TitleComentarios}>
-        <div style={{ width: "84%", paddingBottom: "50px" }}>
-          <div className={style.Title}>Que dicen nuestros clientes</div>
-        </div>
-      </div>
+    return (
+        <div className={style.ContainerComentarios}>
+            <div className={style.TitleComentarios}>
+                <div className={style.ContainerTitle}>
+                    <div className={style.Title}>Que dicen nuestros clientes</div>
+                </div>
+            </div>
 
       <div className={style.ContainerSlideComentarios}>
         <div className={style.ContainerSubText}>

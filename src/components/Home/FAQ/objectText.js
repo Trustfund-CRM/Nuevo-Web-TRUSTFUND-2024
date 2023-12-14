@@ -1,6 +1,6 @@
 export const Questions = [
   {
-    question: "¿Cuánto tiempo dura la promocioón?",
+    question: "¿Cuánto tiempo dura la promoción?",
     answer: "La promocioón dura 30 diáas",
     id: 'question01',
     height: '75px'

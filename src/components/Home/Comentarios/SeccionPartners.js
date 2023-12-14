@@ -13,13 +13,14 @@ import {
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 
 export default function SeccionPartners() {
-  return (
-    <div className={style.SeccionPartners}>
-      <div className={style.TitleComentarios}>
-        <div style={{ width: "84%", paddingBottom: "50px" }}>
-          <div className={style.Title}>Nuestros partners</div>
-        </div>
-      </div>
+
+    return (
+        <div className={style.SeccionPartners}>
+            <div className={style.TitleComentarios}>
+                <div style={{ width: '84%', paddingBottom: '50px' }} className={style.ContainerTitlePartners}>
+                    <div className={style.Title}>Nuestros partners</div>
+                </div>
+            </div>
 
       <div className={style.ContainerSlidePartners}>
         <div className={style.ContainerSubText}>

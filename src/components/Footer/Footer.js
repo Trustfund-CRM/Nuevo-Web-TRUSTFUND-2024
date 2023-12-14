@@ -1,6 +1,9 @@
 "use client";
 
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import style from "./Footer.module.css";
 import Image from "next/image";
 import {
@@ -14,9 +17,25 @@ import { Button } from "react-bootstrap";
 import { flechaModal } from "@/styles/assets";
 import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
 
-export default function Footer() {
+export default function Footer({ styleProp }) {
+
+  const [mobile, setMobile] = useState(false);
+
+  const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+
+      if (window?.innerWidth < 1200) {
+        setMobile(true)
+      }
+    }
+  }, [])
+
+
   return (
-    <div className={style.boxPrincipal}>
+    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`} style={styleProp ? styleProp : null}>
+
       <div className={style.subContainerFooter}>
         <div className={style.ContainerIzqFooter}>
           <div className={style.Suscribite}>
@@ -30,47 +49,21 @@ export default function Footer() {
 
         <div className={style.ContainerDerFooter}>
           <div className={style.ContainerRedes}>
-            <div className={style.subContainerRedes}>
-              <a
-                className={style.iconRedes}
-                href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F"
-              >
-                <Image
-                  className={style.FotoRedes}
-                  alt="facebook"
-                  src={IconoFace}
-                />
-              </a>
-              <a
-                className={style.iconRedes}
-                href="https://www.instagram.com/trustfundgarantias/"
-              >
-                <Image
-                  className={style.FotoRedes}
-                  alt="instagram"
-                  src={IconoIg}
-                />
-              </a>
-              <a
-                className={style.iconRedes}
-                href="https://www.youtube.com/@trustfundgarantias9186"
-              >
-                <Image
-                  className={style.FotoRedes}
-                  alt="youtube"
-                  src={IconoYt}
-                />
-              </a>
-              <a
-                className={style.iconRedes}
-                href="https://www.linkedin.com/company/trust-fund-garantias/"
-              >
-                <Image
-                  className={style.FotoRedes}
-                  alt="linkedin"
-                  src={IconoLnkdn}
-                />
-              </a>
+            <div className={style.ExtraSubContainerRedes}>
+              <div className={style.subContainerRedes}>
+                <a className={style.iconRedes} style={mobile ? { scale: '55%' } : { scale: '200%' }} href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F">
+                  <Image className={style.FotoRedes} alt="facebook" src={IconoFace} />
+                </a>
+                <a className={style.iconRedes} href="https://www.instagram.com/trustfundgarantias/">
+                  <Image className={style.FotoRedes} alt="instagram" src={IconoIg} />
+                </a>
+                <a className={style.iconRedes} href="https://www.youtube.com/@trustfundgarantias9186">
+                  <Image className={style.FotoRedes} alt="youtube" src={IconoYt} />
+                </a>
+                <a className={style.iconRedes} href="https://www.linkedin.com/company/trust-fund-garantias/">
+                  <Image className={style.FotoRedes} alt="linkedin" src={IconoLnkdn} />
+                </a>
+              </div>
             </div>
             <Button className={style.buttonSolicitar}>
               Solicitá tu garantía
@@ -94,9 +87,7 @@ export default function Footer() {
       </div>
 
       <div className={style.textoFooter}>
-        Trust Fund 2023©. Todos los derechos reservados. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Duis finibus malesuada eros, et
-        posuere urna porta
+        Trust Fund 2023©. Todos los derechos reservados.
       </div>
 
       <div className={style.bannerFooter}>

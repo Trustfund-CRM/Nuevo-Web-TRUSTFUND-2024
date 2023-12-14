@@ -47,13 +47,7 @@ export default function PreguntasFrecuentes() {
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <div className={style.SubTitleFAQ}>
         <div className={style.ContainerSubTitle}>
           <div className={style.ButtonsInquiProp}>
             <div
