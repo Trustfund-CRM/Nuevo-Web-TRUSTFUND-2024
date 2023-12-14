@@ -37,8 +37,9 @@ export default function PreguntasFrecuentes() {
 
   return (
     <div
-      className={`${resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ
-        }`}
+      className={`${
+        resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ
+      }`}
     >
       <div className={style.TitleFAQ}>
         <div style={{ width: "84%" }}>
@@ -50,19 +51,21 @@ export default function PreguntasFrecuentes() {
         <div className={style.ContainerSubTitle}>
           <div className={style.ButtonsInquiProp}>
             <div
-              className={`${inquilinosOPropietarios === "inquilinos"
-                ? style.ButtonInquiActivo
-                : style.ButtonInqui
-                }`}
+              className={`${
+                inquilinosOPropietarios === "inquilinos"
+                  ? style.ButtonInquiActivo
+                  : style.ButtonInqui
+              }`}
               onClick={() => setInquilinosOPropietarios("inquilinos")}
             >
               Inquilinos
             </div>
             <div
-              className={`${inquilinosOPropietarios === "propietarios"
-                ? style.ButtonPropActivo
-                : style.ButtonProp
-                }`}
+              className={`${
+                inquilinosOPropietarios === "propietarios"
+                  ? style.ButtonPropActivo
+                  : style.ButtonProp
+              }`}
               onClick={() => setInquilinosOPropietarios("propietarios")}
             >
               Propietarios e Inmobiliarias
@@ -71,22 +74,16 @@ export default function PreguntasFrecuentes() {
 
           <ButtonSlider
             text={"Ver más"}
-            customBackground={{'background': '#E6EAEE', 'color': '#004993'}}
+            customBackground={{ background: "#E6EAEE", color: "#004993" }}
             isPrimary={false}
           />
         </div>
 
         <div className={style.ContainerBottom}>
-          <div className={style.ContainerPreguntas}>
-            {inquilinosOPropietarios === 'inquilinos' ?
-              QuestionsInqui.map((obj) => (
-                <CustomAccordion object={obj} />
-              ))
-              :
-              QuestionsProp.map((obj) => (
-                <CustomAccordion object={obj} />
-              ))
-            }
+          <div className={style.ContainerPreguntas} key={inquilinosOPropietarios}>
+            {inquilinosOPropietarios === "inquilinos"
+              ? QuestionsInqui.map((obj) => <CustomAccordion object={obj} />)
+              : QuestionsProp.map((obj) => <CustomAccordion object={obj} />)}
           </div>
 
           {inquilinosOPropietarios === "inquilinos" ? (

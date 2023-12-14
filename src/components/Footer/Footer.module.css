@@ -140,6 +140,7 @@
 .subContainerRedes {
     display: flex;
     width: 35vh;
+    height: 50px;
     justify-content: space-between;
 }
 

@@ -15,35 +15,6 @@ export default function ScrollVentajas() {
 
   // const [scrollPosition, setScrollPosition] = useState(0);
 
-  // useEffect(() => {
-
-  //   if (typeof window !== 'undefined') {
-
-  //     const handleScroll = () => {
-  //       const currentPosition = window?.scrollY;
-  //       setScrollPosition(currentPosition);
-  //     };
-
-  //     // Attach the scroll event listener
-  //     window?.addEventListener('scroll', handleScroll);
-
-  //     // Clean up the event listener on component unmount
-  //     return () => {
-  //       window?.removeEventListener('scroll', handleScroll);
-  //     };
-  //   }
-
-  // }, []);
-
-  // Define a function to calculate the background color based on scroll position
-  // const calculateBackgroundColor = () => {
-  //   // Your logic to determine the background color based on scroll position
-  //   // For example, you can use conditional statements or a mathematical formula
-  //   // Here, we change the background color based on the scroll position
-  //   const hue = (scrollPosition / window?.innerHeight) * 360;
-  //   return `hsl(${hue}, 50%, 50%)`;
-  // };
-
   return (
     <div
       className={`${resultadoCalc

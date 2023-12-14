@@ -45,7 +45,6 @@ export default function SeccionPartners() {
           <div className={style.Title}>Nuestros partners</div>
         </div>
       </div>
-
       <div className={style.ContainerSlidePartners}>
         <div className={style.ContainerSubText}>
           <div className={style.SubTexts}>

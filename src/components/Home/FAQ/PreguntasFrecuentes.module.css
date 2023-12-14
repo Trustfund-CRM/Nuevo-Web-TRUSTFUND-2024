@@ -1,5 +1,5 @@
 .ContainerFAQ {
-    height: 112vh;
+    height: 100vh;
     background-color: #0076B9;
     width: 100%;
 }
@@ -53,12 +53,12 @@
 }
 
 .ButtonInqui {
-    /* color: #F9FAFB; */
     font-size: 18px;
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px 25px 25px 0px;
     border-right: 1px solid #FFFFFF;
+    cursor: pointer;
 }
 
 .ButtonInquiActivo {
@@ -68,6 +68,7 @@
     font-weight: 500;
     padding: 25px 25px 25px 0px;
     border-right: 1px solid #FFFFFF;
+    cursor: pointer;
 }
 
 .ButtonProp {
@@ -75,6 +76,7 @@
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px;
+    cursor: pointer;
 }
 
 .ButtonPropActivo {
@@ -83,6 +85,7 @@
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px;
+    cursor: pointer;
 }
 
 .flechaInquiProp {
@@ -98,6 +101,23 @@
     justify-content: space-between;
 }
 
+@keyframes animationText {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+      }
+      
+      50% {
+        transform: translateX(30px);
+        opacity: 1;
+      }
+      
+      70% {
+        transform: translateX(-10px);
+      }
+}
+
 .ContainerPreguntas {
     display: flex;
     flex-direction: column;
@@ -106,6 +126,8 @@
     padding-left: 7%;
     height: fit-content;
     gap: 24px;
+    animation-name: animationText;
+    animation-duration: 1.5s;
 }
 
 @media (max-width: 480px) {
