@@ -30,7 +30,7 @@
     background-color: #F2F2F2;
     border-radius: 20px;
     width: 1122px;
-    height: 674px;
+    height: 600px;
     display: flex;
     flex-direction: column;
 
@@ -387,16 +387,18 @@
 
 @media (max-width: 500px) {
     .ContainerModalCalculador {
-        left: auto;
-        bottom: auto;
+        /* left: auto; */
+        /* bottom: auto; */
+        position: initial;
         width: -webkit-fill-available;
         height: 650px;
         margin: 40px 15px 15px 15px;
     }
 
     .ContainerModalCalculadorResultado {
-        left: auto;
-        bottom: auto;
+        /* left: auto; */
+        /* bottom: auto; */
+        position: initial;
         width: -webkit-fill-available;
         height: auto;
         margin: 40px 15px 15px 15px;
@@ -466,5 +468,19 @@
         width: 65%;
         padding: 20px 50px 20px 50px;
         margin: 20px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 430px) {
+    .subTextCalculador {
+        height: 125px;
+    }
+
+    .ButtonSeleccionar {
+        width: 20%;
+    }
+
+    .ButtonSeleccionado {
+        width: 80%;
     }
 }

@@ -17,9 +17,16 @@
 
 html,
 body {
-  max-width: 100vw;
-  background-color: #EBEBEB;
+  width: 100vw;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* background-color: #ffffff; */
+  /* display: flex !important;
+  flex-direction: column;
+  align-items: center; */
   margin: 0px !important;
+  text-rendering: optimizeSpeed;
 }
 
 a {

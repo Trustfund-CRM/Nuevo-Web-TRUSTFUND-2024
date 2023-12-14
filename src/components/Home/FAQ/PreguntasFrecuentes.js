@@ -5,7 +5,8 @@ import style from "./PreguntasFrecuentes.module.css";
 import { Button } from "react-bootstrap";
 import { imgInquilinos, imgPropietarios, flechaModalBlue } from "@/styles";
 import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
-import { Questions } from "./objectText";
+import { QuestionsInqui, QuestionsProp } from "./objectText";
+import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 
 export default function PreguntasFrecuentes() {
   const [inquilinosOPropietarios, setInquilinosOPropietarios] =
@@ -36,9 +37,8 @@ export default function PreguntasFrecuentes() {
 
   return (
     <div
-      className={`${
-        resultadoCalc ? style.ContainerFAQResultados : style.ContainerFAQ
-      }`}
+      className={`${style.ContainerFAQ
+        }`}
     >
       <div className={style.TitleFAQ}>
         <div style={{ width: "84%" }}>
@@ -46,13 +46,7 @@ export default function PreguntasFrecuentes() {
         </div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <div className={style.SubTitleFAQ}>
         <div className={style.ContainerSubTitle}>
           <div className={style.ButtonsInquiProp}>
             <div
@@ -77,14 +71,18 @@ export default function PreguntasFrecuentes() {
             </div>
           </div>
 
-          <Image className={style.flechaInquiProp} src={flechaModalBlue} />
+          <ButtonSlider
+            text={"Ver más"}
+            customBackground={{ background: "#E6EAEE", color: "#004993" }}
+            isPrimary={false}
+          />
         </div>
 
         <div className={style.ContainerBottom}>
-          <div className={style.ContainerPreguntas}>
-            {Questions.map((obj) => (
-              <CustomAccordion object={obj} />
-            ))}
+          <div className={style.ContainerPreguntas} key={inquilinosOPropietarios}>
+            {inquilinosOPropietarios === "inquilinos"
+              ? QuestionsInqui.map((obj) => <CustomAccordion object={obj} />)
+              : QuestionsProp.map((obj) => <CustomAccordion object={obj} />)}
           </div>
 
           {inquilinosOPropietarios === "inquilinos" ? (

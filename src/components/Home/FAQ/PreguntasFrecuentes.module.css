@@ -1,16 +1,13 @@
 .ContainerFAQ {
     height: 100vh;
-    position: relative;
-    top: 229vh;
     background-color: #0076B9;
     width: 100%;
 }
 
 .ContainerFAQResultados {
     height: 100vh;
-    position: relative;
-    top: 260vh;
     background-color: #0076B9;
+    width: 100%;
 }
 
 .TitleFAQ {
@@ -20,6 +17,16 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+}
+
+.SubTitleFAQ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContainerTitleFAQ {
+    width: 84%;
 }
 
 .Title {
@@ -46,12 +53,16 @@
 }
 
 .ButtonInqui {
-    /* color: #F9FAFB; */
     font-size: 18px;
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px 25px 25px 0px;
     border-right: 1px solid #FFFFFF;
+    cursor: pointer;
+}
+
+.ButtonInqui:hover {
+    cursor: pointer;
 }
 
 .ButtonInquiActivo {
@@ -61,6 +72,7 @@
     font-weight: 500;
     padding: 25px 25px 25px 0px;
     border-right: 1px solid #FFFFFF;
+    cursor: pointer;
 }
 
 .ButtonProp {
@@ -68,6 +80,11 @@
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px;
+    cursor: pointer;
+}
+
+.ButtonProp:hover {
+    cursor: pointer;
 }
 
 .ButtonPropActivo {
@@ -76,6 +93,7 @@
     font-family: Montserrat;
     font-weight: 500;
     padding: 25px;
+    cursor: pointer;
 }
 
 .flechaInquiProp {
@@ -91,6 +109,23 @@
     justify-content: space-between;
 }
 
+@keyframes animationText {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+      }
+      
+      50% {
+        transform: translateX(30px);
+        opacity: 1;
+      }
+      
+      70% {
+        transform: translateX(-10px);
+      }
+}
+
 .ContainerPreguntas {
     display: flex;
     flex-direction: column;
@@ -99,52 +134,279 @@
     padding-left: 7%;
     height: fit-content;
     gap: 24px;
+    animation-name: animationText;
+    animation-duration: 1.5s;
 }
 
-/* 
-.ContainerPregunta {
-    display: flex;
-    justify-content: space-between;
-    height: -webkit-fill-available;
-    padding: 10px;
-    border-bottom: 1px solid #F9FAFB;
-    padding: 25px 0px 25px 0px;
-}
-
-.FAQ {
-    width: 82%;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.Pregunta {
-    color: #F9FAFB;
-    font-size: 31px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.Respuesta {
-    color: white;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-}
-
-.VerRespuesta {
-    color: #A0E838;
-    font-size: 39px;
-    font-family: Montserrat;
-    font-weight: 400;
-} */
-
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .ContainerFAQ {
-        top: 377vh;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .ContainerFAQResultados {
-        top: 386vh;
+        height: auto;
+        overflow: hidden;
+        width: -webkit-fill-available;
+    }
+
+    .TitleFAQ {
+        border-bottom: none;
+    }
+
+    .ContainerTitleFAQ {
+        width: 85%;
+    }
+
+    .Title {
+        font-size: 36px;
+    }
+
+    .ButtonsInquiProp {
+        margin-top: 40px;
+    }
+
+    .ContainerSubTitle {
+        width: 85%;
+        flex-direction: column;
+        height: 20vh;
+    }
+
+    .ButtonInqui {
+        align-self: center;
+    }
+
+    .ButtonInquiActivo {
+        align-self: center;
+    }
+
+    .flechaInquiProp {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .ContainerBottom {
+        flex-direction: column;
+        align-items: center;
+        /* width: 90%; */
+    }
+
+    .ContainerPreguntas {
+        width: auto;
+        padding: 0;
+        width: 90%;
+    }
+
+    .ContainerPregunta {
+        padding: 25px 0px 25px 0px;
+        width: 85%;
+        align-self: center;
+    }
+
+    .FAQ {
+        width: auto;
+    }
+
+    .Pregunta {
+        font-size: 28px;
+    }
+
+    .Respuesta {
+        width: 85%;
+    }
+
+    .ImageInquilinoProp {
+        margin-top: 50px;
+        scale: 80%;
+    }
+}
+
+@media (max-height: 670px) {
+
+    .ContainerFAQ {
+        top: 519vh;
+        height: 265vh;
+    }
+
+    .TitleFAQ {
+        height: 40vh;
+    }
+
+    .ContainerSubTitle {
+        width: 85%;
+        flex-direction: column;
+        height: 35vh;
+    }
+
+    .ContainerBottom {
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .SubTitleFAQ {
+        gap: 100px;
+    }
+
+    .ContainerFAQResultados {
+        top: 504vh;
+        height: 265vh;
+    }
+}
+
+@media (max-width: 430px) {
+    .ImageInquilinoProp {
+        margin-top: 0px;
+        scale: 60%;
+        position: relative;
+        /* right: 45px; */
+    }
+
+    /* .ContainerBottom {
+        width: 91%;
+    }
+
+    .ContainerFAQ {
+        height: auto;
+    }
+
+    .ContainerFAQResultados {
+    }
+
+    .TitleFAQ {
+        height: 35vh;
+    }
+
+    .Title {
+        font-size: 30px;
+        border-bottom: 1px solid;
+    }
+
+    .ButtonInqui {
+        font-size: 14px;
+    }
+
+    .ButtonInquiActivo {
+        font-size: 14px;
+    }
+
+    .ButtonProp {
+        font-size: 14px;
+    }
+
+    .ButtonPropActivo {
+        font-size: 14px;
+    }
+
+    .Pregunta {
+        font-size: 21px;
+    }
+
+    .Respuesta {
+        font-size: 14px;
+    } */
+}
+
+@media (max-width: 400px) {
+    .ImageInquilinoProp {
+        margin-top: 0px;
+        scale: 60%;
+        position: relative;
+        right: 100px;
+    }
+}
+
+@media (max-width: 430px) and (max-height: 800px) {
+
+    .ContainerFAQ {
+        top: 383vh;
+        height: 175vh;
+    }
+
+    .ContainerFAQResultados {
+        top: 393vh;
+        height: 175vh;
+    }
+
+    .TitleFAQ {
+        height: 30vh;
+    }
+
+    .SubTitleFAQ {
+        gap: 100px;
+    }
+
+    .ContainerSubTitle {
+        width: 85%;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .ImageInquilinoProp {
+        right: 65px;
+    }
+
+}
+
+@media (max-width: 330px) {
+
+    .ContainerFAQ {
+        top: 383vh;
+        height: -webkit-fill-available;
+    }
+
+    .ContainerFAQResultados {
+        top: 383vh;
+        height: -webkit-fill-available;
+    }
+
+    .TitleFAQ {
+        height: 30vh;
+    }
+
+    .SubTitleFAQ {
+        gap: 50px;
+    }
+
+    .ContainerSubTitle {
+        width: 50%;
+        flex-direction: column;
+        height: 30vh;
+    }
+
+    .ButtonsInquiProp {
+        margin-top: 20px;
+    }
+
+    .ButtonProp {
+        padding: 15px;
+    }
+
+    .ButtonPropActivo {
+        padding: 15px;
+    }
+
+    .ButtonInqui {
+        padding: 15px 15px 15px 0px;
+    }
+
+    .ButtonInquiActivo {
+        padding: 15px 15px 15px 0px;
+    }
+
+    .ContainerPreguntas {
+        width: 80%;
+    }
+
+    .ContainerBottom {
+        width: 85%;
+    }
+
+    .ImageInquilinoProp {
+        right: -35px;
+        scale: 55%;
     }
 }

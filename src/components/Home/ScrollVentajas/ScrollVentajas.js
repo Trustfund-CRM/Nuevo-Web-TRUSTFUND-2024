@@ -3,26 +3,24 @@ import style from "./ScrollVentajas.module.css";
 import { flechaModalBlue } from "@/styles";
 import "./effectLetters.css";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { useEffect } from "react";
+
 export default function ScrollVentajas() {
+
   const resultadoCalc = useSelector(
     (state) => state.reducerInfoGarantia.calculador
   );
 
-  const scrollingText = [
-    "con firma electrónica.",
-    // '100% Online.',
-    // 'en menos de 24hs.',
-    // 'con pagos a medida.',
-    // 'personalizada.'
-  ];
+
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   return (
     <div
       className={`${
-        resultadoCalc
-          ? style.ContainerScrollVentajasResultados
-          : style.ContainerScrollVentajas
-      }`}
+        style.ContainerScrollVentajas
+        }`}
+      // style={ `${scrollPosition > 3000 ? { backgroundColor: '#009FBB' } : { backgroundColor: '#FFFFFF' } }`}
     >
       <div className={style.ContainerTop}>
         <div className={style.TitleVentajas}>

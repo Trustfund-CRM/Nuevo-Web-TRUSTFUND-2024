@@ -1,28 +1,32 @@
 .ContainerGeneral {
     display: flex;
     flex-direction: column;
-    height: 10vh;
-    position: absolute;
-    top: 127vh;
+    height: 150vh;
     justify-content: space-between;
     background-color: #f2f5fb;
     width: -webkit-fill-available;
-    height: 100%;
 }
 
 .ContainerGeneralResultados {
     display: flex;
     flex-direction: column;
-    height: 10vh;
-    position: absolute;
-    top: 114vh;
+    /* height: 10vh; */
+    /* position: absolute;
+    top: 125vh; */
     justify-content: space-between;
     background-color: #f2f5fb;
     width: -webkit-fill-available;
-    height: 100%;
+    height: 200vh;
 }
 
 .ExtraContainerHeader {
+    width: 100%;
+    border-bottom: 1px solid #4D4D4D;
+    height: 40%;
+    display: flex;
+}
+
+.ExtraContainerHeaderResultados {
     width: 100%;
     border-bottom: 1px solid #4D4D4D;
     height: 40%;
@@ -55,7 +59,17 @@
     align-self: center;
     align-items: center;
     overflow: hidden;
-    border: 1px solid red;
+    overflow-y: scroll;
+}
+
+.ScrollCardsResultados {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-fill-available;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
@@ -63,35 +77,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: -webkit-fill-available;
+    gap: 16px;
+    margin-top: 60px;
+    /* overflow-y: scroll; */
+    /* scroll-behavior: smooth; */
+    /* padding: 100px 0px; */
 }
 
 .Card {
     background-color: #FFFFFF;
     border-radius: 30px;
     width: 80%;
+    max-width: 1120px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 50px 0px 50px 0px;
-
-    translate: none;
+    /* margin: 50px 0px 50px 0px; */
+    transition: 0.5s;
     rotate: none;
     scale: none;
-}
-
-.Card:nth-of-type(even) {
-    transform: translateY(-65%) scale(0.8, 0.8);
-}
-
-.Card.show {
-    transform: translateY(0) scale(0.8, 0.8);
 }
 
 .TextoCard {
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 32px;
+    /* justify-content: space-between; */
     padding: 50px;
 }
 
@@ -110,23 +123,79 @@
     width: 90%;
 }
 
-.ImagenCard {
-    scale: 150%;
-    border: 1px solid #004993;
-    border-radius: 30px;
+.ContainerCardArrow {
+    cursor: pointer;
+    width: 4%;
     padding: 10px;
 }
 
-/* .flechaFooterCard {} */
+.ImagenCard {
+    scale: 150%;
+    padding: 10px;
+    transition: 0.5s;
+    position: relative;
+    left: 0px;
+    border: 1px solid #004993;
+    border-radius: 30px;
+}
 
-@media (max-width: 500px) {
+.ImagenCardMouseOver {
+    padding: 6px;
+    scale: 100%;
+}
+
+.TextCardArrow {
+    display: none;
+    width: auto;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.Card:hover .ContainerCardArrow {
+    display: flex;
+    width: 22%;
+    border: 1px solid #004993;
+    border-radius: 30px;
+    background-color: #004993;
+    transition: 0.5s;
+    justify-content: space-around;
+}
+
+.Card:hover .ImagenCard {
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+    left: 0px;
+    scale: 120%;
+}
+
+.Card:hover .ImagenCardMouseOver {
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    left: 80px;
+}
+
+.Card:hover .TextCardArrow {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 0px 0px 0px 5px;
+}
+
+@media (max-width: 480px) {
     .ContainerGeneral {
-        top: 205vh;
-        height: 275vh;
+        /* top: 205vh; */
+        /* height: 275vh; */
+        height: auto;
     }
 
     .ContainerGeneralResultados {
-        top: 295vh;
+        /* top: 291vh; */
+        /* height: 279vh; */
+        height: auto;
+
     }
 
     .ContainerHeader {
@@ -140,6 +209,20 @@
         align-self: center;
     }
 
+    .ExtraContainerHeaderResultados {
+        height: 15%;
+        width: 79%;
+        align-self: center;
+    }
+
+    .ScrollCards {
+        width: 100%;
+    }
+
+    .ScrollCardsResultados {
+        width: 100%;
+    }
+
     .TextHeader {
         width: auto;
         padding: 45px 0px 45px 0px;
@@ -147,11 +230,140 @@
 
     .Carrousel {
         justify-content: space-evenly;
-        height: 180vh;
+        height: fit-content;
+        width: -webkit-fill-available;
     }
 
     .Card {
         margin: 25px 0px 25px 0px;
         flex-direction: column;
+        border-radius: 20px;
+        width: 81%;
     }
+
+    .TextoCard {
+        gap: 32px;
+        width: 75%;
+    }
+
+    .TitleCard {
+        font-size: 28px;
+    }
+
+    .flechaFooterCard {
+        width: 350px;
+        height: 38%;
+        display: flex;
+        align-self: center;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .Card:hover .ContainerCardArrow {
+        width: 65%;
+    }
+}
+
+@media (max-height: 670px) {
+
+    .ContainerGeneral {
+        /* top: 246vh; */
+        height: 465vh;
+    }
+
+    .ExtraContainerHeader {
+        height: 12%;
+        width: 90%;
+    }
+
+    .ExtraContainerHeaderResultados {
+        height: 12%;
+        width: 90%;
+    }
+
+    .ScrollCards {
+        overflow: unset;
+        overflow-y: unset;
+        height: 300vh;
+    }
+
+    .ScrollCardsResultados {
+        overflow: unset;
+        overflow-y: unset;
+        height: 300vh;
+    }
+
+    .Carrousel {
+        justify-content: space-evenly;
+        height: 230vh;
+        width: -webkit-fill-available;
+    }
+
+    .ContainerGeneral {
+        height: 480vh;
+        top: 246vh;
+    }
+
+    .flechaFooterCard {
+        width: -webkit-fill-available;
+    }
+
+    .ContainerGeneralResultados {
+        top: 385vh;
+        height: 465vh;
+    }
+}
+
+@media (max-width: 480px) and (max-height: 800px) {
+
+    .ContainerGeneral {
+        /* top: 205vh; */
+        height: 285vh;
+    }
+
+    .Carrousel {
+        height: 250vh;
+    }
+
+    .ScrollCards {
+        height: 315vh;
+    }
+
+    .flechaFooterCard {
+        width: -webkit-fill-available;
+    }
+
+    .ContainerGeneralResultados {
+        height: 285vh;
+        /* top: 335vh; */
+    }
+
+}
+
+@media (max-width: 330px) {
+    .ContainerGeneral {
+        height: 325vh;
+    }
+
+    .ExtraContainerHeader {
+        height: 20%;
+    }
+
+    .Carrousel {
+        height: 255vh;
+        padding: 0px;
+        gap: 0px;
+        justify-content: flex-start;
+    }
+
+    .TextHeader {
+        padding: 0px;
+    }
+
+    .TextoCard {
+        width: 85%;
+        padding: 22px;
+    }
+
+
+
 }

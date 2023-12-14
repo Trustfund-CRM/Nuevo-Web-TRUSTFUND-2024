@@ -8,7 +8,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import style from "./Navbar.module.css";
 import style2 from "../Footer/Footer.module.css"
 import { LogoTrust, Facebook, Instagram, Youtube, Linkedin } from "@/styles/assets";
-import { nuevoLogo } from "@/styles/assets";
+import { nuevoLogo, logoAzul } from "@/styles/assets";
 import Button from "react-bootstrap/Button";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,12 +16,14 @@ import "../../styles/globals.css";
 import { CruzModal } from '@/styles/assets'
 
 
-export default function NavbarPrincipal() {
+export default function NavbarPrincipal({ styleProp }) {
+
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(!show);
+  const handleShow = () => setShow(!show);
   const [activeNavItem, setActiveNavItem] = useState("");
   const [media, setMedia] = useState()
+  const [logo, setLogo] = useState(nuevoLogo);
 
   useEffect(() => {
     setActiveNavItem("");
@@ -31,12 +33,35 @@ export default function NavbarPrincipal() {
 
   }, []);
 
+  useEffect(() => {
+    if (window !== 'undefined') {
+      function handleScroll() {
+        var scrollY = window.scrollY || window.pageYOffset;
 
+        var triggerPosition = 1000;
 
+        if (scrollY > triggerPosition) {
+          document.getElementById('nav-bar').style.backgroundColor = '#D9D9D980';
+          document.getElementById('text-navbar1').style.color = '#1A1A1A';
+          document.getElementById('text-navbar2').style.color = '#1A1A1A';
+          document.getElementById('text-navbar3').style.color = '#1A1A1A';
+          setLogo(logoAzul);
+        } else {
+          document.getElementById('nav-bar').style.backgroundColor = 'rgb(255 255 255 / 0%)';
+          document.getElementById('text-navbar1').style.color = '#FFFFFF';
+          document.getElementById('text-navbar2').style.color = '#FFFFFF';
+          document.getElementById('text-navbar3').style.color = '#FFFFFF';
+          setLogo(nuevoLogo);
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+    }
+  }, [])
 
 
   return (
-    <div className={style.navContainer}>
+    <div id="nav-bar" className={style.navContainer} style={styleProp ? styleProp : null}>
       <Navbar expand="lg" className={style.navbarPrincipal}>
         <Container fluid className={style.container}>
           <Navbar.Brand >
@@ -45,7 +70,7 @@ export default function NavbarPrincipal() {
               <Image
                 className={style.FotoLogoNavbar}
                 alt="logoNavbarTrust"
-                src={nuevoLogo}
+                src={logo}
               />
             </Link>
           </Navbar.Brand>
@@ -59,7 +84,7 @@ export default function NavbarPrincipal() {
             className={style.OffCanvasPrincipal}
           >
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg">
+              <Offcanvas.Title id="offcanvasNavbarLabel-expand-lg" style={{ display: 'none' }}>
                 <Link href="/">
                   <Image
                     className={style.FotoLogoNavbar}
@@ -79,9 +104,9 @@ export default function NavbarPrincipal() {
                   href="/nuestra-garantia"
                   className={`${style.navLink} ${activeNavItem === "nuestra-garantia" ? style.active : ""
                     }`}
-                  onClick={() => { setActiveNavItem("nuestra-garantia"); handleClose() }}
+                  onClick={() => { setActiveNavItem("nuestra-garantia"); media && media.matches && handleClose() }}
                 >
-                  <div className={style.textNav} >
+                  <div id="text-navbar1" style={{ color: '#FFFFFF' }} className={style.textNav} >
                     NUESTRA GARANTÍA
                   </div>
                 </Link>
@@ -91,10 +116,10 @@ export default function NavbarPrincipal() {
                     ? style.active
                     : ""
                     }`}
-                  onClick={() => { setActiveNavItem("inmobiliarias-y-propietarios"); handleClose() }
+                  onClick={() => { setActiveNavItem("inmobiliarias-y-propietarios"); media && media.matches && handleClose() }
                   }
                 >
-                  <div className={style.textNav}>
+                  <div id="text-navbar2" style={{ color: '#FFFFFF' }} className={style.textNav}>
                     INMOBILIARIA Y PROPIETARIOS
                   </div>
                 </Link>
@@ -102,9 +127,9 @@ export default function NavbarPrincipal() {
                   href="/ConsultasYReclamos"
                   className={`${style.navLink} ${activeNavItem === "ConsultasYReclamos" ? style.active : ""
                     }`}
-                  onClick={() => { setActiveNavItem("ConsultasYReclamos"); handleClose() }}
+                  onClick={() => { setActiveNavItem("ConsultasYReclamos"); media && media.matches && handleClose() }}
                 >
-                  <div className={style.textNav}>
+                  <div id="text-navbar3" style={{ color: '#FFFFFF' }} className={style.textNav}>
                     CONSULTAS Y RECLAMOS
                   </div>
                 </Link>
@@ -132,7 +157,7 @@ export default function NavbarPrincipal() {
                           <div className={style.textNav}>NUESTRAS REDES SOCIALES</div>
                           <div style={{ marginTop: "20px" }}>
                             <div className={style2.subBoxRedes}>
-                              <div style={{ columnGap: "20px" }}>
+                              <div style={{ columnGap: "20px", display: 'flex' }}>
                                 <a className={style2.iconRedes} href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F">
                                   <Image style={{ scale: "80%" }} alt="facebook" src={Facebook} />
                                 </a>
