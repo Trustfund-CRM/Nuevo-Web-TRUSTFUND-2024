@@ -1,0 +1,90 @@
+.CardComentario {
+    width: 217px;
+    min-width: 217px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    position: relative;
+    padding: 0px 20px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.content {
+    width: 257px;
+    min-width: 257px;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    background: linear-gradient(0deg, #009FBB -8.03%, #004993 107.68%);
+}
+
+.CardComentario:hover .content {
+    background: linear-gradient(0deg, #009FBB -8.03%, #004993 107.68%);
+    z-index: -1;
+    transition: all .7s cubic-bezier(0.23, 1, 0.320, 1);
+    height: 100%;
+}
+
+.CardComentario:hover .Puntaje {
+    color: #fff;
+}
+
+.CardComentario:hover .Comentario {
+    color: #fff;
+}
+
+.CardComentario:hover .Autor {
+    color: #fff;
+}
+
+.TopCard {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.Calificaciones {
+    display: flex;
+    align-items: center;
+}
+
+.Puntaje {
+    color: #A3A3A3;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.Comentario {
+    color: #4D4D4D;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 700;
+    display: flex;
+    /* width: 75%; */
+    align-self: center;
+    justify-content: flex-start;
+}
+
+.Autor {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    border-top: 1px solid;
+    padding-top: 15px;
+    color: #999;
+}

@@ -31,10 +31,6 @@ export default function NavbarPrincipal() {
 
   }, []);
 
-
-
-
-
   return (
     <div className={style.navContainer}>
       <Navbar expand="lg" className={style.navbarPrincipal}>

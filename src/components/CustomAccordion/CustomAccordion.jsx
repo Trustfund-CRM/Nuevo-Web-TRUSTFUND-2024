@@ -9,12 +9,6 @@ export const CustomAccordion = ({ object, custom }) => {
 
   const customStyle = {
     ...custom,
-    // gap: open ? "32px" : "0px",
-    // height: object.height,
-  };
-
-  const customHeight = {
-    height: object.height,
   };
 
   return (
