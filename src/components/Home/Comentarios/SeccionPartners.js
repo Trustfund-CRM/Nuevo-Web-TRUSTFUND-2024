@@ -1,26 +1,50 @@
 import Image from "next/image";
 import style from "./SeccionComentarios.module.css";
 import {
-  partner1,
-  partner2,
-  partner3,
-  partner4,
   partner5,
   partner6,
-  flechaModal,
   slider,
 } from "@/styles";
+import {Mamberto, OteroRossi, Libera, Yacoub} from '../../../../public/index.js';
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
+import { useState } from "react";
 
 export default function SeccionPartners() {
+  const arrAssets = [
+    Mamberto,
+    OteroRossi,
+    Libera,
+    Yacoub,
+    partner5,
+    partner6,
+  ];
 
-    return (
-        <div className={style.SeccionPartners}>
-            <div className={style.TitleComentarios}>
-                <div style={{ width: '84%', paddingBottom: '50px' }} className={style.ContainerTitlePartners}>
-                    <div className={style.Title}>Nuestros partners</div>
-                </div>
-            </div>
+  const [startIdx, setStartIdx] = useState(0);
+  const cardsPerPage = 3;
+  const gap = 32;
+
+  const handleNextClick = () => {
+    if (startIdx + cardsPerPage < dataCards.length) {
+      setStartIdx(startIdx + 1);
+    }
+  };
+
+  const handlePrevClick = () => {
+    if (startIdx > 0) {
+      setStartIdx(startIdx - 1);
+    }
+  };
+
+  return (
+    <div className={style.SeccionPartners}>
+      <div className={style.TitleComentarios}>
+        <div
+          style={{ width: "84%", paddingBottom: "50px" }}
+          className={style.ContainerTitlePartners}
+        >
+          <div className={style.Title}>Nuestros partners</div>
+        </div>
+      </div>
 
       <div className={style.ContainerSlidePartners}>
         <div className={style.ContainerSubText}>
@@ -40,16 +64,19 @@ export default function SeccionPartners() {
 
         <div className={style.BottomPartners}>
           <div className={style.ContainerPartners}>
-            <Image className={style.Partner} src={partner1} />
-            <Image className={style.Partner} src={partner2} />
-            <Image className={style.Partner} src={partner3} />
-            <Image className={style.Partner} src={partner4} />
-            <Image className={style.Partner} src={partner5} />
-            <Image className={style.Partner} src={partner6} />
+            {arrAssets.map((asset, index) => (
+              <div className={style.contImagePartner}>
+                <Image
+                  src={asset}
+                  alt="img"
+                  key={index}
+                  className={style.imgPartner}
+                />
+              </div>
+            ))}
           </div>
-
           <div className={style.ContainerSlider}>
-            <Image src={slider} />
+            <Image src={slider} alt="img" />
           </div>
         </div>
       </div>
