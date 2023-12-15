@@ -7,6 +7,7 @@ import { imgInquilinos, imgPropietarios, flechaModalBlue } from "@/styles";
 import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
 import { QuestionsInqui, QuestionsProp } from "./objectText";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
+import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 
 export default function PreguntasFrecuentes() {
   const [inquilinosOPropietarios, setInquilinosOPropietarios] =
@@ -36,62 +37,74 @@ export default function PreguntasFrecuentes() {
   };
 
   return (
-    <div
-      className={`${style.ContainerFAQ
-        }`}
-    >
-      <div className={style.TitleFAQ}>
-        <div style={{ width: "84%" }}>
-          <div className={style.Title}>Preguntas frecuentes</div>
+    <div className={`${style.ContainerFAQ}`}>
+      <CustomContainerMaxWidth>
+        <div className={style.TitleFAQ}>
+          <div style={{ width: "84%" }}>
+            <div className={style.Title}>Preguntas frecuentes</div>
+          </div>
+          <div className={style.lineBottom}></div>
         </div>
-      </div>
 
-      <div className={style.SubTitleFAQ}>
-        <div className={style.ContainerSubTitle}>
-          <div className={style.ButtonsInquiProp}>
-            <div
-              className={`${
-                inquilinosOPropietarios === "inquilinos"
-                  ? style.ButtonInquiActivo
-                  : style.ButtonInqui
-              }`}
-              onClick={() => setInquilinosOPropietarios("inquilinos")}
-            >
-              Inquilinos
+        <div className={style.SubTitleFAQ}>
+          <div className={style.ContainerSubTitle}>
+            <div className={style.ButtonsInquiProp}>
+              <div
+                className={`${
+                  inquilinosOPropietarios === "inquilinos"
+                    ? style.ButtonInquiActivo
+                    : style.ButtonInqui
+                }`}
+                onClick={() => setInquilinosOPropietarios("inquilinos")}
+              >
+                Inquilinos
+              </div>
+              <div className={style.line}></div>
+              <div
+                className={`${
+                  inquilinosOPropietarios === "propietarios"
+                    ? style.ButtonPropActivo
+                    : style.ButtonProp
+                }`}
+                onClick={() => setInquilinosOPropietarios("propietarios")}
+              >
+                Propietarios e Inmobiliarias
+              </div>
             </div>
-            <div
-              className={`${
-                inquilinosOPropietarios === "propietarios"
-                  ? style.ButtonPropActivo
-                  : style.ButtonProp
-              }`}
-              onClick={() => setInquilinosOPropietarios("propietarios")}
-            >
-              Propietarios e Inmobiliarias
-            </div>
+
+            <ButtonSlider
+              text={"Ver más"}
+              customBackground={{ background: "#E6EAEE", color: "#004993" }}
+              isPrimary={false}
+            />
           </div>
 
-          <ButtonSlider
-            text={"Ver más"}
-            customBackground={{ background: "#E6EAEE", color: "#004993" }}
-            isPrimary={false}
-          />
-        </div>
+          <div className={style.ContainerBottom}>
+            <div
+              className={style.ContainerPreguntas}
+              key={inquilinosOPropietarios}
+            >
+              {inquilinosOPropietarios === "inquilinos"
+                ? QuestionsInqui.map((obj) => <CustomAccordion object={obj} />)
+                : QuestionsProp.map((obj) => <CustomAccordion object={obj} />)}
+            </div>
 
-        <div className={style.ContainerBottom}>
-          <div className={style.ContainerPreguntas} key={inquilinosOPropietarios}>
-            {inquilinosOPropietarios === "inquilinos"
-              ? QuestionsInqui.map((obj) => <CustomAccordion object={obj} />)
-              : QuestionsProp.map((obj) => <CustomAccordion object={obj} />)}
+            {inquilinosOPropietarios === "inquilinos" ? (
+              <Image
+                className={style.ImageInquilinoProp}
+                src={imgInquilinos}
+                key={"ImgInqui"}
+              />
+            ) : (
+              <Image
+                className={style.ImageInquilinoProp}
+                src={imgPropietarios}
+                key={"ImgProp"}
+              />
+            )}
           </div>
-
-          {inquilinosOPropietarios === "inquilinos" ? (
-            <Image className={style.ImageInquilinoProp} src={imgInquilinos} />
-          ) : (
-            <Image className={style.ImageInquilinoProp} src={imgPropietarios} />
-          )}
         </div>
-      </div>
+      </CustomContainerMaxWidth>
     </div>
   );
 }

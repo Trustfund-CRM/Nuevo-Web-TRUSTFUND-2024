@@ -20,9 +20,6 @@ const inputs = [
     { label: 'Localidad', name: 'Localidad', type: 'text', required: true }
 ];
 
-
-
-
 export default function ObteneTuGrantiaPrincipal() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [modalShow, setModalShow] = useState(false);

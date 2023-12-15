@@ -25,6 +25,7 @@
 }
 
 .FotoScrollPrincipal {
+    height: 100%;
     width: -webkit-fill-available;
     object-fit: cover;
     object-position: center top; 

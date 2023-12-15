@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import style from "../nuestraGarantia.module.css";
-import { Button, Modal } from 'react-bootstrap';
-import '../stylesInputs.css'
+import { Button, Modal } from "react-bootstrap";
+import "../stylesInputs.css";
 //import getGoogleMyBusinessReviews from '../../../pages/api/mi-endpoint';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
-
 
 const swiperData = [
   {
@@ -32,23 +31,11 @@ const swiperData = [
   },
 ];
 
-
-
 export default function SectionTop() {
-
-  // const [reviews, setReviews] = useState([]);
-  // useEffect(() => {
-  //   async function fetchReviews() {
-  //     const fetchedReviews = await getGoogleMyBusinessReviews();
-  //     setReviews(fetchedReviews);
-  //   }
-  //   fetchReviews();
-  // }, []);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
 
   const swiperSlides = swiperData.map((data, index) => (
     <SwiperSlide key={index} className={style.SwiperSlide}>
@@ -79,18 +66,17 @@ export default function SectionTop() {
   ));
 
   const handleDownloadPDF = () => {
+    const pdfURL =
+      "/TRUST FUND  cuotas vivienda - sin co - solicitante.docx.pdf";
 
-    const pdfURL = '/TRUST FUND  cuotas vivienda - sin co - solicitante.docx.pdf';
-
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = pdfURL;
 
-    link.download = 'TRUST FUND  cuotas vivienda - sin co - solicitante.docx.pdf';
+    link.download =
+      "TRUST FUND  cuotas vivienda - sin co - solicitante.docx.pdf";
 
-    link.dispatchEvent(new MouseEvent('click'));
+    link.dispatchEvent(new MouseEvent("click"));
   };
-
-
 
   return (
     <div className={style.containerPrincipalGarantia}>
@@ -98,23 +84,34 @@ export default function SectionTop() {
         <div className={style.BoxComentsGoogle}>
           <div className={style.Box1}>
             <p className={style.ParrafoGarantia}>
-              Trust Fund <b>financia tu garantía</b> y los <b>gastos de ingreso</b> de manera rápida y sencilla,
-              con el objetivo de agilizar el proceso que conlleva alquilar una propiedad.
-              Los inquilinos que la soliciten, no tienen la necesidad de contar con una
-              garantía propietaria tradicional.
+              Trust Fund <b>financia tu garantía</b> y los{" "}
+              <b>gastos de ingreso</b> de manera rápida y sencilla, con el
+              objetivo de agilizar el proceso que conlleva alquilar una
+              propiedad. Los inquilinos que la soliciten, no tienen la necesidad
+              de contar con una garantía propietaria tradicional.
             </p>
             <div className={style.BoxButtons}>
               <div>
-                <Button href='/' className={style.ButtonAzul} >OBTENÉ TU GARANTÍA </Button>
+                <Button href="/" className={style.ButtonAzul}>
+                  OBTENÉ TU GARANTÍA{" "}
+                </Button>
               </div>
               <div>
-                <Button className={style.ButtonBorder} variant="outline-primary" onClick={handleDownloadPDF} >VER MODELO DE CONTRATO</Button>
+                <Button
+                  className={style.ButtonBorder}
+                  variant="outline-primary"
+                  onClick={handleDownloadPDF}
+                >
+                  VER MODELO DE CONTRATO
+                </Button>
               </div>
             </div>
           </div>
           <div className={style.Box2}>
             <div className={style.Box2Titulo}>
-              <p className={style.TituloComents}>Conocé la opinión de nuestros clientes</p>
+              <p className={style.TituloComents}>
+                Conocé la opinión de nuestros clientes
+              </p>
             </div>
             <Swiper
               spaceBetween={30}
@@ -126,24 +123,14 @@ export default function SectionTop() {
               pagination={{
                 clickable: true,
               }}
-              modules={[Autoplay, Pagination,]}
+              modules={[Autoplay, Pagination]}
               className={style.Swiper}
             >
               {swiperSlides}
             </Swiper>
-
           </div>
         </div>
       </div>
     </div>
-    //   <div>
-    //   {reviews.map((review) => (
-    //     <div key={review.reviewId}>
-    //       <h4>{review.reviewer.displayName}</h4>
-    //       <p>Rating: {review.starRating}</p>
-    //       <p>{review.comment}</p>
-    //     </div>
-    //   ))}
-    // </div>
-  )
+  );
 }

@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     border-bottom: 1px solid #F9FAFB;
+    width: 100%;
+    max-width: 640px;
     padding: 0px 0px 24px 0px;
 }
 
@@ -89,12 +91,12 @@
 @media only screen and (max-width: 480px) {
     .containerAnswerOpen {
         height: auto;
-        width: 75%;
+        width: 100%;
         align-self: center;
     }
 
     .FAQ {
-        width: 75%;
+        width: 100%;
         align-self: center;
     }
 
