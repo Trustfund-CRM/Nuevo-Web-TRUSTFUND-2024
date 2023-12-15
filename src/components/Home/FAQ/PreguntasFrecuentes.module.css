@@ -267,20 +267,20 @@
 
 @media (max-height: 670px) {
 
-    .ContainerFAQ {
+    /* .ContainerFAQ {
         top: 519vh;
         height: 265vh;
-    }
+    } */
 
     .TitleFAQ {
         height: 40vh;
     }
 
-    .ContainerSubTitle {
+    /* .ContainerSubTitle {
         width: 85%;
         flex-direction: column;
         height: 35vh;
-    }
+    } */
 
     .ContainerBottom {
         width: 85%;
@@ -402,3 +402,26 @@
         scale: 55%;
     }
 }
+
+@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
+
+    .ContainerComentarios {
+        height: 100vh;
+    }
+
+    .ContainerBottom {
+        width: 100%;
+        flex-direction: row;
+        height: 35vh;
+    }
+
+    .ContainerFAQ {
+        height: 190vh;
+    }
+
+    .ContainerSubTitle{
+        margin-top: 50px;
+    }
+  
+  }
+  

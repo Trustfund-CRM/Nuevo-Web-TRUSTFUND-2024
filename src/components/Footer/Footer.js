@@ -14,28 +14,25 @@ import {
   FooterDelSud,
 } from "@/styles/assets";
 import { Button } from "react-bootstrap";
-import { flechaModal } from "@/styles/assets";
 import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
 
 export default function Footer() {
-
   const [mobile, setMobile] = useState(false);
 
-  const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador);
+  const resultadoCalc = useSelector(
+    (state) => state.reducerInfoGarantia.calculador
+  );
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-
+    if (typeof window !== "undefined") {
       if (window?.innerWidth < 1200) {
-        setMobile(true)
+        setMobile(true);
       }
     }
-  }, [])
-
+  }, []);
 
   return (
-    <div className={`${resultadoCalc ? style.boxPrincipalResultado : style.boxPrincipal}`}>
-
+    <div className={`${style.boxPrincipal}`}>
       <div className={style.subContainerFooter}>
         <div className={style.ContainerIzqFooter}>
           <div className={style.Suscribite}>
@@ -51,17 +48,46 @@ export default function Footer() {
           <div className={style.ContainerRedes}>
             <div className={style.ExtraSubContainerRedes}>
               <div className={style.subContainerRedes}>
-                <a className={style.iconRedes} style={mobile ? { scale: '55%' } : { scale: '200%' }} href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F">
-                  <Image className={style.FotoRedes} alt="facebook" src={IconoFace} />
+                <a
+                  className={style.iconRedes}
+                  style={mobile ? { scale: "55%" } : { scale: "200%" }}
+                  href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F"
+                >
+                  <Image
+                    className={style.FotoRedes}
+                    alt="facebook"
+                    src={IconoFace}
+                  />
                 </a>
-                <a className={style.iconRedes} href="https://www.instagram.com/trustfundgarantias/">
-                  <Image className={style.FotoRedes} alt="instagram" src={IconoIg} />
+                <a
+                  className={style.iconRedes}
+                  href="https://www.instagram.com/trustfundgarantias/"
+                >
+                  <Image
+                    className={style.FotoRedes}
+                    alt="instagram"
+                    src={IconoIg}
+                  />
                 </a>
-                <a className={style.iconRedes} href="https://www.youtube.com/@trustfundgarantias9186">
-                  <Image className={style.FotoRedes} alt="youtube" src={IconoYt} />
+                <a
+                  className={style.iconRedes}
+                  href="https://www.youtube.com/@trustfundgarantias9186"
+                >
+                  <Image
+                    className={style.FotoRedes}
+                    alt="youtube"
+                    src={IconoYt}
+                  />
                 </a>
-                <a className={style.iconRedes} href="https://www.linkedin.com/company/trust-fund-garantias/">
-                  <Image className={style.FotoRedes} alt="linkedin" src={IconoLnkdn} />
+                <a
+                  className={style.iconRedes}
+                  href="https://www.linkedin.com/company/trust-fund-garantias/"
+                >
+                  <Image
+                    className={style.FotoRedes}
+                    alt="linkedin"
+                    src={IconoLnkdn}
+                  />
                 </a>
               </div>
             </div>

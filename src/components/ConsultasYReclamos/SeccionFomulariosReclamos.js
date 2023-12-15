@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import style from "../../components/nuestraGrantia/nuestraGarantia.module.css";
 import { Accordion } from 'react-bootstrap';

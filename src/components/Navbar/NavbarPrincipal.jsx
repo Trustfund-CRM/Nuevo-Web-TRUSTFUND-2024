@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import style from "./Navbar.module.css";
 
-import { nuevoLogo, logoAzul } from "@/styles/assets";
+import { nuevoLogo } from "@/styles/assets";
 import Image from "next/image";
 import Link from "next/link";
 import "../../styles/globals.css";
@@ -17,7 +17,7 @@ import { usePathname } from "next/navigation";
 
 export default function NavbarPrincipal({ styleProp }) {
   const path = usePathname();
-  console.log('pathname', path)
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(!show);
   const handleShow = () => setShow(!show);
@@ -85,26 +85,26 @@ export default function NavbarPrincipal({ styleProp }) {
               <Nav
                 activeKey="/nuestra-garantia"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                className={`justify-content-end flex-grow-1 pe-3 ${style.subNavLinks}`}
+                className={`justify-content-between flex-grow-1 pe-3 ${style.subNavLinks}`}
               >
-                {DataNav.map((item) => (
-                  <Link
-                    href={item.url}
-                    onClick={() => {
-                      setActiveNavItem(item.action);
-                      media && media.matches && handleClose();
-                    }}
-                    className={`${
-                        path === item.url ? 
-                        style.newLinkActive : 
-                        style.newLink
+                <div className={style.contLinks}>
+                  {DataNav.map((item) => (
+                    <Link
+                      href={item.url}
+                      onClick={() => {
+                        setActiveNavItem(item.action);
+                        media && media.matches && handleClose();
+                      }}
+                      className={`${
+                        path === item.url ? style.newLinkActive : style.newLink
                       }
-                    `}
-                    key={item.name} 
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                      `}
+                      key={item.name}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
                 <MediaItems media={media} />
               </Nav>
             </Offcanvas.Body>
