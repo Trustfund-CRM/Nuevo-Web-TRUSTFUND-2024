@@ -1,6 +1,14 @@
-/* :global {
-    @import 'animate.css';
-} */
+@keyframes modal-animation {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .ContainerModalCalculador {
     background-color: #F2F2F2;
@@ -9,8 +17,7 @@
     height: 351px;
     display: flex;
     flex-direction: column;
-
-    animation: slideInUp 1s ease-in-out;
+    animation: modal-animation 0.3s ease-in-out;
     justify-content: space-around;
     position: absolute;
     z-index: 99;

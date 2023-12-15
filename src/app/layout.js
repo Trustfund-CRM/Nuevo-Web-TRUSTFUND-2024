@@ -119,10 +119,11 @@ export default function RootLayout({ children }) {
         `}
         </Script>
         <body>
-
+          <NavbarPrincipal />
           
           {children}
-      
+
+          <Footer/> 
         </body>
       </html>
     </Provider>
