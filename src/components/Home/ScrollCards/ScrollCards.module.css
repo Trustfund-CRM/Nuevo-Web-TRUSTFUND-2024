@@ -1,11 +1,11 @@
 .ContainerGeneral {
   display: flex;
+  align-items: center;
   flex-direction: column;
   height: 150vh;
-  justify-content: space-between;
-  align-items: center;
   background-color: #f2f5fb;
   width: -webkit-fill-available;
+  justify-content: space-between;
 }
 
 .ExtraContainerHeader {
@@ -13,7 +13,7 @@
   width: 100%;
   height: auto;
   padding: 120px 0px 50px 0px;
-  border-bottom: 1px solid #4d4d4d;
+  position: relative;
 }
 
 .TextHeader {
@@ -71,14 +71,24 @@
 .Card {
   background-color: #ffffff;
   border-radius: 30px;
-  width: 80%;
+  width: 100%;
   max-width: 1120px;
+  max-height: 297px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: 0.5s;
   rotate: none;
   scale: none;
+  transition: all 0.5s;
+}
+
+.Card:hover {
+  box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.3);
+  transform: scale(8.1); /* Ajusté la escala para agrandar un poco */
+  max-width: 1130px;
+  max-height: 307px;
+
 }
 
 .TextoCard {
@@ -103,7 +113,8 @@
   line-height: 19.60px;
   font-family: Montserrat;
   font-weight: 400;
-  width: 90%;
+  width: 100%;
+  max-width: 538px;
 }
 
 .ContainerCardArrow {
@@ -275,6 +286,7 @@
     margin: 25px 0px 25px 0px;
     flex-direction: column;
     border-radius: 20px;
+    max-height: 450px;
     width: 81%;
   }
 

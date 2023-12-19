@@ -4,7 +4,7 @@ import style from "./SeccionComentarios.module.css";
 import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 
-export default function SeccionComentarios() {
+export default function  SeccionComentarios() {
   const resultadoCalc = useSelector(
     (state) => state.reducerInfoGarantia.calculador
   );

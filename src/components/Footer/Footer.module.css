@@ -419,16 +419,17 @@
     }
 }
 
-@media (max-width: 430px) {
-
+@media (max-width: 430px) { 
     .boxPrincipal {
-        top: 484vh;
-        height: 150vh;
+        height: 120vh;
     }
 
     .boxPrincipalResultado {
-        top: 484vh;
         height: 150vh;
+    }
+
+    .ContainerIzqFooter {
+        height: 20vh;
     }
 }
 

@@ -12,7 +12,6 @@ import ScrollVentajas from "@/components/Home/ScrollVentajas/ScrollVentajas";
 import TextoSlide from "@/components/Home/TextoSlide/TextoSlide";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
 
-
 export default function Home() {
   const [mobile, setMobile] = useState(false);
   const [calculador, setCalculador] = useState(false);
@@ -35,7 +34,12 @@ export default function Home() {
       }}
     >
       <ScrollPrincipal />
-      {mobile && <ModalCalculador setCalculador={setCalculador} calculador={calculador} />}
+      {mobile && (
+        <ModalCalculador
+          setCalculador={setCalculador}
+          calculador={calculador}
+        />
+      )}
       <TextoSlide />
       <ScrollCards />
       <ScrollVentajas />
