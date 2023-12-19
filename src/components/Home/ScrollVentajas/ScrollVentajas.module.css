@@ -154,7 +154,8 @@
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
   .ContainerScrollVentajas {
-    height: 774px;
+    /* height: 774px; */
+    height: -webkit-fill-available;
   }
 
   .ContainerTop {
@@ -175,6 +176,7 @@
     width: 80%;
     align-self: center;
     margin-top: 47px;
+    padding-bottom: 150px;
   }
 
   .subContainerBottom {
