@@ -4,6 +4,7 @@ import "./effectLetters.css";
 import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
+import { CustomLine } from "@/components/CustomLine/CustomLine";
 
 export default function ScrollVentajas() {
   const resultadoCalc = useSelector(
@@ -17,6 +18,7 @@ export default function ScrollVentajas() {
           <div className={style.TitleVentajas}>
             Ventajas de utilizar Trust Fund
           </div>
+          <CustomLine color={"#d3d5da"} custom={{ bottom: "0px" }} />
         </div>
 
         <div className={style.ContainerBottom}>

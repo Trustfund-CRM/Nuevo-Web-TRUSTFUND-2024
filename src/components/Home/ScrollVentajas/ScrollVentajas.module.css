@@ -5,26 +5,26 @@
   height: 747px;
   background-color: #009fbb;
   width: -webkit-fill-available;
+  position: relative;
 }
 
 .ContainerTop {
-  color: #d3d5da;
-  font-size: 49px;
-  font-family: Montserrat;
-  font-weight: 500;
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-bottom: 1px solid #d3d5da;
+  flex-direction: column;
+  width: 100%;
   margin-top: 190px;
+  gap: 50px;
+  position: relative;
 }
 
 .TitleVentajas {
+  font-size: 49px;
+  font-family: Montserrat;
+  font-weight: 500;
   display: flex;
-  align-self: flex-end;
-  margin-bottom: 50px;
-  width: 82%;
+  align-items: center;
+  color: #d3d5da;
+  padding-bottom: 50px;
 }
 
 .ContainerBottom {
@@ -121,7 +121,10 @@
     margin-top: 100px;
   }
 
-  .ContainerBottom, .subContainerBottom, .subTitle, .ContainerScrollingText {
+  .ContainerBottom,
+  .subContainerBottom,
+  .subTitle,
+  .ContainerScrollingText {
     flex-direction: column;
     width: -webkit-fill-available;
   }
