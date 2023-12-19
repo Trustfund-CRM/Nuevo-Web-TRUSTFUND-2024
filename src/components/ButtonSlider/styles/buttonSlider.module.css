@@ -10,7 +10,7 @@
 }
 
 .buttonSlider:hover {
-    width: 120px;
+    width: 140px;
     justify-content: center;
     gap: 15px;
     padding: 0px 20px;
@@ -24,7 +24,7 @@
 
 .buttonSlider:hover .buttonTxt {
     display: flex;
-    width: 75px;
+    width: 100px;
     overflow: hidden;
 }
 
