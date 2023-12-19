@@ -1,25 +1,24 @@
-.navbarPrincipal{
-    background-color: transparent;
-    height: 10vh !important;
-    padding: 0px !important;
-    z-index: 999;
-    width: 75%;
-}
-.navContainer{
+.navContainer {
     display: flex;
     justify-content: center;
     position: fixed;
     z-index: 999999;
     width: -webkit-fill-available;
-    background-color: rgb(255 255 255 / 0%);
-    backdrop-filter: blur(10px);
-
 }
+
+.navbarPrincipal {
+    background-color: rgb(0, 73, 147, 0.8);
+    height: 100px;
+    padding: 0px 160px;
+    z-index: 999;
+    width: 100%;
+}
+
 .FotoLogoNavbar {
     scale: 130%;
 }
-.navLink{
-    color: white !important;
+
+.navLink {
     font-weight: 500;
     font-size: 14px;
     height: 100%;
@@ -32,87 +31,143 @@
     transition: 0.3s;
     text-align: -webkit-center;
 }
-.navLink:hover{
-    background-color: #7FA4C8;
+
+.textNav:hover .textNav {
+    color: #A0E838;
 }
-.subNavLinks{
+
+.subNavLinks {
     column-gap: 20px !important;
     height: 94px !important;
     align-items: center;
+    width: 100%;
     z-index: 2;
 }
-.container{
-    /* width: 90% !important; */
+
+.newLink {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0px 12px;
+    color: white;
+}
+
+.newLinkActive {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 0px 12px;
+    color: #A0E838;
+}
+
+.newLink.active {
+    color: #A0E838;
+}
+
+.newLink:hover {
+    color: #A0E838;
+}
+
+.contLinks {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.container {
     height: 100% !important;
     padding: 0px !important;
 }
 
 .active {
-  background-color: #7FA4C8;
+    color: #A0E838;
 }
-.BoxButtonCrm{
+
+.BoxButtonCrm {
     width: 170px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.buttonCrm{
+
+.buttonCrm {
     border-radius: 20px !important;
     padding: 10px 20px;
     border: 1px solid white;
     color: white;
     font-size: 14px;
 }
-.buttonCrm:hover{
+
+.buttonCrm:hover {
     background-color: #7FA4C8;
     border-color: #004994;
 }
-.OffCanvasPrincipal{
+
+.OffCanvasPrincipal {
     background-color: #004994 !important;
 }
 
 
 @media (min-width:768px) {
-    .navbarPrincipal{
-        height: 15vh !important;
-    }
-    .subNavLinks{
+    .subNavLinks {
         height: 85px !important;
         width: 100px !important;
-     }
+    }
 }
 
 @media (max-width: 991px) {
-    .navbarPrincipal{
-        height: auto !important;
+    .navbarPrincipal {
+        height: 65px;
+        padding: 0px 12px;
     }
-    .FotoLogoNavbar{
+
+    .toggleNav {
+        padding: 0;
+    }
+
+    .newLink {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+
+    .contLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .FotoLogoNavbar {
         width: 160px;
         height: auto;
         scale: 100%;
     }
-    .subNavLinks{
+
+    .subNavLinks {
         height: 400px !important;
         padding-left: 20px;
         row-gap: 15px;
         margin-top: 20px;
-     }
-     .BoxButtonCrm{
+    }
+
+    .BoxButtonCrm {
         width: 250px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         position: absolute;
-     }
-     .navLink{
+    }
+
+    .navLink {
         justify-content: center;
         width: -webkit-fill-available;
         align-items: center;
-     }
-     .textNav{
+    }
+
+    .textNav {
         text-align: center;
         color: #fff;
-     }
+    }
 }
 
 @media (max-height: 765px) and (max-width: 992) {

@@ -1,23 +1,19 @@
 import Image from "next/image";
 import style from "./SeccionComentarios.module.css";
+import { partner5, partner6, slider } from "@/styles";
 import {
-  partner5,
-  partner6,
-  slider,
-} from "@/styles";
-import {Mamberto, OteroRossi, Libera, Yacoub} from '../../../../public/index.js';
+  Mamberto,
+  OteroRossi,
+  Libera,
+  Yacoub,
+} from "../../../../public/index.js";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { useState } from "react";
+import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { CustomLine } from "@/components/CustomLine/CustomLine";
 
 export default function SeccionPartners() {
-  const arrAssets = [
-    Mamberto,
-    OteroRossi,
-    Libera,
-    Yacoub,
-    partner5,
-    partner6,
-  ];
+  const arrAssets = [Mamberto, OteroRossi, Libera, Yacoub, partner5, partner6];
 
   const [startIdx, setStartIdx] = useState(0);
   const cardsPerPage = 3;
@@ -44,6 +40,7 @@ export default function SeccionPartners() {
         >
           <div className={style.Title}>Nuestros partners</div>
         </div>
+        <CustomLine color={'#004993'} />
       </div>
       <div className={style.ContainerSlidePartners}>
         <div className={style.ContainerSubText}>
@@ -74,9 +71,9 @@ export default function SeccionPartners() {
               </div>
             ))}
           </div>
-          <div className={style.ContainerSlider}>
-            <Image src={slider} alt="img" />
-          </div>
+        </div>
+        <div className={style.ContainerSlider}>
+          <Image src={slider} alt="img" />
         </div>
       </div>
     </div>

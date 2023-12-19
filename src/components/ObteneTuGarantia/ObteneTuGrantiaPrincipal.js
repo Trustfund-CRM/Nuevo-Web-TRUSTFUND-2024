@@ -10,7 +10,6 @@ import { useForm } from 'react-hook-form';
 import { sendContactForm } from '../../../lib/api';
 import ButtonWsp from '../ButtonWsp/ButtonWsp';
 
-
 const inputs = [
     { label: 'Nombre/s', name: 'Nombre', type: 'text', required: true },
     { label: 'Apellido/s', name: 'Apellido', type: 'text', required: true },
@@ -19,9 +18,6 @@ const inputs = [
     { label: 'Teléfono de contacto', name: 'Telefono', type: 'text', required: true },
     { label: 'Localidad', name: 'Localidad', type: 'text', required: true }
 ];
-
-
-
 
 export default function ObteneTuGrantiaPrincipal() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();

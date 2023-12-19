@@ -5,21 +5,14 @@ import { Accordion, Button, Collapse, Modal } from 'react-bootstrap';
 import { sendContactForm } from '../../../lib/api';
 import '../../components/nuestraGrantia/stylesInputs.css'
 import Image from 'next/image';
-import { CruzModal, ImagenModalCeleste, ImagenModalReclamo, ModalReclamoNuevo1 } from '@/styles';
+import { CruzModal, ModalReclamoNuevo1 } from '@/styles';
 import ButtonWsp from '../ButtonWsp/ButtonWsp';
-
-
-
-
-
 
 export default function FormularioTuConsulta() {
 
     const [message, setMessage] = useState('');
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [modalShow, setModalShow] = useState(false);
-
-
 
     function MyVerticallyCenteredModal(props) {
         return (

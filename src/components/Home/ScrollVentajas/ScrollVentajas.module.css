@@ -1,259 +1,249 @@
 .ContainerScrollVentajas {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    /* position: absolute;
-    top: 227vh; */
-    justify-content: space-between;
-    background-color: #009FBB;
-    width: -webkit-fill-available;
-    /* height: 100%; */
-}
-
-.ContainerScrollVentajasResultados {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    /* position: absolute; */
-    /* top: 225vh; */
-    justify-content: space-between;
-    background-color: #009FBB;
-    width: -webkit-fill-available;
-    /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 747px;
+  background-color: #009fbb;
+  width: -webkit-fill-available;
+  position: relative;
 }
 
 .ContainerTop {
-    color: #D3D5DA;
-    font-size: 49px;
-    font-family: Montserrat;
-    font-weight: 500;
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #D3D5DA;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 190px;
+  gap: 50px;
+  position: relative;
 }
 
 .TitleVentajas {
-    display: flex;
-    align-self: flex-end;
-    margin-bottom: 50px;
-    width: 82%;
+  font-size: 49px;
+  font-family: Montserrat;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: #d3d5da;
+  padding-bottom: 50px;
 }
 
 .ContainerBottom {
-    height: -webkit-fill-available;
-    width: 82%;
-    align-self: center;
+  height: -webkit-fill-available;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  margin-top: 51px;
 }
 
 .subContainerBottom {
-    height: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    gap: 80px;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 80px;
 }
 
 .subTitle {
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    align-items: center;
-    gap: 135px;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  align-items: center;
+  gap: 135px;
 }
 
 .subTextLeft {
-    font-weight: 700;
-    font-size: 20px;
-    font-family: Montserrat;
-    color: #D3D5DA;
-    width: 32%;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Montserrat;
+  color: #d3d5da;
+  width: 100%;
+  max-width: 350px;
 }
 
 .subTextRight {
-    font-weight: 400;
-    font-size: 20px;
-    font-family: Montserrat;
-    color: #D3D5DA;
-    width: 27%;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: Montserrat;
+  color: #d3d5da;
+  width: 100%;
+  max-width: 260px;
 }
 
 .buttonVerMas {
-    scale: 200%;
-    border: 1px solid #D3D5DA;
-    border-radius: 60px;
-    padding: 15px;
-    background-color: #D3D5DA;
+  scale: 200%;
+  border: 1px solid #d3d5da;
+  border-radius: 60px;
+  padding: 15px;
+  background-color: #d3d5da;
 }
 
 .ContainerScrollingText {
-    width: 88%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 60px;
 }
 
 .preText {
-    font-size: 49px;
-    font-weight: 700;
-    font-family: Montserrat;
-    color: #D3D5DA;
+  font-size: 49px;
+  font-weight: 700;
+  font-family: Montserrat;
+  color: #d3d5da;
 }
 
 .ScrollingText {
-    font-size: 49px;
+  font-size: 49px;
+  font-weight: 700;
+  font-family: Montserrat;
+  color: #a0e838;
+}
+
+@media only screen and (max-width: 360px) {
+  .ContainerScrollVentajas {
+    padding: 0px 24px;
+    width: -webkit-fill-available;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    height: auto;
+  }
+
+  .TitleVentajas {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .ContainerTop {
+    margin-top: 100px;
+  }
+
+  .ContainerBottom,
+  .subContainerBottom,
+  .subTitle,
+  .ContainerScrollingText {
+    flex-direction: column;
+    width: -webkit-fill-available;
+  }
+
+  .subTitle {
+    height: auto;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .subContainerBottom {
+    height: auto;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .preText {
+    font-size: 26px;
+  }
+
+  .ContainerScrollingText {
+    gap: 0px;
+  }
+
+}
+
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+  .ContainerScrollVentajas {
+    height: 774px;
+  }
+
+  .ContainerTop {
+    font-size: 36px;
+    width: 81%;
+    display: flex;
+    align-self: center;
+    margin-top: 135px;
+  }
+
+  .TitleVentajas {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .ContainerBottom {
+    height: -webkit-fill-available;
+    width: 80%;
+    align-self: center;
+    margin-top: 47px;
+  }
+
+  .subContainerBottom {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .subTitle {
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .subTextLeft,
+  .subTextRight {
+    width: 100%;
+    display: flex;
+    align-self: flex-start;
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .buttonVerMas {
+    scale: 150%;
+    align-self: flex-start;
+    margin-left: 10px;
+    padding: 10px;
+  }
+
+  .ContainerScrollingText {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 75px;
+    gap: 6px;
+  }
+
+  .preText {
+    font-size: 29px;
+    width: 100%;
+    font-size: 28px;
+    font-style: normal;
     font-weight: 700;
-    font-family: Montserrat;
-    color: #A0E838;
+    line-height: 130%;
+  }
+
+  .ScrollingText {
+    font-size: 29px;
+  }
 }
 
-@media (max-width: 500px){
-    .ContainerScrollVentajas{
-        top: 480vh;
-    }
+@media only screen and (min-width: 481px) and (max-height: 670px) {
+  .ContainerScrollVentajas {
+    top: 600vh;
+    height: 156vh;
+  }
 
-    .ContainerScrollVentajasResultados {
-        top: 570vh;
-    }
+  .butttonVerMas {
+    padding: 10px;
+  }
 
-    .ContainerTop {
-        font-size: 36px;
-        width: 81%;
-        display: flex;
-        align-self: center;
-    }
-
-    .TitleVentajas {
-        width: 100%;
-        margin-bottom: 25px;
-    }
-
-    .ContainerBottom {
-        height: -webkit-fill-available;
-        width: 80%;
-        align-self: center;
-    }
-
-    .subContainerBottom {
-        flex-direction: column;
-    }
-
-    .subTitle {
-        height: 51%;
-        flex-direction: column;
-        width: 100%;
-        gap: 20px;
-        margin-top: 47px;
-    }
-
-    .subTextLeft {
-        width: 90%;
-        display: flex;
-        align-self: flex-start;
-    }
-
-    .subTextRight {
-        width: 90%;
-        display: flex;
-        align-self: flex-start;
-    }
-
-    .buttonVerMas {
-        scale: 150%;
-        align-self: flex-start;
-        margin-left: 10px;
-        padding: 10px;
-    }
-
-    .ContainerScrollingText {
-        width: 100%;
-        flex-direction: column;
-        margin-top: 75px;
-    }
-
-    .preText {
-        font-size: 29px;
-    }
-
-    .ScrollingText {
-        font-size: 29px;
-    }
-
+  .ContainerScrollVentajasResultados {
+    top: 725vh;
+    height: 156vh;
+  }
 }
 
-@media (max-height: 670px) {
-
-    .ContainerScrollVentajas {
-        top: 600vh;
-        height: 156vh;
-    }
-
-    .butttonVerMas {
-        padding: 10px;
-    }
-
-    .ContainerScrollVentajasResultados {
-        top: 725vh;
-        height: 156vh;
-    }
-}
-
-@media (max-width: 430px) {
-
-    .ContainerScrollVentajas {
-        top: 600vh;
-        height: 130vh;
-    }
-
-    .ContainerScrollVentajasResultados {
-        top: 769vh;
-        height: 130vh;
-    }
-
-    .ContainerTop {
-        font-size: 30px;
-        width: 91%;
-    }
-
-    .ContainerBottom {
-        width: 91%;
-    }
-
-    .subTextLeft {
-        font-size: 16px;
-    }
-
-    .subTextRight {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 430px) and (max-height: 800px) {
-
-    .ContainerScrollVentajas {
-        top: 490vh;
-        height: 115vh;
-    }
-
-    .ContainerScrollVentajasResultados {
-        top: 620vh;
-        height: 115vh;
-    }
-
-    .preText {
-        font-size: 29px;
-        margin-right: 12px;
-    }
-
-}
-
-@media (max-width: 1500px) and (max-height: 800px) {
-    .ContainerTitle {
-        width: 920px;
-    }
+@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
+  .ContainerScrollVentajas {
+    height: 770px;
+  }
 }

@@ -1,9 +1,9 @@
+'use client'
 import React, { useState } from "react";
 import style from "../../components/nuestraGrantia/nuestraGarantia.module.css";
 import { Button, Card, Collapse } from "react-bootstrap";
 import Image from "next/image";
 import { consultaInquilinos, consultaPropietarios, flecha } from "@/styles";
-import { motion } from "framer-motion";
 // ---------- LANDING ANTERIOR --------------- //  
 export default function SeccionCollapseRight() {
   const [isCollapsed, setIsCollapsed] = useState(false);

@@ -1,0 +1,27 @@
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(3, 87, 154, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 40px rgba(3, 87, 154, 0);
+    }
+}
+
+.containerButton {
+    bottom: 45px;
+    right: 45px;
+    position: fixed;
+    z-index: 100;
+    background-color: transparent;
+    animation: radial-pulse 2s infinite;
+    animation-delay: 2s;
+    border-radius: 50%;
+
+}
+
+@media (min-width:1440px) and (max-width: 1468px) {
+    .containerButton {
+        right: 80px;
+    }
+}

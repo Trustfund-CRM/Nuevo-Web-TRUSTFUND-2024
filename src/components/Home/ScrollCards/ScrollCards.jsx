@@ -63,6 +63,7 @@ export default function ScrollCards() {
               id={c.id}
               className={style.Card}
               style={{ transform: `translateY(${index}em)` }}
+              key={index}
             >
               <div className={style.TextoCard}>
                 <div className={style.TitleCard}>{c.title}</div>

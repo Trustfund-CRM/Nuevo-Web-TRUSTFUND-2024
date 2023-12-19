@@ -1,104 +1,115 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-bottom: 1px solid #F9FAFB;
-    padding: 0px 0px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #f9fafb;
+  width: 100%;
+  max-width: 640px;
+  padding: 0px 0px 24px 0px;
 }
 
 .FAQ {
-    width: 100%;
-    gap: 20px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Pregunta {
-    color: #F9FAFB;
-    font-family: Montserrat;
-    font-size: 31px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
+  color: #f9fafb;
+  font-family: Montserrat;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
 }
 
 .Respuesta {
-    color: white;
-    font-size: 16px;
-    font-family: Montserrat;
-    font-weight: 400;
-    overflow: hidden;
-    line-height: 150%;
-    margin-top: 24px;
+  color: white;
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  overflow: hidden;
+  line-height: 150%;
+  margin-top: 24px;
 }
 
 .VerRespuesta {
-    color: #A0E838;
-    font-size: 39px;
-    font-family: Montserrat;
-    font-weight: 400;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    cursor: pointer;
+  color: #a0e838;
+  font-size: 39px;
+  font-family: Montserrat;
+  font-weight: 400;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 .containerAnswer {
-    height: 0px;
-    overflow: hidden;
-    object-fit: contain;
-    animation: slideOut .5s ease-in-out;
+  height: 0px;
+  overflow: hidden;
+  object-fit: contain;
+  animation: slideOut 0.5s ease-in-out;
 }
 
 .containerAnswerOpen {
-    height: var(--additional-height);
-    animation: slideIn .5s ease-in-out;
-    overflow: visible;
+  height: var(--additional-height);
+  animation: slideIn 0.5s ease-in-out;
+  overflow: visible;
 }
 
 @keyframes slideIn {
-    0% {
-        height: 0px;
-        overflow: hidden;
-    }
+  0% {
+    height: 0px;
+    overflow: hidden;
+  }
 
-    50% {
-        overflow: hidden;
-    }
+  50% {
+    overflow: hidden;
+  }
 
-    100% {
-        overflow: visible;
-    }
+  100% {
+    overflow: visible;
+  }
 }
 
 @keyframes slideOut {
-    0% {
-        height: var(--additional-height);
-        overflow: hidden;
-    }
+  0% {
+    height: var(--additional-height);
+    overflow: hidden;
+  }
 
-    100% {
-        height: 0px;
-    }
+  100% {
+    height: 0px;
+  }
 }
 
+@media only screen and (max-width: 360px) {
+  .Pregunta {
+    font-size: 20px;
+  }
 
-@media only screen and (max-width: 480px) {
-    .containerAnswerOpen {
-        height: auto;
-        width: 75%;
-        align-self: center;
-    }
+  .Respuesta {
+    font-size: 14px;
+  }
+}
 
-    .FAQ {
-        width: 75%;
-        align-self: center;
-    }
+@media only screen and (min-width: 361px) and (max-width: 480px) {
+  .containerAnswerOpen {
+    height: auto;
+    width: 100%;
+    align-self: center;
+  }
 
-    .Pregunta {
-        font-size: 26px;
-    }
+  .FAQ {
+    width: 100%;
+    align-self: center;
+  }
+
+  .Pregunta {
+    font-size: 26px;
+  }
 }
