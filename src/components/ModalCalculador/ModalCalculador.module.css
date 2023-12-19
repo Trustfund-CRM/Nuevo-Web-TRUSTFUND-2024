@@ -57,6 +57,7 @@
 
 .Title {
     color: #004993;
+    line-height: 46.80px;
     font-size: 39px;
     font-family: Montserrat;
     font-weight: 700;
@@ -67,6 +68,7 @@
     font-size: 18px;
     font-family: Montserrat;
     font-weight: 500;
+    line-height: 26.10px;
     width: 548px;
     height: 47px;
 }
@@ -177,6 +179,7 @@
     color: #004993;
     font-size: 20px;
     font-family: Montserrat;
+    line-height: 28px;
     font-weight: 700;
     border-bottom: 1px solid #D3D5DA;
 }
@@ -191,10 +194,15 @@
 
 .subtitleCard {
     border-bottom: 1px solid #D3D5DA;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px 5px 0px;
 }
 
 .anticipoCard {
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 400;
 }
@@ -202,23 +210,44 @@
 .anticipoCardActiva {
     color: #FFFFFF;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 400;
 }
 
-.descuentoCard {
+.contadoCard {
     color: #4D4D4D;
     font-size: 10px;
     font-family: Montserrat;
     font-size: italic;
+    line-height: 12px;
+    font-weight: 700;
+}
+
+.contadoCardActiva {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-family: Montserrat;
+    font-size: italic;
+    line-height: 12px;
+    font-weight: 700;
+}
+
+.descuentoCard {
+    color: #4D4D4D;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-size: italic;
+    line-height: 12px;
     font-weight: 700;
 }
 
 .descuentoCardActiva {
     color: #FFFFFF;
-    font-size: 10px;
+    font-size: 16px;
     font-family: Montserrat;
     font-size: italic;
+    line-height: 12px;
     font-weight: 700;
 }
 
@@ -240,6 +269,7 @@
     align-items: center;
     color: #4D4D4D;
     font-size: 12px;
+    line-height: 16.20px;
     font-family: Montserrat;
     font-weight: 400;
 }
@@ -249,6 +279,7 @@
     align-items: center;
     color: #FFFFFF;
     font-size: 12px;
+    line-height: 16.20px;
     font-family: Montserrat;
     font-weight: 400;
 }
@@ -257,6 +288,7 @@
     color: #004993;
     font-size: 20px;
     font-family: Montserrat;
+    line-height: 28px;
     font-weight: 700;
 }
 
@@ -264,6 +296,7 @@
     color: #FFFFFF;
     font-size: 20px;
     font-family: Montserrat;
+    line-height: 28px;
     font-weight: 700;
 }
 

@@ -39,7 +39,7 @@ export default function Footer() {
             Suscribite a nuestro newsletter.
           </div>
           <ButtonSlider
-            text={"Ver más"}
+            text={"Suscribirme"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
           />
         </div>

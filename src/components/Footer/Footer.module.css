@@ -107,6 +107,7 @@
 .Suscribite {
     color: #1A1A1A;
     font-size: 31px;
+    line-height: 37.20px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -158,6 +159,7 @@
     width: 30%;
     color: #1A1A1A;
     font-size: 18px;
+    line-height: 26.10px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -166,6 +168,7 @@
     width: 40%;
     color: #1A1A1A;
     font-size: 18px;
+    line-height: 26.10px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -173,6 +176,7 @@
 .textoFooter {
     color: #999999;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -203,6 +207,7 @@
     align-items: center;
     color: #999999;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -223,6 +228,7 @@
     align-items: center;
     color: #999999;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
 }
