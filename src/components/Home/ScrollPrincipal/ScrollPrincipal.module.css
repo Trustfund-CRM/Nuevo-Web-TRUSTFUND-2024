@@ -54,6 +54,7 @@
     display: flex;
     align-items: flex-start;
     font-weight: 100;
+    line-height: 24px;
     font-size: 16px;
     color: #FFFFFF;
 
@@ -70,12 +71,18 @@
 .Text1 {
     font-size: 61px;
     font-weight: 600;
+    line-height: 73.20px;
     color: #FFFFFF;
+    white-space: nowrap;
+    display: flex;
+    width: 180px;
+    height: auto;
 }
 
 .Text2 {
     font-size: 61px;
     font-weight: 600;
+    line-height: 73.20px;
     color: #A0E838;
 }
 
@@ -83,6 +90,7 @@
     width: 320px;
     height: 84px;
     font-weight: 100;
+    line-height: 24px;
     font-size: 16px;
     color: #FFFFFF;
 }
@@ -167,6 +175,12 @@
     to {
         scale: 105%;
         top: 20px;
+    }
+}
+
+@media (max-width: 1420px) {
+    .ContainerTitle {
+        width: auto;
     }
 }
 

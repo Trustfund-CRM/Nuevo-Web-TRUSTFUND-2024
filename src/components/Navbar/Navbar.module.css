@@ -72,6 +72,7 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    gap: 32px;
 }
 
 .container {
@@ -173,5 +174,11 @@
 @media (max-height: 765px) and (max-width: 992) {
     .subNavLinks {
         height: 85px !important;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
+    .navbarPrincipal {
+        padding: 0px 85px;
     }
 }
