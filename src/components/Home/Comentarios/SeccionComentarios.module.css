@@ -310,7 +310,8 @@
   }
 
   .ContainerComentarios {
-    height: 120vh;
+    /* height: 120vh; */
+    height: -webkit-fill-available;
   }
 
   .TitleComentarios {
@@ -321,6 +322,7 @@
   .ContainerTitle {
     width: 80%;
     padding-bottom: 30px;
+    padding-top: 130px;
     border-bottom: 1px solid #004993;
   }
 

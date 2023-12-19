@@ -198,8 +198,9 @@
 
 .footerDelSud {
     display: flex;
-    width: 32vh;
+    /* width: 32vh; */
     justify-content: space-between;
+    gap: 16px;
 }
 
 .textoDelSud {
@@ -231,6 +232,7 @@
     line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
+    cursor: pointer;
 }
 
 @media (max-width: 968px) {

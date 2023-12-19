@@ -15,6 +15,7 @@ import {
 } from "@/styles/assets";
 import { Button } from "react-bootstrap";
 import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
+import Link from "next/link";
 
 export default function Footer() {
   const [mobile, setMobile] = useState(false);
@@ -30,6 +31,19 @@ export default function Footer() {
       }
     }
   }, []);
+
+  const handleDownloadPDF = () => {
+    const pdfURL =
+      "/TRUST FUND  cuotas vivienda - sin co - solicitante.docx.pdf";
+
+    const link = document.createElement("a");
+    link.href = pdfURL;
+
+    link.download =
+      "TRUST FUND  cuotas vivienda - sin co - solicitante.docx.pdf";
+
+    link.dispatchEvent(new MouseEvent("click"));
+  };
 
   return (
     <div className={`${style.boxPrincipal}`}>
@@ -124,9 +138,9 @@ export default function Footer() {
           </div>
 
           <div className={style.botonesFooter}>
-            <div className={style.botonFooter}>Términos y condiciones</div>
-            <div className={style.botonFooter}>Ver modelo de contrato</div>
-            <div className={style.botonFooter}>Acerca de Trust Fund</div>
+            <Link href="/" className={style.botonFooter}>Términos y condiciones</Link>
+            <div onClick={handleDownloadPDF} className={style.botonFooter}>Ver modelo de contrato</div>
+            <Link href="/nuestra-garantia" className={style.botonFooter}>Acerca de Trust Fund</Link>
           </div>
         </div>
       </div>
