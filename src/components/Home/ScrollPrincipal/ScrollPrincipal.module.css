@@ -73,6 +73,10 @@
     font-weight: 600;
     line-height: 73.20px;
     color: #FFFFFF;
+    white-space: nowrap;
+    display: flex;
+    width: 180px;
+    height: auto;
 }
 
 .Text2 {

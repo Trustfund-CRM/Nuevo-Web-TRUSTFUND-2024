@@ -8,6 +8,7 @@ import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { handleQuestions } from "./objectText";
+import { CustomLine } from "@/components/CustomLine/CustomLine";
 
 export default function PreguntasFrecuentes() {
   const [inquilinosOPropietarios, setInquilinosOPropietarios] =
@@ -45,7 +46,7 @@ export default function PreguntasFrecuentes() {
           <div style={{ width: "84%" }}>
             <div className={style.Title}>Preguntas frecuentes</div>
           </div>
-          <div className={style.lineBottom}></div>
+          <CustomLine color={'#ffffff'} />
         </div>
 
         <div className={style.SubTitleFAQ}>
