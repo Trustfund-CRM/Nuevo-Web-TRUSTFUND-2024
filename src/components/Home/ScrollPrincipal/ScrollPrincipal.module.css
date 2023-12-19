@@ -178,6 +178,12 @@
     }
 }
 
+@media (max-width: 1420px) {
+    .ContainerTitle {
+        width: auto;
+    }
+}
+
 @media (max-width: 1024px) {
     .scrollFooter {
         display: none;

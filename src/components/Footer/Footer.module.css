@@ -395,15 +395,20 @@
     }
 
     .footerDelSud {
-        width: 95%;
+        width: 25%;
     }
 
     .botonesFooter {
-        width: 95%;
+        width: 50%;
     }
 
     .ContainerIzqFooter {
         height: 175px;
+        width: 30%;
+    }
+
+    .ContainerDerFooter {
+        width: 50%;
     }
 
     .Suscribite {

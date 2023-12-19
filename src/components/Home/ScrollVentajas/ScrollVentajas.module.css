@@ -259,4 +259,20 @@
   .ContainerScrollVentajas {
     height: 770px;
   }
+
+  .ContainerTop {
+    justify-content: center;
+  }
+
+  .TitleVentajas {
+    width: 80%;
+  }
+
+  .subContainerBottom {
+    justify-content: space-evenly;
+  }
+
+  .ContainerScrollingText {
+    justify-content: center;
+  }
 }
