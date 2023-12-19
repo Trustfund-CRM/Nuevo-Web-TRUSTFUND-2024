@@ -1,9 +1,9 @@
 import Image from "next/image";
 import style from "./ScrollVentajas.module.css";
-import { flechaModalBlue } from "@/styles";
 import "./effectLetters.css";
 import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 
 export default function ScrollVentajas() {
   const resultadoCalc = useSelector(
@@ -30,7 +30,11 @@ export default function ScrollVentajas() {
                 Alquilá con tranquilidad, con Trust Fund estás protegido.
               </div>
             </div>
-            <Image className={style.buttonVerMas} src={flechaModalBlue} />
+            <ButtonSlider
+              text={"Ver más"}
+              customBackground={{ background: "#E6EAEE", color: "#004993" }}
+              isPrimary={false}
+            />
           </div>
 
           <div className={style.ContainerScrollingText}>

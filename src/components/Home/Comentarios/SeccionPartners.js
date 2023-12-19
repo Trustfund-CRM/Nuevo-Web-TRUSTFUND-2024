@@ -1,24 +1,18 @@
 import Image from "next/image";
 import style from "./SeccionComentarios.module.css";
+import { partner5, partner6, slider } from "@/styles";
 import {
-  partner5,
-  partner6,
-  slider,
-} from "@/styles";
-import {Mamberto, OteroRossi, Libera, Yacoub} from '../../../../public/index.js';
+  Mamberto,
+  OteroRossi,
+  Libera,
+  Yacoub,
+} from "../../../../public/index.js";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { useState } from "react";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 
 export default function SeccionPartners() {
-  const arrAssets = [
-    Mamberto,
-    OteroRossi,
-    Libera,
-    Yacoub,
-    partner5,
-    partner6,
-  ];
+  const arrAssets = [Mamberto, OteroRossi, Libera, Yacoub, partner5, partner6];
 
   const [startIdx, setStartIdx] = useState(0);
   const cardsPerPage = 3;
@@ -38,48 +32,48 @@ export default function SeccionPartners() {
 
   return (
     <div className={style.SeccionPartners}>
-        <div className={style.TitleComentarios}>
-          <div
-            style={{ width: "84%", paddingBottom: "50px" }}
-            className={style.ContainerTitlePartners}
-          >
-            <div className={style.Title}>Nuestros partners</div>
-          </div>
+      <div className={style.TitleComentarios}>
+        <div
+          style={{ width: "84%", paddingBottom: "50px" }}
+          className={style.ContainerTitlePartners}
+        >
+          <div className={style.Title}>Nuestros partners</div>
         </div>
-        <div className={style.ContainerSlidePartners}>
-          <div className={style.ContainerSubText}>
-            <div className={style.SubTexts}>
-              <div div className={style.SubTextLeft}>
-                + de 220 inmobiliarias adheridas a nuestro sistema de garantías.
-              </div>
-              <div className={style.SubTextRight}>
-                Conocé a quienes trabajan con nosotros.
-              </div>
+      </div>
+      <div className={style.ContainerSlidePartners}>
+        <div className={style.ContainerSubText}>
+          <div className={style.SubTexts}>
+            <div div className={style.SubTextLeft}>
+              + de 220 inmobiliarias adheridas a nuestro sistema de garantías.
             </div>
-            <ButtonSlider
-              text={"Ver más"}
-              customBackground={{ background: "#004993", color: "#F9FAFB" }}
-            />{" "}
+            <div className={style.SubTextRight}>
+              Conocé a quienes trabajan con nosotros.
+            </div>
           </div>
+          <ButtonSlider
+            text={"Ver más"}
+            customBackground={{ background: "#004993", color: "#F9FAFB" }}
+          />{" "}
+        </div>
 
-          <div className={style.BottomPartners}>
-            <div className={style.ContainerPartners}>
-              {arrAssets.map((asset, index) => (
-                <div className={style.contImagePartner}>
-                  <Image
-                    src={asset}
-                    alt="img"
-                    key={index}
-                    className={style.imgPartner}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className={style.ContainerSlider}>
-              <Image src={slider} alt="img" />
-            </div>
+        <div className={style.BottomPartners}>
+          <div className={style.ContainerPartners}>
+            {arrAssets.map((asset, index) => (
+              <div className={style.contImagePartner}>
+                <Image
+                  src={asset}
+                  alt="img"
+                  key={index}
+                  className={style.imgPartner}
+                />
+              </div>
+            ))}
           </div>
         </div>
+        <div className={style.ContainerSlider}>
+          <Image src={slider} alt="img" />
+        </div>
+      </div>
     </div>
   );
 }

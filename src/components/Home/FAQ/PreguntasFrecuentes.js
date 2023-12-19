@@ -5,9 +5,9 @@ import style from "./PreguntasFrecuentes.module.css";
 import { Button } from "react-bootstrap";
 import { imgInquilinos, imgPropietarios, flechaModalBlue } from "@/styles";
 import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
-import { QuestionsInqui, QuestionsProp } from "./objectText";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { handleQuestions } from "./objectText";
 
 export default function PreguntasFrecuentes() {
   const [inquilinosOPropietarios, setInquilinosOPropietarios] =
@@ -17,6 +17,8 @@ export default function PreguntasFrecuentes() {
   const resultadoCalc = useSelector(
     (state) => state.reducerInfoGarantia.calculador
   );
+
+  const { QuestionsInqui, QuestionsProp } = handleQuestions();
 
   const handleDisplayRespuesta = (value) => {
     if (displayRespuesta !== 0) {

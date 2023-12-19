@@ -23,13 +23,13 @@ export default function SeccionCards() {
     }
   };
 
-    return (
-        <div className={style.ContainerComentarios}>
-            <div className={style.TitleComentarios}>
-                <div className={style.ContainerTitle}>
-                    <div className={style.Title}>Que dicen nuestros clientes</div>
-                </div>
-            </div>
+  return (
+    <div className={style.ContainerComentarios}>
+      <div className={style.TitleComentarios}>
+        <div className={style.ContainerTitle}>
+          <div className={style.Title}>Que dicen nuestros clientes</div>
+        </div>
+      </div>
 
       <div className={style.ContainerSlideComentarios}>
         <div className={style.ContainerSubText}>
@@ -43,7 +43,7 @@ export default function SeccionCards() {
           </div>
           <ButtonSlider
             text={"Ver más"}
-            customBackground={{'background': '#004993', 'color': '#F9FAFB'}}
+            customBackground={{ background: "#004993", color: "#F9FAFB" }}
           />
         </div>
 

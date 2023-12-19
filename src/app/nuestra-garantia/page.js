@@ -7,18 +7,14 @@ import { Footer, NavbarPrincipal } from "@/components";
 
 import React from "react";
 
-export default function page({  }) {
+export default function page({}) {
   return (
-    <div>
-      <section>
-        <SectionTop />
-      </section>
-      <section>
-        <SectionMid />
-      </section>
-      <section>
-        <SectionBottom />
-      </section>
-    </div>
+    <>
+      <SectionTop />
+
+      <SectionMid />
+
+      <SectionBottom />
+    </>
   );
 }
