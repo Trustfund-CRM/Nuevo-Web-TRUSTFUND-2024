@@ -21,6 +21,7 @@
   max-width: 867px;
   font-family: Montserrat;
   font-size: 49px;
+  line-height: 58.80px;
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
@@ -94,6 +95,7 @@
 .TitleCard {
   color: #414141;
   font-size: 39px;
+  line-height: 46.80px;
   font-family: Montserrat;
   font-weight: 400;
 }
@@ -101,6 +103,7 @@
 .DescripcionCard {
   color: black;
   font-size: 14px;
+  line-height: 19.60px;
   font-family: Montserrat;
   font-weight: 400;
   width: 100%;
@@ -276,6 +279,7 @@
     margin: 25px 0px 25px 0px;
     flex-direction: column;
     border-radius: 20px;
+    max-height: 450px;
     width: 81%;
   }
 
@@ -289,7 +293,7 @@
   }
 
   .cardImage {
-    width: 350px;
+    /* width: 350px; */
     height: 38%;
     display: flex;
     align-self: center;

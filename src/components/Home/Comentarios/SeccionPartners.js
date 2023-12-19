@@ -9,7 +9,7 @@ import {
 } from "../../../../public/index.js";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { useState } from "react";
-import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+// import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
 
 export default function SeccionPartners() {
@@ -72,9 +72,9 @@ export default function SeccionPartners() {
             ))}
           </div>
         </div>
-        <div className={style.ContainerSlider}>
+        {/* <div className={style.ContainerSlider}>
           <Image src={slider} alt="img" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

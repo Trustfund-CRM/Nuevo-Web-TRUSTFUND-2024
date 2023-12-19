@@ -32,6 +32,7 @@
 .Title {
   color: #1a1a1a;
   font-size: 49px;
+  line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
 }
@@ -63,11 +64,13 @@
   width: 39%;
   font-weight: 700;
   font-size: 20px;
+  line-height: 24px;
 }
 
 .SubTextRight {
   width: 33%;
   font-size: 20px;
+  line-height: 24px;
 }
 
 .flecha {
@@ -103,6 +106,14 @@
   background-color: #a3a3a3;
   border-radius: 100%;
   cursor: pointer;
+}
+
+.FlechaLeft:hover {
+  background-color: #696969;
+}
+
+.FlechaRight:hover {
+  background-color: #696969;
 }
 
 .containerAux {
@@ -152,6 +163,7 @@
 .Comentario {
   color: #4d4d4d;
   font-size: 16px;
+  line-height: 24px;
   font-family: Montserrat;
   font-weight: 700;
   display: flex;
@@ -175,6 +187,7 @@
   flex-direction: column;
   justify-content: flex-end;
   background-color: #ffffff;
+  padding-bottom: 150px;
 }
 
 .ContainerTitlePartners {
@@ -231,6 +244,7 @@
   .ContainerComentarios {
     height: auto;
   }
+
   .TitleComentarios {
     height: 280px;
   }
@@ -274,7 +288,7 @@
     height: auto;
   }
 
-    .ContainerSlidePartners {
+  .ContainerSlidePartners {
     width: 80%;
     gap: 50px;
   }
@@ -288,6 +302,10 @@
     gap: 16px;
     align-self: auto;
   }
+
+  .ContainerFlechas {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
@@ -296,7 +314,7 @@
   }
 
   .ContainerComentarios {
-    height: 120vh;
+    height: -webkit-fill-available;
   }
 
   .TitleComentarios {
@@ -307,6 +325,7 @@
   .ContainerTitle {
     width: 80%;
     padding-bottom: 30px;
+    padding-top: 130px;
     border-bottom: 1px solid #004993;
   }
 
@@ -324,7 +343,7 @@
     align-items: flex-start;
     width: 100%;
     gap: 0px;
-    height: 51%;
+    height: auto;
   }
 
   .SubTexts {
@@ -360,7 +379,8 @@
   }
 
   .SeccionPartners {
-    height: 85vh;
+    height: 70vh;
+  
   }
 
   .CardComentario {
@@ -387,7 +407,7 @@
   }
 
   .ContainerFlechas {
-    justify-content: center;
+    display: none;
   }
 
   .ContainerTitlePartners {
@@ -403,10 +423,12 @@
 
   .BottomPartners {
     overflow-y: hidden;
+
   }
 
   .ContainerPartners {
-    width: auto;
+    width: 1200px;
+    align-self: auto;
   }
 }
 
@@ -440,7 +462,6 @@
     width: 85%;
   }
 }
-
 
 @media (max-width: 330px) {
   .ContainerSubText {

@@ -107,6 +107,7 @@
 .Suscribite {
     color: #1A1A1A;
     font-size: 31px;
+    line-height: 37.20px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -158,6 +159,7 @@
     width: 30%;
     color: #1A1A1A;
     font-size: 18px;
+    line-height: 26.10px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -166,6 +168,7 @@
     width: 40%;
     color: #1A1A1A;
     font-size: 18px;
+    line-height: 26.10px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -173,6 +176,7 @@
 .textoFooter {
     color: #999999;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -194,8 +198,9 @@
 
 .footerDelSud {
     display: flex;
-    width: 32vh;
+    /* width: 32vh; */
     justify-content: space-between;
+    gap: 16px;
 }
 
 .textoDelSud {
@@ -203,6 +208,7 @@
     align-items: center;
     color: #999999;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
 }
@@ -223,8 +229,10 @@
     align-items: center;
     color: #999999;
     font-size: 14px;
+    line-height: 19.60px;
     font-family: Montserrat;
     font-weight: 500;
+    cursor: pointer;
 }
 
 @media (max-width: 968px) {
@@ -406,16 +414,17 @@
     }
 }
 
-@media (max-width: 430px) {
-
+@media (max-width: 430px) { 
     .boxPrincipal {
-        top: 484vh;
-        height: 150vh;
+        height: 120vh;
     }
 
     .boxPrincipalResultado {
-        top: 484vh;
         height: 150vh;
+    }
+
+    .ContainerIzqFooter {
+        height: 20vh;
     }
 }
 

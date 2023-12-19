@@ -139,7 +139,7 @@ export default function ModalCalculador({ setCalculador, calculador }) {
 
   const onSubmit = (data) => {
     const resultado = Math.floor(calcularGarantia(data));
-    setResultado(resultado);
+    setResultado(formatNumber(resultado));
     const anticipo = Math.floor(resultado * 0.15);
     setAnticipo(formatNumber(anticipo));
     const contado = Math.floor(resultado - anticipo);
@@ -309,7 +309,7 @@ export default function ModalCalculador({ setCalculador, calculador }) {
         </Button>
       </div>
 
-      {mobile ? (
+      {!mobile ? (
         <div className={style.ContainerPasos}>
           <div className={style.Paso}>
             <Image src={percentage} alt="porcentaje" />
@@ -364,8 +364,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
                 <div
                   className={
                     activeItem === "Contado"
-                      ? style.descuentoCardActiva
-                      : style.descuentoCard
+                      ? style.contadoCardActiva
+                      : style.contadoCard
                   }
                 >
                   Sin descuento ${resultado}

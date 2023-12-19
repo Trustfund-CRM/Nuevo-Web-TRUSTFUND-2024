@@ -3,6 +3,6 @@ export const CustomContainerMaxWidth = ({ children }) => {
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        maxWidth: '1440px'
+        maxWidth: '1440px',
     }}>{children}</div>
 }
