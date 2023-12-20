@@ -35,6 +35,7 @@
 
 .contImage {
     display: flex;
+    z-index: 0;
 }
 
 .contImage::before {
