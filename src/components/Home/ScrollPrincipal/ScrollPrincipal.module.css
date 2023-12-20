@@ -1,6 +1,6 @@
 .ExtraContainerScrollPrincipal {
     width: 100%;
-    height:  100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,8 +28,24 @@
     height: 100%;
     width: -webkit-fill-available;
     object-fit: cover;
-    object-position: center top; 
+    object-position: center top;
+    background: rgba(46, 46, 46, 0.30);
     z-index: 1;
+}
+
+.contImage {
+    display: flex;
+}
+
+.contImage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 5;
 }
 
 .ContainerContainerTitle {
@@ -109,7 +125,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: 145%;
-    /* 31.9px */
     letter-spacing: -0.11px;
 }
 
@@ -238,7 +253,7 @@
     }
 
     .FotoScrollPrincipal {
-        object-position: 55% 50%; 
+        object-position: 55% 50%;
     }
 
     .ContainerSubFooter {
@@ -249,10 +264,14 @@
         height: 181vh;
         width: -webkit-fill-available;
     }
+
+    .contImage::before {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 }
 
-@media (max-height: 670px){
-    
+@media (max-height: 670px) {
+
     .ContainerTitle {
         top: 170px;
     }
@@ -266,15 +285,17 @@
         width: -webkit-fill-available;
     }
 
+    .contImage::before {
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 5;
+    }
+
 }
 
 @media (max-width: 430px) {
-    .Text1 {
+    .Text1, .Text2 {
         font-size: 40px;
-    }
-
-    .Text2 {
-        font-size: 40px;
+        height: 45px;
     }
 
     .subText {
@@ -284,6 +305,18 @@
     .ContainerSubFooterCalculador {
         height: 275vh;
         width: -webkit-fill-available;
+    }
+
+    .contImage {
+        position: relative;
+        height: 770px; /* Establecer el alto deseado */
+      }
+
+    .contImage::before {
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 5;
+        /* height: 770px; */
+        /* Ajusta la opacidad según sea necesario para pantallas más pequeñas */
     }
 }
 

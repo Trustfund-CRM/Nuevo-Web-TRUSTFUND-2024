@@ -203,7 +203,7 @@
     padding: 0px;
     gap: 0px;
     justify-content: flex-start;
-    /* background-color: red; */
+    gap: 24px;
   }
 
   .TextHeader {
@@ -220,6 +220,7 @@
     flex-direction: column;
     border-radius: 20px;
     width: 100%;
+    height: 340px;
   }
 
   .cardImage {

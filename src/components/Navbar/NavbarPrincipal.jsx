@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -81,7 +80,7 @@ export default function NavbarPrincipal({ styleProp }) {
                 </Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body style={{ display: "flex" }}>
+            <Offcanvas.Body style={{ display: "flex" }} className={style.auxContainer}>
               <Nav
                 activeKey="/nuestra-garantia"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
