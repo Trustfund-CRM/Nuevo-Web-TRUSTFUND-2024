@@ -35,6 +35,7 @@
 
 .contImage {
     display: flex;
+    z-index: 0;
 }
 
 .contImage::before {
@@ -193,6 +194,12 @@
     }
 }
 
+@media (max-width: 1420px) {
+    .ContainerTitle {
+        width: auto;
+    }
+}
+
 @media (max-width: 1024px) {
     .scrollFooter {
         display: none;
@@ -248,6 +255,7 @@
 
     .FotoScrollPrincipal {
         object-position: 55% 50%;
+        height: 100%;
     }
 
     .ContainerSubFooter {
@@ -309,7 +317,7 @@
     .contImage::before {
         background-color: rgba(0, 0, 0, 0.2);
         z-index: 5;
-        /* height: 770px; */
+        height: 770px;
         /* Ajusta la opacidad según sea necesario para pantallas más pequeñas */
     }
 }

@@ -27,6 +27,13 @@
   line-height: 120%;
 }
 
+.lineBottom {
+  display: flex;
+  width: -webkit-fill-available;
+  border-bottom: 1px solid #4D4D4D;
+  position: absolute;
+}
+
 .ScrollCards {
   display: flex;
   flex-direction: column;
@@ -314,12 +321,18 @@
 
   .ExtraContainerHeader {
     height: 12%;
-    width: 90%;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
   }
 
   .ExtraContainerHeaderResultados {
     height: 12%;
     width: 90%;
+  }
+
+  .TextHeader {
+    max-width: 80%;
   }
 
   .ScrollCards {

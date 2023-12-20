@@ -54,6 +54,7 @@ export default function ScrollCards() {
           <div className={style.TextHeader}>
             Protegemos todas las necesidades en el proceso de alquiler.{" "}
           </div>
+          {/* <div className={style.lineBottom}></div> */}
         </div>
       </div>
       <div id="carousel" className={style.Carrousel} ref={carouselRef}>
