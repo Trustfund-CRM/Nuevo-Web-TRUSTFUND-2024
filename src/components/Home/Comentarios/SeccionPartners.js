@@ -61,11 +61,11 @@ export default function SeccionPartners() {
         <div className={style.BottomPartners}>
           <div className={style.ContainerPartners}>
             {arrAssets.map((asset, index) => (
-              <div className={style.contImagePartner}>
+              <div className={style.contImagePartner} key={index}
+              >
                 <Image
                   src={asset}
                   alt="img"
-                  key={index}
                   className={style.imgPartner}
                 />
               </div>
