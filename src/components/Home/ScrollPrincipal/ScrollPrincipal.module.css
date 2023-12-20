@@ -25,7 +25,7 @@
 }
 
 .FotoScrollPrincipal {
-    height: 100%;
+    height: 100vh;
     width: -webkit-fill-available;
     object-fit: cover;
     object-position: center top;
@@ -35,6 +35,7 @@
 
 .contImage {
     display: flex;
+    z-index: 0;
 }
 
 .contImage::before {
@@ -43,7 +44,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 5;
 }
@@ -254,6 +255,7 @@
 
     .FotoScrollPrincipal {
         object-position: 55% 50%;
+        height: 100%;
     }
 
     .ContainerSubFooter {
@@ -315,7 +317,7 @@
     .contImage::before {
         background-color: rgba(0, 0, 0, 0.2);
         z-index: 5;
-        /* height: 770px; */
+        height: 770px;
         /* Ajusta la opacidad según sea necesario para pantallas más pequeñas */
     }
 }

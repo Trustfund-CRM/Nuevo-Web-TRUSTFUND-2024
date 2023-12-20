@@ -65,15 +65,15 @@ export default function Step1({ star, percentage, frame, flechaModal }) {
 
             <div className={style.ContainerPasos}>
                 <div className={style.Paso}>
-                    <Image src={percentage} />
+                    <Image src={percentage} alt="image"/>
                     <div className={style.textPaso}>Cotizá tu garantía</div>
                 </div>
                 <div className={style.Paso}>
-                    <Image src={frame} />
+                    <Image src={frame} alt="image"/>
                     <div className={style.textPaso}>Validá tus datos</div>
                 </div>
                 <div className={style.Paso}>
-                    <Image src={star} />
+                    <Image src={star} alt="image" />
                     <div className={style.textPaso}>¡Listo!</div>
                 </div>
             </div>

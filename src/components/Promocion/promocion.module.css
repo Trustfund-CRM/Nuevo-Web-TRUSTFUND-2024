@@ -1,4 +1,6 @@
 .blueContainer {
+    position: relative;
+    top: 100px;
     width: auto;
     height: 274px;
     background-image: url(../../styles/assets/background-gradient.png);
@@ -6,18 +8,47 @@
     flex-direction: row;
     justify-content: space-between;
     background-size: cover;
+    @media (min-width: 0px) and (max-width: 880px) {
+        height: auto;
+        padding: 22px;
+        top: 65px;
+    }
+    @media (min-width: 881px) and (max-width: 991px) {
+        top: 65px;
+    }
 }
 
 .promo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    margin-left: 24px;
-    /* margin-left: 16px; */
+
+    align-items: center;
+
+    width: -webkit-fill-available;
+    height: auto;
+    @media (min-width: 0px) and (max-width: 880px) {
+        flex-direction: column;
+        gap: 22px;;
+    }
 }
 
 .imageDescuento {
     align-self: center;
+    max-width:600px ;
+    max-height:  200px;
+    @media (min-width: 881px) and (max-width: 991px) {
+        max-width: 450px;
+        max-height: 150px;
+    }
+    @media (min-width: 450px) and (max-width: 880px) {
+        max-width: 430px ;
+        max-height:  150px !important;
+    }
+    @media (min-width: 0px) and (max-width: 450px) {
+        max-width: 400px ;
+        max-height:  120px ;
+    }
 }
 
 .textGarantia {
@@ -30,9 +61,10 @@
     height: 88px;
     width: max-content;
     text-align: center;
-    position: relative;
-    top: 25px;
+
+
     letter-spacing: 2px;
+ 
 }
 
 .containerDescuento {
@@ -125,27 +157,12 @@
     justify-content: space-between;
 }
 
-@media (max-width: 360px) {
-    /* .blueContainer {
-        justify-content: center;
-    } */
 
-    .promo {
-        margin-left: 10px;
-    }
-}
 
 @media (min-width: 500px) {
-    .blueContainer {
-        justify-content: space-between;
-        height: 175px;
-    }
 
-    .promo {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+
+
 
     .textGarantia {
         /* width: auto; */

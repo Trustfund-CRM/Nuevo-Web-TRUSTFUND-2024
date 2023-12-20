@@ -50,7 +50,7 @@ export default function ScrollPrincipal() {
         </div>
       </div>
       <div className={style.footerHome}>
-        <Image className={style.scrollFooter} src={scroll} />
+        <Image className={style.scrollFooter} src={scroll} alt="image" />
       </div>
 
       {calculador ? (

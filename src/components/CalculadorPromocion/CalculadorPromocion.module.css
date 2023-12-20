@@ -181,7 +181,7 @@
 
 @media (min-height: 670px) and (max-height: 860px) {
     .boxPrincipalCalculador {
-        height: 75vh;
+        height: 100vh;
     }
 
 }

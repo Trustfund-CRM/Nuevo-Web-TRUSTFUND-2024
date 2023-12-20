@@ -74,8 +74,8 @@ export default function CalculadorPromocion() {
 
     const resultado = Math.floor(calcularGarantia(data));
     setResultado(resultado);
-    // const contado = Math.floor(resultado - anticipo);
-    const contado = Math.floor(resultado - (resultado * 0.5));
+    console.log(resultado, "VALOR TOTAL GARANTIA");
+    const contado = Math.floor(resultado - (resultado * 0.35));
     setContado(contado);
 
     setInformacionStep1(data);
@@ -147,7 +147,7 @@ export default function CalculadorPromocion() {
                   <p className={style2.labelCalculadorBox}>VALOR DE GARANTÍA</p>
                   <div className={style2.boxCosto}>
                     <p className={style2.valorGarantíaContado}>Antes <s>${formatNumber(resultado)}</s></p>
-                    <p className={style2.descuentoContado}>50% OFF aplicado</p>
+                    <p className={style2.descuentoContado}>35% OFF aplicado</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row', gap: '10px', width: 'max-content' }}>

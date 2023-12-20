@@ -35,7 +35,6 @@ export default function ScrollVentajas() {
             <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
-              isPrimary={false}
             />
           </div>
 
