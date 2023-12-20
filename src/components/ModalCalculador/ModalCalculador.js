@@ -235,15 +235,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
       onSubmit={handleSubmit(onSubmit)}
       ref={modalRef}
     >
-      <div className={style.ContainerCruzModal}>
-        <Image
-          alt="--"
-          src={CruzModal}
-          onClick={() => setCalculador(false)}
-          style={{ cursor: "pointer", scale: "80%" }}
-        />
-      </div>
-
       <div className={style.TitleCalculador}>
         <div className={style.Title}>Calculá tu garantía</div>
         <div className={style.subTextCalculador}>
@@ -297,7 +288,7 @@ export default function ModalCalculador({ setCalculador, calculador }) {
             <option value="24">24 MESES</option>
             <option value="36">36 MESES</option>
             <option value="48">48 MESES</option>
-            <option value="56">56 MESES</option>
+            <option value="60">60 MESES</option>
           </select>
         </div>
         <Button type="submit" className={style.flechaCalcula}>
