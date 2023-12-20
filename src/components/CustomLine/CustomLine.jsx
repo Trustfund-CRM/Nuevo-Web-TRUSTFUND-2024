@@ -1,7 +1,7 @@
 export const CustomLine = ({ color, custom }) => {
   const customStyleLine = {
     display: "flex",
-    width: "100%",
+    width: "-webkit-fill-available",
     border: `1px solid ${color}`,
     position: "absolute",
     ...custom
