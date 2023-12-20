@@ -240,7 +240,7 @@
 
 @media only screen and (max-width: 766px) {
     .boxPrincipal {
-        height: 97vh;
+        height: 100%;
     }
 
     .ContainerIzqFooter,
