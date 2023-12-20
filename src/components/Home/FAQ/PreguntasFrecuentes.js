@@ -44,7 +44,7 @@ export default function PreguntasFrecuentes() {
       <CustomContainerMaxWidth>
         <div className={style.TitleFAQ}>
           <div style={{ width: "84%" }}>
-            <div className={style.Title}>Preguntas frecuentes</div>
+            <p className={style.Title}>Preguntas frecuentes</p>
           </div>
           <CustomLine color={'#ffffff'} />
         </div>

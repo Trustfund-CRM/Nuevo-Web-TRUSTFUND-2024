@@ -182,7 +182,7 @@
 }
 
 .SeccionPartners {
-  height: 84vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -325,12 +325,13 @@
   .ContainerTitle {
     width: 80%;
     padding-bottom: 30px;
-    padding-top: 130px;
+    padding-top: 120px;
     border-bottom: 1px solid #004993;
   }
 
   .Title {
     font-size: 36px;
+    line-height: 120%;
   }
 
   .ContainerSlideComentarios {
@@ -446,7 +447,6 @@
   }
 
   .ContainerGeneralSectionResultados {
-    /* top: 509vh; */
     width: -webkit-fill-available;
   }
 

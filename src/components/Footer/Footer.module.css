@@ -131,11 +131,13 @@
     justify-content: space-between;
     border-bottom: 1px solid #999999;
     padding-bottom: 10px;
+    gap: 24px;
 }
 
 .subContainerRedes {
     display: flex;
-    width: 35vh;
+    width: auto;
+    gap: 24px;
     height: 50px;
     justify-content: space-between;
 }
@@ -147,7 +149,9 @@
     background-color: #004993;
     border-radius: 30px;
     border: none;
-    padding: 13px 36px 13px 36px;
+    height: 45px;
+    width: 100%;
+    max-width: 253px;
 }
 
 .ContainerContacto {
@@ -198,7 +202,6 @@
 
 .footerDelSud {
     display: flex;
-    /* width: 32vh; */
     justify-content: space-between;
     gap: 16px;
 }
@@ -235,6 +238,106 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width: 766px) {
+    .boxPrincipal {
+        height: 97vh;
+    }
+
+    .ContainerIzqFooter,
+    .subContainerFooter,
+    .ContainerRedes,
+    .ContainerContacto {
+        flex-direction: column;
+    }
+
+    .subContainerFooter {
+        gap: 69px;
+    }
+
+    .ContainerContacto,
+    .Direccion,
+    .ContainerDerFooter,
+    .ContainerIzqFooter {
+        width: 100%;
+    }
+
+    .Suscribite {
+        width: 100%;
+        max-width: 351px;
+    }
+
+    .Contacto,
+    .Direccion {
+        display: flex;
+        width: auto;
+    }
+
+    .ContainerContacto {
+        gap: 32px;
+    }
+
+    .ContainerRedes {
+        border: 0px;
+        gap: 32px;
+    }
+
+    .buttonSolicitar {
+        max-width: 280px;
+    }
+
+    .ExtraSubContainerRedes {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #999999;
+    }
+
+    .subContainerRedes {
+        gap: 12px;
+        width: 80%;
+    }
+
+    .ContainerDerFooter {
+        gap: 24px;
+    }
+
+    .iconRedes {
+        scale: 130%;
+    }
+
+    .boxPrincipalResultado {
+        height: 150vh;
+    }
+
+    .ContainerIzqFooter {
+        height: 20vh;
+    }
+
+    .subBannerFooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .textoFooter {
+        padding: 32px 0px 32px 0px;
+    }
+
+    .footerDelSud {
+        gap: 12px;
+        width: fit-content;
+    }
+
+    .bannerFooter {
+        padding: 24px 0px;
+        height: auto;
+    }
+
+    .botonesFooter {
+        gap: 8px;
+        display: flex;
+        width: auto;
+    }
+}
+
 @media (max-width: 968px) {
     .titulosFooter {
         text-align: center;
@@ -266,123 +369,6 @@
     }
 }
 
-@media (max-width: 600px) {
-    .boxPrincipal {
-        width: -webkit-fill-available;
-        height: 100vh;
-        top: 373vh;
-    }
-
-    .boxPrincipalResultado {
-        width: -webkit-fill-available;
-        height: 100vh;
-        top: 373vh;
-    }
-
-    .subContainerFooter {
-        flex-direction: column;
-        width: 85%;
-        gap: 70px;
-    }
-
-    .subBoxFooter {
-        flex-direction: column;
-        height: 90%;
-    }
-
-    .ContainerIzqFooter {
-        width: 100%;
-        height: 35vh;
-    }
-
-    .ContainerDerFooter {
-        width: auto;
-        flex-direction: column;
-        gap: 45px;
-    }
-
-    .lateralIzq {
-        opacity: 50%;
-        transform: scaleX(-1);
-        position: relative;
-        top: 12px;
-        right: 15px;
-        width: 20%;
-        margin-top: 0px;
-    }
-
-    .lateralDer {
-        opacity: 50%;
-        position: relative;
-        top: 12px;
-        left: 15px;
-        width: 20%;
-        margin-top: 0px;
-    }
-
-    .ContainerRedes {
-        flex-direction: column;
-        border-bottom: none;
-        gap: 25px;
-    }
-
-    .ExtraSubContainerRedes {
-        width: 100%;
-        border-bottom: 1px solid #999999;
-    }
-
-    .subContainerRedes {
-        width: 75%;
-        padding-bottom: 25px;
-    }
-
-    .iconRedes {
-        scale: 130%;
-    }
-
-    .buttonSolicitar {
-        width: 57%;
-    }
-
-    .ContainerContacto {
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .Direccion {
-        width: auto;
-    }
-
-    .Contacto {
-        width: auto;
-    }
-
-    .textoFooter {
-        width: 85%;
-    }
-
-    .bannerFooter {
-        height: 15vh;
-    }
-
-    .subBannerFooter {
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footerDelSud {
-        width: 85%;
-        align-self: center;
-    }
-
-    .botonesFooter {
-        width: 85%;
-        align-self: center;
-    }
-
-}
-
 @media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
 
     .boxPrincipal {
@@ -411,48 +397,5 @@
         font-style: normal;
         font-weight: 500;
         line-height: 120%;
-    }
-}
-
-@media (max-width: 430px) { 
-    .boxPrincipal {
-        height: 120vh;
-    }
-
-    .boxPrincipalResultado {
-        height: 150vh;
-    }
-
-    .ContainerIzqFooter {
-        height: 20vh;
-    }
-}
-
-@media (max-width: 430px) and (max-height: 800px) {
-
-    .boxPrincipal {
-        top: 379vh;
-        height: 129vh;
-    }
-
-    .footerDelSud {
-        width: 95%;
-        align-self: center;
-    }
-
-    .botonesFooter {
-        width: 95%;
-        align-self: center;
-    }
-}
-
-@media (max-width: 330px) {
-
-    .boxPrincipal {
-        height: 150vh;
-    }
-
-    .bannerFooter {
-        height: 20vh;
     }
 }

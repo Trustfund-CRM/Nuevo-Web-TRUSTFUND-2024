@@ -14,18 +14,6 @@ export default function ScrollPrincipal() {
     (state) => state.reducerInfoGarantia.calculador
   );
 
-  // useEffect(() => {
-  //     console.log(resultadoCalc)
-
-  //     if (typeof window !== 'undefined') {
-
-  //         if (window?.innerWidth < 1200) {
-  //             console.log(window?.innerWidth)
-  //             setCalculador(true)
-  //         }
-  //     }
-  // }, [resultadoCalc])
-
   const handleCalculador = () => {
     setCalculador(true);
   };
@@ -53,11 +41,13 @@ export default function ScrollPrincipal() {
             <Image className={style.flecha} src={flechaCirculo} />
           </div>
         </div>
-        <Image
-          className={style.FotoScrollPrincipal}
-          alt="fotoPrincipal"
-          src={backgroundHome}
-        />
+        <div className={style.contImage}>
+          <Image
+            className={style.FotoScrollPrincipal}
+            alt="fotoPrincipal"
+            src={backgroundHome}
+          />
+        </div>
       </div>
       <div className={style.footerHome}>
         <Image className={style.scrollFooter} src={scroll} />
