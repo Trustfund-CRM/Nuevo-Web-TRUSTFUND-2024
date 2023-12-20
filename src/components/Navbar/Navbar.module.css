@@ -151,6 +151,11 @@
         margin-top: 20px;
     }
 
+    .auxContainer {
+        display: flex;
+        width: 100% !important;
+    }
+
     .BoxButtonCrm {
         width: 250px;
         display: flex;
