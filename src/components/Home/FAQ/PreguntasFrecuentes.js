@@ -19,7 +19,7 @@ export default function PreguntasFrecuentes() {
   const [displayRespuesta, setDisplayRespuesta] = useState(0);
 
   const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
+    (state) => state.reducerInfoGarantia.resultado
   );
 
   const { QuestionsInqui, QuestionsProp } = handleQuestions(onyWidth);
@@ -81,6 +81,7 @@ export default function PreguntasFrecuentes() {
             <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
+              route={"/ConsultasYReclamos"}
             />
           </div>
 

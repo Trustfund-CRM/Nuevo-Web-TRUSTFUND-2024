@@ -9,9 +9,10 @@ import { useEffect, useState } from "react";
 import { useWindowScroll } from "@uidotdev/usehooks";
 
 export default function ScrollVentajas() {
+
   const [customStyle, setCustomStyle] = useState({
     background: '#F2F5FB',
-    transition: 'background 1s ease' 
+    transition: 'background 1s ease'
   });
 
   const [{ x, y }, scrollTo] = useWindowScroll();
@@ -22,7 +23,7 @@ export default function ScrollVentajas() {
         ...customStyle,
         background: '#009FBB'
       });
-    } 
+    }
     if (y < 2000) {
       setCustomStyle({
         ...customStyle,
@@ -55,6 +56,7 @@ export default function ScrollVentajas() {
             <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
+              route={"/nuestra-garantia"}
             />
           </div>
 

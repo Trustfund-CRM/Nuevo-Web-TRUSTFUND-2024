@@ -19,6 +19,13 @@ export const setDatosCalculador = (data) => {
     }
 }
 
+export const setCalculador = () => {
+    console.log('setCalculador')
+    return {
+        type: actionTypes.SET_CALCULADOR,
+    }
+}
+
 export const setResultadoCalculador = () => {
     return {
         type: actionTypes.SET_RESULTADO_CALCULADOR,

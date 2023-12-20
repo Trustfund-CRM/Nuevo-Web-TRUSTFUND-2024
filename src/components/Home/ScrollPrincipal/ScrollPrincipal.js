@@ -4,18 +4,25 @@ import { backgroundHome, flechaCirculo, scroll } from "@/styles";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function ScrollPrincipal() {
-  const [calculador, setCalculador] = useState(false);
+  // const [calculador, setCalculador] = useState(false);
 
-  const resultadoCalc = useSelector(
+  const settedCalculador = useSelector(
     (state) => state.reducerInfoGarantia.calculador
   );
 
+  const resultadoCalc = useSelector(
+    (state) => state.reducerInfoGarantia.resultado
+  );
+
+  const dispatch = useDispatch();
+
   const handleCalculador = () => {
-    setCalculador(true);
+    dispatch(setCalculador());
   };
 
   return (
@@ -31,10 +38,9 @@ export default function ScrollPrincipal() {
             Con mínimos requisitos. Obtené tu garantía de alquiler en tan solo
             24hs.
           </div>
-          <div className={style.containerButtons}>
+          <div className={style.containerButtons} onClick={() => handleCalculador()}>
             <Button
               className={style.ButtonHome}
-              onClick={() => handleCalculador()}
             >
               Cotizá tu garantía
             </Button>
@@ -53,13 +59,12 @@ export default function ScrollPrincipal() {
         <Image className={style.scrollFooter} src={scroll} alt="image" />
       </div>
 
-      {calculador ? (
+      {settedCalculador ? (
         <div
-          className={`${
-            resultadoCalc
+          className={`${resultadoCalc
               ? style.ContainerSubFooterCalculador
               : style.ContainerSubFooter
-          }`}
+            }`}
         >
           <ModalCalculador setCalculador={setCalculador} />
         </div>

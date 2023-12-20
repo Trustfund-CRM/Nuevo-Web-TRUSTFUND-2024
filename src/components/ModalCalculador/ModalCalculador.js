@@ -129,7 +129,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     const newValue = currencyMask(value);
-    // console.log(name, newValue)
     datosCalculador[name] = newValue;
   };
 
@@ -223,7 +222,7 @@ export default function ModalCalculador({ setCalculador, calculador }) {
     localStorage.setItem("datosLocalStorage", JSON.stringify(dataToSend));
   }
 
-  useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador(false))
+  useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador())
 
   return (
     <form
