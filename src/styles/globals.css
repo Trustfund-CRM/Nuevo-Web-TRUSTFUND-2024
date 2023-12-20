@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 * {
   box-sizing: initial;
@@ -17,14 +16,7 @@
 
 html,
 body {
-  /* width: 100vw; */
   height: auto;
-  /* overflow-y: scroll;
-  overflow-x: hidden; */
-  /* background-color: #ffffff; */
-  /* display: flex !important;
-  flex-direction: column;
-  align-items: center; */
   margin: 0px !important;
   text-rendering: optimizeSpeed;
 }
@@ -36,7 +28,7 @@ a {
 
 @font-face {
   font-family: Montserrat;
-  src: url(../styles//assets/static/Montserrat-Medium.ttf) format("truetype");
+  src: url(../styles/assets/static/Montserrat-Medium.ttf) format("truetype");
   font-display: swap;
 }
 
