@@ -5,14 +5,34 @@ import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
+import { useEffect, useState } from "react";
+import { useWindowScroll } from "@uidotdev/usehooks";
 
 export default function ScrollVentajas() {
-  const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
-  );
+  const [customStyle, setCustomStyle] = useState({
+    background: '#F2F5FB',
+    transition: 'background 1s ease' 
+  });
+
+  const [{ x, y }, scrollTo] = useWindowScroll();
+
+  useEffect(() => {
+    if (y > 2000) {
+      setCustomStyle({
+        ...customStyle,
+        background: '#009FBB'
+      });
+    } 
+    if (y < 2000) {
+      setCustomStyle({
+        ...customStyle,
+        background: '#F2F5FB'
+      });
+    }
+  }, [y]);
 
   return (
-    <div className={`${style.ContainerScrollVentajas}`}>
+    <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
       <CustomContainerMaxWidth>
         <div className={style.ContainerTop}>
           <div className={style.TitleVentajas}>
