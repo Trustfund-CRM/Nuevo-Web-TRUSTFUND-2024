@@ -8,7 +8,7 @@ import { CustomLine } from "@/components/CustomLine/CustomLine";
 
 export default function ScrollVentajas() {
   const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
+    (state) => state.reducerInfoGarantia.resultado
   );
 
   return (
@@ -35,6 +35,7 @@ export default function ScrollVentajas() {
             <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
+              route={"/nuestra-garantia"}
             />
           </div>
 

@@ -52,10 +52,10 @@ export default function SeccionPartners() {
               Conocé a quienes trabajan con nosotros.
             </div>
           </div>
-          <ButtonSlider
+          {/* <ButtonSlider
             text={"Ver más"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
-          />{" "}
+          />{" "} */}
         </div>
 
         <div className={style.BottomPartners}>

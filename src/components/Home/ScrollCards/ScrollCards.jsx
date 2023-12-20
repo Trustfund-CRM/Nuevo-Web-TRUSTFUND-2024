@@ -37,7 +37,7 @@ export default function ScrollCards() {
   ];
 
   const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
+    (state) => state.reducerInfoGarantia.resultado
   );
 
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);

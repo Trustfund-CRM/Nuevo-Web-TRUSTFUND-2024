@@ -134,7 +134,7 @@
     flex-direction: row;
     gap: 10px;
     width: fit-content;
-
+    cursor: pointer;
 }
 
 .containerButtons:hover .flecha {
