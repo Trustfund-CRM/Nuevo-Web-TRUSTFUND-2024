@@ -68,9 +68,9 @@ export default function ScrollCards() {
               <div className={style.TextoCard}>
                 <div className={style.TitleCard}>{c.title}</div>
                 <div className={style.DescripcionCard}>{c.descripcion}</div>
-                <Image className={style.ImagenCard} src={flechaModalBlue} />
+                <Image className={style.ImagenCard} src={flechaModalBlue} alt="image"/>
               </div>
-              <Image className={style.flechaFooterCard} src={c.image} />
+              <Image className={style.flechaFooterCard} src={c.image} alt="image"/>
             </div>
           );
         })}

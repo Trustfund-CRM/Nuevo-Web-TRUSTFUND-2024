@@ -9,8 +9,11 @@ import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { handleQuestions } from "./objectText";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
+import { useWindowWidth } from "@react-hook/window-size";
 
 export default function PreguntasFrecuentes() {
+  const onyWidth = useWindowWidth();
+
   const [inquilinosOPropietarios, setInquilinosOPropietarios] =
     useState("inquilinos");
   const [displayRespuesta, setDisplayRespuesta] = useState(0);
@@ -19,7 +22,7 @@ export default function PreguntasFrecuentes() {
     (state) => state.reducerInfoGarantia.calculador
   );
 
-  const { QuestionsInqui, QuestionsProp } = handleQuestions();
+  const { QuestionsInqui, QuestionsProp } = handleQuestions(onyWidth);
 
   const handleDisplayRespuesta = (value) => {
     if (displayRespuesta !== 0) {
@@ -78,7 +81,6 @@ export default function PreguntasFrecuentes() {
             <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
-              isPrimary={false}
             />
           </div>
 
@@ -88,8 +90,8 @@ export default function PreguntasFrecuentes() {
               key={inquilinosOPropietarios}
             >
               {inquilinosOPropietarios === "inquilinos"
-                ? QuestionsInqui.map((obj) => <CustomAccordion object={obj} />)
-                : QuestionsProp.map((obj) => <CustomAccordion object={obj} />)}
+                ? QuestionsInqui.map((obj, index) => <CustomAccordion object={obj} key={index}/>)
+                : QuestionsProp.map((obj, index) => <CustomAccordion object={obj} key={index}/>)}
             </div>
 
             {inquilinosOPropietarios === "inquilinos" ? (

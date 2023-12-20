@@ -1,8 +1,5 @@
-import { useWindowWidth } from "@/hooks/useWindowWidth";
+export const handleQuestions = (onyWidth) => {
 
-export const handleQuestions = () => {
-
-  const onyWidth = useWindowWidth();
 
   const QuestionsInqui = [
     {
