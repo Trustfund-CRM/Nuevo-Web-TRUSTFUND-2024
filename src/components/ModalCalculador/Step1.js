@@ -54,7 +54,7 @@ export default function Step1({ star, percentage, frame, flechaModal }) {
                         <option value='24'>24 MESES</option>
                         <option value='36'>36 MESES</option>
                         <option value='48'>48 MESES</option>
-                        <option value='56'>56 MESES</option>
+                        <option value='60'>60 MESES</option>
                     </select>
 
                 </div>

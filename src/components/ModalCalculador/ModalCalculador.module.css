@@ -21,7 +21,7 @@
     justify-content: space-around;
     position: absolute;
     z-index: 99;
-    padding: 0px 0px 28px 0px;
+    padding: 28px 0px 28px 0px;
     left: 40vh;
     bottom: 25vh;
 }
