@@ -8,7 +8,7 @@
 }
 
 .ContainerComentarios {
-  height: 75vh;
+  height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -18,15 +18,13 @@
   font-size: 49px;
   font-family: Montserrat;
   font-weight: 500;
-  height: 40%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
 .ContainerTitle {
-  width: 84%;
-  padding-bottom: 50px;
+  width: -webkit-fill-available;
 }
 
 .Title {
@@ -35,14 +33,22 @@
   line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
+  /* padding-top: 11.8%; */
+  padding-left: 11%;
+  padding-right: 31.1%;
+  padding-bottom: 3.3%;
 }
 
 .ContainerSlideComentarios {
-  width: 84%;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: space-between;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-top: 4%;
+  padding-bottom: 13.2%;
 }
 
 .ContainerSubText {
@@ -50,7 +56,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
   gap: 80px;
 }
 
@@ -84,7 +89,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 95%;
+  
 }
 
 .ContainerFlechas {
@@ -188,12 +193,10 @@
   flex-direction: column;
   justify-content: flex-end;
   background-color: #ffffff;
-  padding: 150px 0px;
 }
 
 .ContainerTitlePartners {
-  width: 84%;
-  padding-bottom: 50px;
+  width: -webkit-fill-available;
 }
 
 .BottomPartners {
@@ -203,12 +206,15 @@
 }
 
 .ContainerSlidePartners {
-  width: 84%;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   align-self: center;
   justify-content: space-between;
   gap: 100px;
+  padding-bottom: 13.2%;
+  padding-left: 11%;
+  padding-right: 11%;
 }
 
 .ContainerSlider {

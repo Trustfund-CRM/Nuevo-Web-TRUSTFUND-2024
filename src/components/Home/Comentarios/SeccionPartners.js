@@ -34,7 +34,6 @@ export default function SeccionPartners() {
     <div className={style.SeccionPartners}>
       <div className={style.TitleComentarios}>
         <div
-          style={{ width: "84%", paddingBottom: "50px" }}
           className={style.ContainerTitlePartners}
         >
           <div className={style.Title}>Nuestros partners</div>
