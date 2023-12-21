@@ -209,468 +209,468 @@ export default function ModalCalculador({ setCalculador, calculador }) {
   useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador())
 
   return (
-    <form
-      className={
-        resultado
-          ? `${style.ContainerModalCalculadorResultado}`
-          : `${style.ContainerModalCalculador}`
-      }
-      onSubmit={handleSubmit(onSubmit)}
-      ref={modalRef}
-    >
-      <div className={style.TitleCalculador}>
-        <div className={style.Title}>Calculá tu garantía</div>
-        <div className={style.subTextCalculador}>
-          Calculá al instante tu garantía y conocé las modalidades de pago que
-          mejor se adapten a tus necesidades.{" "}
-        </div>
-      </div>
-
-      <div className={style.ContainerInputs}>
-        <div className={style.ContainerValores}>
-          <input
-            type="text"
-            name="valorAlquiler"
-            className={style.input1}
-            placeholder="Valor de alquiler"
-            onInput={(e) => handleInputChange(e)}
-            {...register("valorAlquiler", { required: true })}
-          />
-          <input
-            type="text"
-            name="valorExpensas"
-            className={style.input2}
-            placeholder="Valor de expensas"
-            onInput={(e) => handleInputChange(e)}
-            {...register("valorExpensas", { required: true })}
-          />
-        </div>
-        <div className={style.ContainerValores}>
-          <select
-            name="tipoDePropiedad"
-            id="tipoDePropiedad"
-            className={style.input1}
-            onInput={(e) => handleInputChange(e)}
-            {...register("tipoDePropiedad", { required: true })}
-          >
-            <option value="">Tipo</option>
-            <option value="Vivienda">Vivienda</option>
-            <option value="Comercio">Comercio</option>
-            <option value="Campo">Campo</option>
-          </select>
-
-          <select
-            name="Duracion"
-            id="Duracion"
-            className={style.input2}
-            onInput={(e) => handleInputChange(e)}
-            {...register("Duracion", { required: true })}
-          >
-            <option value="">Duración</option>
-            <option value="12">12 MESES</option>
-            <option value="24">24 MESES</option>
-            <option value="36">36 MESES</option>
-            <option value="48">48 MESES</option>
-            <option value="60">60 MESES</option>
-          </select>
-        </div>
-        <Button type="submit" className={style.flechaCalcula}>
-          {mobile ? (
-            <div className={style.textoCalculador}>Calcular</div>
-          ) : (
-            <Image src={flechaModal} alt="flecha" />
-          )}
-        </Button>
-      </div>
-
-      {!mobile ? (
-        <div className={style.ContainerPasos}>
-          <div className={style.Paso}>
-            <Image src={percentage} alt="porcentaje" />
-            <div className={style.textPaso}>Cotizá tu garantía</div>
-          </div>
-          <div className={style.Paso}>
-            <Image src={frame} alt="datos" />
-            <div className={style.textPaso}>Validá tus datos</div>
-          </div>
-          <div className={style.Paso}>
-            <Image src={star} alt="estrella" />
-            <div className={style.textPaso}>¡Listo!</div>
+      <form
+        className={
+          resultado
+            ? `${style.ContainerModalCalculadorResultado}`
+            : `${style.ContainerModalCalculador}`
+        }
+        onSubmit={handleSubmit(onSubmit)}
+        ref={modalRef}
+      >
+        <div className={style.TitleCalculador}>
+          <div className={style.Title}>Calculá tu garantía</div>
+          <div className={style.subTextCalculador}>
+            Calculá al instante tu garantía y conocé las modalidades de pago que
+            mejor se adapten a tus necesidades.{" "}
           </div>
         </div>
-      ) : null}
 
-      {resultado &&
-      anticipo &&
-      contado &&
-      tresCuotas &&
-      seisCuotas &&
-      doceCuotas ? (
-        <div className={style.ExtraContainerCards}>
-          <div className={style.ContainerCards}>
-            <div
-              className={
-                activeItem === "Contado" ? style.activo : style.cardCuota
-              }
-              onMouseOver={() => handleMouseOver("Contado")}
-              onMouseOut={() => handleMouseOut("Contado")}
-              onClick={() => setActiveItem("Contado")}
-            >
-              <div
-                className={
-                  activeItem === "Contado"
-                    ? style.titleCardActiva
-                    : style.titleCard
-                }
-              >
-                15% OFF
-              </div>
-              <div className={style.subtitleCard}>
-                <div
-                  className={
-                    activeItem === "Contado"
-                      ? style.anticipoCardActiva
-                      : style.anticipoCard
-                  }
-                >
-                  Contado
-                </div>
-                <div
-                  className={
-                    activeItem === "Contado"
-                      ? style.contadoCardActiva
-                      : style.contadoCard
-                  }
-                >
-                  Sin descuento ${resultado}
-                </div>
-              </div>
-              <div className={style.pago}>
-                <div
-                  className={
-                    activeItem === "Contado" ? style.cuotasActiva : style.cuotas
-                  }
-                >
-                  1 Pago de
-                </div>
-                <div
-                  className={
-                    activeItem === "Contado"
-                      ? style.valorCuotasActiva
-                      : style.valorCuotas
-                  }
-                >
-                  ${contado}
-                </div>
-              </div>
-              <div
-                className={
-                  activeItem === "Contado"
-                    ? style.ButtonSeleccionado
-                    : style.ButtonSeleccionar
-                }
-              >
-                <div
-                  className={
-                    activeItem === "Contado"
-                      ? style.textSeleccionado
-                      : style.textSeleccionar
-                  }
-                >
-                  {activeItem === "Contado" ? "Seleccionado" : "Seleccionar"}
-                </div>
-                <Image
-                  alt="flecha"
-                  className={
-                    activeItem === "Contado"
-                      ? style.flechaCardActiva
-                      : style.flechaCard
-                  }
-                  src={activeItem === "Contado" ? flechaModal : imageSrc1}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                activeItem === "3 Cuotas" ? style.activo : style.cardCuota
-              }
-              onMouseOver={() => handleMouseOver("3 Cuotas")}
-              onMouseOut={() => handleMouseOut("3 Cuotas")}
-              onClick={() => setActiveItem("3 Cuotas")}
-            >
-              <div
-                className={
-                  activeItem === "3 Cuotas"
-                    ? style.titleCardActiva
-                    : style.titleCard
-                }
-              >
-                3 cuotas s/ interés
-              </div>
-              <div className={style.subtitleCard}>
-                <div
-                  className={
-                    activeItem === "3 Cuotas"
-                      ? style.anticipoCardActiva
-                      : style.anticipoCard
-                  }
-                >
-                  Anticipo del 15%
-                </div>
-                <div
-                  className={
-                    activeItem === "3 Cuotas"
-                      ? style.descuentoCardActiva
-                      : style.descuentoCard
-                  }
-                >
-                  ${anticipo}
-                </div>
-              </div>
-              <div className={style.pago}>
-                <div
-                  className={
-                    activeItem === "3 Cuotas"
-                      ? style.cuotasActiva
-                      : style.cuotas
-                  }
-                >
-                  2 cuotas de
-                </div>
-                <div
-                  className={
-                    activeItem === "3 Cuotas"
-                      ? style.valorCuotasActiva
-                      : style.valorCuotas
-                  }
-                >
-                  ${tresCuotas}
-                </div>
-              </div>
-              <div
-                className={
-                  activeItem === "3 Cuotas"
-                    ? style.ButtonSeleccionado
-                    : style.ButtonSeleccionar
-                }
-              >
-                <div
-                  className={
-                    activeItem === "3 Cuotas"
-                      ? style.textSeleccionado
-                      : style.textSeleccionar
-                  }
-                >
-                  {activeItem === "3 Cuotas" ? "Seleccionado" : "Seleccionar"}
-                </div>
-                <Image
-                  alt="flecha"
-                  className={
-                    activeItem === "3 Cuotas"
-                      ? style.flechaCardActiva
-                      : style.flechaCard
-                  }
-                  src={activeItem === "3 Cuotas" ? flechaModal : imageSrc2}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                activeItem === "6 Cuotas" ? style.activo : style.cardCuota
-              }
-              onMouseOver={() => handleMouseOver("6 Cuotas")}
-              onMouseOut={() => handleMouseOut("6 Cuotas")}
-              onClick={() => setActiveItem("6 Cuotas")}
-            >
-              <div
-                className={
-                  activeItem === "6 Cuotas"
-                    ? style.titleCardActiva
-                    : style.titleCard
-                }
-              >
-                6 cuotas s/ interés
-              </div>
-              <div className={style.subtitleCard}>
-                <div
-                  className={
-                    activeItem === "6 Cuotas"
-                      ? style.anticipoCardActiva
-                      : style.anticipoCard
-                  }
-                >
-                  Anticipo del 15%
-                </div>
-                <div
-                  className={
-                    activeItem === "6 Cuotas"
-                      ? style.descuentoCardActiva
-                      : style.descuentoCard
-                  }
-                >
-                  ${anticipo}
-                </div>
-              </div>
-              <div className={style.pago}>
-                <div
-                  className={
-                    activeItem === "6 Cuotas"
-                      ? style.cuotasActiva
-                      : style.cuotas
-                  }
-                >
-                  5 cuotas de
-                </div>
-                <div
-                  className={
-                    activeItem === "6 Cuotas"
-                      ? style.valorCuotasActiva
-                      : style.valorCuotas
-                  }
-                >
-                  ${seisCuotas}
-                </div>
-              </div>
-              <div
-                className={
-                  activeItem === "6 Cuotas"
-                    ? style.ButtonSeleccionado
-                    : style.ButtonSeleccionar
-                }
-              >
-                <div
-                  className={
-                    activeItem === "6 Cuotas"
-                      ? style.textSeleccionado
-                      : style.textSeleccionar
-                  }
-                >
-                  {activeItem === "6 Cuotas" ? "Seleccionado" : "Seleccionar"}
-                </div>
-                <Image
-                  alt="flecha"
-                  className={
-                    activeItem === "6 Cuotas"
-                      ? style.flechaCardActiva
-                      : style.flechaCard
-                  }
-                  src={activeItem === "6 Cuotas" ? flechaModal : imageSrc3}
-                />
-              </div>
-            </div>
-
-            <div
-              className={
-                activeItem === "12 Cuotas" ? style.activo : style.cardCuota
-              }
-              onMouseOver={() => handleMouseOver("12 Cuotas")}
-              onMouseOut={() => handleMouseOut("12 Cuotas")}
-              onClick={() => setActiveItem("12 Cuotas")}
-            >
-              <div
-                className={
-                  activeItem === "12 Cuotas"
-                    ? style.titleCardActiva
-                    : style.titleCard
-                }
-              >
-                12 cuotas
-              </div>
-              <div className={style.subtitleCard}>
-                <div
-                  className={
-                    activeItem === "12 Cuotas"
-                      ? style.anticipoCardActiva
-                      : style.anticipoCard
-                  }
-                >
-                  Anticipo del 15%
-                </div>
-                <div
-                  className={
-                    activeItem === "12 Cuotas"
-                      ? style.descuentoCardActiva
-                      : style.descuentoCard
-                  }
-                >
-                  ${anticipo12}
-                </div>
-              </div>
-              <div className={style.pago}>
-                <div
-                  className={
-                    activeItem === "12 Cuotas"
-                      ? style.cuotasActiva
-                      : style.cuotas
-                  }
-                >
-                  11 cuotas de
-                </div>
-                <div
-                  className={
-                    activeItem === "12 Cuotas"
-                      ? style.valorCuotasActiva
-                      : style.valorCuotas
-                  }
-                >
-                  ${doceCuotas}
-                </div>
-              </div>
-              <div
-                className={
-                  activeItem === "12 Cuotas"
-                    ? style.ButtonSeleccionado
-                    : style.ButtonSeleccionar
-                }
-              >
-                <div
-                  className={
-                    activeItem === "12 Cuotas"
-                      ? style.textSeleccionado
-                      : style.textSeleccionar
-                  }
-                >
-                  {activeItem === "12 Cuotas" ? "Seleccionado" : "Seleccionar"}
-                </div>
-                <Image
-                  alt="flecha"
-                  className={
-                    activeItem === "12 Cuotas"
-                      ? style.flechaCardActiva
-                      : style.flechaCard
-                  }
-                  src={activeItem === "12 Cuotas" ? flechaModal : imageSrc4}
-                />
-              </div>
-            </div>
+        <div className={style.ContainerInputs}>
+          <div className={style.ContainerValores}>
+            <input
+              type="text"
+              name="valorAlquiler"
+              className={style.input1}
+              placeholder="Valor de alquiler"
+              onInput={(e) => handleInputChange(e)}
+              {...register("valorAlquiler", { required: true })}
+            />
+            <input
+              type="text"
+              name="valorExpensas"
+              className={style.input2}
+              placeholder="Valor de expensas"
+              onInput={(e) => handleInputChange(e)}
+              {...register("valorExpensas", { required: true })}
+            />
           </div>
+          <div className={style.ContainerValores}>
+            <select
+              name="tipoDePropiedad"
+              id="tipoDePropiedad"
+              className={style.input1}
+              onInput={(e) => handleInputChange(e)}
+              {...register("tipoDePropiedad", { required: true })}
+            >
+              <option value="">Tipo</option>
+              <option value="Vivienda">Vivienda</option>
+              <option value="Comercio">Comercio</option>
+              <option value="Campo">Campo</option>
+            </select>
 
-          <div className={style.containerButtonCard}>
-            {activeItem === null ? (
-              <div className={style.buttonSolicitarDisabled}>
-                Solicitá tu garantía
-              </div>
+            <select
+              name="Duracion"
+              id="Duracion"
+              className={style.input2}
+              onInput={(e) => handleInputChange(e)}
+              {...register("Duracion", { required: true })}
+            >
+              <option value="">Duración</option>
+              <option value="12">12 MESES</option>
+              <option value="24">24 MESES</option>
+              <option value="36">36 MESES</option>
+              <option value="48">48 MESES</option>
+              <option value="60">60 MESES</option>
+            </select>
+          </div>
+          <Button type="submit" className={style.flechaCalcula}>
+            {mobile ? (
+              <div className={style.textoCalculador}>Calcular</div>
             ) : (
-              <Link
-                className={style.buttonSolicitar}
-                onClick={handleClick}
-                href="/ObteneTuGarantia"
-              >
-                Solicitá tu garantía
-              </Link>
+              <Image src={flechaModal} alt="flecha" />
             )}
-            {!mobile ? (
-              <Image
-                alt="flecha"
-                className={style.flechaSolicitar}
-                src={flechaModalBlue}
-              />
-            ) : null}
-          </div>
+          </Button>
         </div>
-      ) : null}
-    </form>
+
+        {!mobile ? (
+          <div className={style.ContainerPasos}>
+            <div className={style.Paso}>
+              <Image src={percentage} alt="porcentaje" />
+              <div className={style.textPaso}>Cotizá tu garantía</div>
+            </div>
+            <div className={style.Paso}>
+              <Image src={frame} alt="datos" />
+              <div className={style.textPaso}>Validá tus datos</div>
+            </div>
+            <div className={style.Paso}>
+              <Image src={star} alt="estrella" />
+              <div className={style.textPaso}>¡Listo!</div>
+            </div>
+          </div>
+        ) : null}
+
+        {resultado &&
+        anticipo &&
+        contado &&
+        tresCuotas &&
+        seisCuotas &&
+        doceCuotas ? (
+          <div className={style.ExtraContainerCards}>
+            <div className={style.ContainerCards}>
+              <div
+                className={
+                  activeItem === "Contado" ? style.activo : style.cardCuota
+                }
+                onMouseOver={() => handleMouseOver("Contado")}
+                onMouseOut={() => handleMouseOut("Contado")}
+                onClick={() => setActiveItem("Contado")}
+              >
+                <div
+                  className={
+                    activeItem === "Contado"
+                      ? style.titleCardActiva
+                      : style.titleCard
+                  }
+                >
+                  15% OFF
+                </div>
+                <div className={style.subtitleCard}>
+                  <div
+                    className={
+                      activeItem === "Contado"
+                        ? style.anticipoCardActiva
+                        : style.anticipoCard
+                    }
+                  >
+                    Contado
+                  </div>
+                  <div
+                    className={
+                      activeItem === "Contado"
+                        ? style.contadoCardActiva
+                        : style.contadoCard
+                    }
+                  >
+                    Sin descuento ${resultado}
+                  </div>
+                </div>
+                <div className={style.pago}>
+                  <div
+                    className={
+                      activeItem === "Contado" ? style.cuotasActiva : style.cuotas
+                    }
+                  >
+                    1 Pago de
+                  </div>
+                  <div
+                    className={
+                      activeItem === "Contado"
+                        ? style.valorCuotasActiva
+                        : style.valorCuotas
+                    }
+                  >
+                    ${contado}
+                  </div>
+                </div>
+                <div
+                  className={
+                    activeItem === "Contado"
+                      ? style.ButtonSeleccionado
+                      : style.ButtonSeleccionar
+                  }
+                >
+                  <div
+                    className={
+                      activeItem === "Contado"
+                        ? style.textSeleccionado
+                        : style.textSeleccionar
+                    }
+                  >
+                    {activeItem === "Contado" ? "Seleccionado" : "Seleccionar"}
+                  </div>
+                  <Image
+                    alt="flecha"
+                    className={
+                      activeItem === "Contado"
+                        ? style.flechaCardActiva
+                        : style.flechaCard
+                    }
+                    src={activeItem === "Contado" ? flechaModal : imageSrc1}
+                  />
+                </div>
+              </div>
+
+              <div
+                className={
+                  activeItem === "3 Cuotas" ? style.activo : style.cardCuota
+                }
+                onMouseOver={() => handleMouseOver("3 Cuotas")}
+                onMouseOut={() => handleMouseOut("3 Cuotas")}
+                onClick={() => setActiveItem("3 Cuotas")}
+              >
+                <div
+                  className={
+                    activeItem === "3 Cuotas"
+                      ? style.titleCardActiva
+                      : style.titleCard
+                  }
+                >
+                  3 cuotas s/ interés
+                </div>
+                <div className={style.subtitleCard}>
+                  <div
+                    className={
+                      activeItem === "3 Cuotas"
+                        ? style.anticipoCardActiva
+                        : style.anticipoCard
+                    }
+                  >
+                    Anticipo del 15%
+                  </div>
+                  <div
+                    className={
+                      activeItem === "3 Cuotas"
+                        ? style.descuentoCardActiva
+                        : style.descuentoCard
+                    }
+                  >
+                    ${anticipo}
+                  </div>
+                </div>
+                <div className={style.pago}>
+                  <div
+                    className={
+                      activeItem === "3 Cuotas"
+                        ? style.cuotasActiva
+                        : style.cuotas
+                    }
+                  >
+                    2 cuotas de
+                  </div>
+                  <div
+                    className={
+                      activeItem === "3 Cuotas"
+                        ? style.valorCuotasActiva
+                        : style.valorCuotas
+                    }
+                  >
+                    ${tresCuotas}
+                  </div>
+                </div>
+                <div
+                  className={
+                    activeItem === "3 Cuotas"
+                      ? style.ButtonSeleccionado
+                      : style.ButtonSeleccionar
+                  }
+                >
+                  <div
+                    className={
+                      activeItem === "3 Cuotas"
+                        ? style.textSeleccionado
+                        : style.textSeleccionar
+                    }
+                  >
+                    {activeItem === "3 Cuotas" ? "Seleccionado" : "Seleccionar"}
+                  </div>
+                  <Image
+                    alt="flecha"
+                    className={
+                      activeItem === "3 Cuotas"
+                        ? style.flechaCardActiva
+                        : style.flechaCard
+                    }
+                    src={activeItem === "3 Cuotas" ? flechaModal : imageSrc2}
+                  />
+                </div>
+              </div>
+
+              <div
+                className={
+                  activeItem === "6 Cuotas" ? style.activo : style.cardCuota
+                }
+                onMouseOver={() => handleMouseOver("6 Cuotas")}
+                onMouseOut={() => handleMouseOut("6 Cuotas")}
+                onClick={() => setActiveItem("6 Cuotas")}
+              >
+                <div
+                  className={
+                    activeItem === "6 Cuotas"
+                      ? style.titleCardActiva
+                      : style.titleCard
+                  }
+                >
+                  6 cuotas s/ interés
+                </div>
+                <div className={style.subtitleCard}>
+                  <div
+                    className={
+                      activeItem === "6 Cuotas"
+                        ? style.anticipoCardActiva
+                        : style.anticipoCard
+                    }
+                  >
+                    Anticipo del 15%
+                  </div>
+                  <div
+                    className={
+                      activeItem === "6 Cuotas"
+                        ? style.descuentoCardActiva
+                        : style.descuentoCard
+                    }
+                  >
+                    ${anticipo}
+                  </div>
+                </div>
+                <div className={style.pago}>
+                  <div
+                    className={
+                      activeItem === "6 Cuotas"
+                        ? style.cuotasActiva
+                        : style.cuotas
+                    }
+                  >
+                    5 cuotas de
+                  </div>
+                  <div
+                    className={
+                      activeItem === "6 Cuotas"
+                        ? style.valorCuotasActiva
+                        : style.valorCuotas
+                    }
+                  >
+                    ${seisCuotas}
+                  </div>
+                </div>
+                <div
+                  className={
+                    activeItem === "6 Cuotas"
+                      ? style.ButtonSeleccionado
+                      : style.ButtonSeleccionar
+                  }
+                >
+                  <div
+                    className={
+                      activeItem === "6 Cuotas"
+                        ? style.textSeleccionado
+                        : style.textSeleccionar
+                    }
+                  >
+                    {activeItem === "6 Cuotas" ? "Seleccionado" : "Seleccionar"}
+                  </div>
+                  <Image
+                    alt="flecha"
+                    className={
+                      activeItem === "6 Cuotas"
+                        ? style.flechaCardActiva
+                        : style.flechaCard
+                    }
+                    src={activeItem === "6 Cuotas" ? flechaModal : imageSrc3}
+                  />
+                </div>
+              </div>
+
+              <div
+                className={
+                  activeItem === "12 Cuotas" ? style.activo : style.cardCuota
+                }
+                onMouseOver={() => handleMouseOver("12 Cuotas")}
+                onMouseOut={() => handleMouseOut("12 Cuotas")}
+                onClick={() => setActiveItem("12 Cuotas")}
+              >
+                <div
+                  className={
+                    activeItem === "12 Cuotas"
+                      ? style.titleCardActiva
+                      : style.titleCard
+                  }
+                >
+                  12 cuotas
+                </div>
+                <div className={style.subtitleCard}>
+                  <div
+                    className={
+                      activeItem === "12 Cuotas"
+                        ? style.anticipoCardActiva
+                        : style.anticipoCard
+                    }
+                  >
+                    Anticipo del 15%
+                  </div>
+                  <div
+                    className={
+                      activeItem === "12 Cuotas"
+                        ? style.descuentoCardActiva
+                        : style.descuentoCard
+                    }
+                  >
+                    ${anticipo12}
+                  </div>
+                </div>
+                <div className={style.pago}>
+                  <div
+                    className={
+                      activeItem === "12 Cuotas"
+                        ? style.cuotasActiva
+                        : style.cuotas
+                    }
+                  >
+                    11 cuotas de
+                  </div>
+                  <div
+                    className={
+                      activeItem === "12 Cuotas"
+                        ? style.valorCuotasActiva
+                        : style.valorCuotas
+                    }
+                  >
+                    ${doceCuotas}
+                  </div>
+                </div>
+                <div
+                  className={
+                    activeItem === "12 Cuotas"
+                      ? style.ButtonSeleccionado
+                      : style.ButtonSeleccionar
+                  }
+                >
+                  <div
+                    className={
+                      activeItem === "12 Cuotas"
+                        ? style.textSeleccionado
+                        : style.textSeleccionar
+                    }
+                  >
+                    {activeItem === "12 Cuotas" ? "Seleccionado" : "Seleccionar"}
+                  </div>
+                  <Image
+                    alt="flecha"
+                    className={
+                      activeItem === "12 Cuotas"
+                        ? style.flechaCardActiva
+                        : style.flechaCard
+                    }
+                    src={activeItem === "12 Cuotas" ? flechaModal : imageSrc4}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className={style.containerButtonCard}>
+              {activeItem === null ? (
+                <div className={style.buttonSolicitarDisabled}>
+                  Solicitá tu garantía
+                </div>
+              ) : (
+                <Link
+                  className={style.buttonSolicitar}
+                  onClick={handleClick}
+                  href="/ObteneTuGarantia"
+                >
+                  Solicitá tu garantía
+                </Link>
+              )}
+              {!mobile ? (
+                <Image
+                  alt="flecha"
+                  className={style.flechaSolicitar}
+                  src={flechaModalBlue}
+                />
+              ) : null}
+            </div>
+          </div>
+        ) : null}
+      </form>
   );
 }

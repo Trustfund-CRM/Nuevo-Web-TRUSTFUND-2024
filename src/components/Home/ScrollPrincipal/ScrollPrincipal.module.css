@@ -35,6 +35,8 @@
 
 .contImage {
     display: flex;
+    position: fixed;
+    z-index: 0;
     width: 100%;
     z-index: 0;
 }
@@ -148,13 +150,15 @@
 .footerHome {
     display: flex;
     flex-direction: column;
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available; */
     justify-content: flex-end;
     position: absolute;
+    left: 50%;
+    bottom: 5%;
     z-index: 2;
     height: auto;
-    bottom: 10%;
-    left: 100;
+    /* bottom: 10%; */
+    /* left: 100; */
 }
 
 .scrollFooter {
@@ -214,6 +218,8 @@
     .ContainerTitle {
         width: -webkit-fill-available;
         padding-left: 30px;
+        gap: 24px;
+        height: fit-content;
     }
 
     .Titulo {
@@ -317,4 +323,8 @@
     .ContainerTitle {
         top: 30%;
     }
+
+    /* .ContainerSubFooterCalculador, .ContainerSubFooter {
+
+    } */
 }

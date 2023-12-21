@@ -4,6 +4,7 @@
   height: 100vh;
   background-color: #0076b9;
   width: 100%;
+  z-index: 9;
 }
 
 .ContainerFAQResultados {

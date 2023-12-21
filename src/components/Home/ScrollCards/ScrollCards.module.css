@@ -6,6 +6,7 @@
   background-color: #f2f5fb;
   width: -webkit-fill-available;
   justify-content: space-between;
+  z-index: 9;
 }
 
 .ExtraContainerHeader {

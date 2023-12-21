@@ -1,12 +1,10 @@
 .containerSlide {
     height: 15vh;
-    /* display: flex; */
-    /* position: absolute;
-    top: 112vh; */
     background-color: #FFFFFF;
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
+    z-index: 8;
 }
 
 .containerSlideCalculador {
