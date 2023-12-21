@@ -36,7 +36,7 @@ export default function ScrollVentajas() {
 
   return (
     <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
-      <CustomContainerMaxWidth>
+      <CustomContainerMaxWidth ventajas={true}>
         <div className={style.ContainerTop}>
           <div className={style.TitleVentajas}>
             Ventajas de utilizar Trust Fund
