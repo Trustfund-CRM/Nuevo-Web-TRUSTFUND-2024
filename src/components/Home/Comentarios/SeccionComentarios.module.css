@@ -223,6 +223,10 @@
   justify-content: center;
   align-self: center;
   gap: 64px;
+
+  @media (min-width: 0px) and (max-width: 1100px) {
+    overflow: hidden;
+  }
 }
 
 .contImagePartner {
@@ -230,6 +234,10 @@
   align-items: center;
   width: 180px;
   height: 110px;
+
+  @media (min-width: 0px) and (max-width: 1200px) {
+    width: 120px;
+  }
 }
 
 .contImagePartner .imgPartner {
