@@ -3,6 +3,7 @@ const initialState = {
     inmobiliarias: [],
     calculador: false,
     resultado: false,
+    modal: false,
 }
 
 function reducerInfoGarantia(state = initialState, action) {
@@ -38,6 +39,11 @@ function reducerInfoGarantia(state = initialState, action) {
             return {
                 ...state,
                 resultado: true
+            }
+        case actionTypes.SET_MODAL_SUSCRIBE:
+            return {
+                ...state,
+                modal: !state.modal
             }
         default:
             return state

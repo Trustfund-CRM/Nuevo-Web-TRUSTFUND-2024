@@ -31,6 +31,12 @@ export const setResultadoCalculador = () => {
     }
 }
 
+export const setModalSuscribe = () => {
+    return {
+        type: actionTypes.SET_MODAL_SUSCRIBE,
+    }
+}
+
 export const getInmobiliarias = () => async (dispatch) => {
     return await axios.get(`https://trustfundcrm.testeoenzo.online/api/inmobiliarias_adheridas`)
         .then((info) => {

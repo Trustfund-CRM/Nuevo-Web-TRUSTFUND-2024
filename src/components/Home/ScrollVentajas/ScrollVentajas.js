@@ -59,6 +59,7 @@ export default function ScrollVentajas() {
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
               route={"/nuestra-garantia"}
+              suscribe={false}
             />
           </div>
 
