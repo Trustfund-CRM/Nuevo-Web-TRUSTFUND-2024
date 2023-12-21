@@ -311,6 +311,9 @@ export default function ModalCalculador({ setCalculador, calculador }) {
 
       {!mobile ? (
         <div className={style.ContainerPasos}>
+          <div className={style.PasoAux}>
+          Solicitala en pocos pasos
+          </div>
           <div className={style.Paso}>
             <Image src={percentage} alt="porcentaje" />
             <div className={style.textPaso}>Cotizá tu garantía</div>
