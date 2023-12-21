@@ -55,6 +55,7 @@ export default function SeccionPartners() {
           {/* <ButtonSlider
             text={"Ver más"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
+            suscribe={false}
           />{" "} */}
         </div>
 

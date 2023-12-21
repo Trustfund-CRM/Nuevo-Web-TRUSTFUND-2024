@@ -74,7 +74,7 @@ export default function Footer() {
           <ButtonSlider
             text={"Suscribirme"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
-            route={"/"} //Debe mandar un mail a info@trustfund.com.ar y mostrar un modal informando eso
+            suscribe={true} //Debe mandar un mail a info@trustfund.com.ar y mostrar un modal informando eso
           />
         </div>
 
