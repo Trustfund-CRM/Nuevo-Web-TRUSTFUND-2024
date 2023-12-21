@@ -4,6 +4,10 @@
   height: 100vh;
   background-color: #0076b9;
   width: 100%;
+
+  @media (min-width: 0px) and (max-width: 900px) {
+    height: auto;
+  }
 }
 
 .ContainerFAQResultados {
@@ -127,6 +131,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 0px) and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 @keyframes animateImage {
@@ -148,6 +156,12 @@
 .ImageInquilinoProp {
   animation-name: animateImage;
   animation-duration: 1.5s;
+
+  @media (min-width: 0px) and (max-width: 1340px) {
+    position: relative;
+    scale: 75%;
+    left: 57px;
+  }
 }
 
 @keyframes animationText {
