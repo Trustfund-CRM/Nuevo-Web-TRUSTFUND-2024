@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const ButtonSlider = ({ text, customBackground, route }) => {
-  console.log(route)
   return (
     <Link href={`${route}`} className={style.buttonSlider} style={customBackground}>
       <div className={style.buttonTxt}>{text}</div>

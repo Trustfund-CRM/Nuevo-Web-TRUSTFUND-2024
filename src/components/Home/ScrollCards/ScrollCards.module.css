@@ -190,8 +190,8 @@
   }
 
   .ContainerGeneral {
-    height: 235vh;
-    padding: 0px 24px;
+    height: auto;
+    padding: 24px;
   }
 
   .ExtraContainerHeader {
@@ -211,7 +211,7 @@
   }
 
   .TextoCard {
-    width: 85%;
+    width: 100%;
     padding: 22px;
   }
 
@@ -221,6 +221,7 @@
     border-radius: 20px;
     width: 100%;
     height: 340px;
+    max-height: 340px;
   }
 
   .cardImage {
@@ -235,7 +236,7 @@
 @media only screen and (min-width: 361px) and (max-width: 480px) {
   .ContainerGeneral {
     height: auto;
-    padding-bottom: 80px;
+    padding: 0px 24px 100px 24px;
   }
 
   .ContainerGeneralResultados {
@@ -249,7 +250,7 @@
 
   .ExtraContainerHeader {
     height: 15%;
-    width: 79%;
+    width: 100%;
     align-self: center;
   }
 
@@ -284,16 +285,17 @@
   }
 
   .Card {
-    margin: 25px 0px 25px 0px;
+    /* margin: 25px 0px 25px 0px; */
     flex-direction: column;
     border-radius: 20px;
     max-height: 450px;
-    width: 81%;
+    width: 100%;
   }
 
   .TextoCard {
     gap: 32px;
-    width: 75%;
+    width: 100%;
+    padding: 22px;
   }
 
   .TitleCard {

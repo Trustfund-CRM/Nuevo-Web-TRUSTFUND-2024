@@ -27,48 +27,51 @@ export default function ScrollPrincipal() {
 
   return (
     <div className={`${style.ExtraContainerScrollPrincipal}`}>
-      <div className={style.ContainerScrollPrincipal}>
-        <div className={style.ContainerTitle}>
-          <div className={style.Intro}>Somos Trust Fund</div>
-          <div className={style.Titulo}>
-            <div className={style.Text1}>Garantizamos</div>
-            <div className={style.Text2}>tu alquiler</div>
-          </div>
-          <div className={style.subText}>
-            Con mínimos requisitos. Obtené tu garantía de alquiler en tan solo
-            24hs.
-          </div>
-          <div className={style.containerButtons} onClick={() => handleCalculador()}>
-            <Button
-              className={style.ButtonHome}
+      <CustomContainerMaxWidth>
+        <div className={style.ContainerScrollPrincipal}>
+          <div className={style.ContainerTitle}>
+            <div className={style.Intro}>Somos Trust Fund</div>
+            <div className={style.Titulo}>
+              <div className={style.Text1}>Garantizamos</div>
+              <div className={style.Text2}>tu alquiler</div>
+            </div>
+            <div className={style.subText}>
+              Con mínimos requisitos. Obtené tu garantía de alquiler en tan solo
+              24hs.
+            </div>
+            <div
+              className={style.containerButtons}
+              onClick={() => handleCalculador()}
             >
-              Cotizá tu garantía
-            </Button>
-            <Image className={style.flecha} src={flechaCirculo} />
+              <Button className={style.ButtonHome}>Cotizá tu garantía</Button>
+              <Image className={style.flecha} src={flechaCirculo} />
+            </div>
           </div>
         </div>
-        <div className={style.contImage}>
-          <Image
-            className={style.FotoScrollPrincipal}
-            alt="fotoPrincipal"
-            src={backgroundHome}
-          />
+        <div className={style.footerHome}>
+          <Image className={style.scrollFooter} src={scroll} alt="image" />
         </div>
-      </div>
-      <div className={style.footerHome}>
-        <Image className={style.scrollFooter} src={scroll} alt="image" />
-      </div>
 
-      {settedCalculador ? (
-        <div
-          className={`${resultadoCalc
-              ? style.ContainerSubFooterCalculador
-              : style.ContainerSubFooter
+        {settedCalculador ? (
+          <div
+            className={`${
+              resultadoCalc
+                ? style.ContainerSubFooterCalculador
+                : style.ContainerSubFooter
             }`}
-        >
-          <ModalCalculador setCalculador={setCalculador} />
-        </div>
-      ) : null}
+          >
+            <ModalCalculador setCalculador={setCalculador} />
+          </div>
+        ) : null}
+      </CustomContainerMaxWidth>
+
+      <div className={style.contImage}>
+        <Image
+          className={style.FotoScrollPrincipal}
+          alt="fotoPrincipal"
+          src={backgroundHome}
+        />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import style from "./SeccionComentarios.module.css";
 import Image from "next/image";
-import { calificacion, calificacionGris, flechaModal } from "@/styles";
+import { flechaModal } from "@/styles";
 import { useState } from "react";
 import { dataCards } from "./dataCards";
 import { RatingCard } from "@/components/Cards/RatingCard";
