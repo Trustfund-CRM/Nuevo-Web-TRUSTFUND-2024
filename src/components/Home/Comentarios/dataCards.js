@@ -37,7 +37,7 @@ export const dataCards = [
     },
     {
       id: 'card_7',
-      username: 'Marcelo Alejandro Cuello Cuello',
+      username: 'Marcelo Alejandro Cuello',
       data: 'Excelente lugar con muy buena atención y cordial trato, muy conforme con la celeridad con la que se expide el contrato de caución siendo éste muy seguro para los requisitos de alquileres.',
       valoration: 4.9,
     },
@@ -67,7 +67,7 @@ export const dataCards = [
     },
     {
       id: 'card_12',
-      username: 'YONATHAN Acosta',
+      username: 'Yonathan Acosta',
       data: 'Muy buena predisposición, y buena presencia de sus trabajadores. Una manera fácil y eficaz de poder llevar a cabo el alquiler de los departamentos',
       valoration: 4.9,
     },
@@ -80,7 +80,7 @@ export const dataCards = [
     {
       id: 'card_14',
       username: 'Pablo Ruiz',
-      data: 'Muy buena atención.  Cordialidad y agilidad para resolver el tramite.... lo recomiendo ... me resolvió el problema de no poseer una garantía en la plata para alquilar dpto . Gracias',
+      data: 'Muy buena atención. Cordialidad y agilidad para resolver el tramite. Lo recomiendo me resolvió el problema de no poseer una garantía en la plata para alquilar dpto . Gracias',
       valoration: 4.9,
     },
     {

@@ -44,13 +44,11 @@ export default function CalculadorPromocion() {
 
   if (typeof window !== "undefined") {
     targetDivRef = document?.getElementById('step2')?.scrollIntoView()
-    console.log(targetDivRef)
   }
 
   function handleCalcular() {
 
     if (targetDivRef?.current) {
-      console.log('entra al if')
       targetDivRef?.current?.scrollIntoView({
         behavior: 'smooth',
       });
@@ -74,7 +72,6 @@ export default function CalculadorPromocion() {
 
     const resultado = Math.floor(calcularGarantia(data));
     setResultado(resultado);
-    console.log(resultado, "VALOR TOTAL GARANTIA");
     const contado = Math.floor(resultado - (resultado * 0.35));
     setContado(contado);
 

@@ -39,12 +39,9 @@ const generateEmailContent = (data) => {
 };
 
 const handler = async (req, res) => {
-  console.log('entró a handler back')
   if (req.method === "POST") {
     const data = req.body;
-    console.log('data por body: ', data)
     if (!data) {
-      console.log('no hay data master')
       return res.status(400).send({ message: "Bad request" });
     }
 
@@ -54,10 +51,8 @@ const handler = async (req, res) => {
         ...generateEmailContent(data),
         subject: data.subject,
       });
-      console.log('se mando todo joya')
       return res.status(200).json({ success: true });
     } catch (err) {
-      console.log(err);
       return res.status(400).json({ message: err.message });
     }
   }

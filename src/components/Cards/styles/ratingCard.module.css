@@ -1,6 +1,6 @@
 .CardComentario {
-    width: 217px;
-    min-width: 217px;
+    width: 257px;
+    min-width: 257px;
     height: 300px;
     border-radius: 10px;
     background-color: #F9FAFB;
@@ -75,7 +75,6 @@
     font-family: Montserrat;
     font-weight: 700;
     display: flex;
-    /* width: 75%; */
     align-self: center;
     justify-content: flex-start;
 }

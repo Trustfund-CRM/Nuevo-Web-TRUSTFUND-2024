@@ -1,14 +1,16 @@
-import Image from "next/image";
 import style from "./ScrollVentajas.module.css";
 import "./effectLetters.css";
-import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
 import { useEffect, useState } from "react";
 import { useWindowScroll } from "@uidotdev/usehooks";
+import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 
 export default function ScrollVentajas() {
+
+  const onlyWidth = useWindowWidth()
+  const onlyHeight = useWindowHeight()
 
   const [customStyle, setCustomStyle] = useState({
     background: '#F2F5FB',
@@ -18,13 +20,13 @@ export default function ScrollVentajas() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (y > 2000) {
+    if (onlyWidth < 480 ? y > 2800 : onlyHeight < 800 ? y > 1800 : y > 2000) {
       setCustomStyle({
         ...customStyle,
         background: '#009FBB'
       });
     }
-    if (y < 2000) {
+    if (onlyWidth < 480 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'
