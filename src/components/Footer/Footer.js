@@ -67,7 +67,7 @@ export default function Footer() {
   return (
     <div className={`${style.boxPrincipal}`}>
       <div className={style.subContainerFooter}>
-        <div className={style.ContainerIzqFooter}>
+        {/* <div className={style.ContainerIzqFooter}>
           <div className={style.Suscribite}>
             Suscribite a nuestro newsletter.
           </div>
@@ -76,7 +76,7 @@ export default function Footer() {
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
             suscribe={true} //Debe mandar un mail a info@trustfund.com.ar y mostrar un modal informando eso
           />
-        </div>
+        </div> */}
 
         <div className={style.ContainerDerFooter}>
           <div className={style.ContainerRedes}>
