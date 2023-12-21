@@ -82,6 +82,7 @@ export default function PreguntasFrecuentes() {
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
               route={"/ConsultasYReclamos"}
+              suscribe={false}
             />
           </div>
 
