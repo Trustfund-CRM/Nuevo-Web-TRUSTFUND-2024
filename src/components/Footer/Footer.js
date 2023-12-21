@@ -17,6 +17,8 @@ import { Button } from "react-bootstrap";
 import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
 import Link from "next/link";
 import { setCalculador } from '../../redux/Actions/actionCalculadorPrincipal';
+import { useWindowScroll } from "@uidotdev/usehooks";
+
 
 export default function Footer() {
   const [mobile, setMobile] = useState(false);
@@ -27,11 +29,20 @@ export default function Footer() {
 
   const dispatch = useDispatch();
 
+  const [{ x, y }, scrollTo] = useWindowScroll();
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (window?.innerWidth < 1200) {
         setMobile(true);
       }
+
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      };
     }
   }, []);
 
@@ -50,6 +61,7 @@ export default function Footer() {
 
   const handleSolicita = () => {
     dispatch(setCalculador());
+    scrollTo({ left: 0, top: 0, behavior: "smooth" })
   }
 
   return (
@@ -62,7 +74,7 @@ export default function Footer() {
           <ButtonSlider
             text={"Suscribirme"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
-            route={"/"}
+            route={"/"} //Debe mandar un mail a info@trustfund.com.ar y mostrar un modal informando eso
           />
         </div>
 
