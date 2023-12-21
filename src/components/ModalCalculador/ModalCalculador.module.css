@@ -9,21 +9,76 @@
         opacity: 1;
     }
 }
+.ContainerAux{
+    width: 1122px;
+    height: auto;
+    padding: 65px 28px 39px 28px;
+    border:solid 1px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+background: var(--Escala-de-grises-1, #F2F2F2);
+gap:34px;
+}
+.SolicitalaText{
+    color: #FFF;
+width:auto;
+/* BOLD/H5 bold */
+font-family: Montserrat;
+font-size: 25px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 30px */
+}
+.contentIconPubli{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: flex-start;
+    align-content: flex-end;
+    justify-content: flex-start;
+}
+.ContentPublicidad{
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+    width: auto;
+    align-items: center;
+    justify-content: flex-end;
+   
+}
+.ContentPublicidadLineWhite{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: auto;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: solid 2px #FFFFFF;
+}
+
 
 .ContainerModalCalculador {
-    background-color: #F2F2F2;
-    border-radius: 20px;
-    width: 1122px;
-    height: 351px;
+    background-color: #862f2f00;
+
+    width: -webkit-fill-available;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     animation: modal-animation 0.3s ease-in-out;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
     z-index: 99;
-    padding: 0px 0px 28px 0px;
-    left: 40vh;
-    bottom: 25vh;
+    top:0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border:solid 1px red;
 }
 
 .ContainerCruzModal {
@@ -52,7 +107,8 @@
 .TitleCalculador {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    width:-webkit-fill-available;
 }
 
 .Title {
@@ -76,7 +132,7 @@
 .ContainerInputs {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: -webkit-fill-available;
     justify-content: space-between;
     align-self: center;
 }
@@ -117,12 +173,16 @@
 .ContainerPasos {
     display: flex;
     flex-direction: row;
-    width: 90%;
     justify-content: space-between;
     align-self: center;
-    background-image: url('../../styles/assets/bg_Modal.png');
+    background-image: url(/_next/static/media/bg_Modal.84e91f94.png);
     color: #F2F2F2;
     border-radius: 20px;
+    background-repeat: no-repeat;
+    padding: 32px 22px;
+    width: -webkit-fill-available;
+    background-size: cover;
+    background-position: center;
 }
 
 .Paso {
