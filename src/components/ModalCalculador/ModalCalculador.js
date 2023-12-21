@@ -113,7 +113,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
 
   const currencyMask = (e) => {
     let value = e;
-    console.log(value);
     value = value.replace(/\D/g, "");
     value = value
       .toString()
@@ -156,16 +155,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
     const doceCuotas = Math.floor(contadoDoce / 11);
     setDoceCuotas(formatNumber(doceCuotas));
 
-    console.log(
-      resultado,
-      anticipo,
-      contado,
-      tresCuotas,
-      seisCuotas,
-      doceCuotas
-    );
-    console.log(data);
-
     setInformacionStep1(data);
 
     dispatch(setResultadoCalculador(true));
@@ -174,7 +163,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
   let dataToSend = {};
 
   function handleClick() {
-    console.log(informacionStep1);
 
     if (activeItem === "Contado") {
       dataToSend = {
@@ -183,7 +171,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
         contado: formatNumber(contado),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     if (activeItem === "3 Cuotas") {
@@ -194,7 +181,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
         cuotas: formatNumber(tresCuotas),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     if (activeItem === "6 Cuotas") {
@@ -205,7 +191,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
         cuotas: formatNumber(seisCuotas),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     if (activeItem === "12 Cuotas") {
@@ -216,7 +201,6 @@ export default function ModalCalculador({ setCalculador, calculador }) {
         cuotas: formatNumber(doceCuotas),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     localStorage.setItem("datosLocalStorage", JSON.stringify(dataToSend));
