@@ -16,10 +16,10 @@ import "animate.css";
 import Link from "next/link";
 
 
-export default function FormModal({ setCalculador, calculador }) {
+export default function FormModal({ setCalculador, calculador,setRenderForm }) {
 
     return (
-        <div className={style.Container}>
+        <div className={style.Container} >
             <div className={style.ContentText}>
                 <div className={style.TextObteneGarantia}>
                     Obtené tu garantía
@@ -53,7 +53,7 @@ export default function FormModal({ setCalculador, calculador }) {
                 />
             </div>
             <div className={style.DivContentBtn}>
-                <div className={style.Boton1}>
+                <div className={style.Boton1} onClick={()=> setRenderForm(false)}>
                     Volver a calcular
                 </div>
                 <div className={style.Boton2}>

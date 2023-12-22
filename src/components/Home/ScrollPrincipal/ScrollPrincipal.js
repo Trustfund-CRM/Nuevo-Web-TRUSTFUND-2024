@@ -17,7 +17,9 @@ export default function ScrollPrincipal() {
   const handleCalculador = () => {
     setCalculador(true);
   };
-
+  const handleFormClick = (e) => {
+    e.stopPropagation(); // Evita que el evento de clic se propague hacia arriba
+  };
   return (
     <div className={`${style.ExtraContainerScrollPrincipal}`}>
       <div className={style.ContainerScrollPrincipal}>
@@ -32,12 +34,12 @@ export default function ScrollPrincipal() {
             24hs.
           </div>
           <div className={style.containerButtons}>
-            <Button
+            <div
               className={style.ButtonHome}
-              onClick={() => handleCalculador()}
+              onClick={() => setCalculador(true)}
             >
               Cotizá tu garantía
-            </Button>
+            </div>
             <Image className={style.flecha} src={flechaCirculo} />
           </div>
         </div>
@@ -53,17 +55,15 @@ export default function ScrollPrincipal() {
         <Image className={style.scrollFooter} src={scroll} alt="image" />
       </div>
 
-      {calculador ? (
-        <div
-          className={`${
-            resultadoCalc
-              ? style.ContainerSubFooterCalculador
-              : style.ContainerSubFooter
-          }`}
-        >
-          <ModalCalculador setCalculador={setCalculador} />
-        </div>
-      ) : null}
+      {calculador ? 
+            <div className={style.ContainerModalCalculador}
+         >
+
+            <ModalCalculador  />
+            </div>
+
+     
+       : null}
     </div>
   );
 }

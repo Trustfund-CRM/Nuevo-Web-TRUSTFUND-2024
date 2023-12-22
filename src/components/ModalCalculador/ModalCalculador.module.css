@@ -154,6 +154,7 @@ line-height: 120%; /* 30px */
     border: none;
     background-color: #F9FAFB;
     border-right: 1px solid #004993;
+    outline: none;
 }
 
 .input2 {
@@ -161,6 +162,7 @@ line-height: 120%; /* 30px */
     width: 222px;
     border: none;
     background-color: #F9FAFB;
+    outline: none;
 }
 
 .flechaCalcula {
@@ -209,6 +211,8 @@ line-height: 120%; /* 30px */
 .ExtraContainerCards {
     display: flex;
     flex-direction: column;
+    border:solid 1px red;
+    width:-webkit-fill-available;
 }
 
 .cardCuota {
@@ -415,7 +419,15 @@ line-height: 120%; /* 30px */
     padding: 13px 36px 13px 36px;
     border-radius: 30px;
     border: none;
+    cursor:pointer;
 }
+.buttonSolicitarDisabled:hover {
+    color:#004993;
+    background-color: #FFFFFF;
+    border:solid 2px #004993;
+    transform: scale(0.95);
+}
+
 
 .buttonSolicitar:hover {
     background-color: #0076B9;
@@ -538,6 +550,7 @@ line-height: 120%; /* 30px */
     .input2 {
         align-self: flex-start;
         width: -webkit-fill-available;
+     
     }
 
     .flechaCalcula {
