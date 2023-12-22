@@ -2,6 +2,10 @@
   box-sizing: content-box;
   height: 65px;
   display: flex;
+
+  @media (min-width: 0px) and (max-width: 601px) {
+    height: 100px;
+  }
 }
 
 .words {

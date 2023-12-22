@@ -28,13 +28,14 @@
   color: #F9FAFB;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 11%;
-  padding-top: 13.2%;
-  padding-bottom: 3.3%;
+  padding-left: 11vw;
+  padding-top: 13.2vw;
+  padding-bottom: 3.3vw;
   /* padding-right: 37.3%; */
 
   @media (min-width: 481px) and (max-width: 890px) {
-    font-size: 39px;
+    /* font-size: 39px; */
+    /* padding-right: 0vw; */
   }
 }
 
@@ -59,7 +60,7 @@
   width: 100%;
   gap: 80px;
 
-  @media (min-width: 701px) and (max-width: 1180px) {
+  @media (min-width: 480px) and (max-width: 1180px) {
     flex-direction: column;
   }
 }
@@ -74,6 +75,11 @@
   @media (min-width: 701px) and (max-width: 1180px) {
     width: 100%;
     justify-content: space-between;
+  }
+
+  @media (min-width: 0px) and (max-width: 700px) {
+    flex-direction: column;
+    gap: 22px;
   }
 }
 

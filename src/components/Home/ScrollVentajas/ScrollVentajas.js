@@ -17,6 +17,11 @@ export default function ScrollVentajas() {
     transition: 'background 1s ease'
   });
 
+  const [customColor, setCustomColor] = useState({
+    color: '#000000',
+    transition: 'background 1s ease'
+  });
+
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
@@ -25,11 +30,19 @@ export default function ScrollVentajas() {
         ...customStyle,
         background: '#009FBB'
       });
+      setCustomColor({
+        ...customColor,
+        color: '#ffffff'
+      });
     }
     if (onlyWidth < 480 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'
+      });
+      setCustomColor({
+        ...customColor,
+        color: '#000000'
       });
     }
   }, [y]);
@@ -38,7 +51,7 @@ export default function ScrollVentajas() {
     <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
       <CustomContainerMaxWidth ventajas={true}>
         <div className={style.ContainerTop}>
-          <div className={style.TitleVentajas}>
+          <div className={style.TitleVentajas} style={customColor}>
             Ventajas de utilizar Trust Fund
           </div>
           <CustomLine color={"#d3d5da"} custom={{ bottom: "0px" }} />
@@ -47,11 +60,11 @@ export default function ScrollVentajas() {
         <div className={style.ContainerBottom}>
           <div className={style.subContainerBottom}>
             <div className={style.subTitle}>
-              <div className={style.subTextLeft}>
+              <div className={style.subTextLeft} style={customColor}>
                 Rápido para el inquilino, seguro para el propietario, confiable
                 para la inmobiliaria.
               </div>
-              <div className={style.subTextRight}>
+              <div className={style.subTextRight} style={customColor}>
                 Alquilá con tranquilidad, con Trust Fund estás protegido.
               </div>
             </div>

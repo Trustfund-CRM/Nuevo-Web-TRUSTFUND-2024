@@ -27,6 +27,11 @@ export default function PreguntasFrecuentes() {
     transition: 'background 1s ease'
   });
 
+  const [customColor, setCustomColor] = useState({
+    color: '#000000',
+    transition: 'background 1s ease'
+  });
+
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
@@ -35,26 +40,29 @@ export default function PreguntasFrecuentes() {
         ...customStyle,
         background: '#0076b9'
       });
+      setCustomColor({
+        ...customColor,
+        color: '#ffffff'
+      });
     }
-    if (onlyWidth < 480 ? y < 4480 : onlyHeight < 800 ? y < 3900 : y < 4350) {
+    if (onlyWidth < 480 ? y < 4880 : onlyHeight < 800 ? y < 4400 : y < 4950) {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'
+      });
+      setCustomColor({
+        ...customColor,
+        color: '#000000'
       });
     }
   }, [y]);
 
 
-  console.log(y)
-
-
   return (
     <div className={`${style.ContainerFAQ}`} style={customStyle}>
-      <CustomContainerMaxWidth>
+      <CustomContainerMaxWidth FAQ={true}>
         <div className={style.TitleFAQ}>
-          <div style={{ width: "84%" }}>
-            <p className={style.Title}>Preguntas frecuentes</p>
-          </div>
+          <p className={style.Title} style={customColor}>Preguntas frecuentes</p>
           <CustomLine color={"#ffffff"} />
         </div>
 
@@ -62,22 +70,20 @@ export default function PreguntasFrecuentes() {
           <div className={style.ContainerSubTitle}>
             <div className={style.ButtonsInquiProp}>
               <div
-                className={`${
-                  inquilinosOPropietarios === "inquilinos"
+                className={`${inquilinosOPropietarios === "inquilinos"
                     ? style.ButtonInquiActivo
                     : style.ButtonInqui
-                }`}
+                  }`}
                 onClick={() => setInquilinosOPropietarios("inquilinos")}
               >
                 Inquilinos
               </div>
               <div className={style.line}></div>
               <div
-                className={`${
-                  inquilinosOPropietarios === "propietarios"
+                className={`${inquilinosOPropietarios === "propietarios"
                     ? style.ButtonPropActivo
                     : style.ButtonProp
-                }`}
+                  }`}
                 onClick={() => setInquilinosOPropietarios("propietarios")}
               >
                 Propietarios e Inmobiliarias
@@ -99,11 +105,11 @@ export default function PreguntasFrecuentes() {
             >
               {inquilinosOPropietarios === "inquilinos"
                 ? QuestionsInqui.map((obj, index) => (
-                    <CustomAccordion object={obj} key={index} />
-                  ))
+                  <CustomAccordion object={obj} key={index} />
+                ))
                 : QuestionsProp.map((obj, index) => (
-                    <CustomAccordion object={obj} key={index} />
-                  ))}
+                  <CustomAccordion object={obj} key={index} />
+                ))}
             </div>
 
             {inquilinosOPropietarios === "inquilinos" ? (

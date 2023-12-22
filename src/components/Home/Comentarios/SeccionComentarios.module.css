@@ -33,14 +33,23 @@
   line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
-  /* padding-top: 11.8%; */
-  padding-left: 11%;
-  padding-right: 31.1%;
-  padding-bottom: 3.3%;
+  padding-top: 11.8vw;
+  padding-left: 11vw;
+  padding-right: 31.1vw;
+  padding-bottom: 3.3vw;
+
+  @media (min-width: 583px) and (max-width: 1194px) {
+    /* font-size: 39px; */
+    padding-right: 0vw;
+  }
+
+  @media (min-width: 0px) and (max-width: 582px) {
+    padding-right: 0vw;
+  }
 }
 
 .ContainerSlideComentarios {
-  width: auto;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -49,6 +58,10 @@
   padding-right: 11%;
   padding-top: 4%;
   padding-bottom: 13.2%;
+
+  @media (min-width: 0px) and (max-width: 1100px) {
+    gap: 58px;
+  }
 }
 
 .ContainerSubText {
@@ -57,26 +70,45 @@
   justify-content: space-between;
   align-items: center;
   gap: 80px;
+
+  @media (min-width: 0px) and (max-width: 1100px) {
+    flex-direction: column;
+    gap: 0px;
+  }
 }
 
 .SubTexts {
   display: flex;
   justify-content: space-between;
   padding: 50px 0px 50px 0px;
+
+  @media (min-width: 0px) and (max-width: 756px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 .SubTextLeft {
   width: 100%;
-  max-width: 340px;
+  max-width: 345px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+
+  @media (min-width: 0px) and (max-width: 756px) {
+    max-width: -webkit-fill-available;
+    width: 75%;
+  }
 }
 
 .SubTextRight {
   width: 33%;
   font-size: 20px;
   line-height: 24px;
+
+  @media (min-width: 0px) and (max-width: 756px) {
+    width: 75%;
+  }
 }
 
 .flecha {
@@ -89,6 +121,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (min-width: 0px) and (max-width: 1175px) {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
   
 }
 
@@ -97,6 +134,10 @@
   flex-direction: row;
   align-items: center;
   gap: 15px;
+
+  @media (min-width: 0px) and (max-width: 1175px) {
+    justify-content: center;
+  }
 }
 
 .FlechaLeft {
@@ -105,6 +146,8 @@
   border-radius: 100%;
   transform: scaleX(-1);
   cursor: pointer;
+  height: 60px;
+  width: 60px;
 }
 
 .FlechaRight {
@@ -112,6 +155,8 @@
   background-color: #a3a3a3;
   border-radius: 100%;
   cursor: pointer;
+  height: 60px;
+  width: 60px;
 }
 
 .FlechaLeft:hover {
