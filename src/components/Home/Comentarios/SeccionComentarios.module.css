@@ -33,17 +33,18 @@
   line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
-  padding-top: 11.8%;
-  padding-left: 11%;
-  padding-right: 31.1%;
-  padding-bottom: 3.3%;
+  padding-top: 11.8vw;
+  padding-left: 11vw;
+  padding-right: 31.1vw;
+  padding-bottom: 3.3vw;
 
   @media (min-width: 583px) and (max-width: 1194px) {
-    font-size: 39px;
+    /* font-size: 39px; */
+    padding-right: 0vw;
   }
 
   @media (min-width: 0px) and (max-width: 582px) {
-    padding-right: 0%;
+    padding-right: 0vw;
   }
 }
 

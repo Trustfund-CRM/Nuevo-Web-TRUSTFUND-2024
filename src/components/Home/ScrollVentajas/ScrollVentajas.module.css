@@ -28,13 +28,14 @@
   color: #F9FAFB;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 11%;
-  padding-top: 13.2%;
-  padding-bottom: 3.3%;
+  padding-left: 11vw;
+  padding-top: 13.2vw;
+  padding-bottom: 3.3vw;
   /* padding-right: 37.3%; */
 
   @media (min-width: 481px) and (max-width: 890px) {
-    font-size: 39px;
+    /* font-size: 39px; */
+    /* padding-right: 0vw; */
   }
 }
 

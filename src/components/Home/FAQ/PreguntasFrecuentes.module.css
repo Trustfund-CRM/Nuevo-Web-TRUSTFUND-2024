@@ -1,7 +1,7 @@
 .ContainerFAQ {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: -webkit-fill-available;
   background-color: #0076b9;
   width: 100%;
 
@@ -18,7 +18,7 @@
 
 .TitleFAQ {
   /* border-bottom: 1px solid #F9FAFB; */
-  height: 20vh;
+  /* height: 20vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -29,6 +29,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-top: 5%;
+  padding-bottom: 6.4%;
+  gap: 5vw;
 }
 
 .ContainerTitleFAQ {
@@ -41,15 +46,23 @@
   line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
-  padding-bottom: 50px;
+  padding-left: 11vw;
+  padding-top: 12vw;
+  padding-right: 51vw;
+  padding-bottom: 2vw;
+  width: -webkit-fill-available;
+
+  @media (min-width: 0px) and (max-width: 1415px) {
+    /* padding-right: 0vw; */
+
+  }
 }
 
 .ContainerSubTitle {
   display: flex;
   flex-direction: row;
-  width: 85%;
+  width: -webkit-fill-available;
   align-items: center;
-  height: 15vh;
   justify-content: space-between;
 }
 
@@ -185,11 +198,14 @@
   flex-direction: column;
   justify-content: space-between;
   width: 75vh;
-  padding-left: 7%;
   height: fit-content;
   gap: 24px;
   animation-name: animationText;
   animation-duration: 1.5s;
+
+  @media (min-width: 0px) and (max-width: 820px) {
+    width: auto;
+  }
 }
 
 @media (max-width: 360px) {
@@ -244,7 +260,7 @@
     width: 100%;
   }
 
-  .ImageInquilinoProp {    
+  .ImageInquilinoProp {
     scale: 70%;
   }
 }
