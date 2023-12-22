@@ -133,12 +133,18 @@ line-height: 120%; /* 30px */
 
 .ContainerInputs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: -webkit-fill-available;
     justify-content: space-between;
     align-self: center;
 }
-
+.ContenedorInputsForm{
+    width: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap:21px;
+}
 .ContainerValores {
     display: flex;
     flex-direction: row;
@@ -147,7 +153,7 @@ line-height: 120%; /* 30px */
     background-color: #F9FAFB;
     border-radius: 10px;
     padding: 18px 18px 18px 0px;
-    width: 435px;
+    width: auto;
 }
 
 .input1 {
@@ -155,8 +161,22 @@ line-height: 120%; /* 30px */
     width: 222px;
     border: none;
     background-color: #F9FAFB;
-    border-right: 1px solid #004993;
+
     outline: none;
+}
+.lineaAzul{
+    background: #004993;
+    height: 37px;
+    width:2px;
+}
+.bolitaBlanca{
+    width:10px;
+    height:10px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    top: 24px;
+    right: 50%;;
 }
 
 .input2 {

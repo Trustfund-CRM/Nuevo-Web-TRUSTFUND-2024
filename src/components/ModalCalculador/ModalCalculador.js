@@ -239,26 +239,29 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
               </div>
             </div>
 
-            <div className={style.ContainerInputs}>
-              <div className={style.ContainerValores}>
-                <input
-                  type="text"
-                  name="valorAlquiler"
-                  className={style.input1}
-                  placeholder="Valor de alquiler"
-                  onInput={(e) => handleInputChange(e)}
-                  {...register("valorAlquiler", { required: true })}
-                />
-                <input
-                  type="text"
-                  name="valorExpensas"
-                  className={style.input2}
-                  placeholder="Valor de expensas"
-                  onInput={(e) => handleInputChange(e)}
-                  {...register("valorExpensas", { required: true })}
-                />
-              </div>
-              <div className={style.ContainerValores}>
+          
+              <div className={style.ContenedorInputsForm}>
+                <div className={style.ContainerValores}>
+                  <input
+                    type="text"
+                    name="valorAlquiler"
+                    className={style.input1}
+                    placeholder="Valor de alquiler"
+                    onInput={(e) => handleInputChange(e)}
+                    {...register("valorAlquiler", { required: true })}
+                  />
+                  <input
+                    type="text"
+                    name="valorExpensas"
+                    className={style.input2}
+                    placeholder="Valor de expensas"
+                    onInput={(e) => handleInputChange(e)}
+                    {...register("valorExpensas", { required: true })}
+                  />
+                </div>
+                <div className={style.ContainerValores}>
+
+
                 <select
                   name="tipoDePropiedad"
                   id="tipoDePropiedad"
@@ -272,6 +275,7 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                   <option value="Campo">Campo</option>
                 </select>
 
+                <div className={style.lineaAzul}></div>
                 <select
                   name="Duracion"
                   id="Duracion"
@@ -287,66 +291,11 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                   <option value="60">60 MESES</option>
                 </select>
 
+                </div>
+                
               </div>
 
-              <div className={style.ContainerInputs}>
-                <div className={style.ContainerValores}>
-                  <input
-                    autoComplete="off"
-                    type="text"
-                    name="valorAlquiler"
-                    className={style.input1}
-                    placeholder="Valor de alquiler"
-                    onInput={(e) => handleInputChange(e)}
-                    {...register("valorAlquiler", { required: true })}
-                  />
-                  <input
-                    autoComplete="off"
-                    type="text"
-                    name="valorExpensas"
-                    className={style.input2}
-                    placeholder="Valor de expensas"
-                    onInput={(e) => handleInputChange(e)}
-                    {...register("valorExpensas", { required: true })}
-                  />
-                </div>
-                <div className={style.ContainerValores}>
-                  <select
-                    name="tipoDePropiedad"
-                    id="tipoDePropiedad"
-                    className={style.input1}
-                    onInput={(e) => handleInputChange(e)}
-                    {...register("tipoDePropiedad", { required: true })}
-                  >
-                    <option value="">Tipo</option>
-                    <option value="Vivienda">Vivienda</option>
-                    <option value="Comercio">Comercio</option>
-                    <option value="Campo">Campo</option>
-                  </select>
 
-                  <select
-                    name="Duracion"
-                    id="Duracion"
-                    className={style.input2}
-                    onInput={(e) => handleInputChange(e)}
-                    {...register("Duracion", { required: true })}
-                  >
-                    <option value="">Duración</option>
-                    <option value="12">12 MESES</option>
-                    <option value="24">24 MESES</option>
-                    <option value="36">36 MESES</option>
-                    <option value="48">48 MESES</option>
-                    <option value="56">56 MESES</option>
-                  </select>
-                </div>
-                <Button type="submit" className={style.flechaCalcula} >
-                  {mobile ? (
-                    <div className={style.textoCalculador}>Calcular</div>
-                  ) : (
-                    <Image src={flechaModal} alt="flecha" />
-                  )}
-                </Button>
-              </div>
 
               {!mobile ? (
                 <div className={style.ContainerPasos}>
@@ -359,18 +308,23 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                       <div className={style.contentIconPubli}>
                         <Image src={percentage} alt="porcentaje" />
                         <div className={style.textPaso}>Cotizá tu garantía</div>
+                        <div className={style.bolitaBlanca}></div>
                       </div>
 
 
                       <div className={style.contentIconPubli}>
                         <Image src={frame} alt="datos" />
                         <div className={style.textPaso}>Validá tus datos</div>
+                        <div className={style.bolitaBlanca}></div>
                       </div>
                       <div className={style.contentIconPubli}>
                         <Image src={star} alt="estrella" />
                         <div className={style.textPaso}>¡Listo!</div>
+                        <div className={style.bolitaBlanca}></div>
                       </div>
                     </div>
+
+               
                   </div>
 
 
@@ -744,7 +698,7 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                 </div>
               ) : null}
 
-            </div>
+     
           </div>
       }
 

@@ -1,10 +1,14 @@
 .ExtraContainerScrollPrincipal {
-    width: 100%;
+    width: -webkit-fill-available;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-image: url("../../../styles/assets//bg_imge.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .ExtraContainerScrollPrincipalResultado {
@@ -72,17 +76,18 @@
 .ContainerContainerTitle {
     display: flex;
     justify-self: center;
+
 }
 
 .ContainerTitle {
     width: auto;
-    height: 383px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    z-index: 2;
-    justify-content: space-around;
-    top: 280px;
+    gap:16px;
+    margin-left: 10.8vw;
+   
+    border:solid 1px red
 }
 
 .Intro {

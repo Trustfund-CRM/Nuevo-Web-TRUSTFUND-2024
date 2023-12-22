@@ -51,6 +51,7 @@ export default function ScrollPrincipal() {
             <Image className={style.flecha} src={flechaCirculo} />
 
           </div>
+         
         </div>
         <div className={style.footerHome}>
           <Image className={style.scrollFooter} src={scroll} alt="image" />
