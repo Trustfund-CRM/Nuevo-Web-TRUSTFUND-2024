@@ -23,7 +23,26 @@
     justify-content: center;
     flex-direction: column;
 }
+.ContainerModalCalculador {
+    background-color: #862f2f00;
 
+    width: -webkit-fill-available;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: modal-animation 0.3s ease-in-out;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 999999;
+    top:0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  
+}
 .FotoScrollPrincipal {
     height: 100vh;
     width: -webkit-fill-available;
@@ -122,6 +141,8 @@
     font-weight: 700;
     line-height: 145%;
     letter-spacing: -0.11px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .containerButtons {
