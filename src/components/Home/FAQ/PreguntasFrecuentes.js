@@ -57,8 +57,6 @@ export default function PreguntasFrecuentes() {
     }
   }, [y]);
 
-  console.log(y)
-
 
   return (
     <div className={`${style.ContainerFAQ}`} style={customStyle}>
