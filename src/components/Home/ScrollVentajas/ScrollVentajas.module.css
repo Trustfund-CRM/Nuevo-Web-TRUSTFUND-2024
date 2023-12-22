@@ -60,7 +60,7 @@
   width: 100%;
   gap: 80px;
 
-  @media (min-width: 701px) and (max-width: 1180px) {
+  @media (min-width: 480px) and (max-width: 1180px) {
     flex-direction: column;
   }
 }
@@ -75,6 +75,11 @@
   @media (min-width: 701px) and (max-width: 1180px) {
     width: 100%;
     justify-content: space-between;
+  }
+
+  @media (min-width: 0px) and (max-width: 700px) {
+    flex-direction: column;
+    gap: 22px;
   }
 }
 

@@ -53,7 +53,7 @@
   width: -webkit-fill-available;
 
   @media (min-width: 0px) and (max-width: 1415px) {
-    /* padding-right: 0vw; */
+    padding-right: 0vw;
 
   }
 }
