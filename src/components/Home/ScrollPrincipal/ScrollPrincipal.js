@@ -9,7 +9,7 @@ import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/Cu
 import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function ScrollPrincipal() {
-  // const [calculador, setCalculador] = useState(false);
+  const [calculador, setCalculador] = useState(false);
 
   const settedCalculador = useSelector(
     (state) => state.reducerInfoGarantia.calculador
@@ -65,6 +65,7 @@ export default function ScrollPrincipal() {
 
      
        : null}
+       </div>
 
     </div>
   );
