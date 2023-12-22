@@ -71,6 +71,7 @@ line-height: 120%; /* 30px */
     justify-content: space-around;
     position: fixed;
     z-index: 99;
+
     top:0px;
     left: 0px;
     display: flex;
@@ -79,6 +80,7 @@ line-height: 120%; /* 30px */
     justify-content: center;
 
     border:solid 1px red;
+
 }
 
 .ContainerCruzModal {

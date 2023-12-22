@@ -4,6 +4,10 @@
   height: 100vh;
   background-color: #0076b9;
   width: 100%;
+
+  @media (min-width: 0px) and (max-width: 900px) {
+    height: auto;
+  }
 }
 
 .ContainerFAQResultados {
@@ -127,6 +131,10 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 0px) and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 @keyframes animateImage {
@@ -148,6 +156,12 @@
 .ImageInquilinoProp {
   animation-name: animateImage;
   animation-duration: 1.5s;
+
+  @media (min-width: 0px) and (max-width: 1340px) {
+    position: relative;
+    scale: 75%;
+    left: 57px;
+  }
 }
 
 @keyframes animationText {
@@ -189,6 +203,11 @@
     height: -webkit-fill-available;
   }
 
+  .Title {
+    font-size: 38px;
+    line-height: 48.80px;
+  }
+
   .TitleFAQ {
     height: 30vh;
   }
@@ -225,10 +244,8 @@
     width: 100%;
   }
 
-  .ImageInquilinoProp {
-    position: relative;
-    right: 127px;
-    scale: 50%;
+  .ImageInquilinoProp {    
+    scale: 70%;
   }
 }
 
@@ -328,8 +345,8 @@
   }
 
   .ImageInquilinoProp {
-    margin-top: 50px;
-    scale: 65%;
+    /* margin-top: 50px; */
+    scale: 70%;
   }
 }
 
@@ -353,7 +370,7 @@
   }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
+@media only screen and (min-width: 966px) and (max-width: 1500px) and (max-height: 800px) {
   .ContainerComentarios {
     height: 100vh;
   }
@@ -362,6 +379,11 @@
     width: 100%;
     flex-direction: row;
     height: 35vh;
+    padding: 0px 5%;
+  }
+
+  .ContainerPreguntas {
+    padding: 0;
   }
 
   .ContainerFAQ {

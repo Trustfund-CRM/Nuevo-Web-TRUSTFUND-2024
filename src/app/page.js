@@ -11,15 +11,29 @@ import ScrollPrincipal from "@/components/Home/ScrollPrincipal/ScrollPrincipal";
 import ScrollVentajas from "@/components/Home/ScrollVentajas/ScrollVentajas";
 import TextoSlide from "@/components/Home/TextoSlide/TextoSlide";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
+import FormNewsletter from "@/components/FormNewsletter/FormNewsletter";
+import { useDispatch, useSelector } from "react-redux";
+import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function Home() {
   const [mobile, setMobile] = useState(false);
-  const [calculador, setCalculador] = useState(false);
+  const [calc, setCalc] = useState(false);
+
+  const settedCalculador = useSelector(
+    (state) => state.reducerInfoGarantia.calculador
+  );
+
+  const modalSuscribe = useSelector(
+    (state) => state.reducerInfoGarantia.modal
+  )
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (window?.innerWidth < 765) {
         setMobile(true);
+        dispatch(setCalculador());
       }
     }
   }, []);
@@ -36,8 +50,8 @@ export default function Home() {
       <ScrollPrincipal />
       {mobile && (
         <ModalCalculador
-          setCalculador={setCalculador}
-          calculador={calculador}
+          setCalculador={setCalc}
+          calculador={settedCalculador}
         />
       )}
       <TextoSlide />
@@ -45,6 +59,10 @@ export default function Home() {
       <ScrollVentajas />
       <SeccionComentarios />
       <PreguntasFrecuentes />
+      {/* {modalSuscribe && (
+        <FormNewsletter />
+      )
+      } */}
       <ButtonWsp />
     </div>
   );

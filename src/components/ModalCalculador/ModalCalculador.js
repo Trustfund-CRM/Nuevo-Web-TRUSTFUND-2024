@@ -115,7 +115,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
 
   const currencyMask = (e) => {
     let value = e;
-    console.log(value);
     value = value.replace(/\D/g, "");
     value = value
       .toString()
@@ -131,7 +130,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     const newValue = currencyMask(value);
-    // console.log(name, newValue)
     datosCalculador[name] = newValue;
   };
 
@@ -159,16 +157,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
     const doceCuotas = Math.floor(contadoDoce / 11);
     setDoceCuotas(formatNumber(doceCuotas));
 
-    console.log(
-      resultado,
-      anticipo,
-      contado,
-      tresCuotas,
-      seisCuotas,
-      doceCuotas
-    );
-    console.log(data);
-
     setInformacionStep1(data);
 
     dispatch(setResultadoCalculador(true));
@@ -177,7 +165,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
   let dataToSend = {};
 
   function handleClick() {
-    console.log(informacionStep1);
 
     if (activeItem === "Contado") {
       dataToSend = {
@@ -186,7 +173,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
         contado: formatNumber(contado),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     if (activeItem === "3 Cuotas") {
@@ -197,7 +183,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
         cuotas: formatNumber(tresCuotas),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     if (activeItem === "6 Cuotas") {
@@ -208,7 +193,6 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
         cuotas: formatNumber(seisCuotas),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     if (activeItem === "12 Cuotas") {
@@ -219,13 +203,12 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
         cuotas: formatNumber(doceCuotas),
         pago: activeItem,
       };
-      console.log(dataToSend);
     }
 
     localStorage.setItem("datosLocalStorage", JSON.stringify(dataToSend));
   }
 
-  useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador(false))
+  useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador())
 
   return (
     <form
@@ -236,6 +219,7 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
       }
       onSubmit={handleSubmit(onSubmit)}
       ref={modalRef}
+
       
 
     >
@@ -244,12 +228,64 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
         <FormModal setRenderForm={setRenderForm}/>:
         <div className={style.ContainerAux}>
 
-        <div className={style.TitleCalculador}>
-          <div className={style.Title}>Calculá tu garantía</div>
-          <div className={style.subTextCalculador}>
-            Calculá al instante tu garantía y conocé las modalidades de pago que
-            mejor se adapten a tus necesidades.{" "}
-          </div>
+
+    >
+      <div className={style.TitleCalculador}>
+        <div className={style.Title}>Calculá tu garantía</div>
+        <div className={style.subTextCalculador}>
+          Calculá al instante tu garantía y conocé las modalidades de pago que
+          mejor se adapten a tus necesidades.{" "}
+        </div>
+      </div>
+
+      <div className={style.ContainerInputs}>
+        <div className={style.ContainerValores}>
+          <input
+            type="text"
+            name="valorAlquiler"
+            className={style.input1}
+            placeholder="Valor de alquiler"
+            onInput={(e) => handleInputChange(e)}
+            {...register("valorAlquiler", { required: true })}
+          />
+          <input
+            type="text"
+            name="valorExpensas"
+            className={style.input2}
+            placeholder="Valor de expensas"
+            onInput={(e) => handleInputChange(e)}
+            {...register("valorExpensas", { required: true })}
+          />
+        </div>
+        <div className={style.ContainerValores}>
+          <select
+            name="tipoDePropiedad"
+            id="tipoDePropiedad"
+            className={style.input1}
+            onInput={(e) => handleInputChange(e)}
+            {...register("tipoDePropiedad", { required: true })}
+          >
+            <option value="">Tipo</option>
+            <option value="Vivienda">Vivienda</option>
+            <option value="Comercio">Comercio</option>
+            <option value="Campo">Campo</option>
+          </select>
+
+          <select
+            name="Duracion"
+            id="Duracion"
+            className={style.input2}
+            onInput={(e) => handleInputChange(e)}
+            {...register("Duracion", { required: true })}
+          >
+            <option value="">Duración</option>
+            <option value="12">12 MESES</option>
+            <option value="24">24 MESES</option>
+            <option value="36">36 MESES</option>
+            <option value="48">48 MESES</option>
+            <option value="60">60 MESES</option>
+          </select>
+
         </div>
 
         <div className={style.ContainerInputs}>

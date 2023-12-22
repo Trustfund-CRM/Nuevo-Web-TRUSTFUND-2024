@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 export default function TextoSlide() {
 
-    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.calculador)
+    const resultadoCalc = useSelector((state) => state.reducerInfoGarantia.resultado)
 
     useEffect(() => {
         console.log(resultadoCalc)

@@ -1,19 +1,42 @@
-import Image from "next/image";
 import style from "./ScrollVentajas.module.css";
 import "./effectLetters.css";
-import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
+import { useEffect, useState } from "react";
+import { useWindowScroll } from "@uidotdev/usehooks";
+import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 
 export default function ScrollVentajas() {
-  const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
-  );
+
+  const onlyWidth = useWindowWidth()
+  const onlyHeight = useWindowHeight()
+
+  const [customStyle, setCustomStyle] = useState({
+    background: '#F2F5FB',
+    transition: 'background 1s ease'
+  });
+
+  const [{ x, y }, scrollTo] = useWindowScroll();
+
+  useEffect(() => {
+    if (onlyWidth < 480 ? y > 2800 : onlyHeight < 800 ? y > 1800 : y > 2000) {
+      setCustomStyle({
+        ...customStyle,
+        background: '#009FBB'
+      });
+    }
+    if (onlyWidth < 480 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
+      setCustomStyle({
+        ...customStyle,
+        background: '#F2F5FB'
+      });
+    }
+  }, [y]);
 
   return (
-    <div className={`${style.ContainerScrollVentajas}`}>
-      <CustomContainerMaxWidth>
+    <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
+      <CustomContainerMaxWidth ventajas={true}>
         <div className={style.ContainerTop}>
           <div className={style.TitleVentajas}>
             Ventajas de utilizar Trust Fund
@@ -35,6 +58,8 @@ export default function ScrollVentajas() {
             <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
+              route={"/nuestra-garantia"}
+              suscribe={false}
             />
           </div>
 

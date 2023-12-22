@@ -7,10 +7,11 @@
     width: 60px;
     height: 60px;
     transition: all 0.6s cubic-bezier(0.65, 0, 0.076, 1);
+    text-decoration: none;
 }
 
 .buttonSlider:hover {
-    width: 140px;
+    width: 175px;
     justify-content: center;
     gap: 15px;
     padding: 0px 20px;
@@ -20,12 +21,14 @@
 .buttonTxt {
     overflow: hidden;
     display: none;
+    text-decoration: none;
 }
 
 .buttonSlider:hover .buttonTxt {
     display: flex;
     width: 100px;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .arrow {

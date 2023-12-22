@@ -2,6 +2,8 @@ import { actionTypes } from "../Constantes/actionsTypes";
 const initialState = {
     inmobiliarias: [],
     calculador: false,
+    resultado: false,
+    modal: false,
 }
 
 function reducerInfoGarantia(state = initialState, action) {
@@ -28,10 +30,20 @@ function reducerInfoGarantia(state = initialState, action) {
                 ...state,
                 inmobiliarias: statusFiltered
             }
+        case actionTypes.SET_CALCULADOR:
+            return {
+                ...state,
+                calculador: !state.calculador
+            }
         case actionTypes.SET_RESULTADO_CALCULADOR:
             return {
                 ...state,
-                calculador: true
+                resultado: true
+            }
+        case actionTypes.SET_MODAL_SUSCRIBE:
+            return {
+                ...state,
+                modal: !state.modal
             }
         default:
             return state

@@ -4,24 +4,32 @@ import { backgroundHome, flechaCirculo, scroll } from "@/styles";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function ScrollPrincipal() {
-  const [calculador, setCalculador] = useState(false);
+  // const [calculador, setCalculador] = useState(false);
 
-  const resultadoCalc = useSelector(
+  const settedCalculador = useSelector(
     (state) => state.reducerInfoGarantia.calculador
   );
 
+  const resultadoCalc = useSelector(
+    (state) => state.reducerInfoGarantia.resultado
+  );
+
+  const dispatch = useDispatch();
+
   const handleCalculador = () => {
-    setCalculador(true);
+    dispatch(setCalculador());
   };
   const handleFormClick = (e) => {
     e.stopPropagation(); // Evita que el evento de clic se propague hacia arriba
   };
   return (
     <div className={`${style.ExtraContainerScrollPrincipal}`}>
+
       <div className={style.ContainerScrollPrincipal}>
         <div className={style.ContainerTitle}>
           <div className={style.Intro}>Somos Trust Fund</div>
@@ -41,19 +49,12 @@ export default function ScrollPrincipal() {
               Cotizá tu garantía
             </div>
             <Image className={style.flecha} src={flechaCirculo} />
+
           </div>
         </div>
-        <div className={style.contImage}>
-          <Image
-            className={style.FotoScrollPrincipal}
-            alt="fotoPrincipal"
-            src={backgroundHome}
-          />
+        <div className={style.footerHome}>
+          <Image className={style.scrollFooter} src={scroll} alt="image" />
         </div>
-      </div>
-      <div className={style.footerHome}>
-        <Image className={style.scrollFooter} src={scroll} alt="image" />
-      </div>
 
       {calculador ? 
             <div className={style.ContainerModalCalculador}
@@ -64,6 +65,7 @@ export default function ScrollPrincipal() {
 
      
        : null}
+
     </div>
   );
 }

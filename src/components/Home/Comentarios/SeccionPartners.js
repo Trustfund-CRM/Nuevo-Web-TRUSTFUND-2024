@@ -7,7 +7,6 @@ import {
   Libera,
   Yacoub,
 } from "../../../../public/index.js";
-import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { useState } from "react";
 // import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
@@ -35,7 +34,6 @@ export default function SeccionPartners() {
     <div className={style.SeccionPartners}>
       <div className={style.TitleComentarios}>
         <div
-          style={{ width: "84%", paddingBottom: "50px" }}
           className={style.ContainerTitlePartners}
         >
           <div className={style.Title}>Nuestros partners</div>
@@ -52,10 +50,11 @@ export default function SeccionPartners() {
               Conocé a quienes trabajan con nosotros.
             </div>
           </div>
-          <ButtonSlider
+          {/* <ButtonSlider
             text={"Ver más"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
-          />{" "}
+            suscribe={false}
+          />{" "} */}
         </div>
 
         <div className={style.BottomPartners}>

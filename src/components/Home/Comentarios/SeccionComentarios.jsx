@@ -6,7 +6,7 @@ import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/Cu
 
 export default function  SeccionComentarios() {
   const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
+    (state) => state.reducerInfoGarantia.resultado
   );
 
   return (

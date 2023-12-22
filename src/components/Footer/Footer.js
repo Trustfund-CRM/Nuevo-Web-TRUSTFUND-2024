@@ -3,7 +3,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import style from "./Footer.module.css";
 import Image from "next/image";
 import {
@@ -16,19 +16,33 @@ import {
 import { Button } from "react-bootstrap";
 import { ButtonSlider } from "../ButtonSlider/ButtonSlider";
 import Link from "next/link";
+import { setCalculador } from '../../redux/Actions/actionCalculadorPrincipal';
+import { useWindowScroll } from "@uidotdev/usehooks";
+
 
 export default function Footer() {
   const [mobile, setMobile] = useState(false);
 
   const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
+    (state) => state.reducerInfoGarantia.resultado
   );
+
+  const dispatch = useDispatch();
+
+  const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (window?.innerWidth < 1200) {
         setMobile(true);
       }
+
+      const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      };
     }
   }, []);
 
@@ -45,18 +59,24 @@ export default function Footer() {
     link.dispatchEvent(new MouseEvent("click"));
   };
 
+  const handleSolicita = () => {
+    dispatch(setCalculador());
+    scrollTo({ left: 0, top: 0, behavior: "smooth" })
+  }
+
   return (
     <div className={`${style.boxPrincipal}`}>
       <div className={style.subContainerFooter}>
-        <div className={style.ContainerIzqFooter}>
+        {/* <div className={style.ContainerIzqFooter}>
           <div className={style.Suscribite}>
             Suscribite a nuestro newsletter.
           </div>
           <ButtonSlider
             text={"Suscribirme"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
+            suscribe={true} //Debe mandar un mail a info@trustfund.com.ar y mostrar un modal informando eso
           />
-        </div>
+        </div> */}
 
         <div className={style.ContainerDerFooter}>
           <div className={style.ContainerRedes}>
@@ -105,7 +125,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <Button className={style.buttonSolicitar}>
+            <Button className={style.buttonSolicitar} onClick={() => handleSolicita()}>
               Solicitá tu garantía
             </Button>
           </div>
@@ -138,7 +158,7 @@ export default function Footer() {
           </div>
 
           <div className={style.botonesFooter}>
-            <Link href="/" className={style.botonFooter}>Términos y condiciones</Link>
+            {/* <Link href="/" className={style.botonFooter}>Términos y condiciones</Link> */}
             <div onClick={handleDownloadPDF} className={style.botonFooter}>Ver modelo de contrato</div>
             <Link href="/nuestra-garantia" className={style.botonFooter}>Acerca de Trust Fund</Link>
           </div>

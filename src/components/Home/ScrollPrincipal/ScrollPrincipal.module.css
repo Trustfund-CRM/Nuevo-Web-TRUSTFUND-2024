@@ -54,6 +54,7 @@
 
 .contImage {
     display: flex;
+    width: 100%;
     z-index: 0;
 }
 
@@ -74,16 +75,14 @@
 }
 
 .ContainerTitle {
-    width: 1098px;
+    width: auto;
     height: 383px;
     display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 2;
     justify-content: space-around;
-    padding-left: 310px;
     top: 280px;
-
 }
 
 .Intro {
@@ -93,7 +92,6 @@
     line-height: 24px;
     font-size: 16px;
     color: #FFFFFF;
-
 }
 
 .Titulo {
@@ -104,7 +102,8 @@
     align-items: flex-start;
 }
 
-.Text1 {
+.Text1,
+.Text2 {
     font-size: 61px;
     font-weight: 600;
     line-height: 73.20px;
@@ -112,20 +111,16 @@
     white-space: nowrap;
     display: flex;
     width: 180px;
-    height: auto;
+    height: 64px;
 }
 
 .Text2 {
-    font-size: 61px;
-    font-weight: 600;
-    line-height: 73.20px;
     color: #A0E838;
 }
 
 .subText {
     width: 320px;
-    height: 84px;
-    font-weight: 100;
+    font-weight: 500;
     line-height: 24px;
     font-size: 16px;
     color: #FFFFFF;
@@ -134,7 +129,7 @@
 .ButtonHome {
     background-color: #004993;
     text-align: center;
-    width: 200px;
+    width: 280px;
     border-radius: 30px;
     padding: 13px 36px 13px 36px;
     border: none;
@@ -153,9 +148,9 @@
 .containerButtons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
     width: fit-content;
-
+    cursor: pointer;
+    gap: 10px;
 }
 
 .containerButtons:hover .flecha {
@@ -230,6 +225,7 @@
 @media (max-width: 500px) {
     .ExtraContainerScrollPrincipal {
         height: 100%;
+        flex-direction: row;
     }
 
     .ContainerScrollPrincipal {
@@ -293,30 +289,10 @@
     }
 }
 
-@media (max-height: 670px) {
-
-    .ContainerTitle {
-        top: 170px;
-    }
-
-    .ContainerSubFooter {
-        height: 110vh;
-    }
-
-    .ContainerSubFooterCalculador {
-        height: 250vh;
-        width: -webkit-fill-available;
-    }
-
-    .contImage::before {
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 5;
-    }
-
-}
-
 @media (max-width: 430px) {
-    .Text1, .Text2 {
+
+    .Text1,
+    .Text2 {
         font-size: 40px;
         height: 45px;
     }
@@ -332,14 +308,13 @@
 
     .contImage {
         position: relative;
-        height: 770px; /* Establecer el alto deseado */
-      }
+        height: 770px;
+    }
 
     .contImage::before {
         background-color: rgba(0, 0, 0, 0.2);
         z-index: 5;
         height: 770px;
-        /* Ajusta la opacidad según sea necesario para pantallas más pequeñas */
     }
 }
 
@@ -352,5 +327,15 @@
     .ContainerSubFooterCalculador {
         height: 220vh;
         width: -webkit-fill-available;
+    }
+}
+
+@media only screen and (min-width: 966px) and (max-width: 1500px) and (max-height: 800px) {
+    .ContainerScrollPrincipal {
+        padding-left: 5%;
+    }
+
+    .ContainerTitle {
+        top: 30%;
     }
 }
