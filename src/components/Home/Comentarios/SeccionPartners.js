@@ -29,7 +29,7 @@ export default function SeccionPartners() {
       setStartIdx(startIdx - 1);
     }
   };
-
+//a
   return (
     <div className={style.SeccionPartners}>
       <div className={style.TitleComentarios}>
