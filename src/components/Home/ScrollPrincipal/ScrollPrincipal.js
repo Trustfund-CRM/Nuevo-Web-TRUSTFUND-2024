@@ -61,7 +61,7 @@ export default function ScrollPrincipal() {
             <div className={style.ContainerModalCalculador}
          >
 
-            <ModalCalculador  />
+            <ModalCalculador setCalculador={setCalculador} />
             </div>
 
      

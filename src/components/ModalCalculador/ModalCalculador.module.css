@@ -13,24 +13,29 @@
     width: 1122px;
     height: auto;
     padding: 65px 28px 39px 28px;
-    border:solid 1px red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-background: var(--Escala-de-grises-1, #F2F2F2);
-gap:34px;
+    background: var(--Escala-de-grises-1, #F2F2F2);
+    gap:34px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: all 0.3s linear;
+    @media screen and (max-height: 750px) {
+        padding: 30px 28px 30px 28px;
+        transform: scale(0.90);
+        margin-top: 3vh;
+    }
 }
 .SolicitalaText{
     color: #FFF;
-width:auto;
-/* BOLD/H5 bold */
-font-family: Montserrat;
-font-size: 25px;
-font-style: normal;
-font-weight: 700;
-line-height: 120%; /* 30px */
+    width:auto;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 30px */
 }
 .contentIconPubli{
     display: flex;
@@ -47,7 +52,6 @@ line-height: 120%; /* 30px */
     width: auto;
     align-items: center;
     justify-content: flex-end;
-   
 }
 .ContentPublicidadLineWhite{
     display: flex;
@@ -61,8 +65,8 @@ line-height: 120%; /* 30px */
 
 
 .ContainerModalCalculador {
-    background-color: #862f2f00;
-
+    background-color: #0b0b0b80;
+    backdrop-filter: blur(3px);
     width: -webkit-fill-available;
     height: 100vh;
     display: flex;
@@ -71,16 +75,12 @@ line-height: 120%; /* 30px */
     justify-content: space-around;
     position: fixed;
     z-index: 99;
-
     top:0px;
     left: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    border:solid 1px red;
-
 }
 
 .ContainerCruzModal {
@@ -97,7 +97,6 @@ line-height: 120%; /* 30px */
     height: 600px;
     display: flex;
     flex-direction: column;
-
     justify-content: space-around;
     position: absolute;
     z-index: 99;
@@ -114,21 +113,25 @@ line-height: 120%; /* 30px */
 }
 
 .Title {
-    color: #004993;
-    line-height: 46.80px;
-    font-size: 39px;
+    width: 439px;
+    color: var(--Azul-principal, #004993);
     font-family: Montserrat;
+    font-size: 39px;
+    font-style: normal;
     font-weight: 700;
+    line-height: 120%; /* 46.8px */
 }
 
 .subTextCalculador {
     color: #1A1A1A;
-    font-size: 18px;
-    font-family: Montserrat;
-    font-weight: 500;
-    line-height: 26.10px;
     width: 548px;
-    height: 47px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%; /* 26.1px */
+    letter-spacing: -0.09px;
+    opacity: 0.6;
 }
 
 .ContainerInputs {
@@ -143,17 +146,21 @@ line-height: 120%; /* 30px */
     height: auto;
     display: flex;
     flex-direction: row;
-    gap:21px;
+    gap:10px;
+    align-items: center;
+    justify-content: space-between
 }
 .ContainerValores {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     background-color: #F9FAFB;
     border-radius: 10px;
     padding: 18px 18px 18px 0px;
     width: auto;
+    max-height: 53px;
+    height: 53px;
 }
 
 .input1 {
@@ -161,14 +168,41 @@ line-height: 120%; /* 30px */
     width: 222px;
     border: none;
     background-color: #F9FAFB;
-
     outline: none;
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
 }
+
+.input1::placeholder {
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    color: #1A1A1A; /* Puedes ajustar el color según tus preferencias */
+}
+
+.input2::placeholder {
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    color: #1A1A1A; /* Puedes ajustar el color según tus preferencias */
+}
+
 .lineaAzul{
     background: #004993;
     height: 37px;
     width:2px;
 }
+
 .bolitaBlanca{
     width:10px;
     height:10px;
@@ -185,6 +219,12 @@ line-height: 120%; /* 30px */
     border: none;
     background-color: #F9FAFB;
     outline: none;
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
 }
 
 .flechaCalcula {
@@ -192,6 +232,12 @@ line-height: 120%; /* 30px */
     border: none;
     border-radius: 30px;
     padding: 18px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .ContainerPasos {
@@ -225,16 +271,16 @@ line-height: 120%; /* 30px */
 .ContainerCards {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 95%;
+    justify-content: space-between;
+    width: -webkit-fill-available;
     align-self: center;
 }
 
 .ExtraContainerCards {
     display: flex;
     flex-direction: column;
-    border:solid 1px red;
     width:-webkit-fill-available;
+    gap:35px;
 }
 
 .cardCuota {
@@ -244,9 +290,10 @@ line-height: 120%; /* 30px */
     gap: 5px;
     background-color: #FFFFFF;
     border-radius: 20px;
-    margin: 25px 0px 25px 0px;
+    margin: 0px 0px 0px 0px;
     justify-content: space-between;
-    width: 20%;
+    width: auto;
+    min-width: 230px;
 }
 
 .activo {
@@ -256,7 +303,7 @@ line-height: 120%; /* 30px */
     gap: 5px;
     background-color: #004994;
     border-radius: 20px;
-    margin: 25px 0px 25px 0px;
+    margin: 0px 0px 0px 0px;
     justify-content: space-between;
     width: 20%;
 }
@@ -387,30 +434,27 @@ line-height: 120%; /* 30px */
 }
 
 .flechaCard {
-    padding: 10px;
     display: flex;
     justify-content: center;
-    z-index: 2;
-    position: relative;
-    left: 0px;
     transition: 1s;
     background-color: #FFFFFF;
 }
 
 .flechaCardActiva {
-    padding: 6px;
-    /* border: 1px solid #FFFFFF; */
-    /* border-radius: 30px; */
-    scale: 80%;
+    display: none;
+    align-self: center;
+    width: auto;
+    height: auto;
 }
 
 .flechaSolicitar {
     padding: 10px;
     border: 2px solid #004993;
-    border-radius: 30px;
+    border-radius: 100%;
     display: flex;
     align-self: center;
-    scale: 150%;
+    width: 60px;
+    height: 60px;
 }
 
 .containerButtonCard {
@@ -418,7 +462,8 @@ line-height: 120%; /* 30px */
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-
+    width: -webkit-fill-available;
+    cursor: pointer;
 }
 
 .buttonSolicitar {
@@ -442,12 +487,12 @@ line-height: 120%; /* 30px */
     border-radius: 30px;
     border: none;
     cursor:pointer;
+    border:solid 2px #004993;
 }
 .buttonSolicitarDisabled:hover {
     color:#004993;
     background-color: #FFFFFF;
     border:solid 2px #004993;
-    transform: scale(0.95);
 }
 
 
@@ -461,7 +506,6 @@ line-height: 120%; /* 30px */
 
 .textSeleccionar {
     display: none;
-    z-index: 1;
     width: 0%;
     color: #FFFFFF;
     font-weight: 500;
@@ -478,21 +522,25 @@ line-height: 120%; /* 30px */
 .ButtonSeleccionar {
     border: 1px solid #004993;
     border-radius: 30px;
-    width: 17%;
-    transition: 1s;
+    width: 30px;
+    transition: 0.5s;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
+    height: 30px;
 }
 
 .ButtonSeleccionado {
     border: 1px solid #004993;
     border-radius: 30px;
-    width: 70%;
-    transition: 1s;
+    width: 78%;
+    transition: 0.5s;
     display: flex;
     align-items: center;
     overflow: hidden;
+    flex-direction: row;
 }
 
 .textoCalculador {
@@ -503,20 +551,26 @@ line-height: 120%; /* 30px */
 }
 
 .cardCuota:hover .ButtonSeleccionar {
-    padding: 0px 10px 0px 10px;
-    width: 60%;
+    padding: 0px 10px 0px 15px;
+    width: 80%;
     background-color: #004993;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: end;
 }
 
 .cardCuota:hover .textSeleccionar {
     display: flex;
+    width: auto;
+    /* border:solid 1px white */
 }
 
 .cardCuota:hover .flechaCard {
-    left: 98px;
+
     background-color: #004993;
-    scale: 80%;
-    padding: 6px;
+
 }
 
 @media (max-width: 500px) {

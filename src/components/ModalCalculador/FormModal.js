@@ -14,10 +14,48 @@ import {
 } from "@/styles";
 import "animate.css";
 import Link from "next/link";
+import Swal from "sweetalert2";
+
+export default function FormModal({ setCalculador, calculador,setRenderForm ,handleClick }) {
+    const [form, setForm] = useState({
+        Nombre: "",
+        Apellido: "",
+        Email: "",
+        Dni: "",
+        Telefono:"",
+        Localidad:"",
+      });
 
 
-export default function FormModal({ setCalculador, calculador,setRenderForm }) {
+    const customStyle = {
+        confirmButtonColor: '#004993',
+        fontFamily: 'Poppins, sans-serif',
 
+    };
+    const handleChangeForm = (e) => {
+       
+        const { name, value } = e.target;
+
+        setForm({
+            ...form,
+            [name]: e.target.value,
+        });
+
+    };
+    const enviarForm = () => {
+        handleClick(form)
+        Swal.fire({
+
+            text: 'Debe completar todos los campos',
+            icon: 'error',
+            confirmButtonText: 'Ok',
+            customClass: {
+                confirmButton: 'mi-clase-confirm' // Puedes agregar una clase personalizada al botón confirmar si es necesario
+            },
+            ...customStyle // Incorpora el estilo personalizado
+        });
+    }
+    
     return (
         <div className={style.Container} >
             <div className={style.ContentText}>
@@ -30,33 +68,54 @@ export default function FormModal({ setCalculador, calculador,setRenderForm }) {
             </div>
             <div className={style.GridContentInputs}>
                 <input className={style.InputStyle}
+                    name="Nombre"
                     placeholder="Nombre/s"
+                    value={form.Nombre}
+                    onChange={handleChangeForm}
                 />
                 <input className={style.InputStyle}
                     placeholder="Apellido/s"
+                    value={form.Apellido}
+                    name="Apellido"
+                    onChange={handleChangeForm}
                 />
                 <input
                     className={style.InputStyle}
+                    name="Email"
+                    value={form.Email}
                     placeholder="Email"
+                    onChange={handleChangeForm}
+                    type="text"
                 />
                 <input 
                   className={style.InputStyle}
+                  value={form.Dni}
+                  name="Dni"
                   placeholder="DNI/ Pasaporte / Cédula"
+                  onChange={handleChangeForm}
+                  type="number"
                 />
                 <input 
                   className={style.InputStyle}
+                  name="Telefono"
                   placeholder="Teléfono"
+                  value={form.Telefono}
+                  onChange={handleChangeForm}
+                  type="number"
                 />
                 <input 
                   className={style.InputStyle}
+                  name="Localidad"
                   placeholder="Localidad"
+                  value={form.Localidad}
+                  onChange={handleChangeForm}
                 />
             </div>
             <div className={style.DivContentBtn}>
                 <div className={style.Boton1} onClick={()=> setRenderForm(false)}>
                     Volver a calcular
                 </div>
-                <div className={style.Boton2}>
+                <div className={style.Boton2} onClick={() => enviarForm()}>
                     Solicitá tu garantía
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"
              

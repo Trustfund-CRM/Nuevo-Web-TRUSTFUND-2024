@@ -1,22 +1,37 @@
 .Container{
     width: 1122px;
     height: auto;
-    padding: 86px 28px 39px 28px;
-    border:solid 1px red;
+    padding: 30px 28px 30px 28px;
+    /* border:solid 1px red; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
 background: var(--Escala-de-grises-1, #F2F2F2);
-gap:16px;
+gap:34px;
+opacity: 1;  /* Inicia con opacidad cero para que aparezca gradualmente */
+animation: slideIn 0.2s ease-in-out;
+transform: all 1s linear;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 .ContentText{
     width: -webkit-fill-available;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border:solid 1px red;
+    /* border:solid 1px red; */
 }
 .TextObteneGarantia{
     color: var(--Azul-principal, #004993);
@@ -53,7 +68,7 @@ letter-spacing: -0.09px;
     border:none;
     border-radius: 10px;
     background: #F9FAFB;
-    padding: 10px;
+    padding: 25px !important;
     outline: none;
 }
 
@@ -84,6 +99,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 24px */
 cursor: pointer;
+padding: 25px !important;
 
 }
 .Boton1:hover {
@@ -108,7 +124,7 @@ gap: 15px;
 border-radius: 30px;
 background: var(--Azul-principal, #004993);
 color: #FFF;
-
+padding: 25px !important;
 /* Body/Body Medium_medium */
 font-family: Montserrat;
 font-size: 16px;

@@ -37,7 +37,7 @@
     animation: modal-animation 0.3s ease-in-out;
     justify-content: space-around;
     position: fixed;
-    z-index: 999999;
+    z-index: 999;
     top:0px;
     left: 0px;
     display: flex;
