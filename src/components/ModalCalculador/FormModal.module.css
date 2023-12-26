@@ -11,8 +11,13 @@
 background: var(--Escala-de-grises-1, #F2F2F2);
 gap:34px;
 opacity: 1;  /* Inicia con opacidad cero para que aparezca gradualmente */
-animation: slideIn 0.2s ease-in-out;
+animation: slideIn 0.1s ease-in-out;
 transform: all 1s linear;
+@media screen and (max-height: 780px) {
+    padding: 30px 28px 30px 28px;
+    transform: scale(0.78);
+    margin-top: 9vh;
+}
 }
 
 

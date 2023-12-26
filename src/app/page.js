@@ -16,27 +16,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function Home() {
-  const [mobile, setMobile] = useState(false);
-  const [calc, setCalc] = useState(false);
 
-  const settedCalculador = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
-  );
 
-  const modalSuscribe = useSelector(
-    (state) => state.reducerInfoGarantia.modal
-  )
 
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window?.innerWidth < 765) {
-        setMobile(true);
-        dispatch(setCalculador());
-      }
-    }
-  }, []);
+
 
   return (
     <div
@@ -48,21 +32,16 @@ export default function Home() {
       }}
     >
       <ScrollPrincipal />
-      {mobile && (
-        <ModalCalculador
-          setCalculador={setCalc}
-          calculador={settedCalculador}
-        />
-      )}
+
       <TextoSlide />
       <ScrollCards />
       <ScrollVentajas />
       <SeccionComentarios />
       <PreguntasFrecuentes />
-      {modalSuscribe && (
+      {/* {modalSuscribe && (
         <FormNewsletter />
       )
-      }
+      } */}
       <ButtonWsp />
     </div>
   );

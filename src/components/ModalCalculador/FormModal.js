@@ -26,6 +26,14 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
         Localidad:"",
       });
 
+      const [colorNombre, setColorNombre] = useState("none");
+      const [colorApellido, setColorApellido] = useState("none");
+      const [colorEmail, setColorEmail] = useState("none");
+      const [colorDni, setColorDni] = useState("none");
+      const [colorTelefono, setColorTelefono] = useState("none");
+      const [colorLocalidad, setColorLocalidad] = useState("none");
+      
+      const [valido, setValido] = useState(false);
 
     const customStyle = {
         confirmButtonColor: '#004993',
@@ -42,20 +50,61 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
         });
 
     };
-    const enviarForm = () => {
-        handleClick(form)
-        Swal.fire({
+    const verificarCampos = async () => {
+        setColorNombre(form.Nombre.trim() !== "" ? "#F9FAFB" : "red");
+        setColorApellido(form.Apellido.trim() !== "" ? "#F9FAFB" : "red");
+        setColorEmail(form.Email.trim() !== "" ? "#F9FAFB" : "red");
+        setColorDni(form.Dni.trim() !== "" ? "#F9FAFB" : "red");
+        setColorTelefono(form.Telefono.trim() !== "" ? "#F9FAFB" : "red");
+        setColorLocalidad(form.Localidad.trim() !== "" ? "#F9FAFB" : "red");
+      };
+    const enviarForm = async () => {
+        setValido(true);
+        await verificarCampos()
+        if(
+            !form.Nombre ||
+            !form.Apellido ||
+            !form.Email ||
+            !form.Dni ||
+            !form.Telefono ||
+            !form.Localidad
+        ){
+            Swal.fire({
 
-            text: 'Debe completar todos los campos',
-            icon: 'error',
-            confirmButtonText: 'Ok',
-            customClass: {
-                confirmButton: 'mi-clase-confirm' // Puedes agregar una clase personalizada al botón confirmar si es necesario
-            },
-            ...customStyle // Incorpora el estilo personalizado
-        });
+                text: 'Debe completar todos los campos',
+                icon: 'error',
+                confirmButtonText: 'Ok',
+                customClass: {
+                    confirmButton: 'mi-clase-confirm' // Puedes agregar una clase personalizada al botón confirmar si es necesario
+                },
+                ...customStyle // Incorpora el estilo personalizado
+            });
+        }else{
+            handleClick(form)
+            setValido(false);
+            Swal.fire({
+                title: 'Formulario enviado con exito',
+   
+                text: 'Un asesor se comunicará a la brevedad.',
+                icon: 'success',
+                confirmButtonText: 'Ok',
+                customClass: {
+                    confirmButton: 'mi-clase-confirm' // Puedes agregar una clase personalizada al botón confirmar si es necesario
+                },
+                ...customStyle // Incorpora el estilo personalizado
+            });
+            setCalculador(false)
+            setRenderForm(false)
+        }
+
+
     }
-    
+    useEffect(  () => {
+        if(valido){
+          verificarCampos()
+        }
+      
+      }, [form, valido]);
     return (
         <div className={style.Container} onClick={handleFormClick} >
             <div className={style.ContentText}>
@@ -68,12 +117,20 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
             </div>
             <div className={style.GridContentInputs}>
                 <input className={style.InputStyle}
+                    style={{
+                        border:`solid 1px ${colorNombre}`
+                      }}
+                    autoComplete="false"
                     name="Nombre"
                     placeholder="Nombre/s"
                     value={form.Nombre}
                     onChange={handleChangeForm}
                 />
                 <input className={style.InputStyle}
+                    style={{
+                        border:`solid 1px ${colorApellido}`
+                      }}
+                      autoComplete="false"
                     placeholder="Apellido/s"
                     value={form.Apellido}
                     name="Apellido"
@@ -81,6 +138,10 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input
                     className={style.InputStyle}
+                    autoComplete="false"
+                    style={{
+                        border:`solid 1px ${colorEmail}`
+                      }}
                     name="Email"
                     value={form.Email}
                     placeholder="Email"
@@ -89,6 +150,10 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input 
                   className={style.InputStyle}
+                  autoComplete="false"
+                  style={{
+                    border:`solid 1px ${colorDni}`
+                  }}
                   value={form.Dni}
                   name="Dni"
                   placeholder="DNI/ Pasaporte / Cédula"
@@ -97,6 +162,10 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input 
                   className={style.InputStyle}
+                  autoComplete="false"
+                  style={{
+                    border:`solid 1px ${colorTelefono}`
+                  }}
                   name="Telefono"
                   placeholder="Teléfono"
                   value={form.Telefono}
@@ -105,6 +174,10 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input 
                   className={style.InputStyle}
+                  autoComplete="false"
+                  style={{
+                    border:`solid 1px ${colorLocalidad}`
+                  }}
                   name="Localidad"
                   placeholder="Localidad"
                   value={form.Localidad}
