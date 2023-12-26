@@ -77,7 +77,7 @@ export default function ModalCalculador({
         setMobile(true);
       }
     }
-  }, [window.innerWidth]);
+  }, []);
 console.log("GOLAA")
   const handleMouseOver = (value) => {
     if (value === "Contado") {
@@ -332,7 +332,21 @@ const verificarCampos = async () => {
   
   }, [form, valido]);
 
-
+  const renderizarForm = () => {
+    if(mobile){
+      const scrollAmount = 380; // por ejemplo, 200 píxeles
+  
+      window.scrollTo({
+        top: 150,
+        behavior: 'smooth',
+      });
+      setRenderForm(true)
+  
+  
+    }else {
+      setRenderForm(true)
+    }
+  }
   return (
     <form
       className={
@@ -798,7 +812,7 @@ const verificarCampos = async () => {
                 <div className={style.containerButtonCard} >
 
                   <div
-                    onClick={() => setRenderForm(true)}
+                    onClick={() => renderizarForm()}
                     className={style.buttonSolicitarDisabled}>
                     Solicitá tu garantía
                   </div>
@@ -806,7 +820,7 @@ const verificarCampos = async () => {
 
                   {!mobile ? (
                     <Image
-                      onClick={() => setRenderForm(true)}
+                      onClick={() => renderizarForm()}
                       alt="flecha"
                       className={style.flechaSolicitar}
                       src={flechaModalBlue}

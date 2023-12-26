@@ -18,7 +18,7 @@ export default function ScrollPrincipal() {
     if (typeof window !== "undefined") {
       if (window?.innerWidth < 1017) {
         setMobile(true);
-        setCalculador(true)
+        // setCalculador(true)
       }
     }
   }, []);
@@ -39,7 +39,7 @@ const abrirModal = () => {
     const scrollAmount = 380; // por ejemplo, 200 píxeles
 
     window.scrollTo({
-      top: window.pageYOffset + scrollAmount,
+      top: 400,
       behavior: 'smooth',
     });
     setCalculador(true)
@@ -64,9 +64,8 @@ const abrirModal = () => {
             Con mínimos requisitos. Obtené tu garantía de alquiler en tan solo
             24hs.
           </div>
-          {
-            mobile ? 
-            null : 
+          
+     
             <div className={style.containerButtons}>
             <div
               className={style.ButtonHome}
@@ -77,7 +76,7 @@ const abrirModal = () => {
             <Image className={style.flecha} src={flechaCirculo}   onClick={() => abrirModal()}/>
 
           </div>
-          }
+          
    
          
         </div>
