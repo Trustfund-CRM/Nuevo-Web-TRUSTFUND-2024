@@ -80,6 +80,7 @@
   margin-top: 4.16vw;
   padding-left: 11vw;
   padding-right: 11vw;
+  padding-bottom: 4vw;
   border:solid 1px red;
   @media (min-width: 0px) and (max-width: 770px) {
     padding-bottom: 20vw;
