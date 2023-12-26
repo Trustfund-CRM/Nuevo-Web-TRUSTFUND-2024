@@ -25,7 +25,7 @@ export default function ScrollVentajas() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 480 ? y > 2800 : onlyHeight < 800 ? y > 1800 : y > 2000) {
+    if (onlyWidth < 280 ? y > 2800 : onlyHeight < 800 ? y > 1800 : y > 2000) {
       setCustomStyle({
         ...customStyle,
         background: '#009FBB'
@@ -35,7 +35,7 @@ export default function ScrollVentajas() {
         color: '#ffffff'
       });
     }
-    if (onlyWidth < 480 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
+    if (onlyWidth < 280 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'
