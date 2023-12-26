@@ -92,10 +92,12 @@
     flex-direction: column;
     gap:16px;
     margin-left: 10.8vw;
+
     @media (min-width: 0px) and (max-width: 1017px) {
         margin-left: 9.8vw;
         margin-top: 3vh;
     }
+
 }
 
 .Intro {
