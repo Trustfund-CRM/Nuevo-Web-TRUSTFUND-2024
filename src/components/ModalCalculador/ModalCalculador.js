@@ -20,7 +20,7 @@ import { sendContactForm } from '../../../lib/api';
 import { setResultadoCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 import useCloseOnOutsideClickAndEscape from "@/hooks/useCloseOnOutsideClickAndEscape";
 import FormModal from "./FormModal";
-export default function ModalCalculador({ setCalculador, calculador, handleFormClick }) {
+export default function ModalCalculador({ setCalculador, calculador }) {
   const modalRef = useRef();
   const [renderForm, setRenderForm] = useState(false);
   const [datosCalculador, setDatosCalculador] = useState({
@@ -117,20 +117,20 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
   const handleFormat = (e) => {
     var num = e.replace(/\.|[A-Za-z]/g, "");
     if (!isNaN(num)) {
-        num = num
-            .toString()
-            .split("")
-            .reverse()
-            .join("")
-            .replace(/(?=\d*\.?)(\d{3})/g, "$1.");
-        num = num.split("").reverse().join("").replace(/^[\.]/, "");
-        e = num;
-        return e;
+      num = num
+        .toString()
+        .split("")
+        .reverse()
+        .join("")
+        .replace(/(?=\d*\.?)(\d{3})/g, "$1.");
+      num = num.split("").reverse().join("").replace(/^[\.]/, "");
+      e = num;
+      return e;
     } else {
-        e = e.replace(/[^\d\.]*/g, "");
-        return e;
+      e = e.replace(/[^\d\.]*/g, "");
+      return e;
     }
-};
+  };
   const currencyMask = (e) => {
     let value = e;
     value = value.replace(/\D/g, "");
@@ -144,10 +144,10 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
     e = value;
     e = handleFormat(e)
     // console.log(e, "formateado")
-  //   setInput({
-  //     ...input,
-  //     [name]: e.target.value,
-  // });
+    //   setInput({
+    //     ...input,
+    //     [name]: e.target.value,
+    // });
     return e;
   };
 
@@ -156,9 +156,9 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
     const newValue = currencyMask(value);
     console.log(name, "formateado2")
     setDatosCalculador({
-          ...datosCalculador,
-          [name]: newValue,
-      });
+      ...datosCalculador,
+      [name]: newValue,
+    });
     datosCalculador[name] = newValue;
   };
 
@@ -196,14 +196,14 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
     console.log('data: ', data)
     // console.log('datosStepPrincipal : ', datosStepPrincipal)
     let response = await sendContactForm({
-        ...data,
-   
-        subject: 'Formulario - Obtené tu garantía'
+      ...data,
+
+      subject: 'Formulario - Obtené tu garantía'
     })
     console.log(response)
     // reset()
-  
-};
+
+  };
   function handleClick(form) {
 
     if (activeItem === "Contado") {
@@ -245,14 +245,18 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
       };
     }
     console.log(form, "FORM")
-    console.log(dataToSend ,"MODALFORM")
+    console.log(dataToSend, "MODALFORM")
     const objetoCombinado = { ...dataToSend, ...form };
     onSubmitForm(objetoCombinado)
     localStorage.setItem("datosLocalStorage", JSON.stringify(objetoCombinado));
-    
-  }
 
+  }
+  const handleFormClick = (e) => {
+    e.stopPropagation(); // Evita que el evento de clic se propague hacia arriba
+  };
   useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador())
+
+
 
   return (
     <form
@@ -263,17 +267,18 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
       }
       onSubmit={handleSubmit(onSubmit)}
       ref={modalRef}
-
-
+      onClick={() => setCalculador(false)}
 
     >
       {
         renderForm ?
-          <FormModal setRenderForm={setRenderForm}  handleClick={handleClick}/> :
+          <FormModal
+            setRenderForm={setRenderForm}
+            handleClick={handleClick}
+            handleFormClick={handleFormClick} />
+          :
 
-          <div className={style.ContainerAux}>
-
-
+          <div className={style.ContainerAux} onClick={handleFormClick}>
 
             <div className={style.TitleCalculador}>
               <div className={style.Title}>Calculá tu garantía</div>
@@ -287,7 +292,7 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
             <div className={style.ContenedorInputsForm}>
               <div className={style.ContainerValores}>
                 <input
-                autoComplete="off"
+                  autoComplete="off"
                   type="text"
                   name="valorAlquiler"
                   className={style.input1}
@@ -296,9 +301,9 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                   onInput={(e) => handleInputChange(e)}
                   {...register("valorAlquiler", { required: true })}
                 />
-                           <div className={style.lineaAzul}></div>
+                <div className={style.lineaAzul}></div>
                 <input
-                   autoComplete="off"
+                  autoComplete="off"
                   type="text"
                   name="valorExpensas"
                   className={style.input2}
@@ -456,24 +461,24 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                           : style.ButtonSeleccionar
                       }
                     >
-                                <div
-                                  className={
-                                    activeItem === "Contado"
-                                      ? style.textSeleccionado
-                                      : style.textSeleccionar
-                                  }
-                                >
-                                  {activeItem === "Contado" ? "Seleccionado" : "Seleccionar"}
-                                </div>
-                                <Image
-                                  alt="flecha"
-                                  className={
-                                    activeItem === "Contado"
-                                      ? style.flechaCardActiva
-                                      : style.flechaCard
-                                  }
-                                  src={activeItem === "Contado" ? flechaModal : imageSrc1}
-                                />
+                      <div
+                        className={
+                          activeItem === "Contado"
+                            ? style.textSeleccionado
+                            : style.textSeleccionar
+                        }
+                      >
+                        {activeItem === "Contado" ? "Seleccionado" : "Seleccionar"}
+                      </div>
+                      <Image
+                        alt="flecha"
+                        className={
+                          activeItem === "Contado"
+                            ? style.flechaCardActiva
+                            : style.flechaCard
+                        }
+                        src={activeItem === "Contado" ? flechaModal : imageSrc1}
+                      />
                     </div>
                   </div>
 
@@ -736,7 +741,7 @@ export default function ModalCalculador({ setCalculador, calculador, handleFormC
                 <div className={style.containerButtonCard} >
 
                   <div
-onClick={() => setRenderForm(true)}
+                    onClick={() => setRenderForm(true)}
                     className={style.buttonSolicitarDisabled}>
                     Solicitá tu garantía
                   </div>
@@ -744,7 +749,7 @@ onClick={() => setRenderForm(true)}
 
                   {!mobile ? (
                     <Image
-                    onClick={() => setRenderForm(true)}
+                      onClick={() => setRenderForm(true)}
                       alt="flecha"
                       className={style.flechaSolicitar}
                       src={flechaModalBlue}

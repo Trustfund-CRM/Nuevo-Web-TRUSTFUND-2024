@@ -65,7 +65,7 @@
 
 
 .ContainerModalCalculador {
-    background-color: #0b0b0b80;
+    
     backdrop-filter: blur(3px);
     width: -webkit-fill-available;
     height: 100vh;
@@ -574,14 +574,7 @@
 }
 
 @media (max-width: 500px) {
-    .ContainerModalCalculador {
-        /* left: auto; */
-        /* bottom: auto; */
-        position: initial;
-        width: -webkit-fill-available;
-        height: 650px;
-        margin: 40px 15px 15px 15px;
-    }
+
 
     .ContainerModalCalculadorResultado {
         /* left: auto; */

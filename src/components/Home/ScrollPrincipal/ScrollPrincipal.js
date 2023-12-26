@@ -48,7 +48,7 @@ export default function ScrollPrincipal() {
             >
               Cotizá tu garantía
             </div>
-            <Image className={style.flecha} src={flechaCirculo} />
+            <Image className={style.flecha} src={flechaCirculo}   onClick={() => setCalculador(true)}/>
 
           </div>
          
@@ -58,11 +58,10 @@ export default function ScrollPrincipal() {
         </div>
 
       {calculador ? 
-            <div className={style.ContainerModalCalculador}
-         >
+        
 
             <ModalCalculador setCalculador={setCalculador} />
-            </div>
+          
 
      
        : null}

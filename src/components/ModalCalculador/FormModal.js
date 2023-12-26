@@ -16,7 +16,7 @@ import "animate.css";
 import Link from "next/link";
 import Swal from "sweetalert2";
 
-export default function FormModal({ setCalculador, calculador,setRenderForm ,handleClick }) {
+export default function FormModal({ setCalculador, calculador,setRenderForm ,handleClick, handleFormClick }) {
     const [form, setForm] = useState({
         Nombre: "",
         Apellido: "",
@@ -57,7 +57,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
     }
     
     return (
-        <div className={style.Container} >
+        <div className={style.Container} onClick={handleFormClick} >
             <div className={style.ContentText}>
                 <div className={style.TextObteneGarantia}>
                     Obtené tu garantía
