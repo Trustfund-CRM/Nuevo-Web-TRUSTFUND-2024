@@ -6,8 +6,19 @@
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  user-select: none;
+}
+.swal2-confirm {
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99999999 !important;
+}
+*.swal2-popup {
+  font-family: 'Montserrat', sans-serif;
+  z-index: 99999999 !important;
 }
 
+.swal2-cancel,
+.swal2-deny,
 :root {
   --cards: 4;
   --cardHeight: 300px;

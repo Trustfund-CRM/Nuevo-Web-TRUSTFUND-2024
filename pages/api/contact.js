@@ -18,7 +18,9 @@ const CONTACT_MESSAGE_FIELDS = {
   valorExpensas: "valorExpensas",
   Motivo: "Motivo",
   Reclamo:"Reclamo",
-  
+  contado:"contado",
+  pago:"pago"
+
 };
 
 const generateEmailContent = (data) => {

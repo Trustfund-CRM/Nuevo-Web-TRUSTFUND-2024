@@ -92,3 +92,4 @@ export { default as IconoYt } from './VectorYt.svg';
 export { default as IconoLnkdn } from './VectorLnkdn.svg';
 export { default as FooterDelSud } from './FooterDelSud.svg';
 export { default as logoAzul } from './Grupo_390.svg';
+export { default as flexhaBlanca} from './flexhaBlanca.svg'
