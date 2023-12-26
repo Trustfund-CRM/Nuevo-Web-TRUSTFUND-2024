@@ -13,10 +13,17 @@ gap:34px;
 opacity: 1;  /* Inicia con opacidad cero para que aparezca gradualmente */
 animation: slideIn 0.1s ease-in-out;
 transform: all 1s linear;
-@media screen and (max-height: 780px) {
+@media screen and (max-height: 780px) and (min-width: 500px) {
+    /* Cuando la altura es menor o igual a 780px y el ancho es mayor o igual a 500px */
     padding: 30px 28px 30px 28px;
     transform: scale(0.78);
     margin-top: 9vh;
+  };
+  @media (min-width: 0px) and (max-width: 1017px) {
+  
+        width: -webkit-fill-available;
+        padding: 30px 28px 30px 28px;
+ 
 }
 }
 
@@ -36,7 +43,12 @@ transform: all 1s linear;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* border:solid 1px red; */
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: auto;
+        min-width: -webkit-fill-available;
+        flex-direction: column;
+        gap:16px;
+    } 
 }
 .TextObteneGarantia{
     color: var(--Azul-principal, #004993);
@@ -47,6 +59,14 @@ font-size: 39px;
 font-style: normal;
 font-weight: 700;
 line-height: 120%; 
+@media (min-width: 500px) and (max-width: 600px) {
+    width: auto;
+    font-size: 35px;
+    };
+@media (min-width: 0px) and (max-width: 500px) {
+    width: auto;
+    font-size: 26px;
+    }
 }
 .TextCompletaTusDatos{
     color: #1A1A1A;
@@ -58,6 +78,10 @@ font-style: normal;
 font-weight: 500;
 line-height: 145%; /* 26.1px */
 letter-spacing: -0.09px;
+@media (min-width: 0px) and (max-width: 600px) {
+    width: auto;
+    font-size: 16px;
+    }
 }
 
 .GridContentInputs{
@@ -65,7 +89,13 @@ letter-spacing: -0.09px;
     display: grid;
     grid-template-columns: auto auto auto;
     height: auto;
-    gap:20px
+    gap:20px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: 100%;
+        grid-template-columns: auto;
+ 
+
+    } 
 }
 .InputStyle{
               
@@ -75,6 +105,11 @@ letter-spacing: -0.09px;
     background: #F9FAFB;
     padding: 25px !important;
     outline: none;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: -webkit-fill-available;
+       
+
+    } 
 }
 
 .DivContentBtn{
@@ -82,6 +117,12 @@ letter-spacing: -0.09px;
     flex-direction: row;
     gap:27px;
     width: 583px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: auto;
+        flex-direction: column;
+ 
+
+    } 
 }
 
 .Boton1{
