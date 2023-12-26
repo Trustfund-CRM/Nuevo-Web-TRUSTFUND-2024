@@ -82,6 +82,10 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
         }else{
             handleClick(form)
             setValido(false);
+            window.scrollTo({
+                top: 1,
+                behavior: 'smooth',
+              });
             Swal.fire({
                 title: 'Formulario enviado con exito',
    
@@ -95,6 +99,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
             });
             setCalculador(false)
             setRenderForm(false)
+      
         }
 
 
@@ -120,7 +125,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                     style={{
                         border:`solid 1px ${colorNombre}`
                       }}
-                    autoComplete="false"
+                      autoComplete="off"
                     name="Nombre"
                     placeholder="Nombre/s"
                     value={form.Nombre}
@@ -130,7 +135,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                     style={{
                         border:`solid 1px ${colorApellido}`
                       }}
-                      autoComplete="false"
+                      autoComplete="off"
                     placeholder="Apellido/s"
                     value={form.Apellido}
                     name="Apellido"
@@ -138,7 +143,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input
                     className={style.InputStyle}
-                    autoComplete="false"
+                    autoComplete="off"
                     style={{
                         border:`solid 1px ${colorEmail}`
                       }}
@@ -150,7 +155,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input 
                   className={style.InputStyle}
-                  autoComplete="false"
+                  autoComplete="off"
                   style={{
                     border:`solid 1px ${colorDni}`
                   }}
@@ -162,7 +167,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input 
                   className={style.InputStyle}
-                  autoComplete="false"
+                  autoComplete="off"
                   style={{
                     border:`solid 1px ${colorTelefono}`
                   }}
@@ -174,7 +179,7 @@ export default function FormModal({ setCalculador, calculador,setRenderForm ,han
                 />
                 <input 
                   className={style.InputStyle}
-                  autoComplete="false"
+                  autoComplete="off"
                   style={{
                     border:`solid 1px ${colorLocalidad}`
                   }}

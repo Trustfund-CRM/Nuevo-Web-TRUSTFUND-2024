@@ -33,16 +33,16 @@ export default function Home() {
     >
       <ScrollPrincipal />
 
-      {/* <TextoSlide /> */}
-      {/* <ScrollCards /> */}
-      {/* <ScrollVentajas /> */}
-      {/* <SeccionComentarios /> */}
-      {/* <PreguntasFrecuentes /> */}
+      <TextoSlide />
+      <ScrollCards />
+      <ScrollVentajas />
+      <SeccionComentarios />
+      <PreguntasFrecuentes />
       {/* {modalSuscribe && (
         <FormNewsletter />
       )
       } */}
-      {/* <ButtonWsp /> */}
+      <ButtonWsp />
     </div>
   );
 }
