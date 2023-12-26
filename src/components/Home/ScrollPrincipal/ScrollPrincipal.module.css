@@ -9,10 +9,17 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    @media (min-width: 0px) and (max-width: 1017px) {
+    @media (min-width: 600px) and (max-width: 1017px) {
         min-height: 70vh;
         height: auto;
         padding-top: 120px;
+        padding-bottom: 50px;
+    };
+    @media (min-width: 0px) and (max-width: 600px) {
+        min-height: 70vh;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 50px;
     }
 
 }

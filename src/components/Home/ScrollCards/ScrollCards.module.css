@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 157vh;
+  height: auto;
   background-color: #f2f5fb;
   width: -webkit-fill-available;
   justify-content: space-between;
@@ -80,11 +80,11 @@
   margin-top: 4.16vw;
   padding-left: 11vw;
   padding-right: 11vw;
-  /* overflow-y: scroll; */
-  /* scroll-behavior: smooth; */
-  /* padding: 100px 0px; */
+  border:solid 1px red;
   @media (min-width: 0px) and (max-width: 770px) {
     padding-bottom: 20vw;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -102,20 +102,7 @@
   scale: none;
   transition: all 0.5s;
 
-  @media (min-width: 481px) and (max-width: 760px) {
-    flex-direction: column;
-    border-radius: 20px;
-    /* max-height: 450px; */
-    width: 80%;
-    /* max-width: 50vw; */
 
-    /* margin: 25px 0px 25px 0px;
-    flex-direction: column;
-    border-radius: 20px;
-    width: 100%;
-    height: 340px;
-    max-height: 340px; */
-  }
 }
 
 .Card:hover {
@@ -258,6 +245,7 @@
   .ContainerGeneral {
     height: auto;
     padding: 0px 24px 100px 24px;
+    border:solid 1px red;
   }
 
   .ExtraContainerHeader {
@@ -288,6 +276,7 @@
     width: 100%;
     height: 340px;
     max-height: 340px;
+    
   }
 
   .cardImage {
@@ -342,6 +331,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
+    border: solid 1px red;
+    text-align: left;
+    padding: 36px 10px 16px 0px;
   }
 
   .Carrousel {
@@ -356,6 +348,7 @@
     border-radius: 20px;
     max-height: 450px;
     width: 100%;
+    border:solid 1px red;
   }
 
   .TextoCard {
@@ -401,6 +394,7 @@
 
   .TextHeader {
     max-width: 80%;
+
   }
 
   .ScrollCards {
