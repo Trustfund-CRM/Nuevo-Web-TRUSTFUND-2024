@@ -21,7 +21,7 @@ export default function ScrollPrincipal() {
         setCalculador(true)
       }
     }
-  }, [window?.innerWidth]);
+  }, []);
 
   const settedCalculador = useSelector(
     (state) => state.reducerInfoGarantia.calculador

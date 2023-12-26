@@ -107,19 +107,12 @@
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
 
-  .wrapper {
-    height: 50px;
-  }
-
   .word {
     font-size: 28px;
   }
 }
 
 @media (max-width: 360px) {
-  .wrapper {
-    height: 26px;
-  }
 
   .word {
     font-size: 26px;

@@ -365,7 +365,7 @@
   }
 
   .ContainerPartners {
-    width: 1200px;
+    width: auto;
     gap: 16px;
     align-self: auto;
   }
@@ -493,7 +493,7 @@
   }
 
   .ContainerPartners {
-    width: 1200px;
+    width: auto;
     align-self: auto;
   }
 }
@@ -562,7 +562,7 @@
   }
 
   .ContainerPartners {
-    width: 1200px;
+    width: auto;
     align-self: auto;
   }
 }

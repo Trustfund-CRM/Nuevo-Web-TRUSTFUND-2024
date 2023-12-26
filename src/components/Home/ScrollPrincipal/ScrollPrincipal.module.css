@@ -92,6 +92,10 @@
     flex-direction: column;
     gap:16px;
     margin-left: 10.8vw;
+
+    @media (min-width: 0px) and (max-width: 370px) {
+        margin-left: 0px;
+    }
    
 }
 
