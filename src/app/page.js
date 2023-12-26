@@ -54,16 +54,16 @@ export default function Home() {
           calculador={settedCalculador}
         />
       )}
-      {/* <TextoSlide />
+      <TextoSlide />
       <ScrollCards />
       <ScrollVentajas />
       <SeccionComentarios />
-      <PreguntasFrecuentes /> */}
-      {/* {modalSuscribe && (
+      <PreguntasFrecuentes />
+      {modalSuscribe && (
         <FormNewsletter />
       )
-      } */}
-      {/* <ButtonWsp /> */}
+      }
+      <ButtonWsp />
     </div>
   );
 }
