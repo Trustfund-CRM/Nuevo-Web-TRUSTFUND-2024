@@ -20,15 +20,23 @@ import { sendContactForm } from '../../../lib/api';
 import { setResultadoCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 import useCloseOnOutsideClickAndEscape from "@/hooks/useCloseOnOutsideClickAndEscape";
 import FormModal from "./FormModal";
-export default function ModalCalculador({ setCalculador, calculador }) {
+import styled from 'styled-components';
+import Dropdown from './Dropdown'; // Ajusta la ruta según sea necesario
+import Swal from "sweetalert2";
+export default function ModalCalculador({
+  setCalculador,
+  calculador,
+  miIdRef,
+  ref,
+  id,
+}) {
   const modalRef = useRef();
+
   const [renderForm, setRenderForm] = useState(false);
-  const [datosCalculador, setDatosCalculador] = useState({
-    valorAlquiler: "",
-    valorExpensas: "",
-    Duracion: "",
-    tipoDePropiedad: "",
-  });
+
+  const options = ['', '12 MESES', '24 MESES', '36 MESES', '48 MESES', '60 MESES'];
+  const optionsTypeInmueble = ['Vivienda', 'Comercio', 'Campo'];
+
 
   // const [step, setStep] = useState(1);
   const [mobile, setMobile] = useState(false);
@@ -46,13 +54,19 @@ export default function ModalCalculador({ setCalculador, calculador }) {
   const [imageSrc2, setImageSrc2] = useState(flechaModalBlue);
   const [imageSrc3, setImageSrc3] = useState(flechaModalBlue);
   const [imageSrc4, setImageSrc4] = useState(flechaModalBlue);
+  const [colorValorAlquiler, setColorValorAlquiler] = useState("none");
+  const [colorValorExpensas, setColorValorExpensas] = useState("none");
+  const [colorTipoDePropiedad, setColorTipoDePropiedad] = useState("none");
+  const [colorDuracion, setColorDuracion] = useState("none");
+  const [valido, setValido] = useState(false);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm();
+  const [form, setForm] = useState({
+    valorAlquiler: "",
+    valorExpensas: "",
+    tipoDePropiedad: "",
+    duracion: "",
+  })
+
 
   const dispatch = useDispatch();
 
@@ -63,8 +77,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
         setMobile(true);
       }
     }
-  }, []);
-
+  }, [window.innerWidth]);
+console.log("GOLAA")
   const handleMouseOver = (value) => {
     if (value === "Contado") {
       setImageSrc1(flexhaBlanca);
@@ -97,21 +111,21 @@ export default function ModalCalculador({ setCalculador, calculador }) {
 
   const calcularGarantia = (data) => {
     console.log(data)
-    const { valorAlquiler, valorExpensas, Duracion } = data;
+    const { valorAlquiler, valorExpensas, duracion } = data;
     const alquiler = parseFloat(valorAlquiler.replace(/\./g, "") || 0);
     const expensas = parseFloat(valorExpensas.replace(/\./g, "") || 0);
-    const duracion = parseInt(Duracion);
-    const resultado = (alquiler + expensas) * duracion * 0.06;
+    const duracionaux = parseInt(duracion);
+    const resultado = (alquiler + expensas) * duracionaux * 0.06;
     return resultado;
   };
 
   const calcularGarantia12 = (data) => {
 
-    const { valorAlquiler, valorExpensas, Duracion } = data;
+    const { valorAlquiler, valorExpensas, duracion } = data;
     const alquiler = parseFloat(valorAlquiler.replace(/\./g, "") || 0);
     const expensas = parseFloat(valorExpensas.replace(/\./g, "") || 0);
-    const duracion = parseInt(Duracion);
-    const resultado = (alquiler + expensas) * duracion * 0.08;
+    const duracionaux = parseInt(duracion);
+    const resultado = (alquiler + expensas) * duracionaux * 0.08;
     return resultado;
   };
   const handleFormat = (e) => {
@@ -143,52 +157,73 @@ export default function ModalCalculador({ setCalculador, calculador }) {
     value = value.split("").reverse().join("").replace(/^[.]/, "");
     e = value;
     e = handleFormat(e)
-    // console.log(e, "formateado")
-    //   setInput({
-    //     ...input,
-    //     [name]: e.target.value,
-    // });
+
     return e;
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    const newValue = currencyMask(value);
-    console.log(name, "formateado2")
-    setDatosCalculador({
-      ...datosCalculador,
-      [name]: newValue,
-    });
-    datosCalculador[name] = newValue;
-  };
 
   function formatNumber(resultado) {
     return new Intl.NumberFormat('es-ES', { useGrouping: false }).format(resultado);
   }
+  const customStyle = {
+    confirmButtonColor: '#004993',
+    fontFamily: 'Poppins, sans-serif',
 
-  const onSubmit = (data) => {
-    const resultado = Math.floor(calcularGarantia(data));
-    setResultado(formatNumber(resultado));
-    const anticipo = Math.floor(resultado * 0.15);
-    setAnticipo(formatNumber(anticipo));
-    const contado = Math.floor(resultado - anticipo);
-    setContado(formatNumber(contado));
-    const tresCuotas = Math.floor(contado / 2);
-    setTresCuotas(formatNumber(tresCuotas));
-    const seisCuotas = Math.floor(contado / 5);
-    setSeisCuotas(formatNumber(seisCuotas));
+};
+const verificarCampos = async () => {
+  setColorValorAlquiler(form.valorAlquiler.trim() !== "" ? "#F9FAFB" : "red");
+  setColorValorExpensas(form.valorExpensas.trim() !== "" ? "#F9FAFB" : "red");
+  setColorTipoDePropiedad(form.tipoDePropiedad.trim() !== "" ? "#F9FAFB" : "red");
+  setColorDuracion(form.duracion.trim() !== "" ? "#F9FAFB" : "red");
+  
+};
+  const onSubmit = async (data) => {
+    setValido(true)
+    await verificarCampos()
+    console.log(colorValorExpensas)
+    if (
+      !data.valorAlquiler ||
+      !data.valorExpensas ||
+      !data.duracion ||
+      !data.tipoDePropiedad
+    ) {
+      Swal.fire({
 
-    const resultado12 = Math.floor(calcularGarantia12(data));
-    setResultado12(formatNumber(resultado12));
-    const anticipo12 = Math.floor(resultado12 * 0.15);
-    setAnticipo12(formatNumber(anticipo12));
-    const contadoDoce = Math.floor(resultado12 - anticipo12);
-    const doceCuotas = Math.floor(contadoDoce / 11);
-    setDoceCuotas(formatNumber(doceCuotas));
+        text: 'Debe completar todos los campos',
+        icon: 'error',
+        confirmButtonText: 'Ok',
+        customClass: {
+          confirmButton: 'mi-clase-confirm' // Puedes agregar una clase personalizada al botón confirmar si es necesario
+        },
+        ...customStyle // Incorpora el estilo personalizado
+      });
+    } else {
 
-    setInformacionStep1(data);
+      const resultado = Math.floor(calcularGarantia(data));
+      setResultado(formatNumber(resultado));
+      const anticipo = Math.floor(resultado * 0.15);
+      setAnticipo(formatNumber(anticipo));
+      const contado = Math.floor(resultado - anticipo);
+      setContado(formatNumber(contado));
+      const tresCuotas = Math.floor(contado / 2);
+      setTresCuotas(formatNumber(tresCuotas));
+      const seisCuotas = Math.floor(contado / 5);
+      setSeisCuotas(formatNumber(seisCuotas));
 
-    dispatch(setResultadoCalculador(true));
+      const resultado12 = Math.floor(calcularGarantia12(data));
+      setResultado12(formatNumber(resultado12));
+      const anticipo12 = Math.floor(resultado12 * 0.15);
+      setAnticipo12(formatNumber(anticipo12));
+      const contadoDoce = Math.floor(resultado12 - anticipo12);
+      const doceCuotas = Math.floor(contadoDoce / 11);
+      setDoceCuotas(formatNumber(doceCuotas));
+
+      setInformacionStep1(data);
+
+      dispatch(setResultadoCalculador(true));
+      setValido(false)
+    }
+
   };
 
   let dataToSend = {};
@@ -204,6 +239,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
     // reset()
 
   };
+
+
   function handleClick(form) {
 
     if (activeItem === "Contado") {
@@ -251,11 +288,49 @@ export default function ModalCalculador({ setCalculador, calculador }) {
     localStorage.setItem("datosLocalStorage", JSON.stringify(objetoCombinado));
 
   }
+
+
+
   const handleFormClick = (e) => {
     e.stopPropagation(); // Evita que el evento de clic se propague hacia arriba
   };
-  useCloseOnOutsideClickAndEscape(modalRef, calculador, () => setCalculador())
 
+  const handleChangeForm = async (e) => {
+
+    let { name, value } = e.target;
+ 
+    if (name === 'valorAlquiler' || name === 'valorExpensas') {
+      
+      value = currencyMask(value)
+    }
+    setForm({
+      ...form,
+      [name]: value,
+    });
+
+  };
+
+  const handleSelect = (selectedOption) => {
+    setForm({
+      ...form,
+      duracion: selectedOption,
+    });
+    // Puedes manejar la selección aquí según tus necesidades
+  };
+  const handleSelectTypeProp = (selectedOption) => {
+    setForm({
+      ...form,
+      tipoDePropiedad: selectedOption,
+    });
+    // Puedes manejar la selección aquí según tus necesidades
+  };
+
+  useEffect(  () => {
+    if(valido){
+      verificarCampos()
+    }
+  
+  }, [form, valido]);
 
 
   return (
@@ -265,14 +340,15 @@ export default function ModalCalculador({ setCalculador, calculador }) {
           ? `${style.ContainerModalCalculador}`
           : `${style.ContainerModalCalculador}`
       }
-      onSubmit={handleSubmit(onSubmit)}
-      ref={modalRef}
-      onClick={() => setCalculador(false)}
 
+      onClick={() => setCalculador(false)}
+      ref={ref}
+      id={id}
     >
       {
         renderForm ?
           <FormModal
+          setCalculador={setCalculador}
             setRenderForm={setRenderForm}
             handleClick={handleClick}
             handleFormClick={handleFormClick} />
@@ -292,61 +368,42 @@ export default function ModalCalculador({ setCalculador, calculador }) {
             <div className={style.ContenedorInputsForm}>
               <div className={style.ContainerValores}>
                 <input
+                style={{
+                  border:`solid 1px ${colorValorAlquiler}`
+                }}
                   autoComplete="off"
                   type="text"
                   name="valorAlquiler"
                   className={style.input1}
                   placeholder="Valor de alquiler"
-                  value={datosCalculador.valorAlquiler}
-                  onInput={(e) => handleInputChange(e)}
-                  {...register("valorAlquiler", { required: true })}
+                  value={form.valorAlquiler}
+                  onChange={handleChangeForm}
                 />
                 <div className={style.lineaAzul}></div>
                 <input
+                style={{
+                  border:`solid 1px ${colorValorExpensas}`
+                }}
                   autoComplete="off"
                   type="text"
                   name="valorExpensas"
                   className={style.input2}
-                  value={datosCalculador.valorExpensas}
+                  value={form.valorExpensas}
                   placeholder="Valor de expensas"
-                  onInput={(e) => handleInputChange(e)}
-                  {...register("valorExpensas", { required: true })}
+                  onChange={handleChangeForm}
                 />
               </div>
               <div className={style.ContainerValores}>
 
 
-                <select
-                  name="tipoDePropiedad"
-                  id="tipoDePropiedad"
-                  className={style.input1}
-                  onInput={(e) => handleInputChange(e)}
-                  {...register("tipoDePropiedad", { required: true })}
-                >
-                  <option value="">Tipo</option>
-                  <option value="Vivienda">Vivienda</option>
-                  <option value="Comercio">Comercio</option>
-                  <option value="Campo">Campo</option>
-                </select>
+                <Dropdown  colorTipoDePropiedad={colorTipoDePropiedad} options={optionsTypeInmueble} onSelect={handleSelectTypeProp} placeholder={"Tipo"} />
+
 
                 <div className={style.lineaAzul}></div>
-                <select
-                  name="Duracion"
-                  id="Duracion"
-                  className={style.input2}
-                  onInput={(e) => handleInputChange(e)}
-                  {...register("Duracion", { required: true })}
-                >
-                  <option value="">Duración</option>
-                  <option value="12">12 MESES</option>
-                  <option value="24">24 MESES</option>
-                  <option value="36">36 MESES</option>
-                  <option value="48">48 MESES</option>
-                  <option value="60">60 MESES</option>
-                </select>
+                <Dropdown colorDuracion={colorDuracion} options={options} onSelect={handleSelect} placeholder={"Duración"} />
 
               </div>
-              <Button type="submit" className={style.flechaCalcula}>
+              <Button onClick={() => onSubmit(form)} className={style.flechaCalcula}>
                 {mobile ? (
                   <div className={style.textoCalculador}>Calcular</div>
                 ) : (
@@ -403,8 +460,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
                     className={
                       activeItem === "Contado" ? style.activo : style.cardCuota
                     }
-                    onMouseOver={() => handleMouseOver("Contado")}
-                    onMouseOut={() => handleMouseOut("Contado")}
+                    // onMouseOver={() => handleMouseOver("Contado")}
+                    // onMouseOut={() => handleMouseOut("Contado")}
                     onClick={() => setActiveItem("Contado")}
                   >
                     <div
@@ -486,8 +543,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
                     className={
                       activeItem === "3 Cuotas" ? style.activo : style.cardCuota
                     }
-                    onMouseOver={() => handleMouseOver("3 Cuotas")}
-                    onMouseOut={() => handleMouseOut("3 Cuotas")}
+                    // onMouseOver={() => handleMouseOver("3 Cuotas")}
+                    // onMouseOut={() => handleMouseOut("3 Cuotas")}
                     onClick={() => setActiveItem("3 Cuotas")}
                   >
                     <div
@@ -571,8 +628,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
                     className={
                       activeItem === "6 Cuotas" ? style.activo : style.cardCuota
                     }
-                    onMouseOver={() => handleMouseOver("6 Cuotas")}
-                    onMouseOut={() => handleMouseOut("6 Cuotas")}
+                    // onMouseOver={() => handleMouseOver("6 Cuotas")}
+                    // onMouseOut={() => handleMouseOut("6 Cuotas")}
                     onClick={() => setActiveItem("6 Cuotas")}
                   >
                     <div
@@ -656,8 +713,8 @@ export default function ModalCalculador({ setCalculador, calculador }) {
                     className={
                       activeItem === "12 Cuotas" ? style.activo : style.cardCuota
                     }
-                    onMouseOver={() => handleMouseOver("12 Cuotas")}
-                    onMouseOut={() => handleMouseOut("12 Cuotas")}
+                    // onMouseOver={() => handleMouseOver("12 Cuotas")}
+                    // onMouseOut={() => handleMouseOut("12 Cuotas")}
                     onClick={() => setActiveItem("12 Cuotas")}
                   >
                     <div
