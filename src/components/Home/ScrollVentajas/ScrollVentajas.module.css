@@ -18,6 +18,43 @@
   position: relative;
 }
 
+.TitleTop {
+  display: flex;
+  flex-direction: row;
+}
+
+.ElementTop {
+  display: flex;
+  position: absolute;
+  top: 7.2vw;
+
+  @media (min-width: 1301px) and (max-width: 1630px) {
+    top: 5.2vw;
+  }
+
+  @media (min-width: 991px) and (max-width: 1300px) {
+    top: 4.2vw;
+    left: -1vw;
+    scale: 80%;
+  }
+
+  @media (min-width: 0px) and (max-width: 990px) {
+    display: none;
+  }
+}
+
+.ElementBottom {
+  display: flex;
+  z-index: 99;
+  align-self: flex-end;
+  position: absolute;
+  bottom: -7vw;
+
+  @media (min-width: 0px) and (max-width: 990px) {
+    display: none;
+  }
+}
+
 .TitleVentajas {
   font-size: 49px;
   font-family: 'Montserrat';
@@ -312,7 +349,7 @@
 
   .ContainerTop {
     justify-content: center;
-    padding: 0% 5%;
+    /* padding: 0% 5%; */
   }
 
   .TitleVentajas {

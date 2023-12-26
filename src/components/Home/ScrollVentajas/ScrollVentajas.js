@@ -6,6 +6,8 @@ import { CustomLine } from "@/components/CustomLine/CustomLine";
 import { useEffect, useState } from "react";
 import { useWindowScroll } from "@uidotdev/usehooks";
 import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
+import { VectorVentajas, VectorVentajasBlue } from "@/styles";
+import Image from "next/image";
 
 export default function ScrollVentajas() {
 
@@ -51,8 +53,11 @@ export default function ScrollVentajas() {
     <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
       <CustomContainerMaxWidth ventajas={true}>
         <div className={style.ContainerTop}>
-          <div className={style.TitleVentajas} style={customColor}>
-            Ventajas de utilizar Trust Fund
+          <div className={style.TitleTop}>
+            <Image className={style.ElementTop} src={VectorVentajas} />
+            <div className={style.TitleVentajas} style={customColor}>
+              Ventajas de utilizar Trust Fund
+            </div>
           </div>
           <CustomLine color={"#d3d5da"} custom={{ bottom: "0px" }} />
         </div>
@@ -89,6 +94,7 @@ export default function ScrollVentajas() {
             </div>
           </div>
         </div>
+        <Image className={style.ElementBottom} src={VectorVentajasBlue}/>
       </CustomContainerMaxWidth>
     </div>
   );
