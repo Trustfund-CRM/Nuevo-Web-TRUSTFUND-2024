@@ -95,3 +95,8 @@ export { default as logoAzul } from './Grupo_390.svg';
 export { default as flexhaBlanca} from './flexhaBlanca.svg';
 export { default as VectorVentajas} from './VectorVentajas.png';
 export { default as VectorVentajasBlue} from './VectorBlue.png';
+export { default as VectorServiciosTop} from './VectorServicios.png';
+export { default as House} from './ServicioHouse.png';
+export { default as FireInactivo} from './ServicioFire.png';
+export { default as PencilInactivo} from './ServicioPencil.png';
+export { default as WebInactivo} from './ServicioWeb.png';

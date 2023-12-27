@@ -1,0 +1,101 @@
+.ContainerServiciosCards {
+    display: flex;
+    background-color: #112A42;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.HeaderServiciosCards {
+    display: flex;
+    flex-direction: row;
+    width: -webkit-fill-available;
+    height: 40vh;
+    border-bottom: 1px solid #009FBB;
+}
+
+.VectorTop {
+    z-index: 99;
+    position: absolute;
+    top: 8vw;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        display: none;
+    }
+}
+
+.ContainerTitle {
+    padding-left: 11vw;
+    padding-top: 13vw;
+    padding-bottom: 3vw;
+}
+
+.preTitle {
+    color: #F9FAFB;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.1px;
+
+}
+
+.Title {
+    color: #F9FAFB;
+    font-family: Montserrat;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 58.8px;
+}
+
+.ContainerCards {
+    height: 60vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ServicioCard {
+    width: 256px;
+    height: 256px;
+    border-radius: 20px;
+    background: #009FBB;
+    border: 6px solid #009FBB;
+    padding: 25px 35px 25px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+.cardImgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/* .imgCard {} */
+
+.TitleCard {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #F9FAFB;
+    text-align: center;
+}
+
+.VectorBottom {
+    display: flex;
+    z-index: 99;
+    align-self: flex-end;
+    position: absolute;
+    bottom: -7vw;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        display: none;
+    }
+}
