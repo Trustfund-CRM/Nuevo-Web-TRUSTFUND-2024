@@ -100,3 +100,4 @@ export { default as House} from './ServicioHouse.png';
 export { default as FireInactivo} from './ServicioFire.png';
 export { default as PencilInactivo} from './ServicioPencil.png';
 export { default as WebInactivo} from './ServicioWeb.png';
+export { default as FlechaSolicita} from './FlechaSolicita.png';
