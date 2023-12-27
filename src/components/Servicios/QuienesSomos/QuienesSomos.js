@@ -1,9 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useWindowWidth, useWindowHeight } from "@react-hook/window-size";
 import { FlechaSolicita } from "@/styles";
 import style from './QuienesSomos.module.css';
+import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
+import { handleQuestions } from "./PreguntasQuienesSomos";
 
 export default function QuienesSomos() {
+
+    const onlyWidth = useWindowWidth();
+    const onlyHeight = useWindowHeight();
+
+    const { Questions } = handleQuestions(onlyWidth);
 
     const [calculador, setCalculador] = useState(false);
 
@@ -62,7 +70,7 @@ export default function QuienesSomos() {
                     </div>
 
                     <div className={style.RightBlock}>
-                        <div className={style.itemPregunta}>
+                        {/* <div className={style.itemPregunta}>
                             <div className={style.Pregunta}>¿Quiénes somos?</div>
                             <div className={style.cruz}></div>
                         </div>
@@ -77,7 +85,10 @@ export default function QuienesSomos() {
                         <div className={style.itemPregunta}>
                             <div className={style.Pregunta}>¿Cómo la obtengo?</div>
                             <div className={style.cruz}></div>
-                        </div>
+                        </div> */}
+                        {Questions.map((obj, index) => (
+                            <CustomAccordion object={obj} key={index} route={'QuienesSomos'} />
+                        ))}
                     </div>
                 </div>
             </div>

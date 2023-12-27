@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./styles/customAccordion.module.css";
-export const CustomAccordion = ({ object, custom }) => {
+export const CustomAccordion = ({ object, custom, route }) => {
   const [open, setOpen] = useState(null);
 
   const handleSetOpen = () => {
@@ -9,9 +9,9 @@ export const CustomAccordion = ({ object, custom }) => {
 
   return (
     <div className={styles.container} id={object.id}>
-      <div className={styles.FAQ}>
-        <div className={styles.Pregunta}>{object.question}</div>
-        <div className={styles.VerRespuesta} onClick={() => handleSetOpen()}>
+      <div className={`${route === 'QuienesSomos' ? styles.FAQQuieneSomos : styles.FAQ}`}>
+        <div className={`${route === 'QuienesSomos' ? styles.PreguntaQuienesSomos : styles.Pregunta}`}>{object.question}</div>
+        <div className={`${route === 'QuienesSomos' ? styles.VerRespuestaQuienesSomos : styles.VerRespuesta}`} onClick={() => handleSetOpen()}>
           {open ? "-" : "+"}
         </div>
       </div>
