@@ -13,10 +13,10 @@ import "swiper/css";
 import Script from "next/script";
 
 import { Montserrat } from 'next/font/google'
- 
+
 // If loading a variable font, you don't need to specify the font weight
 const inter = Montserrat({ subsets: ['latin'] })
- 
+
 
 export default function RootLayout({ children }) {
   const containerRef = useRef(null);
@@ -115,6 +115,28 @@ export default function RootLayout({ children }) {
             />
           </head>
         ) : null}
+        {children.props.childProp.segment === "Servicios" ? (
+          <head>
+            <meta name="robots" content="all" />
+            <link
+              rel="icon"
+              href="https://res.cloudinary.com/trustfund2022/image/upload/v1659102256/TRUST%20FUND/Home/icon-trustfund_arzsal.png"
+            />
+            <title>Trust Fund - Servicios</title>
+            <link
+              rel="apple-touch-icon"
+              href="https://res.cloudinary.com/trustfund2022/image/upload/v1659102256/TRUST%20FUND/Home/icon-trustfund_arzsal.png"
+            />
+            <meta
+              name="description"
+              content="¿No encontraste la respuesta a tu pregunta? Te ayudamos a resolver tus inquietudes de manera rápida y eficaz con asesoramiento personalizado."
+            />
+            <meta
+              name="keywords"
+              content="¿No encontraste la respuesta a tu pregunta? Te ayudamos a resolver tus inquietudes de manera rápida y eficaz con asesoramiento personalizado."
+            />
+          </head>
+        ) : null}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -126,10 +148,10 @@ export default function RootLayout({ children }) {
         </Script>
         <body>
           <NavbarPrincipal />
-          
+          {console.log(children.props.childProp.segment)}
           {children}
 
-          <Footer/> 
+          <Footer />
         </body>
       </html>
     </Provider>

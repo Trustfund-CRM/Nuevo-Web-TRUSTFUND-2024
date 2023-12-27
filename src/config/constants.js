@@ -1,4 +1,4 @@
-export const DataNav = [ 
+export const DataNav = [
     {
         url: '/nuestra-garantia',
         action: 'nuestra-garantia',
@@ -13,5 +13,27 @@ export const DataNav = [
         url: '/ConsultasYReclamos',
         action: 'ConsultasYReclamos',
         name: 'CONSULTAS Y RECLAMOS'
-    }
+    },
+    {
+        url: '/Servicios',
+        action: 'Servicios',
+        name: 'Servicios'
+    },
+    /*
+    {
+        url: '/nosotros',
+        action: 'Nosotros',
+        name: 'Nosotros'
+    },
+    {
+        url: '/clientes',
+        action: 'Clientes',
+        name: 'Clientes'
+    },
+    {
+        url: '/consultas',
+        action: 'ConsultasYReclamos',
+        name: 'Consultas'
+    },
+    */
 ]

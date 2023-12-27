@@ -1,4 +1,4 @@
-const routes = ['/', '/ConsultasYReclamos', '/InmobiliariasYPropietarios', '/nuestra-garantia', '/ObteneTuGarantia', '/Promocion'];
+const routes = ['/', '/ConsultasYReclamos', '/InmobiliariasYPropietarios', '/nuestra-garantia', '/ObteneTuGarantia', '/Servicios', '/Promocion'];
 
 function isValidRoute(path){
     return routes.includes(path);
