@@ -11,7 +11,7 @@ import {
 } from "@/styles";
 import { useSelector } from "react-redux";
 
-export default function ScrollCards() {
+const ScrollCards1 = () => {
   const cards = [
     {
       title: "Inquilinos",
@@ -36,34 +36,16 @@ export default function ScrollCards() {
     },
   ];
 
-  const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.resultado
-  );
 
-  const [isCarouselVisible, setIsCarouselVisible] = useState(false);
-  const carouselRef = useRef();
 
   return (
-    <div
-      className={`${
-        style.ContainerGeneral
-      }`}
-    >
-      <div className={style.ExtraContainerHeader}>
-        <div className={style.ContainerHeader}>
-          <div className={style.TextHeader}>
-            Protegemos todas las necesidades en el proceso de alquiler.{" "}
-          </div>
-          {/* <div className={style.lineBottom}></div> */}
-        </div>
-      </div>
-      <div id="carousel" className={style.Carrousel} ref={carouselRef}>
-        {cards?.map((c, index) => {
+    <div>
+       {/*  {cards.map((c, index) => {
           return (
             <div
               id={c.id}
               className={style.Card}
-              style={{ transform: `translateY(${index}em)` }}
+           
               key={index}
             >
               <div className={style.TextoCard}>
@@ -74,31 +56,12 @@ export default function ScrollCards() {
               <Image className={style.flechaFooterCard} src={c.image} alt="image"/>
             </div>
           );
-        })}
-      </div>
+        })} */}
+        hola
     </div>
+
+    
   );
 }
 
-{
-  /* <div id="carousel-container" className={style.ScrollCards}>
-        <div id="carousel" className={style.Carrousel}>
-          {cards?.map((c) => {
-            return (
-              <div
-                id={c.id}
-                className={style.Card}
-                style={{ transform: `translateY(${translateValue}px)` }}
-              >
-                <div className={style.TextoCard}>
-                  <div className={style.TitleCard}>{c.title}</div>
-                  <div className={style.DescripcionCard}>{c.descripcion}</div>
-                  <Image className={style.ImagenCard} src={flechaModalBlue} />
-                </div>
-                <Image className={style.flechaFooterCard} src={c.image} />
-              </div>
-            );
-          })}
-        </div>
-      </div> */
-}
+export default ScrollCards1

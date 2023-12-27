@@ -12,7 +12,7 @@ import {
 import { useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
-
+import ScrollCounter from "./VerticalCarousel.js"
 export default function ScrollCards() {
   const cards = [
     {
@@ -46,34 +46,35 @@ export default function ScrollCards() {
   const carouselRef = useRef();
 
   return (
-    <div className={`${style.ContainerGeneral}`}>
-      <CustomContainerMaxWidth>
-        <div className={style.ExtraContainerHeader}>
-          <div className={style.TextHeader}>
-            Protegemos todas las necesidades en el proceso de alquiler.{" "}
-          </div>
-          <CustomLine color={'#333'} custom={{ bottom: '0px' }} />
-        </div>
-        <div id="carousel" className={style.Carrousel} ref={carouselRef}>
-          {cards?.map((c, index) => {
-            return (
-              <div
-                id={c.id}
-                className={style.Card}
-                style={{ transform: `translateY(${index}em)` }}
-                key={index}
-              >
-                <div className={style.TextoCard}>
-                  <div className={style.TitleCard}>{c.title}</div>
-                  <div className={style.DescripcionCard}>{c.descripcion}</div>
-                  {/* <Image className={style.ImagenCard} src={flechaModalBlue} /> */}
-                </div>
-                <Image className={style.cardImage} src={c.image} />
-              </div>
-            );
-          })}
-        </div>
-      </CustomContainerMaxWidth>
-    </div>
+    // <div className={`${style.ContainerGeneral}`}>
+    //   <CustomContainerMaxWidth>
+    //     <div className={style.ExtraContainerHeader}>
+    //       <div className={style.TextHeader}>
+    //         Protegemos todas las necesidades en el proceso de alquiler.{" "}
+    //       </div>
+    //       <CustomLine color={'#333'} custom={{ bottom: '0px' }} />
+    //     </div>
+    //     <div id="carousel" className={style.Carrousel} ref={carouselRef}>
+    //       {cards?.map((c, index) => {
+    //         return (
+    //           <div
+    //             id={c.id}
+    //             className={style.Card}
+    //             style={{ transform: `translateY(${index}em)` }}
+    //             key={index}
+    //           >
+    //             <div className={style.TextoCard}>
+    //               <div className={style.TitleCard}>{c.title}</div>
+    //               <div className={style.DescripcionCard}>{c.descripcion}</div>
+    //               {/* <Image className={style.ImagenCard} src={flechaModalBlue} /> */}
+    //             </div>
+    //             <Image className={style.cardImage} src={c.image} />
+    //           </div>
+    //         );
+    //       })}
+    //     </div>
+    //   </CustomContainerMaxWidth>
+    // </div>
+        <ScrollCounter/>
   );
 }
