@@ -9,9 +9,9 @@ export const CustomAccordion = ({ object, custom, route }) => {
 
   return (
     <div className={styles.container} id={object.id}>
-      <div className={`${route === 'QuienesSomos' ? styles.FAQQuieneSomos : styles.FAQ}`}>
-        <div className={`${route === 'QuienesSomos' ? styles.PreguntaQuienesSomos : styles.Pregunta}`}>{object.question}</div>
-        <div className={`${route === 'QuienesSomos' ? styles.VerRespuestaQuienesSomos : styles.VerRespuesta}`} onClick={() => handleSetOpen()}>
+      <div className={styles.FAQ}>
+        <div className={styles.Pregunta}>{object.question}</div>
+        <div className={styles.VerRespuesta} onClick={() => handleSetOpen()}>
           {open ? "-" : "+"}
         </div>
       </div>

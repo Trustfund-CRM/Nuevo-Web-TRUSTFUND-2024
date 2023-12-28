@@ -15,13 +15,6 @@
   justify-content: space-between;
 }
 
-.FAQQuieneSomos {
-  border-bottom: 1px solid #009FBB;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .Pregunta {
   color: #f9fafb;
   font-family: Montserrat;
@@ -30,16 +23,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-}
-
-.PreguntaQuienesSomos {
-  color: #1A1A1A;
-  font-family: Montserrat;
-  font-size: 31px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 37.2px;
-  padding-bottom: 33px;
 }
 
 .Respuesta {
@@ -55,20 +38,6 @@
 
 .VerRespuesta {
   color: #a0e838;
-  font-size: 39px;
-  font-family: Montserrat;
-  font-weight: 400;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.VerRespuestaQuienesSomos {
-  color: #009FBB;
   font-size: 39px;
   font-family: Montserrat;
   font-weight: 400;
