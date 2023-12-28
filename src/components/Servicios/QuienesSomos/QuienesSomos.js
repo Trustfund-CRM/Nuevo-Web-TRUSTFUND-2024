@@ -9,14 +9,8 @@ import {
     costosPreguntas,
 } from "@/styles";
 import style from './QuienesSomos.module.css';
-import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
 
 export default function QuienesSomos() {
-
-    const onlyWidth = useWindowWidth();
-    const onlyHeight = useWindowHeight();
-
-    const { Questions } = handleQuestions(onlyWidth);
 
     const [calculador, setCalculador] = useState(false);
 
