@@ -22,15 +22,6 @@ export default function QuienesSomos() {
         setQuestion(value)
     };
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            if (window?.innerWidth < 1017) {
-                setMobile(true);
-                // setCalculador(true)
-            }
-        }
-    }, []);
-
     const abrirModal = () => {
         if (mobile) {
             const scrollAmount = 380; // por ejemplo, 200 píxeles
