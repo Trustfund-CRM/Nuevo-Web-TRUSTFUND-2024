@@ -1,33 +1,23 @@
 /* styles/VerticalCarousel.module.css */
 .carouselContainer {
     position: relative;
-    height: 500px;
-    overflow: hidden;
-    border: solid 2px blue;
-    width: -webkit-fill-available;
+    height: 600px;
+  margin-top: 10vh;
+    /* border: solid 2px blue; */
+    width: min-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding:4%;
+
   }
   
-  .carousel {
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease-in-out;
-    border:solid 1px rgb(0, 255, 149);
-    width: auto;
-    height: auto;
-  }
-  
+
   .card {
 
     border-radius: 30px;
-    width: auto;
-    /* max-width: 1120px; */
-    /* max-height: 297px; */
-    /* height: 100%; */
+    width: 1121px;
+    height: 297.961px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,19 +25,24 @@
  
     /* border: 1px solid #ddd; */
     margin: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     background-color: #fff;
     cursor: pointer;
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-    border:solid 1px red;
+    /* border:solid 1px red; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
   
   .card:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* transform: scale(1.2); */
   }
+
   
   .card.active {
-    transform: scale(1.2);
+    margin-top: 5%;
+    transform: scale(1.2) ;
   }
   
   .cardContent {
@@ -55,6 +50,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+
   }
   
   .navButton {

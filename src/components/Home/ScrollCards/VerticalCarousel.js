@@ -1,45 +1,50 @@
-import React, { useState, useEffect } from 'react';
+// VerticalCarousel.jsx
+
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './VerticalCarousel.module.css';
-import style from "./ScrollCards.module.css";
-import Image from "next/image";
+import style from './ScrollCards.module.css';
+import Image from 'next/image';
+import BotonCard from './BotonCard';
+
 import {
   inquilinos,
   propietarios,
   inmobiliarias,
   flechaModalBlue,
-} from "@/styles";
-import ScrollCards1 from "./ScrollCards"
+} from '@/styles';
 
 const VerticalCarousel = () => {
   const cards = [
     {
-      title: "Inquilinos",
+      title: 'Inquilinos',
       descripcion:
-        "Somos tu mejor opción. Nuestra garantía de alquiler es rápida, accesible, segura y sin trámites engorrosos. Obtenela 100% online y en menos de 24hs.",
+        'Somos tu mejor opción. Nuestra garantía de alquiler es rápida, accesible, segura y sin trámites engorrosos. Obtenela 100% online y en menos de 24hs.',
       image: inquilinos,
-      id: "card1",
+      id: 'card1',
     },
     {
-      title: "Propietarios",
+      title: 'Propietarios',
       descripcion:
-        "Te aseguramos el pago mensual del alquiler, expensas, servicios y el cuidado de tu propiedad. Cubrimos gastos legales de un posible desalojo del inquilino.",
+        'Te aseguramos el pago mensual del alquiler, expensas, servicios y el cuidado de tu propiedad. Cubrimos gastos legales de un posible desalojo del inquilino.',
       image: propietarios,
-      id: "card2",
+      id: 'card2',
     },
     {
-      title: "Inmobiliarias",
+      title: 'Inmobiliarias',
       descripcion:
-        "Contamos con un protocolo de alto nivel, preparado para responder ágilmente ante posibles incumplimientos del inquilino en el contrato de alquiler.",
+        'Contamos con un protocolo de alto nivel, preparado para responder ágilmente ante posibles incumplimientos del inquilino en el contrato de alquiler.',
       image: inmobiliarias,
-      id: "card3",
+      id: 'card3',
     },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const carouselContainerRef = useRef(null);
+
   const handleMouseEnter = () => {
     document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = '23px'; // Ajusta el espacio del scroll
+    document.body.style.paddingRight = '22px'; // Ajusta el espacio del scroll
   };
 
   const handleMouseLeave = () => {
@@ -48,47 +53,76 @@ const VerticalCarousel = () => {
   };
 
   const handleWheel = (event) => {
-    if (event.deltaY > 300) {
+    const direction = event.deltaY > 0 ? 'down' : 'up';
+
+    if (direction === 'down' && activeIndex < cards.length - 1) {
       // Scrolling down
-      setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
-    } else {
+      setActiveIndex((prevIndex) => prevIndex + 1);
+    } else if (direction === 'up' && activeIndex > 0) {
       // Scrolling up
-      setActiveIndex((prevIndex) => {
-        const nextIndex = prevIndex - 1;
-        return nextIndex < 0 ? cards.length - 1 : nextIndex;
-      });
+      setActiveIndex((prevIndex) => prevIndex - 1);
     }
   };
 
   useEffect(() => {
-    window.addEventListener('wheel', handleWheel);
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
+    const container = carouselContainerRef.current;
+
+    const handleScroll = () => {
+      const scrollPosition = container.scrollTop;
+      const cardHeight = container.clientHeight;
+
+      const newIndex = Math.round(scrollPosition / cardHeight);
+
+      setActiveIndex(newIndex);
     };
-  }, []);
+
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [carouselContainerRef]);
 
   return (
-    <div className={styles.carouselContainer}>
-      <div
-        className={styles.carousel}
-        style={{ transform: `translateY(${-activeIndex * 350}px)` }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className={`${styles.card} ${index === activeIndex && styles.active}`}
-          >
-            <div className={style.TextoCard}>
-              <div className={style.TitleCard}>{card.title}</div>
-              <div className={style.DescripcionCard}>{card.descripcion}</div>
-              <Image className={style.ImagenCard} src={flechaModalBlue} alt="image"/>
-            </div>
-            <Image className={style.flechaFooterCard} src={card.image} alt="image"/>
+    <div
+      ref={carouselContainerRef}
+      id="carousel-container"
+      className={styles.carouselContainer}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onWheel={handleWheel}
+    >
+      {/* <div>{activeIndex}</div> */}
+      {cards.map((card, index) => (
+        <div
+          key={card.id}
+          className={`${styles.card} ${
+            index === activeIndex && styles.active
+          }`}
+          style={{
+            zIndex: index === activeIndex ? 1 : 0,
+            position: 'absolute',
+            top: `${index === activeIndex ? 0 : 150}px`, // Ajusta el valor según sea necesario
+            transition: 'transform 0.3s ease-in-out, zIndex 1s ease-in-out, top 1s ease-in-out',
+            transform: `scale(${index === activeIndex ? 1.05 : 1})`,
+          }}
+        >
+          <div className={style.TextoCard}>
+            <div className={style.TitleCard}>{card.title}</div>
+            <div className={style.DescripcionCard}>{card.descripcion}</div>
+            {/* <BotonCard /> */}
           </div>
-        ))}
-      </div>
+          <Image
+            className={style.flechaFooterCard}
+            src={card.image}
+            alt="image"
+          />
+        </div>
+      ))}
     </div>
   );
 };

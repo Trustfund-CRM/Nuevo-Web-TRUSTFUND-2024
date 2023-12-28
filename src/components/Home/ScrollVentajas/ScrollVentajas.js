@@ -1,18 +1,17 @@
-import style from "./ScrollVentajas.module.css";
+import { useEffect, useRef, useState } from "react";
+import { useWindowScroll } from "@uidotdev/usehooks";
+import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
+import style from "./ScrollVentajas.module.css";  // Asegúrate de importar tu archivo de estilos
 import "./effectLetters.css";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
-import { useEffect, useState } from "react";
-import { useWindowScroll } from "@uidotdev/usehooks";
-import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 import { VectorVentajas, VectorVentajasBlue } from "@/styles";
 import Image from "next/image";
 
 export default function ScrollVentajas() {
-
-  const onlyWidth = useWindowWidth()
-  const onlyHeight = useWindowHeight()
+  const onlyWidth = useWindowWidth();
+  const onlyHeight = useWindowHeight();
 
   const [customStyle, setCustomStyle] = useState({
     background: '#F2F5FB',
@@ -21,13 +20,41 @@ export default function ScrollVentajas() {
 
   const [customColor, setCustomColor] = useState({
     color: '#000000',
-    transition: 'background 1s ease'
+    transition: 'color 1s ease'
   });
 
-  const [{ x, y }, scrollTo] = useWindowScroll();
+  const [isVisible, setIsVisible] = useState(false);
+  const miComponenteRef = useRef(null);
 
   useEffect(() => {
-    if (onlyWidth < 280 ? y > 2800 : onlyHeight < 800 ? y > 1800 : y > 2000) {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Umbral de visibilidad del 50%
+    };
+
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        setIsVisible(entry.isIntersecting);
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    if (miComponenteRef.current) {
+      observer.observe(miComponenteRef.current);
+    }
+
+    return () => {
+      if (miComponenteRef.current) {
+        observer.unobserve(miComponenteRef.current);
+      }
+    };
+
+  }, [miComponenteRef]);
+
+  useEffect(() => {
+    if (isVisible) {
       setCustomStyle({
         ...customStyle,
         background: '#009FBB'
@@ -36,8 +63,7 @@ export default function ScrollVentajas() {
         ...customColor,
         color: '#ffffff'
       });
-    }
-    if (onlyWidth < 280 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
+    } else {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'
@@ -47,10 +73,15 @@ export default function ScrollVentajas() {
         color: '#000000'
       });
     }
-  }, [y]);
+  }, [isVisible]);
 
   return (
-    <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
+    <div 
+    className={`${style.ContainerScrollVentajas}`}
+     style={customStyle}
+     id="miComponenteVisible"
+    ref={miComponenteRef}
+     >
       <CustomContainerMaxWidth ventajas={true}>
         <div className={style.ContainerTop}>
           <div className={style.TitleTop}>
