@@ -341,12 +341,24 @@
     padding-bottom: 32px;
 }
 
+.ContainerCubrimos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.RowCubrimos {
+    display: flex;
+    gap: 10px;
+}
+
 .ContainerFirmaElectronica {
     display: flex;
     width: -webkit-fill-available;
     justify-content: flex-start;
     padding-left: 11vw;
     padding-top: 7.7vw;
+    gap: 10px;
 }
 
 .TextFirmaElectronica {

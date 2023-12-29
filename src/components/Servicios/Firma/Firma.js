@@ -4,6 +4,10 @@ import { useWindowWidth, useWindowHeight } from "@react-hook/window-size";
 import {
     FlechaSolicita,
     ZapSign,
+    seguridadFirma,
+    legalidadFirma,
+    integridadFirma,
+    rapidezFirma,
 } from "@/styles";
 import style from './Firma.module.css';
 
@@ -111,7 +115,24 @@ export default function QuienesSomos() {
                             </div>
                             {open && (
                                 <div className={`${open ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    Nuestra <b>garantía de alquiler</b> cubre las <b>obligaciones establecidas en un contrato de locación</b>, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos <b>garantías de fianza en todo el territorio nacional</b> con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
+                                    <div className={style.ContainerCubrimos}>
+                                        <div className={style.RowCubrimos}>
+                                            <Image src={seguridadFirma} />
+                                            Seguridad. Garantiza la autenticidad del firmante ya que se genera mediante un certificado digital único y no puede ser falsificado.
+                                        </div>
+                                        <div className={style.RowCubrimos}>
+                                            <Image src={legalidadFirma} />
+                                            Legalidad. La firma electrónica está avalada por la Ley 25.506, lo que permite cumplir con los requisitos jurídicos y reglamentarios.
+                                        </div>
+                                        <div className={style.RowCubrimos}>
+                                            <Image src={integridadFirma} />
+                                            Integridad. Asegura que el documento no ha sufrido manipulaciones ni fue alterado, proporcionando una prueba sólida de que el contenido es válido.
+                                        </div>
+                                        <div className={style.RowCubrimos}>
+                                            <Image src={rapidezFirma} />
+                                            Rapidez y eficiencia. Se eliminan los trámites engorrosos, las firmas manuales y la pérdida de tiempo, agilizando el proceso y garantizando la comodidad de las personas firmantes.
+                                        </div>
+                                    </div>
                                 </div>
                             )
                             }
