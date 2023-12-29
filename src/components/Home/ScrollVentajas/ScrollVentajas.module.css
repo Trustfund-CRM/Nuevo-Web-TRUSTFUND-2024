@@ -81,7 +81,7 @@
 .ContainerBottom {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: -webkit-fill-available;
   height: 100%;
   gap: 4.1vw;
   align-self: center;
