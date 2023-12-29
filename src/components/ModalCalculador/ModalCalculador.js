@@ -417,13 +417,13 @@ const verificarCampos = async () => {
                 <Dropdown colorDuracion={colorDuracion} options={options} onSelect={handleSelect} placeholder={"Duración"} />
 
               </div>
-              <Button onClick={() => onSubmit(form)} className={style.flechaCalcula}>
+              <buton onClick={() => onSubmit(form)} className={style.flechaCalcula}>
                 {mobile ? (
                   <div className={style.textoCalculador}>Calcular</div>
                 ) : (
                   <Image src={flechaModal} alt="flecha" />
                 )}
-              </Button>
+              </buton>
             </div>
 
 
