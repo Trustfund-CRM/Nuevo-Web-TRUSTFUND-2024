@@ -11,10 +11,10 @@ export default function  SeccionComentarios() {
 
   return (
     <div className={`${style.ContainerGeneralSection}`}>
-      <CustomContainerMaxWidth>
+      
         <SeccionCards />
         <SeccionPartners />
-      </CustomContainerMaxWidth>
+    
     </div>
   );
 }

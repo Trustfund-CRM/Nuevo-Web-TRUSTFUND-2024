@@ -14,6 +14,7 @@ import {
 } from '@/styles';
 
 const VerticalCarousel = () => {
+  const [mobile, setMobile] = useState(false);
   const cards = [
     {
       title: 'Inquilinos',
@@ -86,44 +87,88 @@ const VerticalCarousel = () => {
       }
     };
   }, [carouselContainerRef]);
-
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window?.innerWidth < 1017) {
+        setMobile(true);
+        // setCalculador(true)
+      }
+    }
+  }, []);
   return (
-    <div
-      ref={carouselContainerRef}
-      id="carousel-container"
-      className={styles.carouselContainer}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onWheel={handleWheel}
-    >
-      {/* <div>{activeIndex}</div> */}
-      {cards.map((card, index) => (
+    <div>
+      {mobile ?
+             <div
+            //  ref={carouselContainerRef}
+            //  id="carousel-container"
+             className={styles.carouselContainer}
+             style={{
+              height: 'auto',
+              gap: '16px',
+              position: 'initial'
+             }}
+            //  onMouseEnter={handleMouseEnter}
+            //  onMouseLeave={handleMouseLeave}
+            //  onWheel={handleWheel}
+           >
+
+             {cards.map((card, index) => (
+               <div
+                 key={card.id}
+                 className={styles.card}
+             
+               >
+                 <div className={style.TextoCard}>
+                   <div className={style.TitleCard}>{card.title}</div>
+                   <div className={style.DescripcionCard}>{card.descripcion}</div>
+                   {/* <BotonCard /> */}
+                 </div>
+                 <Image
+                   className={style.flechaFooterCard}
+                   src={card.image}
+                   alt="image"
+                 />
+               </div>
+             ))}
+           </div> :
         <div
-          key={card.id}
-          className={`${styles.card} ${
-            index === activeIndex && styles.active
-          }`}
-          style={{
-            zIndex: index === activeIndex ? 1 : 0,
-            position: 'absolute',
-            top: `${index === activeIndex ? 0 : 150}px`, // Ajusta el valor según sea necesario
-            transition: 'transform 0.3s ease-in-out, zIndex 1s ease-in-out, top 1s ease-in-out',
-            transform: `scale(${index === activeIndex ? 1.05 : 1})`,
-          }}
+          ref={carouselContainerRef}
+          id="carousel-container"
+          className={styles.carouselContainer}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onWheel={handleWheel}
         >
-          <div className={style.TextoCard}>
-            <div className={style.TitleCard}>{card.title}</div>
-            <div className={style.DescripcionCard}>{card.descripcion}</div>
-            {/* <BotonCard /> */}
-          </div>
-          <Image
-            className={style.flechaFooterCard}
-            src={card.image}
-            alt="image"
-          />
+          {/* <div>{activeIndex}</div> */}
+          {cards.map((card, index) => (
+            <div
+              key={card.id}
+              className={`${styles.card} ${index === activeIndex && styles.active
+                }`}
+              style={{
+                zIndex: index === activeIndex ? 1 : 0,
+                position: 'absolute',
+                top: `${index === activeIndex ? 0 : 150}px`, // Ajusta el valor según sea necesario
+                transition: 'transform 0.3s ease-in-out, zIndex 1s ease-in-out, top 1s ease-in-out',
+                transform: `scale(${index === activeIndex ? 1.05 : 1})`,
+              }}
+            >
+              <div className={style.TextoCard}>
+                <div className={style.TitleCard}>{card.title}</div>
+                <div className={style.DescripcionCard}>{card.descripcion}</div>
+                {/* <BotonCard /> */}
+              </div>
+              <Image
+                className={style.flechaFooterCard}
+                src={card.image}
+                alt="image"
+              />
+            </div>
+          ))}
         </div>
-      ))}
+      }
     </div>
+
   );
 };
 

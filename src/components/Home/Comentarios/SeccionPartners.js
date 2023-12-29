@@ -42,14 +42,14 @@ export default function SeccionPartners() {
       </div>
       <div className={style.ContainerSlidePartners}>
         <div className={style.ContainerSubText}>
-          <div className={style.SubTexts}>
+         
             <div div className={style.SubTextLeft}>
               + de 220 inmobiliarias adheridas a nuestro sistema de garantías.
             </div>
             <div className={style.SubTextRight}>
               Conocé a quienes trabajan con nosotros.
             </div>
-          </div>
+         
           {/* <ButtonSlider
             text={"Ver más"}
             customBackground={{ background: "#004993", color: "#F9FAFB" }}
