@@ -191,7 +191,7 @@
         align-items: center;
         justify-content: center;
         width: auto;
-       height: 50px !important;
+       max-height: 50px !important;
        line-height: 1px;
        padding: none !important;
       }
