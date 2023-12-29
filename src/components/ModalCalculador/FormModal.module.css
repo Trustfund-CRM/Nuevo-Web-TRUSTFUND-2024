@@ -103,7 +103,7 @@ letter-spacing: -0.09px;
     border:none;
     border-radius: 10px;
     background: #F9FAFB;
-    padding: 25px !important;
+    padding: 12px !important;
     outline: none;
     max-height: 30px !important;
     @media (min-width: 0px) and (max-width: 1017px) {
@@ -147,7 +147,7 @@ font-style: normal;
 font-weight: 500;
 line-height: 150%; /* 24px */
 cursor: pointer;
-padding: 25px !important;
+padding: 12px !important;
 
 }
 .Boton1:hover {
@@ -173,7 +173,7 @@ gap: 15px;
 border-radius: 30px;
 background: var(--Azul-principal, #004993);
 color: #FFF;
-padding: 25px !important;
+padding: 12px !important;
 /* Body/Body Medium_medium */
 font-family: Montserrat;
 font-size: 16px;
