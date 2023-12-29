@@ -1,11 +1,11 @@
-.ContainerQuienesSomos {
+.ContainerServicioWeb {
     display: flex;
     background-color: #F2F5FB;
     flex-direction: column;
     height: auto;
 }
 
-.HeaderQuienesSomos {
+.HeaderServicioWeb {
     display: flex;
     flex-direction: row;
     width: -webkit-fill-available;
@@ -40,7 +40,7 @@
 
 .ContainerBody {
     /* height: 60vh; */
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: row;
     align-self: center;
@@ -53,5 +53,170 @@
 }
 
 .ContainerBlue {
+    /* padding-left: 11vw; */
+    padding-top: 5.8vw;
+    padding-bottom: 20vw;
+    /* padding-right: 13vw; */
     background-color: #004993;
+}
+
+.ContainerSubTexts {
+    display: flex;
+    flex-direction: row;
+    /* width: 60%; */
+    justify-content: space-between;
+    align-self: flex-start;
+    padding-left: 11vw;
+    padding-right: 13vw;
+    gap: 6.8vw;
+    padding-bottom: 3.6vw;
+}
+
+.subTextLeft {
+    width: 352px;
+    height: 106px;
+    color: #F9FAFB;
+
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.greenText {
+    color: #A0E838;
+}
+
+.subTextRight {
+    width: 467px;
+    height: 84px;
+    color: #F9FAFB;
+
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.imagenTablet {
+    display: flex;
+    align-self: center;
+    position: relative;
+    bottom: 20vw;
+}
+
+.Beneficios {
+    color: var(--Azul-principal, #004993);
+
+    font-family: Montserrat;
+    font-size: 39px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 46.8px;
+    display: flex;
+    align-self: center;
+    margin-top: -12vw;
+}
+
+.ContainerCardsBeneficios {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 80%;
+    align-self: center;
+    padding-top: 3.2vw;
+    padding-bottom: 6.3vw;
+    justify-content: center;
+}
+
+.CardBeneficio {
+    width: 160px;
+    height: 179px;
+    padding: 33px 28px 33px 28px;
+    background: var(--Escala-de-grises-1, #F2F2F2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.TitleBeneficio {
+    color: #1A1A1A;
+
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.DescBeneficio {
+    color: #1A1A1A;
+
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.2px;
+}
+
+.ContainerVioleta {
+    background-color: #7065EE;
+    padding-left: 10.5vw;
+    /* padding-right: 24.3vw; */
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    display: flex;
+    flex-direction: row;
+    gap: 69px;
+    justify-content: space-between;
+}
+
+.subContainerVioleta {
+    display: flex;
+    flex-direction: row;
+    gap: 69px;
+    align-items: center;
+}
+
+.textFlexy {
+    width: 544px;
+    height: 73px;
+    color: var(--Escala-de-azules, #F9FAFB);
+
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.VectorAzul {
+    display: flex;
+    z-index: 99;
+    align-self: flex-end;
+    position: relative;
+    bottom: 8vw;
+}
+
+.ContainerDuda {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    gap: 166px;
+    padding-top: 3.8vw;
+    padding-bottom: 6.1vw;
+}
+
+.textDuda {
+    color: #1A1A1A;
+
+    font-family: Montserrat;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46.8px;
 }
