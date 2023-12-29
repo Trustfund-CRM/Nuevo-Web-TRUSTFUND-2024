@@ -105,7 +105,8 @@ const VerticalCarousel = () => {
              style={{
               height: 'auto',
               gap: '16px',
-              position: 'initial'
+              position: 'initial',
+              marginBottom: '10vh',
              }}
             //  onMouseEnter={handleMouseEnter}
             //  onMouseLeave={handleMouseLeave}

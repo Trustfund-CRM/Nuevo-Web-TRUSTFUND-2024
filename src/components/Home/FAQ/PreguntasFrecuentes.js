@@ -35,7 +35,7 @@ export default function PreguntasFrecuentes() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 480 ? y > 4480 : onlyHeight < 800 ? y > 3900 : y > 4350) {
+    if (onlyWidth < 480 ? y > 4080 : onlyHeight < 800 ? y > 3000 : y > 4050) {
       setCustomStyle({
         ...customStyle,
         background: '#0076b9'
@@ -45,7 +45,7 @@ export default function PreguntasFrecuentes() {
         color: '#ffffff'
       });
     }
-    if (onlyWidth < 480 ? y < 4880 : onlyHeight < 800 ? y < 4400 : y < 4950) {
+    if (onlyWidth < 480 ? y < 4080 : onlyHeight < 800 ? y < 4000 : y < 4050) {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'

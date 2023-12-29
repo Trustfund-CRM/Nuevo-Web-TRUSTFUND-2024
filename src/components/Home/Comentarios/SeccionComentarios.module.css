@@ -72,13 +72,17 @@
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 20%;
  
   @media (min-width: 0px) and (max-width: 756px) {
     flex-direction: column;
-    
+    gap:16px;
+    /* border:solid 1px red; */
+    text-align: start;
+    align-items: flex-start;
+    padding-left: 16px;
   }
 
 }
@@ -98,24 +102,24 @@
 
 .SubTextLeft {
   width: 100%;
-  max-width: 345px;
+  
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 
   @media (min-width: 0px) and (max-width: 756px) {
     max-width: -webkit-fill-available;
-    width: 75%;
+    /* width: 75%; */
   }
 }
 
-.SubTextRight {
+.SubTextLeft {
   width: 33%;
   font-size: 20px;
   line-height: 24px;
 
   @media (min-width: 0px) and (max-width: 756px) {
-    width: 75%;
+    width: -webkit-fill-available;
   }
 }
 
@@ -305,7 +309,7 @@ justify-content: flex-start;
 }
 
 .contImagePartner .imgPartner {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   transition: filter 0.5s;
 }
 
@@ -321,10 +325,7 @@ justify-content: flex-start;
  
 
 
-  .SubTextLeft,
-  .SubTextRight {
-    width: auto;
-  }
+
 
   
 
@@ -381,7 +382,8 @@ justify-content: flex-start;
     width: auto;
   }
 
-  .SubTextRight {
+  .SubTextRight1 {
+    font-size: 42px !important;
     width: auto;
   }
 
