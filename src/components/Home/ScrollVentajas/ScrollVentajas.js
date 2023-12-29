@@ -104,12 +104,12 @@ export default function ScrollVentajas() {
                 Alquilá con tranquilidad, con Trust Fund estás protegido.
               </div>
             </div>
-            <ButtonSlider
+            {/* <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
               route={"/nuestra-garantia"}
               suscribe={false}
-            />
+            /> */}
           </div>
 
           <div className={style.ContainerScrollingText}>

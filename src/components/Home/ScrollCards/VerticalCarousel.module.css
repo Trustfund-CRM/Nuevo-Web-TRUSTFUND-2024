@@ -31,6 +31,12 @@
     transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
     /* border:solid 1px red; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    @media (min-width: 0px) and (max-width: 1415px) {
+      width:80%;
+      /* height: auto; */
+      /* padding-top: 120px;
+      padding-bottom: 50px; */
+  }
   }
 
   
