@@ -329,6 +329,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0px !important;
     @media (min-width: 0px) and (max-width: 1017px) {
         width: auto;
  
@@ -572,6 +573,8 @@
     height: 30px;
     max-height: 30px !important;
     max-width: 30px;
+    /* padding: 0px !important; */
+
 }
 
 .containerButtonCard {
