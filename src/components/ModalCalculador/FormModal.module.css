@@ -105,6 +105,7 @@ letter-spacing: -0.09px;
     background: #F9FAFB;
     padding: 25px !important;
     outline: none;
+    max-height: 30px;
     @media (min-width: 0px) and (max-width: 1017px) {
         width: -webkit-fill-available;
        
@@ -134,6 +135,7 @@ justify-content: center;
 align-items: center;
 gap: 15px;
 border-radius: 30px;
+max-height: 30px;
 border: 2px solid var(--Azul-principal, #004993);
 
 color: var(--Azul-principal, #004993);
@@ -163,6 +165,7 @@ padding: 25px !important;
     flex-direction: row;
 width: 278px;
 height: 30px;
+max-height: 30px;
 padding: 13px 0px;
 justify-content: center;
 align-items: center;
