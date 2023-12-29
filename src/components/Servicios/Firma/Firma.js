@@ -118,19 +118,19 @@ export default function QuienesSomos() {
                                     <div className={style.ContainerCubrimos}>
                                         <div className={style.RowCubrimos}>
                                             <Image src={seguridadFirma} />
-                                            Seguridad. Garantiza la autenticidad del firmante ya que se genera mediante un certificado digital único y no puede ser falsificado.
+                                            <span className={style.boldText}>Seguridad.</span> Garantiza la autenticidad del firmante ya que se genera mediante un certificado digital único y no puede ser falsificado.
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={legalidadFirma} />
-                                            Legalidad. La firma electrónica está avalada por la Ley 25.506, lo que permite cumplir con los requisitos jurídicos y reglamentarios.
+                                            <span className={style.boldText}>Legalidad.</span> La firma electrónica está avalada por la Ley 25.506, lo que permite cumplir con los requisitos jurídicos y reglamentarios.
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={integridadFirma} />
-                                            Integridad. Asegura que el documento no ha sufrido manipulaciones ni fue alterado, proporcionando una prueba sólida de que el contenido es válido.
+                                            <span className={style.boldText}>Integridad.</span> Asegura que el documento no ha sufrido manipulaciones ni fue alterado, proporcionando una prueba sólida de que el contenido es válido.
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={rapidezFirma} />
-                                            Rapidez y eficiencia. Se eliminan los trámites engorrosos, las firmas manuales y la pérdida de tiempo, agilizando el proceso y garantizando la comodidad de las personas firmantes.
+                                            <span className={style.boldText}>Rapidez y eficiencia.</span> Se eliminan los trámites engorrosos, las firmas manuales y la pérdida de tiempo, agilizando el proceso y garantizando la comodidad de las personas firmantes.
                                         </div>
                                     </div>
                                 </div>

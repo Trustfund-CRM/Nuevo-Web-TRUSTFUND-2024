@@ -72,9 +72,9 @@ export default function Contrata() {
                     </div>
                     <div className={style.subButtonText}>Solicitá tu seguro con nuestro partner oficial MERCI PRODUCTORES ASESORES DE SEGUROS S.A. </div>
                 </div>
-{
-    //las preguntas deberian ser componentes separados que reciben open por props
-}
+                {
+                    //las preguntas deberian ser componentes separados que reciben open por props
+                }
                 <div className={style.RightBlock}>
                     <div className={style.itemPregunta}>
                         <div className={style.TopPregunta}>
@@ -97,19 +97,19 @@ export default function Contrata() {
                                 <div className={style.ContainerCubrimos}>
                                     <div className={style.RowCubrimos}>
                                         <Image src={incendioBlanco} />
-                                        Incendio: El riesgo de incendio para la vivienda y los bienes que contenga tu hogar. Incluye huracán, ciclón y tornado.
+                                        <span className={style.boldText}>Incendio:</span> El riesgo de incendio para la vivienda y los bienes que contenga tu hogar. Incluye huracán, ciclón y tornado.
                                     </div>
                                     <div className={style.RowCubrimos}>
                                         <Image src={roboBlanco} />
-                                        Robo: Robo o hurto de los bienes que conforman tu mobiliario.
+                                        <span className={style.boldText}>Robo:</span> Robo o hurto de los bienes que conforman tu mobiliario.
                                     </div>
                                     <div className={style.RowCubrimos}>
                                         <Image src={electroBlanco} />
-                                        Electro: Robo o rotura de electrodomésticos que forman parte de tu hogar.
+                                        <span className={style.boldText}>Electro:</span> Robo o rotura de electrodomésticos que forman parte de tu hogar.
                                     </div>
                                     <div className={style.RowCubrimos}>
                                         <Image src={civilBlanco} />
-                                        Responsabilidad civil: Daños que puedas ocasionar a terceros por hechos privados o como consecuencia de incendio o explosión en tu hogar.
+                                        <span className={style.boldText}>Responsabilidad civil:</span> Daños que puedas ocasionar a terceros por hechos privados o como consecuencia de incendio o explosión en tu hogar.
                                     </div>
                                 </div>
                             </div>
@@ -136,15 +136,15 @@ export default function Contrata() {
                                 <div className={style.ContainerCubrimos}>
                                     <div className={style.RowCubrimos}>
                                         <Image src={explosionBlanca} />
-                                        Daños directos: Impactos de aeronaves, vehículos terrestres, humo que provenga de desperfectos en el funcionamiento de cualquier aparato de calefacción ambiental y/o cocina instalados en el bien asegurado.
+                                        <span className={style.boldText}>Daños directos:</span> Impactos de aeronaves, vehículos terrestres, humo que provenga de desperfectos en el funcionamiento de cualquier aparato de calefacción ambiental y/o cocina instalados en el bien asegurado.
                                     </div>
                                     <div className={style.RowCubrimos}>
                                         <Image src={cablesBlanco} />
-                                        Daños indirectos: Cualquier medio empleado para extinguir, evitar o circunscribir la propagación del daño, salvamento, evacuación inevitable por el siniestro y demolición ordenada por autoridad competente.
+                                        <span className={style.boldText}>Daños indirectos:</span> Cualquier medio empleado para extinguir, evitar o circunscribir la propagación del daño, salvamento, evacuación inevitable por el siniestro y demolición ordenada por autoridad competente.
                                     </div>
                                     <div className={style.RowCubrimos}>
                                         <Image src={corazonBlanco} />
-                                        Cobertura adicional: Granizo, terremoto, remoción de escombros y gastos de limpieza, gastos de extinción de incendios, responsabilidad civil a consecuencia de incendio y/o explosión.
+                                        <span className={style.boldText}>Cobertura adicional:</span> Granizo, terremoto, remoción de escombros y gastos de limpieza, gastos de extinción de incendios, responsabilidad civil a consecuencia de incendio y/o explosión.
                                     </div>
                                 </div>
                             </div>

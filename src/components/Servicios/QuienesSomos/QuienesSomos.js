@@ -77,7 +77,7 @@ export default function QuienesSomos() {
                             </div>
                             {open && question === 1 && (
                                 <div className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    Nuestra <b>garantía de alquiler</b> cubre las <b>obligaciones establecidas en un contrato de locación</b>, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos <b>garantías de fianza en todo el territorio nacional</b> con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
+                                    Nuestra <span className={style.boldText}>garantía de alquiler</span> cubre las <span className={style.boldText}>obligaciones establecidas en un contrato de locación</span>, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos <span className={style.boldText}>garantías de fianza en todo el territorio nacional</span> con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
                                 </div>
                             )
                             }
@@ -94,19 +94,19 @@ export default function QuienesSomos() {
                                     <div className={style.ContainerCubrimos}>
                                         <div className={style.RowCubrimos}>
                                             <Image src={casaPreguntas} />
-                                            <b>Alquiler y expensas.</b>
+                                            <span className={style.boldText}>Alquiler y expensas.</span>
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={serviciosPreguntas} />
-                                            <b>Servicios</b> (Luz, agua, electricidad y SUM).
+                                            <span className={style.boldText}>Servicios</span> (Luz, agua, electricidad y SUM).
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={dañosPreguntas} />
-                                            <b>Daños y roturas en el inmueble</b> (vidrios, cerraduras, grifería, calefactores y/o artefactos de aire acondicionado).
+                                            <span className={style.boldText}>Daños y roturas en el inmueble</span> (vidrios, cerraduras, grifería, calefactores y/o artefactos de aire acondicionado).
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={costosPreguntas} />
-                                            <b>Costos de desalojo ante posible usurpación</b> del inquilino.
+                                            <span className={style.boldText}>Costos de desalojo ante posible usurpación</span> del inquilino.
                                         </div>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@ export default function QuienesSomos() {
                             </div>
                             {open && question === 3 && (
                                 <div className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    <div><b>DNI - Historial crediticio favorable</b></div>
+                                    <div><span className={style.boldText}>DNI - Historial crediticio favorable</span></div>
                                     <div>*En caso que tu historial crediticio sea desfavorable, te solicitaremos la inclusión de un co-solicitante.
                                     </div>
                                 </div>
@@ -138,9 +138,9 @@ export default function QuienesSomos() {
                             </div>
                             {open && question === 4 && (
                                 <div className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    <div>• Foto del <b>frente y dorso de tu DNI.</b></div>
-                                    <div>• Elegís el <b>método de pago: </b>Descuentos de contado - Financiación en cuotas.</div>
-                                    <div>• <b>¡Listo! </b>En menos de 24hs tendrás tu garantía de alquiler.</div>
+                                    <div>• Foto del <span className={style.boldText}>frente y dorso de tu DNI.</span></div>
+                                    <div>• Elegís el <span className={style.boldText}>método de pago: </span>Descuentos de contado - Financiación en cuotas.</div>
+                                    <div>• <span className={style.boldText}>¡Listo! </span>En menos de 24hs tendrás tu garantía de alquiler.</div>
                                 </div>
                             )
                             }
