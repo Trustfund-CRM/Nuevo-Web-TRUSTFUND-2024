@@ -1,0 +1,57 @@
+.ContainerQuienesSomos {
+    display: flex;
+    background-color: #F2F5FB;
+    flex-direction: column;
+    height: auto;
+}
+
+.HeaderQuienesSomos {
+    display: flex;
+    flex-direction: row;
+    width: -webkit-fill-available;
+    height: 40vh;
+    border-bottom: 1px solid #4D4D4D;
+}
+
+.ContainerTitle {
+    padding-left: 11vw;
+    padding-top: 13vw;
+    padding-bottom: 3vw;
+}
+
+.preTitle {
+    color: #292D32;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.1px;
+
+}
+
+.Title {
+    color: #004993;
+    font-family: Montserrat;
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 58.8px;
+}
+
+.ContainerBody {
+    /* height: 60vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 11vw;
+    padding-top: 5.8vw;
+    padding-bottom: 6.4vw;
+    padding-right: 13vw;
+}
+
+.ContainerBlue {
+    background-color: #004993;
+}
