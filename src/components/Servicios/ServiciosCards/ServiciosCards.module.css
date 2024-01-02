@@ -62,13 +62,17 @@
     width: 256px;
     height: 256px;
     border-radius: 20px;
-    background: #009FBB;
+    background-color: #112A42;
     border: 6px solid #009FBB;
     padding: 25px 35px 25px 35px;
     display: flex;
     flex-direction: column;
     gap: 12px;
     justify-content: center;
+}
+
+.ServicioCard:hover {
+    background-color: #009FBB;
 }
 
 .cardImgContainer {

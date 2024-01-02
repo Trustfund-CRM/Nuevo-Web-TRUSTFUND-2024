@@ -76,7 +76,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 1 && (
-                                <div className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '200px' }} className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     Nuestra <span className={style.boldText}>garantía de alquiler</span> cubre las <span className={style.boldText}>obligaciones establecidas en un contrato de locación</span>, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos <span className={style.boldText}>garantías de fianza en todo el territorio nacional</span> con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
                                 </div>
                             )
