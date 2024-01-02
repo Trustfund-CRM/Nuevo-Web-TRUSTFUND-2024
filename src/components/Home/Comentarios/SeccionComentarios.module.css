@@ -2,29 +2,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+
   background-color: #ffffff;
   width: 100%;
+
+  height: auto;
 }
 
 .ContainerComentarios {
-  height: -webkit-fill-available;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  height: auto;
 }
 
 .TitleComentarios {
-  font-size: 49px;
-  font-family: Montserrat;
-  font-weight: 500;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  margin-top: 10vh;
+
 }
 
 .ContainerTitle {
   width: -webkit-fill-available;
+  margin-bottom: 10vh;
 }
 
 .Title {
@@ -33,19 +38,19 @@
   line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
-  padding-top: 11.8vw;
-  padding-left: 11vw;
-  padding-right: 31.1vw;
-  padding-bottom: 3.3vw;
+  padding: 0px 8vw;
 
-  @media (min-width: 583px) and (max-width: 1194px) {
-    /* font-size: 39px; */
-    padding-right: 0vw;
-  }
+  @media (min-width: 500px) and (max-width: 800px) {
+    font-size: 35px;
+    
+  };
+  @media (min-width: 0px) and (max-width: 500px) {
+    font-size: 28px;
+    line-height: normal;
+    text-align: center;
+  };
 
-  @media (min-width: 0px) and (max-width: 582px) {
-    padding-right: 0vw;
-  }
+
 }
 
 .ContainerSlideComentarios {
@@ -54,27 +59,32 @@
   flex-direction: column;
   align-self: center;
   justify-content: space-between;
-  padding-left: 11%;
-  padding-right: 11%;
+  padding-left: 8vw;
+  padding-right: 8vw;
   padding-top: 4%;
   padding-bottom: 13.2%;
 
-  @media (min-width: 0px) and (max-width: 1100px) {
-    gap: 58px;
-  }
+
 }
 
 .ContainerSubText {
-  height: 50%;
+  width: -webkit-fill-available;
+  height: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  gap: 80px;
-
-  @media (min-width: 0px) and (max-width: 1100px) {
+  gap: 20%;
+ 
+  @media (min-width: 0px) and (max-width: 756px) {
     flex-direction: column;
-    gap: 0px;
+    gap:16px;
+    /* border:solid 1px red; */
+    text-align: start;
+    align-items: flex-start;
+    padding-left: 16px;
   }
+
 }
 
 .SubTexts {
@@ -85,29 +95,31 @@
   @media (min-width: 0px) and (max-width: 756px) {
     flex-direction: column;
     gap: 16px;
+    text-align: center;
+    align-items: center;
   }
 }
 
 .SubTextLeft {
   width: 100%;
-  max-width: 345px;
+  
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 
   @media (min-width: 0px) and (max-width: 756px) {
     max-width: -webkit-fill-available;
-    width: 75%;
+    /* width: 75%; */
   }
 }
 
-.SubTextRight {
+.SubTextLeft {
   width: 33%;
   font-size: 20px;
   line-height: 24px;
 
   @media (min-width: 0px) and (max-width: 756px) {
-    width: 75%;
+    width: -webkit-fill-available;
   }
 }
 
@@ -238,10 +250,13 @@
   flex-direction: column;
   justify-content: flex-end;
   background-color: #ffffff;
+  width: -webkit-fill-available;
+
 }
 
 .ContainerTitlePartners {
   width: -webkit-fill-available;
+  margin-bottom: 10vh;
 }
 
 .BottomPartners {
@@ -258,8 +273,11 @@
   justify-content: space-between;
   gap: 100px;
   padding-bottom: 13.2%;
-  padding-left: 11%;
-  padding-right: 11%;
+  height: auto;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+
 }
 
 .ContainerSlider {
@@ -271,13 +289,12 @@
 .ContainerPartners {
   width: 90%;
   display: flex;
-  justify-content: center;
+justify-content: flex-start;
   align-self: center;
   gap: 64px;
-
-  @media (min-width: 0px) and (max-width: 1100px) {
-    overflow: hidden;
-  }
+  max-width: 90vw;
+  position: relative;
+  overflow-x: auto;
 }
 
 .contImagePartner {
@@ -292,7 +309,7 @@
 }
 
 .contImagePartner .imgPartner {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   transition: filter 0.5s;
 }
 
@@ -301,39 +318,18 @@
 }
 
 @media only screen and (max-width: 360px) {
-  .ContainerComentarios {
-    height: auto;
-  }
 
-  .Title {
-    font-size: 35px;
-    line-height: 40.8px;
-  }
 
-  .TitleComentarios {
-    height: auto;
-    margin-top: 100px;
-  }
 
-  .ContainerSubText,
-  .SubTexts {
-    flex-direction: column;
-  }
 
-  .SubTextLeft,
-  .SubTextRight {
-    width: auto;
-  }
+ 
 
-  .ContainerSubText {
-    gap: 0px;
-    align-items: flex-start;
-  }
 
-  .ContainerSlideComentarios {
-    width: 90%;
-    gap: 50px;
-  }
+
+
+  
+
+
 
   .ContainerSlideCards {
     flex-direction: column-reverse;
@@ -350,25 +346,14 @@
     flex-direction: row;
   }
 
-  .SeccionPartners {
-    height: auto;
-    padding: 0px 0px 150px 0px;
-  }
+  
 
-  .ContainerSlidePartners {
-    width: 80%;
-    gap: 50px;
-  }
+ 
 
   .BottomPartners {
     overflow-y: hidden;
   }
 
-  .ContainerPartners {
-    width: auto;
-    gap: 16px;
-    align-self: auto;
-  }
 
   .ContainerFlechas {
     display: none;
@@ -380,39 +365,13 @@
     width: -webkit-fill-available;
   }
 
-  .ContainerComentarios {
-    height: -webkit-fill-available;
-  }
 
-  .TitleComentarios {
-    border-bottom: none;
-    height: 15%;
-  }
 
-  .ContainerTitle {
-    width: 80%;
-    padding-bottom: 30px;
-    padding-top: 120px;
-    border-bottom: 1px solid #004993;
-  }
 
-  .Title {
-    font-size: 36px;
-    line-height: 120%;
-  }
 
-  .ContainerSlideComentarios {
-    width: 80%;
-    gap: 50px;
-  }
+ 
 
-  .ContainerSubText {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 0px;
-    height: auto;
-  }
+
 
   .SubTexts {
     flex-direction: column;
@@ -423,7 +382,8 @@
     width: auto;
   }
 
-  .SubTextRight {
+  .SubTextRight1 {
+    font-size: 42px !important;
     width: auto;
   }
 
@@ -446,9 +406,7 @@
     flex-direction: row;
   }
 
-  .SeccionPartners {
-    height: auto;
-  }
+
 
   .CardComentario {
     width: auto;
@@ -483,29 +441,19 @@
     border-bottom: 1px solid #004993;
   }
 
-  .ContainerSlidePartners {
-    width: 80%;
-    gap: 50px;
-  }
+
 
   .BottomPartners {
     overflow-y: hidden;
   }
 
-  .ContainerPartners {
-    width: auto;
-    align-self: auto;
-  }
+
 }
 
 @media (max-height: 670px) {
-  .ContainerComentarios {
-    height: 245vh;
-  }
 
-  .SeccionPartners {
-    height: 120vh;
-  }
+
+
 
   .flecha {
     padding: 15px;
@@ -515,54 +463,30 @@
     width: -webkit-fill-available;
   }
 
-  .ContainerTitle {
-    width: 85%;
-  }
+
 
   .ContainerSlideCards {
     width: 100%;
   }
 
-  .ContainerSlideComentarios {
-    width: 85%;
-  }
+
 }
 
-@media (max-width: 330px) {
-  .ContainerSubText {
-    height: 55%;
-  }
-}
+
 
 @media only screen and (min-width: 966px) and (max-width: 1500px) and (max-height: 800px) {
-  .ContainerComentarios {
-    height: auto;
-  }
 
-  .ContainerTitle {
-    width: 80%;
-    padding-top: 120px;
-  }
 
-  .ContainerSlideComentarios {
-    width: 80%;
-  }
+
+
 
   .ContainerTitlePartners {
     width: 80%;
   }
 
-  .ContainerSlidePartners {
-    width: 80%;
-    gap: 40px;
-  }
 
   .BottomPartners {
     overflow-y: hidden;
   }
 
-  .ContainerPartners {
-    width: auto;
-    align-self: auto;
-  }
 }
