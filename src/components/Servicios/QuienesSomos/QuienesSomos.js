@@ -12,6 +12,14 @@ import style from './QuienesSomos.module.css';
 
 export default function QuienesSomos() {
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const screenWidth = window.innerWidth;
+        screenWidth < 990 ? setIsMobile(true) : setIsMobile(false);
+        console.log(screenWidth)
+    }, []);
+
     const [calculador, setCalculador] = useState(false);
 
     const [open, setOpen] = useState(null);
@@ -23,7 +31,7 @@ export default function QuienesSomos() {
     };
 
     const abrirModal = () => {
-        if (mobile) {
+        if (isMobile) {
             const scrollAmount = 380; // por ejemplo, 200 píxeles
 
             window.scrollTo({
@@ -44,7 +52,9 @@ export default function QuienesSomos() {
                 <div className={style.HeaderQuienesSomos}>
                     <div className={style.ContainerTitle}>
                         <div className={style.preTitle}>Garantías de alquiler</div>
-                        <div className={style.Title}>Trust Fund, tu mejor opción.</div>
+                        <div className={style.Title}>
+                            Trust Fund,{isMobile ? <br></br> : null} tu mejor opción.
+                        </div>
                     </div>
                 </div>
 
