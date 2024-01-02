@@ -199,6 +199,7 @@
     align-self: flex-end;
     position: relative;
     bottom: 8vw;
+    overflow: hidden;
 }
 
 .ContainerDuda {
