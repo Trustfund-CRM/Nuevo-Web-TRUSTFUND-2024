@@ -78,7 +78,7 @@
 }
 
 .subTextLeft {
-    width: 352px;
+    width: auto;
     height: auto;
     color: #F9FAFB;
 
@@ -98,7 +98,7 @@
 }
 
 .subTextRight {
-    width: 467px;
+    width: auto;
     height: auto;
     color: #F9FAFB;
 
@@ -124,9 +124,14 @@
         scale: 60%;
     }
 
-    @media (min-width: 0px) and (max-width: 760px) {
+    @media (min-width: 626px) and (max-width: 760px) {
         bottom: 35vw;
         scale: 50%;
+    }
+
+    @media (min-width: 0px) and (max-width: 625px) {
+        bottom: 35vw;
+        scale: 40%;
     }
 }
 
@@ -244,7 +249,7 @@
 }
 
 .textFlexy {
-    width: 544px;
+    width: auto;
     height: auto;
     color: var(--Escala-de-azules, #F9FAFB);
 
