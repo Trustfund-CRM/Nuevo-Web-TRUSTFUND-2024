@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useWindowScroll } from "@uidotdev/usehooks";
 import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
-import style from "./ScrollVentajas.module.css";  // Asegúrate de importar tu archivo de estilos
+import style from "./ScrollVentajas.module.css"; 
 import "./effectLetters.css";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
@@ -14,79 +14,44 @@ export default function ScrollVentajas() {
   const onlyHeight = useWindowHeight();
 
   const [customStyle, setCustomStyle] = useState({
-    background: '#F2F5FB',
-    transition: 'background 1s ease'
+    background: "#F2F5FB",
+    transition: "background 1s ease",
   });
 
-  const [customColor, setCustomColor] = useState({
-    color: '#000000',
-    transition: 'color 1s ease'
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-  const miComponenteRef = useRef(null);
+  const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Umbral de visibilidad del 50%
-    };
+    if (onlyWidth < 480 ? y > 1200 : onlyHeight < 800 ? y > 1400 : y > 1400) {
+      // console.log('ENTRE')
 
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        setIsVisible(entry.isIntersecting);
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    if (miComponenteRef.current) {
-      observer.observe(miComponenteRef.current);
-    }
-
-    return () => {
-      if (miComponenteRef.current) {
-        observer.unobserve(miComponenteRef.current);
-      }
-    };
-
-  }, [miComponenteRef]);
-
-  useEffect(() => {
-    if (isVisible) {
       setCustomStyle({
         ...customStyle,
-        background: '#009FBB'
-      });
-      setCustomColor({
-        ...customColor,
-        color: '#ffffff'
-      });
-    } else {
-      setCustomStyle({
-        ...customStyle,
-        background: '#F2F5FB'
-      });
-      setCustomColor({
-        ...customColor,
-        color: '#000000'
+        background: "#009FBB",
       });
     }
-  }, [isVisible]);
+    if (onlyWidth < 480 ? y < 1200 : onlyHeight < 800 ? y < 1400 : y < 1400) {
+      // console.log('ENTRE')
+      setCustomStyle({
+        ...customStyle,
+        background: "#F2F5FB",
+      });
+    }
+  }, [y]);
+
+  console.log('Y', y)
 
   return (
-    <div 
-    className={`${style.ContainerScrollVentajas}`}
-     style={customStyle}
-     id="miComponenteVisible"
-    ref={miComponenteRef}
-     >
+    <div
+      className={`${style.ContainerScrollVentajas}`}
+      style={customStyle}
+      id="miComponenteVisible"
+      // ref={miComponenteRef}
+    >
       <CustomContainerMaxWidth ventajas={true}>
         <div className={style.ContainerTop}>
           <div className={style.TitleTop}>
             <Image className={style.ElementTop} src={VectorVentajas} />
-            <div className={style.TitleVentajas} style={customColor}>
+            <div className={style.TitleVentajas}>
               Ventajas de utilizar Trust Fund
             </div>
           </div>
@@ -96,11 +61,11 @@ export default function ScrollVentajas() {
         <div className={style.ContainerBottom}>
           <div className={style.subContainerBottom}>
             <div className={style.subTitle}>
-              <div className={style.subTextLeft} style={customColor}>
+              <div className={style.subTextLeft}>
                 Rápido para el inquilino, seguro para el propietario, confiable
                 para la inmobiliaria.
               </div>
-              <div className={style.subTextRight} style={customColor}>
+              <div className={style.subTextRight}>
                 Alquilá con tranquilidad, con Trust Fund estás protegido.
               </div>
             </div>
@@ -125,7 +90,7 @@ export default function ScrollVentajas() {
             </div>
           </div>
         </div>
-        <Image className={style.ElementBottom} src={VectorVentajasBlue}/>
+        <Image className={style.ElementBottom} src={VectorVentajasBlue} />
       </CustomContainerMaxWidth>
     </div>
   );

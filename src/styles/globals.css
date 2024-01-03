@@ -31,7 +31,11 @@ body {
   height: auto;
   margin: 0px !important;
   text-rendering: optimizeSpeed;
-  
+}
+
+body {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 a {

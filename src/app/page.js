@@ -1,8 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
-
 import "../utils/bootstrap";
-
 import ButtonWsp from "@/components/ButtonWsp/ButtonWsp";
 import SeccionComentarios from "@/components/Home/Comentarios/SeccionComentarios";
 import PreguntasFrecuentes from "@/components/Home/FAQ/PreguntasFrecuentes";
@@ -16,12 +13,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function Home() {
-
-
-
-
-
-
   return (
     <div
       style={{
@@ -32,7 +23,6 @@ export default function Home() {
       }}
     >
       <ScrollPrincipal />
-
       <TextoSlide />
       <ScrollCards />
       <ScrollVentajas />

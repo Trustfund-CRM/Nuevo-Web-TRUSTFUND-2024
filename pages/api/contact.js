@@ -1,11 +1,9 @@
-
-
 import { mailOptions, transporter } from "../../src/config/nodemailer";
 const CONTACT_MESSAGE_FIELDS = {
   Nombre: "Nombre",
   Apellido: "Apellido",
   Dni: "Dni",
-  Provincia:"Provincia",
+  Provincia: "Provincia",
   Localidad: "Localidad",
   Email: "Email",
   Telefono: "Telefono",
@@ -17,10 +15,9 @@ const CONTACT_MESSAGE_FIELDS = {
   valorAlquiler: "valorAlquiler",
   valorExpensas: "valorExpensas",
   Motivo: "Motivo",
-  Reclamo:"Reclamo",
-  contado:"contado",
-  pago:"pago"
-
+  Reclamo: "Reclamo",
+  contado: "contado",
+  pago: "pago",
 };
 
 const generateEmailContent = (data) => {
@@ -29,7 +26,7 @@ const generateEmailContent = (data) => {
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
     ""
   );
-  
+
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
     return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`);
   }, "");
