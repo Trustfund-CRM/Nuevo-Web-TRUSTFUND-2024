@@ -78,35 +78,43 @@ export default function ServicioWeb() {
 
                 <div className={style.ContainerCardsBeneficios}>
 
-                    <div className={style.CardBeneficio}>
-                        <Image src={starBeneficio} />
-                        <div className={style.TitleBeneficio}>Diseño moderno</div>
-                        <div className={style.DescBeneficio}>Fácil navegación para tus clientes.</div>
+                    <div className={style.subContainerCards}>
+                        <div className={style.CardBeneficio}>
+                            <Image src={starBeneficio} />
+                            <div className={style.TitleBeneficio}>Diseño moderno</div>
+                            <div className={style.DescBeneficio}>Fácil navegación para tus clientes.</div>
+                        </div>
+                        <div className={style.CardBeneficio}>
+                            <Image src={monitorBeneficio} />
+                            <div className={style.TitleBeneficio}>Diseño responsive</div>
+                            <div className={style.DescBeneficio}>Adaptada a todos los dispositivos.</div>
+                        </div>
                     </div>
-                    <div className={style.CardBeneficio}>
-                        <Image src={monitorBeneficio} />
-                        <div className={style.TitleBeneficio}>Diseño responsive</div>
-                        <div className={style.DescBeneficio}>Adaptada a todos los dispositivos.</div>
+
+                    <div className={style.subContainerCards}>
+                        <div className={style.CardBeneficio}>
+                            <Image src={codeBeneficio} />
+                            <div className={style.TitleBeneficio}>Fácil navegación</div>
+                            <div className={style.DescBeneficio}>Experiencia personalizada.</div>
+                        </div>
+                        <div className={style.CardBeneficio}>
+                            <Image src={globalBeneficio} />
+                            <div className={style.TitleBeneficio}>Motores de búsqueda</div>
+                            <div className={style.DescBeneficio}>Optimizamos el posicionamiento web.</div>
+                        </div>
                     </div>
-                    <div className={style.CardBeneficio}>
-                        <Image src={codeBeneficio} />
-                        <div className={style.TitleBeneficio}>Fácil navegación</div>
-                        <div className={style.DescBeneficio}>Experiencia personalizada.</div>
-                    </div>
-                    <div className={style.CardBeneficio}>
-                        <Image src={globalBeneficio} />
-                        <div className={style.TitleBeneficio}>Motores de búsqueda</div>
-                        <div className={style.DescBeneficio}>Optimizamos el posicionamiento web.</div>
-                    </div>
-                    <div className={style.CardBeneficio}>
-                        <Image src={searchBeneficio} />
-                        <div className={style.TitleBeneficio}>Búsqueda inteligente</div>
-                        <div className={style.DescBeneficio}>Una búsqueda fácil para tus clientes.</div>
-                    </div>
-                    <div className={style.CardBeneficio}>
-                        <Image src={buildingBeneficio} />
-                        <div className={style.TitleBeneficio}>Cualidades del inmueble</div>
-                        <div className={style.DescBeneficio}>Descripciones, fotos, videos y más.</div>
+
+                    <div className={style.subContainerCards}>
+                        <div className={style.CardBeneficio}>
+                            <Image src={searchBeneficio} />
+                            <div className={style.TitleBeneficio}>Búsqueda inteligente</div>
+                            <div className={style.DescBeneficio}>Una búsqueda fácil para tus clientes.</div>
+                        </div>
+                        <div className={style.CardBeneficio}>
+                            <Image src={buildingBeneficio} />
+                            <div className={style.TitleBeneficio}>Cualidades del inmueble</div>
+                            <div className={style.DescBeneficio}>Descripciones, fotos, videos y más.</div>
+                        </div>
                     </div>
 
                 </div>
