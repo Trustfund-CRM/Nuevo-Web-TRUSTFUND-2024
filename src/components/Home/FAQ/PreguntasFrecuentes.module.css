@@ -17,8 +17,6 @@
 }
 
 .TitleFAQ {
-  /* border-bottom: 1px solid #F9FAFB; */
-  /* height: 20vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -227,7 +225,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media only screen and (max-width: 360px) {
   .ContainerFAQ {
     top: 383vh;
     height: -webkit-fill-available;
@@ -355,7 +353,6 @@
   .ContainerPreguntas {
     width: auto;
     padding: 0;
-    width: 90%;
   }
 
   .ContainerPregunta {
@@ -376,6 +373,12 @@
     width: 85%;
   }
 
+}
+
+@media only screen and (max-width: 766px) {
+  .SubTitleFAQ {
+    padding: 0px 24px;
+  }
 }
 
 @media (max-height: 670px) {
@@ -415,7 +418,7 @@
   }
 
   .ContainerFAQ {
-    height: 190vh;
+    height: 150vh;
   }
 
   .ContainerSubTitle {

@@ -156,7 +156,6 @@ export default function Footer() {
             <div className={style.textoDelSud}>Una empresa de </div>
             <Image className={style.logoDelSud} src={FooterDelSud} />
           </div>
-
           <div className={style.botonesFooter}>
             {/* <Link href="/" className={style.botonFooter}>Términos y condiciones</Link> */}
             <div onClick={handleDownloadPDF} className={style.botonFooter}>Ver modelo de contrato</div>

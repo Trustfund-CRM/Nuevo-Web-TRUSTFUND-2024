@@ -307,17 +307,18 @@
     height: 53px;
     @media (min-width: 0px) and (max-width: 1017px) {
         width: 100%;
- 
         border-radius: 8px;
         padding: 16px 36px 16px 36px;
     } 
 }
+
 .input2 option {
     font-family: Montserrat; /* Puedes ajustar esto según tus necesidades */
     font-size: 16px; /* Puedes ajustar esto según tus necesidades */
     width: 200px !important;
     max-width: 200px !important;
 }
+
 .flechaCalcula {
     background-color: #004993;
     border: none;
@@ -567,18 +568,19 @@
     height: auto;
 }
 
-.flechaSolicitar {
-    padding: 10px;
+.contFlechaSolicitar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
     border: 2px solid #004993;
     border-radius: 100%;
-    display: flex;
-    align-self: center;
-    width: 30px;
-    height: 30px;
-    max-height: 30px !important;
-    max-width: 30px;
-    /* padding: 0px !important; */
+}
 
+.flechaSolicitar {
+    width: 24px;
+    height: 24px;
 }
 
 .containerButtonCard {
@@ -607,24 +609,19 @@
     font-family: Montserrat;
     font-weight: 700;
     background-color: #004993;
-    padding: 13px 36px 13px 36px;
+    padding: 0px 20px;
     border-radius: 30px;
     border: none;
     cursor:pointer;
     border:solid 2px #004993;
-    height: 30px;
+    height: 60px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
-    @media (min-width: 0px) and (max-width: 1017px) {
-        width: auto;
-        font-size: 16px !important;
-        padding-right: 17px !important;
-        padding-left: 18px !important;
-    } 
 }
+
 .buttonSolicitarDisabled:hover {
     color:#004993;
     background-color: #FFFFFF;

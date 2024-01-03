@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import style from "./PreguntasFrecuentes.module.css";
-import { Button } from "react-bootstrap";
 import { imgInquilino, imgPropietario, flechaModalBlue } from "@/styles";
 import { CustomAccordion } from "@/components/CustomAccordion/CustomAccordion";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
@@ -35,7 +33,7 @@ export default function PreguntasFrecuentes() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 480 ? y > 4080 : onlyHeight < 800 ? y > 3000 : y > 4050) {
+    if (onlyWidth < 480 ? y > 3200 : onlyHeight < 800 ? y > 3600 : y > 4200) {
       setCustomStyle({
         ...customStyle,
         background: '#0076b9'
@@ -45,7 +43,7 @@ export default function PreguntasFrecuentes() {
         color: '#ffffff'
       });
     }
-    if (onlyWidth < 480 ? y < 4080 : onlyHeight < 800 ? y < 4000 : y < 4050) {
+    if (onlyWidth < 480 ? y < 3200 : onlyHeight < 800 ? y < 3600 : y < 4200) {
       setCustomStyle({
         ...customStyle,
         background: '#F2F5FB'

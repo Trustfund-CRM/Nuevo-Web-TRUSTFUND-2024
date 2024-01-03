@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 
 const email = process.env.EMAIL_PRINCIPAL;
 const pass = process.env.EMAIL_CONTRASENA;
+
 /*
 export const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -13,21 +14,20 @@ export const transporter = nodemailer.createTransport({
 */
 
 export const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: "smtp.gmail.com",
   port: 465,
   secure: true,
   auth: {
     user: email,
-    pass: pass
-  }
+    pass: pass,
+  },
 });
 
 transporter.verify().then(() => {
-  console.log('Ready to send emails.')
-})
-
+  console.log("Ready to send emails.");
+});
 
 export const mailOptions = {
-    from: email,
-    to: 'info@trustfund.com.ar',
-  };
+  from: email,
+  to: "info@trustfund.com.ar",
+};

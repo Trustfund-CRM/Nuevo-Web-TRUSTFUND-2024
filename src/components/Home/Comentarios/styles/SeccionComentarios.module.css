@@ -13,23 +13,21 @@
   width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 
   height: auto;
 }
 
 .TitleComentarios {
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
   margin-top: 10vh;
-
 }
 
 .ContainerTitle {
   width: -webkit-fill-available;
-  margin-bottom: 10vh;
 }
 
 .Title {
@@ -38,19 +36,6 @@
   line-height: 58.80px;
   font-family: Montserrat;
   font-weight: 500;
-  padding: 0px 8vw;
-
-  @media (min-width: 500px) and (max-width: 800px) {
-    font-size: 35px;
-    
-  };
-  @media (min-width: 0px) and (max-width: 500px) {
-    font-size: 28px;
-    line-height: normal;
-    text-align: center;
-  };
-
-
 }
 
 .ContainerSlideComentarios {
@@ -62,54 +47,18 @@
   padding-left: 8vw;
   padding-right: 8vw;
   padding-top: 4%;
-  padding-bottom: 13.2%;
-
-
-}
-
-.ContainerSubText {
-  width: -webkit-fill-available;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20%;
- 
-  @media (min-width: 0px) and (max-width: 756px) {
-    flex-direction: column;
-    gap:16px;
-    /* border:solid 1px red; */
-    text-align: start;
-    align-items: flex-start;
-    padding-left: 16px;
-  }
-
+  padding-bottom: 4.2%;
 }
 
 .SubTexts {
   display: flex;
   justify-content: space-between;
   padding: 50px 0px 50px 0px;
-
   @media (min-width: 0px) and (max-width: 756px) {
     flex-direction: column;
     gap: 16px;
     text-align: center;
     align-items: center;
-  }
-}
-
-.SubTextLeft {
-  width: 100%;
-  
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-
-  @media (min-width: 0px) and (max-width: 756px) {
-    max-width: -webkit-fill-available;
-    /* width: 75%; */
   }
 }
 
@@ -138,7 +87,7 @@
     flex-direction: column-reverse;
     gap: 32px;
   }
-  
+
 }
 
 .ContainerFlechas {
@@ -158,8 +107,8 @@
   border-radius: 100%;
   transform: scaleX(-1);
   cursor: pointer;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 
 .FlechaRight {
@@ -167,8 +116,8 @@
   background-color: #a3a3a3;
   border-radius: 100%;
   cursor: pointer;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 
 .FlechaLeft:hover {
@@ -244,40 +193,36 @@
   color: #999999;
 }
 
-.SeccionPartners {
-  height: auto;
+.ContainerPartners {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: #ffffff;
-  width: -webkit-fill-available;
-
-}
-
-.ContainerTitlePartners {
-  width: -webkit-fill-available;
-  margin-bottom: 10vh;
-}
-
-.BottomPartners {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  max-width: 1200px;
+  padding: 8px 0px;
   gap: 32px;
 }
 
-.ContainerSlidePartners {
-  width: -webkit-fill-available;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-content: space-between;
-  gap: 100px;
-  padding-bottom: 13.2%;
-  height: auto;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  padding-top: 10vh;
 
+.BottomPartners {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  max-width: 1200px;
+  border: 1px solid red;
+}
+
+.contNavigationButtons {
+  display: flex;
+  padding: 12px 0px;
+  gap: 12px;
+}
+
+.NavigationButton {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 100%;
+  background-color: transparent;
 }
 
 .ContainerSlider {
@@ -286,55 +231,34 @@
   padding-bottom: 100px;
 }
 
-.ContainerPartners {
-  width: 90%;
-  display: flex;
-justify-content: flex-start;
-  align-self: center;
-  gap: 64px;
-  max-width: 90vw;
-  position: relative;
-  overflow-x: auto;
-}
-
-.contImagePartner {
-  display: flex;
-  align-items: center;
-  width: 180px;
-  height: 110px;
-
-  @media (min-width: 0px) and (max-width: 1200px) {
-    width: 120px;
-  }
-}
-
-.contImagePartner .imgPartner {
-  filter: grayscale(0%);
-  transition: filter 0.5s;
-}
-
-.contImagePartner:hover .imgPartner {
-  filter: grayscale(0%);
-}
-
 @media only screen and (max-width: 360px) {
-
-
-
-
- 
-
-
-
-
-  
-
-
 
   .ContainerSlideCards {
     flex-direction: column-reverse;
     align-items: center;
     gap: 32px;
+  }
+
+  .TitleComentarios {
+    width: 100%;
+    padding: 0px 24px;
+  }
+
+  .ContainerTitle {
+    margin-bottom: 20px;
+  }
+
+  .Title {
+    color: #1A1A1A;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  .SubTextLeft,
+  .SubTextRight {
+    text-align: start;
   }
 
   .containerAux {
@@ -346,14 +270,9 @@ justify-content: flex-start;
     flex-direction: row;
   }
 
-  
-
- 
-
   .BottomPartners {
     overflow-y: hidden;
   }
-
 
   .ContainerFlechas {
     display: none;
@@ -365,13 +284,28 @@ justify-content: flex-start;
     width: -webkit-fill-available;
   }
 
+  .TitleComentarios {
+    width: 100%;
+    padding: 0px 24px;
+  }
 
+  .Title {
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
 
+  .ContainerTitle {
+    margin-bottom: 20px;
+  }
 
-
- 
-
-
+  .SubTextLeft,
+  .SubTextRight {
+    text-align: start;
+  }
 
   .SubTexts {
     flex-direction: column;
@@ -383,7 +317,7 @@ justify-content: flex-start;
   }
 
   .SubTextRight1 {
-    font-size: 42px !important;
+    font-size: 42px;
     width: auto;
   }
 
@@ -405,8 +339,6 @@ justify-content: flex-start;
   .SlideCards {
     flex-direction: row;
   }
-
-
 
   .CardComentario {
     width: auto;
@@ -435,58 +367,16 @@ justify-content: flex-start;
     display: none;
   }
 
-  .ContainerTitlePartners {
-    width: 80%;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #004993;
-  }
-
 
 
   .BottomPartners {
     overflow-y: hidden;
   }
 
-
 }
-
-@media (max-height: 670px) {
-
-
-
-
-  .flecha {
-    padding: 15px;
-  }
-
-  .ContainerGeneralSectionResultados {
-    width: -webkit-fill-available;
-  }
-
-
-
-  .ContainerSlideCards {
-    width: 100%;
-  }
-
-
-}
-
-
 
 @media only screen and (min-width: 966px) and (max-width: 1500px) and (max-height: 800px) {
-
-
-
-
-
-  .ContainerTitlePartners {
-    width: 80%;
-  }
-
-
   .BottomPartners {
     overflow-y: hidden;
   }
-
 }
