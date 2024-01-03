@@ -119,7 +119,7 @@ export { default as civilBlanco} from './civilBlanco.png';
 export { default as explosionBlanca} from './explosionBlanca.png';
 export { default as cablesBlanco} from './cablesBlanco.png';
 export { default as corazonBlanco} from './corazonBlanco.png';
-export { default as ZapSign} from './ZapSign.png';
+export { default as ZapSign} from './ZapSign.svg';
 export { default as seguridadFirma} from './seguridadFirma.png';
 export { default as legalidadFirma} from './legalidadFirma.png';
 export { default as integridadFirma} from './integridadFirma.png';

@@ -64,11 +64,20 @@
     padding-right: 13vw;
     gap: 6.8vw;
     padding-bottom: 3.6vw;
+
+    @media (min-width: 991px) and (max-width: 1680px) {
+        width: 80%;
+    }
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        width: 60%;
+        flex-direction: column;
+    }
 }
 
 .subTextLeft {
-    width: 350px;
-    height: 47px;
+    width: auto;
+    height: auto;
     color: #009FBB;
 
     font-family: Montserrat;
@@ -79,8 +88,8 @@
 }
 
 .subTextRight {
-    width: 343px;
-    height: 71px;
+    width: auto;
+    height: auto;
     color: #1A1A1A;
 
     font-family: Montserrat;
@@ -96,6 +105,11 @@
     width: 85%;
     cursor: pointer;
     gap: 10px;
+
+    @media (min-width: 0px) and (max-width: 840px) {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .containerButtons:hover .flecha {
@@ -178,12 +192,6 @@
     }
 }
 
-.ContainerSubTexts {}
-
-.subTextLeft {}
-
-.subTextRight {}
-
 .ContainerProceso {
     background-color: #F2F2F2;
     padding-left: 11vw;
@@ -213,14 +221,25 @@
     display: flex;
     height: 0px;
     justify-content: space-between;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        height: auto;
+        width: 0px;
+    }
 }
 
-.ContainerPuntos {
+.ContainerPaso {
     display: flex;
-    justify-content: space-between;
-    gap: 20vw;
+    flex-direction: column;
     position: relative;
     bottom: 10px;
+    gap: 2.3vw;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        flex-direction: row;
+        bottom: 0px;
+        right: 10px;
+    }
 }
 
 .punto {
@@ -229,12 +248,39 @@
     fill: var(--Azul, #0076B9);
     background-color: #0076B9;
     border-radius: 30px;
+    align-self: center;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        position: relative;
+        bottom: 20px;
+        align-self: flex-end;
+    }
 }
 
 .ContainerPasos {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        flex-direction: row;
+    }
+}
+
+.imgProcesos {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.ContainerCardsPasos {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 2.5vw;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        flex-direction: column;
+    }
 }
 
 .CardPaso {
@@ -253,8 +299,8 @@
 }
 
 .textPaso {
-    width: 194px;
-    height: 80px;
+    width: auto;
+    height: auto;
     color: #1A1A1A;
 
     font-family: Montserrat;
@@ -262,11 +308,18 @@
     font-style: normal;
     font-weight: 500;
     line-height: 19.6px;
+    padding-top: 2.3vw;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        padding-top: 0vw;
+        align-self: center;
+        width: 80%;
+    }
 }
 
 .DisclaimerFirma {
-    width: 1122px;
-    height: 47px;
+    width: auto;
+    height: auto;
     color: #1A1A1A;
 
     font-family: Montserrat;
@@ -279,14 +332,27 @@
     align-self: center;
     padding-top: 3.6vw;
     padding-bottom: 4.3vw;
+    padding-left: 11vw;
+    padding-right: 11vw;
+
+    @media (min-width: 0px) and (max-width: 1320px) {
+        text-align: center;
+        padding-bottom: 9.3vw;
+        font-size: 25px;
+    }
 }
 
 .ContainerBottom {
     display: flex;
     padding-left: 11vw;
     padding-right: 13.4vw;
+    gap: 7vw;
     width: 100%;
     justify-content: space-between;
+
+    @media (min-width: 0px) and (max-width: 840px) {
+        flex-direction: column;
+    }
 }
 
 .itemPregunta {
@@ -358,7 +424,12 @@
     justify-content: flex-start;
     padding-left: 11vw;
     padding-top: 7.7vw;
+    padding-right: 11vw;
     gap: 10px;
+
+    @media (min-width: 0px) and (max-width: 650px) {
+        flex-direction: column;
+    }
 }
 
 .TextFirmaElectronica {
@@ -370,6 +441,19 @@
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        width: 349px;
+    }
+}
+
+.logoZapSign {
+    width: 205.501px;
+    height: 60px;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        align-self: center;
+    }
 }
 
 .boldText {
