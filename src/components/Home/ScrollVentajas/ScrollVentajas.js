@@ -22,7 +22,7 @@ export default function ScrollVentajas() {
 
   useEffect(() => {
     if (onlyWidth < 480 ? y > 1200 : onlyHeight < 800 ? y > 1400 : y > 1400) {
-      console.log('ENTRE')
+      // console.log('ENTRE')
 
       setCustomStyle({
         ...customStyle,
