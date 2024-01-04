@@ -148,7 +148,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && (
-                                <div className={`${open ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '300px' }} className={`${open ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div className={style.ContainerCubrimos}>
                                         <div className={style.RowCubrimos}>
                                             <Image src={seguridadFirma} />

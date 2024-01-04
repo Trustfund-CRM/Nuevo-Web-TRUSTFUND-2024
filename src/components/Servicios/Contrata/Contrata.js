@@ -93,7 +93,7 @@ export default function Contrata() {
                             </div>
                         </div>
                         {open && question === 1 && (
-                            <div className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                            <div style={{ height: '250px' }} className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                 <div className={style.ContainerCubrimos}>
                                     <div className={style.RowCubrimos}>
                                         <Image src={incendioBlanco} />
@@ -132,7 +132,7 @@ export default function Contrata() {
                             </div>
                         </div>
                         {open && question === 2 && (
-                            <div className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                            <div style={{ height: '300px' }} className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                 <div className={style.ContainerCubrimos}>
                                     <div className={style.RowCubrimos}>
                                         <Image src={explosionBlanca} />

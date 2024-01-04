@@ -100,7 +100,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 2 && (
-                                <div className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '250px' }} className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div className={style.ContainerCubrimos}>
                                         <div className={style.RowCubrimos}>
                                             <Image src={casaPreguntas} />
@@ -131,7 +131,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 3 && (
-                                <div className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '75px' }} className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div><span className={style.boldText}>DNI - Historial crediticio favorable</span></div>
                                     <div>*En caso que tu historial crediticio sea desfavorable, te solicitaremos la inclusión de un co-solicitante.
                                     </div>
@@ -147,7 +147,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 4 && (
-                                <div className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '100px' }} className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div>• Foto del <span className={style.boldText}>frente y dorso de tu DNI.</span></div>
                                     <div>• Elegís el <span className={style.boldText}>método de pago: </span>Descuentos de contado - Financiación en cuotas.</div>
                                     <div>• <span className={style.boldText}>¡Listo! </span>En menos de 24hs tendrás tu garantía de alquiler.</div>
