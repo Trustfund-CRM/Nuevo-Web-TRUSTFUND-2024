@@ -157,7 +157,7 @@ export default function Contrata() {
                 <div className={style.TextProveedor}>
                     *Proveedor de seguros MERCI PRODUCTORES ASESORES DE SEGUROS S.A Matrícula N°1722 – Grupo Delsud Administración financiera e inmobiliaria S.R.L (Letra chica)
                 </div>
-                <Image src={ssn} />
+                <Image src={ssn} className={style.logoSSN}/>
             </div>
         </div>
     )

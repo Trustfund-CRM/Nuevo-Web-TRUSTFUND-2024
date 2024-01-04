@@ -216,8 +216,8 @@
 }
 
 .TitleProceso {
-    width: 359px;
-    height: 42px;
+    width: auto;
+    height: auto;
     color: #1A1A1A;
 
     font-family: Montserrat;
@@ -455,7 +455,9 @@
     line-height: 24px;
 
     @media (min-width: 0px) and (max-width: 990px) {
-        width: 349px;
+        width: auto;
+        height: auto;
+        text-align: center;
     }
 }
 

@@ -82,6 +82,11 @@
     @media (min-width: 0px) and (max-width: 990px) {
         align-self: center;
     }
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        width: auto;
+        height: auto;
+    }
 }
 
 .textGarantia {
@@ -92,6 +97,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        width: auto;
+        height: auto;
+    }
 }
 
 .containerButtons {
@@ -136,6 +146,12 @@
         height: 50px !important;
         line-height: 1px;
         padding: none !important;
+    }
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        width: auto;
+        height: auto;
+        line-height: 145% !important;
     }
 }
 

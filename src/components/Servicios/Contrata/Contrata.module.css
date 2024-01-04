@@ -73,8 +73,14 @@
     gap: 35px;
     align-self: self-start;
 
-    @media (min-width: 0px) and (max-width: 990px) {
+    @media (min-width: 451px) and (max-width: 990px) {
         align-self: center;
+    }
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        align-self: center;
+        width: auto;
+        height: auto;
     }
 }
 
@@ -88,6 +94,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: 24px;
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        width: auto;
+        height: auto;
+    }
 }
 
 .containerButtons {
@@ -133,6 +144,10 @@
         line-height: 1px;
         padding: none !important;
     }
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        line-height: 145%;
+    }
 }
 
 .flecha {
@@ -160,6 +175,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 19.2px;
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        width: auto;
+        height: auto;
+    }
 }
 
 .RightBlock {
@@ -200,6 +220,10 @@
     display: flex;
     align-self: flex-end;
     gap: 10px;
+
+    @media (min-width: 0px) and (max-width: 525px) {
+        flex-direction: column;
+    }
 }
 
 .TitlePregunta {
@@ -328,6 +352,7 @@
 
     @media (min-width: 0px) and (max-width: 990px) {
         flex-direction: column;
+        gap: 3vw;
     }
 }
 
@@ -342,6 +367,22 @@
     font-weight: 400;
     line-height: 19.2px;
     align-self: center;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        text-align: center;
+    }
+}
+
+.logoSSN {
+    @media (min-width: 461px) and (max-width: 990px) {
+        align-self: center;
+    }
+
+    @media (min-width: 0px) and (max-width: 460px) {
+        align-self: center;
+        scale: 80%;
+        position: relative;
+    }
 }
 
 .boldText {
