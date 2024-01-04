@@ -83,8 +83,8 @@ export default function Footer() {
             <div className={style.ExtraSubContainerRedes}>
               <div className={style.subContainerRedes}>
                 <a
-                  className={style.iconRedes}
-                  style={mobile ? { scale: "55%" } : { scale: "200%" }}
+                  className={style.iconFacebook}
+                  // style={mobile ? { scale: "55%" } : { scale: "200%" }}
                   href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F"
                 >
                   <Image

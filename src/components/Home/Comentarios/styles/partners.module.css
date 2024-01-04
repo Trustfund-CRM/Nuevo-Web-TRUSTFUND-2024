@@ -70,7 +70,7 @@
 
 @media only screen and (max-width: 360px) {
     .TitleComentarios {
-        width: 100%;
+        width: -webkit-fill-available;
         padding: 0px 24px;
     }
 
@@ -82,7 +82,7 @@
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
     .TitleComentarios {
-        width: 100%;
+        width: -webkit-fill-available;
         padding: 0px 24px;
     }
 

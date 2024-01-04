@@ -32,7 +32,7 @@ export default function SeccionCards() {
           <div className={style.ContainerTitle}>
             <div className={style.Title}>Que dicen nuestros clientes</div>
           </div>
-          <CustomLine color={'#004993'} />
+          <CustomLine color={"#004993"} />
         </div>
 
         <div className={style.ContainerSlideComentarios}>
@@ -55,18 +55,22 @@ export default function SeccionCards() {
 
           <div className={style.ContainerSlideCards}>
             <div className={style.ContainerFlechas}>
-              <Image
-                className={style.FlechaLeft}
-                src={flechaModal}
-                alt="img"
-                onClick={handlePrevClick}
-              />
-              <Image
-                className={style.FlechaRight}
-                src={flechaModal}
-                alt="img"
-                onClick={handleNextClick}
-              />
+              <div className={style.contIcon}>
+                <Image
+                  className={style.FlechaLeft}
+                  src={flechaModal}
+                  alt="img"
+                  onClick={handlePrevClick}
+                />
+              </div>
+              <div className={style.contIcon}>
+                <Image
+                  className={style.FlechaRight}
+                  src={flechaModal}
+                  alt="img"
+                  onClick={handleNextClick}
+                />
+              </div>
             </div>
             <div className={style.containerAux}>
               <div

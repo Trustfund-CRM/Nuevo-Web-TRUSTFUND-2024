@@ -201,7 +201,7 @@
 
   .TitleVentajas {
     padding: 0;
-    width: 100%;
+    width: -webkit-fill-available;
     font-size: 32px;
   }
 
@@ -261,7 +261,7 @@
 
   .ContainerTop {
     font-size: 36px;
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 0px 24px;
     display: flex;
     align-self: center;
@@ -269,7 +269,7 @@
   }
 
   .TitleVentajas {
-    width: 100%;
+    width: -webkit-fill-available;
     margin-bottom: 25px;
     font-size: 36px;
     line-height: 120%;
@@ -278,7 +278,7 @@
 
   .ContainerBottom {
     align-self: center;
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 0px 24px 150px 24px;
     margin-top: 47px;
     height: -webkit-fill-available;
@@ -300,7 +300,7 @@
 
   .subTextLeft,
   .subTextRight {
-    width: 100%;
+    width: -webkit-fill-available;
     display: flex;
     align-self: flex-start;
     font-size: 20px;

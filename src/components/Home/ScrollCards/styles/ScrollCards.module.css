@@ -200,7 +200,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 100%;
+  width: -webkit-fill-available;
   padding: 22px;
 }
 
@@ -214,6 +214,7 @@
 @media only screen and (max-width: 360px) {
   .TextHeader {
     font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .ContainerGeneral {
@@ -223,6 +224,7 @@
 
   .ExtraContainerHeader {
     height: 20%;
+    margin-top: 10vh;
   }
 
   .Carrousel {
@@ -238,12 +240,12 @@
   }
 
   .Card {
-    margin: 25px 0px 25px 0px;
+    margin: 0px;
     flex-direction: column;
     border-radius: 20px;
     width: 100%;
-    height: 340px;
-    max-height: 340px;
+    /* height: 340px;
+    max-height: 340px; */
 
   }
 
@@ -377,7 +379,7 @@
   }
 }
 
-@media (min-width: 300px) and (max-width: 766px) {
+/* @media (min-width: 300px) and (max-width: 766px) {
   .Carrousel {
     gap: 20px;
     height: auto;
@@ -388,4 +390,4 @@
     padding: 0px 24px 0px 24px;
   }
 
-}
+} */
