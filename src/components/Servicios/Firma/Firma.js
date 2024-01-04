@@ -46,7 +46,7 @@ export default function QuienesSomos() {
     }
 
     return (
-        <div>
+        <div id="firma">
             <div className={style.ContainerFirma}>
                 <div className={style.HeaderFirma}>
                     <div className={style.ContainerTitle}>

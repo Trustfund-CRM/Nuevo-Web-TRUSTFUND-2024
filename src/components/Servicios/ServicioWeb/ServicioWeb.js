@@ -45,7 +45,7 @@ export default function ServicioWeb() {
     }
 
     return (
-        <div>
+        <div id='web'>
             <div className={style.ContainerServicioWeb}>
                 <div className={style.HeaderServicioWeb}>
                     <div className={style.ContainerTitle}>

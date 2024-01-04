@@ -45,7 +45,7 @@ export default function Contrata() {
 
 
     return (
-        <div className={style.ContainerContrata}>
+        <div id="contrata" className={style.ContainerContrata}>
             <div className={style.HeaderContrata}>
                 <div className={style.ContainerTitle}>
                     <div className={style.preTitle}>Seguros</div>

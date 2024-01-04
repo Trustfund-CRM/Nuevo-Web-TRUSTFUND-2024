@@ -47,7 +47,7 @@ export default function QuienesSomos() {
     }
 
     return (
-        <div>
+        <div id="quienesSomos">
             <div className={style.ContainerQuienesSomos}>
                 <div className={style.HeaderQuienesSomos}>
                     <div className={style.ContainerTitle}>
