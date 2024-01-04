@@ -45,7 +45,7 @@ export default function Contrata() {
 
 
     return (
-        <div className={style.ContainerContrata}>
+        <div id="contrata" className={style.ContainerContrata}>
             <div className={style.HeaderContrata}>
                 <div className={style.ContainerTitle}>
                     <div className={style.preTitle}>Seguros</div>
@@ -93,7 +93,7 @@ export default function Contrata() {
                             </div>
                         </div>
                         {open && question === 1 && (
-                            <div className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                            <div style={{ height: '250px' }} className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                 <div className={style.ContainerCubrimos}>
                                     <div className={style.RowCubrimos}>
                                         <Image src={incendioBlanco} />
@@ -132,7 +132,7 @@ export default function Contrata() {
                             </div>
                         </div>
                         {open && question === 2 && (
-                            <div className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                            <div style={{ height: '300px' }} className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                 <div className={style.ContainerCubrimos}>
                                     <div className={style.RowCubrimos}>
                                         <Image src={explosionBlanca} />
@@ -157,7 +157,7 @@ export default function Contrata() {
                 <div className={style.TextProveedor}>
                     *Proveedor de seguros MERCI PRODUCTORES ASESORES DE SEGUROS S.A Matrícula N°1722 – Grupo Delsud Administración financiera e inmobiliaria S.R.L (Letra chica)
                 </div>
-                <Image src={ssn} />
+                <Image src={ssn} className={style.logoSSN}/>
             </div>
         </div>
     )

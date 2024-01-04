@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: row;
     width: -webkit-fill-available;
-    height: 40vh;
+    height: auto;
     border-bottom: 1px solid #4D4D4D;
 }
 
@@ -36,6 +36,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 58.8px;
+    width: 78.8vw;
+
+    @media (min-width: 0px) and (max-width: 450px) {
+        width: auto;
+    }
 }
 
 .ContainerBody {
@@ -70,11 +75,15 @@
     padding-right: 13vw;
     gap: 6.8vw;
     padding-bottom: 3.6vw;
+
+    @media (min-width: 0px) and (max-width: 990px) {
+        flex-direction: column;
+    }
 }
 
 .subTextLeft {
-    width: 352px;
-    height: 106px;
+    width: auto;
+    height: auto;
     color: #F9FAFB;
 
     font-family: Montserrat;
@@ -82,6 +91,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 30px;
+
+    @media (min-width: 0px) and (max-width: 570px) {
+        font-size: 20px;
+    }
 }
 
 .greenText {
@@ -89,8 +102,8 @@
 }
 
 .subTextRight {
-    width: 467px;
-    height: 84px;
+    width: auto;
+    height: auto;
     color: #F9FAFB;
 
     font-family: Montserrat;
@@ -105,6 +118,27 @@
     align-self: center;
     position: relative;
     bottom: 20vw;
+
+    @media (min-width: 991px) and (max-width: 1300px) {
+        scale: 80%;
+    }
+
+    @media (min-width: 761px) and (max-width: 990px) {
+        bottom: 30vw;
+        scale: 60%;
+    }
+
+    @media (min-width: 626px) and (max-width: 760px) {
+        bottom: 35vw;
+        scale: 50%;
+    }
+
+    @media (min-width: 0px) and (max-width: 625px) {
+        bottom: 20vw;
+        /* scale: 40%; */
+        width: 87vw;
+        height: 45vw;
+    }
 }
 
 .Beneficios {
@@ -118,17 +152,40 @@
     display: flex;
     align-self: center;
     margin-top: -12vw;
+
+    @media (min-width: 646px) and (max-width: 1415px) {
+        width: 80vw;
+    }
+
+    @media (min-width: 0px) and (max-width: 645px) {
+        width: 80vw;
+        font-size: 25px;
+    }
 }
 
 .ContainerCardsBeneficios {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 32px;
     width: 80%;
     align-self: center;
     padding-top: 3.2vw;
     padding-bottom: 6.3vw;
     justify-content: center;
+
+    @media (min-width: 0px) and (min-width: 1230px) {
+        flex-direction: row;
+    }
+}
+
+.subContainerCards {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    @media (min-width: 0px) and (max-width: 1230px) {
+        align-self: center;
+    }
 }
 
 .CardBeneficio {
@@ -165,13 +222,19 @@
 .ContainerVioleta {
     background-color: #7065EE;
     padding-left: 10.5vw;
-    /* padding-right: 24.3vw; */
     padding-top: 5vw;
     padding-bottom: 5vw;
     display: flex;
     flex-direction: row;
     gap: 69px;
     justify-content: space-between;
+
+    @media (min-width: 0px) and (max-width: 1350px) {
+        /* padding-right: 24.3vw; */
+        flex-direction: column;
+        gap: 0px;
+        padding-bottom: 0vw;
+    }
 }
 
 .subContainerVioleta {
@@ -179,11 +242,20 @@
     flex-direction: row;
     gap: 69px;
     align-items: center;
+
+    @media (min-width: 821px) and (max-width: 1180px) {
+        padding-right: 10.5vw;
+    }
+
+    @media (min-width: 0px) and (max-width: 820px) {
+        flex-direction: column;
+        padding-right: 10.5vw;
+    }
 }
 
 .textFlexy {
-    width: 544px;
-    height: 73px;
+    width: auto;
+    height: auto;
     color: var(--Escala-de-azules, #F9FAFB);
 
     font-family: Montserrat;
@@ -191,6 +263,10 @@
     font-style: italic;
     font-weight: 700;
     line-height: 24px;
+
+    @media (min-width: 0px) and (max-width: 820px) {
+        text-align: center;
+    }
 }
 
 .VectorAzul {
@@ -199,6 +275,12 @@
     align-self: flex-end;
     position: relative;
     bottom: 8vw;
+    overflow: hidden;
+
+    @media (min-width: 0px) and (max-width: 1350px) {
+        bottom: 0vw;
+        top: 8vw;
+    }
 }
 
 .ContainerDuda {
@@ -209,6 +291,20 @@
     gap: 166px;
     padding-top: 3.8vw;
     padding-bottom: 6.1vw;
+
+    @media (min-width: 851px) and (max-width: 1350px) {
+        padding-top: 10.4vw;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (min-width: 0px) and (max-width: 850px) {
+        padding-top: 10.4vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        gap: 7.8vw;
+        flex-direction: column;
+    }
 }
 
 .textDuda {

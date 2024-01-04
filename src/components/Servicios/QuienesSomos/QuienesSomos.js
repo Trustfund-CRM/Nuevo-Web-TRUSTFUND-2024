@@ -12,6 +12,14 @@ import style from './QuienesSomos.module.css';
 
 export default function QuienesSomos() {
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const screenWidth = window.innerWidth;
+        screenWidth < 990 ? setIsMobile(true) : setIsMobile(false);
+        console.log(screenWidth)
+    }, []);
+
     const [calculador, setCalculador] = useState(false);
 
     const [open, setOpen] = useState(null);
@@ -23,7 +31,7 @@ export default function QuienesSomos() {
     };
 
     const abrirModal = () => {
-        if (mobile) {
+        if (isMobile) {
             const scrollAmount = 380; // por ejemplo, 200 píxeles
 
             window.scrollTo({
@@ -39,12 +47,14 @@ export default function QuienesSomos() {
     }
 
     return (
-        <div>
+        <div id="quienesSomos">
             <div className={style.ContainerQuienesSomos}>
                 <div className={style.HeaderQuienesSomos}>
                     <div className={style.ContainerTitle}>
                         <div className={style.preTitle}>Garantías de alquiler</div>
-                        <div className={style.Title}>Trust Fund, tu mejor opción.</div>
+                        <div className={style.Title}>
+                            Trust Fund,{isMobile ? <br></br> : null} tu mejor opción.
+                        </div>
                     </div>
                 </div>
 
@@ -76,7 +86,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 1 && (
-                                <div className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '200px' }} className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     Nuestra <span className={style.boldText}>garantía de alquiler</span> cubre las <span className={style.boldText}>obligaciones establecidas en un contrato de locación</span>, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos <span className={style.boldText}>garantías de fianza en todo el territorio nacional</span> con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
                                 </div>
                             )
@@ -90,7 +100,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 2 && (
-                                <div className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '250px' }} className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div className={style.ContainerCubrimos}>
                                         <div className={style.RowCubrimos}>
                                             <Image src={casaPreguntas} />
@@ -121,7 +131,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 3 && (
-                                <div className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '75px' }} className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div><span className={style.boldText}>DNI - Historial crediticio favorable</span></div>
                                     <div>*En caso que tu historial crediticio sea desfavorable, te solicitaremos la inclusión de un co-solicitante.
                                     </div>
@@ -137,7 +147,7 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 4 && (
-                                <div className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div style={{ height: '100px' }} className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div>• Foto del <span className={style.boldText}>frente y dorso de tu DNI.</span></div>
                                     <div>• Elegís el <span className={style.boldText}>método de pago: </span>Descuentos de contado - Financiación en cuotas.</div>
                                     <div>• <span className={style.boldText}>¡Listo! </span>En menos de 24hs tendrás tu garantía de alquiler.</div>
