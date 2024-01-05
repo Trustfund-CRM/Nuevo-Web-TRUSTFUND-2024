@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: auto;
+  height: 100%;
   background-color: #f2f5fb;
   width: -webkit-fill-available;
   justify-content: space-between;
@@ -75,13 +75,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: -webkit-fill-available;
-  gap: 16px;
+  height: 700px;
+  gap: 200px;
   margin-top: 4.16vw;
   padding-left: 11vw;
   padding-right: 11vw;
   padding-bottom: 4vw;
-  border:solid 1px red;
   @media (min-width: 0px) and (max-width: 770px) {
     padding-bottom: 20vw;
     padding-left: 0px;
@@ -89,53 +88,30 @@
   }
 }
 
+.flechaFooterCard {
+  width: -webkit-fill-available;
+  max-width: 50%;
+  height: 100%;
+  @media (min-width: 0px) and (max-width: 1100px) {
+    max-width: 100%;
+    border-radius: 16px 16px 16px 16px;
+  }
+}
+
 .Card {
   background-color: #ffffff;
   border-radius: 30px;
-  width: 100%;
-  /* max-width: 1120px; */
-  /* max-height: 297px; */
-  /* height: 100%; */
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  rotate: none;
-  scale: none;
-  transition: all 0.5s;
-
-
+  transition: all 1.5s;
 }
 
 .Card:hover {
   box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.3);
-  transform: scale(8.1);
-  /* Ajusté la escala para agrandar un poco */
   max-width: 1130px;
   max-height: 307px;
-
-}
-
-.TextoCard {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding-left: 3.5%;
-  padding-top: 3.5%;
-  padding-bottom: 8%;
-  padding-right: 3%;
-
-  @media (min-width: 0px) and (max-width: 1080px) {
-    gap: 50px;
-  }
-
-  @media (min-width: 481px) and (max-width: 760px) {
-    gap: 50px;
-    padding-left: 6.3%;
-    padding-top: 13%;
-    padding-right: 6.3%;
-    width: auto;
-  }
 }
 
 .TitleCard {
@@ -144,7 +120,6 @@
   line-height: 46.80px;
   font-family: Montserrat;
   font-weight: 400;
-
   @media (min-width: 0px) and (max-width: 1080px) {
     font-size: 31px;
   }
@@ -156,7 +131,7 @@
   line-height: 19.60px;
   font-family: Montserrat;
   font-weight: 400;
-  width: 100%;
+  width: -webkit-fill-available;
   max-width: 538px;
 }
 
@@ -221,68 +196,59 @@
   padding: 0px 0px 0px 5px;
 }
 
+.TextoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: -webkit-fill-available;
+  padding: 22px;
+}
+
 .cardImage {
   object-fit: cover;
   border-radius: 0px 30px 30px 0px;
   max-width: 485px;
   width: 100%;
-
-  @media (min-width: 0px) and (max-width: 1080px) {
-    max-width: 350px;
-  }
-
-  @media (min-width: 481px) and (max-width: 760px) {
-    width: auto;
-    max-width: 550px;
-    border-radius: 0px 0px 30px 30px;
-  }
 }
 
 @media only screen and (max-width: 360px) {
   .TextHeader {
     font-size: 30px;
+    margin-bottom: 20px;
   }
 
   .ContainerGeneral {
     height: auto;
     padding: 0px 24px 100px 24px;
-    border:solid 1px red;
   }
 
   .ExtraContainerHeader {
     height: 20%;
+    margin-top: 10vh;
   }
 
   .Carrousel {
+    justify-content: flex-start;
+    margin-top: 48px;
     height: auto;
     padding: 0px;
-    gap: 0px;
-    justify-content: flex-start;
     gap: 24px;
+    /* gap: 0px; */
   }
 
   .TextHeader {
     padding: 0px;
   }
 
-  .TextoCard {
-    width: 100%;
-    padding: 22px;
-  }
-
   .Card {
-    margin: 25px 0px 25px 0px;
+    margin: 0px;
     flex-direction: column;
     border-radius: 20px;
     width: 100%;
-    height: 340px;
-    max-height: 340px;
-    
   }
 
   .cardImage {
-    width: -webkit-fill-available;
-    height: 150px;
+    height: 193px;
     display: flex;
     align-self: center;
     border-radius: 0px 0px 20px 20px;
@@ -332,7 +298,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-    border: solid 1px red;
     text-align: left;
     padding: 36px 10px 16px 0px;
   }
@@ -341,21 +306,14 @@
     justify-content: space-evenly;
     height: fit-content;
     width: -webkit-fill-available;
+    gap: 24px;
   }
 
   .Card {
-    /* margin: 25px 0px 25px 0px; */
     flex-direction: column;
     border-radius: 20px;
     max-height: 450px;
     width: 100%;
-    border:solid 1px red;
-  }
-
-  .TextoCard {
-    gap: 32px;
-    width: 100%;
-    padding: 22px;
   }
 
   .TitleCard {
@@ -363,8 +321,7 @@
   }
 
   .cardImage {
-    /* width: 350px; */
-    height: 38%;
+    height: 193px;
     display: flex;
     align-self: center;
     border-radius: 0px 0px 20px 20px;
@@ -375,7 +332,7 @@
   }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
+@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 800px) {
   .ContainerGeneral {
     height: auto;
     padding-bottom: 100px;
@@ -411,8 +368,7 @@
   }
 
   .Carrousel {
-    justify-content: space-evenly;
-    height: auto;
+    height: 670px;
     width: -webkit-fill-available;
   }
 
@@ -421,24 +377,15 @@
   }
 }
 
-/* @media (max-width: 480px) and (max-height: 800px) {
-  .ContainerGeneral {
-    height: 285vh;
-  }
-
+/* @media (min-width: 300px) and (max-width: 766px) {
   .Carrousel {
-    height: 250vh;
+    gap: 20px;
+    height: auto;
+    margin-top: 40px;
   }
 
-  .ScrollCards {
-    height: 315vh;
+  .ContainerGeneral {
+    padding: 0px 24px 0px 24px;
   }
 
-  .cardImage {
-    width: -webkit-fill-available;
-  }
-
-  .ContainerGeneralResultados {
-    height: 285vh;
-  }
 } */

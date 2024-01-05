@@ -90,6 +90,12 @@
 }
 
 @media only screen and (max-width: 360px) {
+  .containerAnswerOpen {
+    height: var(--additional-height);
+    width: 100%;
+    align-self: center;
+  }
+
   .Pregunta {
     font-size: 20px;
   }
@@ -101,7 +107,7 @@
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
   .containerAnswerOpen {
-    height: auto;
+    height: var(--additional-height);
     width: 100%;
     align-self: center;
   }
