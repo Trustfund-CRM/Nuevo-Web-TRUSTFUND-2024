@@ -75,7 +75,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 670px;
+  height: 700px;
   gap: 200px;
   margin-top: 4.16vw;
   padding-left: 11vw;
@@ -228,11 +228,12 @@
   }
 
   .Carrousel {
+    justify-content: flex-start;
+    margin-top: 48px;
     height: auto;
     padding: 0px;
-    gap: 0px;
-    justify-content: flex-start;
     gap: 24px;
+    /* gap: 0px; */
   }
 
   .TextHeader {
@@ -244,9 +245,6 @@
     flex-direction: column;
     border-radius: 20px;
     width: 100%;
-    /* height: 340px;
-    max-height: 340px; */
-
   }
 
   .cardImage {
@@ -260,6 +258,7 @@
 @media only screen and (min-width: 361px) and (max-width: 480px) {
   .ContainerGeneral {
     height: auto;
+    padding: 0px 24px 100px 24px;
   }
 
   .ContainerGeneralResultados {
@@ -299,7 +298,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 120%;
-    /* border: solid 1px red; */
     text-align: left;
     padding: 36px 10px 16px 0px;
   }
@@ -308,6 +306,7 @@
     justify-content: space-evenly;
     height: fit-content;
     width: -webkit-fill-available;
+    gap: 24px;
   }
 
   .Card {
@@ -315,7 +314,6 @@
     border-radius: 20px;
     max-height: 450px;
     width: 100%;
-    /* border: solid 1px red; */
   }
 
   .TitleCard {

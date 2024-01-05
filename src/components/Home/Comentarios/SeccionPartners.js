@@ -1,17 +1,17 @@
 import { CustomLine } from "@/components/CustomLine/CustomLine";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { CarrouselPartners } from "@/components/CarrouselPartners/CarrouselPartners";
-import style from './styles/partners.module.css'
+import { CustomTitleSection } from "@/components/CustomTitleSection/CustomTitleSection";
+import style from "./styles/partners.module.css";
 export default function SeccionPartners() {
   return (
     <div className={style.SeccionPartners}>
+      <CustomTitleSection
+        title={"Nuestros partners"}
+        textColor={"#1A1A1A"}
+        bgLine={"#004993"}
+      />
       <CustomContainerMaxWidth>
-        <div className={style.TitleComentarios}>
-          <div className={style.ContainerTitlePartners}>
-            <div className={style.Title}>Nuestros partners</div>
-          </div>
-          <CustomLine color={"#004993"} />
-        </div>
         <div className={style.ContainerSlidePartners}>
           <div className={style.ContainerSubText}>
             <div div className={style.SubTextLeft}>

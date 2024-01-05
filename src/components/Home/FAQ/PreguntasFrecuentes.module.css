@@ -1,6 +1,8 @@
 .ContainerFAQ {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: -webkit-fill-available;
   background-color: #0076b9;
   width: 100%;
@@ -10,25 +12,11 @@
   }
 }
 
-.ContainerFAQResultados {
-  height: 100vh;
-  background-color: #0076b9;
-  width: 100%;
-}
-
-.TitleFAQ {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-}
 
 .SubTitleFAQ {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 11%;
-  padding-right: 11%;
   padding-top: 5%;
   padding-bottom: 6.4%;
   gap: 5vw;
@@ -36,20 +24,6 @@
 
 .ContainerTitleFAQ {
   width: 84%;
-}
-
-.Title {
-  color: #f9fafb;
-  font-size: 49px;
-  line-height: 58.80px;
-  font-family: Montserrat;
-  /* line-height: 120%; */
-  font-weight: 500;
-  padding-left: 11vw;
-  padding-top: 12vw;
-  padding-right: 51vw;
-  padding-bottom: 2vw;
-  width: -webkit-fill-available;
 }
 
 .ContainerSubTitle {
@@ -234,19 +208,6 @@
     margin-bottom: 20px;
   }
 
-  .Title {
-    font-size: 38px;
-    line-height: 120%;
-    padding: 0px;
-    padding-bottom: 0px;
-  }
-
-  .TitleFAQ {
-    width: -webkit-fill-available;
-    padding: 0px 24px;
-    margin-top: 10vh;
-  }
-
   .ContainerSubTitle {
     width: -webkit-fill-available;
     flex-direction: column;
@@ -297,29 +258,12 @@
     width: -webkit-fill-available;
   }
 
-  .TitleFAQ {
-    border-bottom: none;
-    margin-top: 120px;
-    margin-bottom: 20px;
-    height: auto;
-  }
-
   .SubTitleFAQ {
     gap: 64px;
   }
 
   .ContainerTitleFAQ {
     width: 85%;
-  }
-
-  .Title {
-    font-size: 36px;
-    color: #F9FAFB;
-    font-family: Montserrat;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
   }
 
   .ButtonsInquiProp {

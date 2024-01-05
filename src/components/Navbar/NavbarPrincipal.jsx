@@ -18,8 +18,8 @@ export default function NavbarPrincipal({ styleProp }) {
   const path = usePathname();
 
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(!show);
-  const handleShow = () => setShow(!show);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [activeNavItem, setActiveNavItem] = useState("");
   const [media, setMedia] = useState();
   const [logo, setLogo] = useState(nuevoLogo);
@@ -80,7 +80,10 @@ export default function NavbarPrincipal({ styleProp }) {
                 </Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body style={{ display: "flex" }} className={style.auxContainer}>
+            <Offcanvas.Body
+              style={{ display: "flex" }}
+              className={style.auxContainer}
+            >
               <Nav
                 activeKey="/nuestra-garantia"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}

@@ -4,6 +4,7 @@ export const CustomLine = ({ color, custom }) => {
     width: "-webkit-fill-available",
     border: `1px solid ${color}`,
     position: "absolute",
+    bottom: '0px',
     ...custom
   };
 

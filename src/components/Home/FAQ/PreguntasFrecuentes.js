@@ -9,6 +9,7 @@ import { handleQuestions } from "./objectText";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
 import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 import { useWindowScroll } from "@uidotdev/usehooks";
+import { CustomTitleSection } from "@/components/CustomTitleSection/CustomTitleSection";
 
 export default function PreguntasFrecuentes() {
   const onlyWidth = useWindowWidth();
@@ -32,7 +33,7 @@ export default function PreguntasFrecuentes() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 480 ? y > 3200 : onlyHeight < 800 ? y > 3600 : y > 4200) {
+    if (onlyWidth < 480 ? y > 4200 : onlyHeight < 800 ? y > 3600 : y > 4200) {
       setCustomStyle({
         ...customStyle,
         background: "#0076b9",
@@ -42,7 +43,7 @@ export default function PreguntasFrecuentes() {
         color: "#ffffff",
       });
     }
-    if (onlyWidth < 480 ? y < 3200 : onlyHeight < 800 ? y < 3600 : y < 4200) {
+    if (onlyWidth < 480 ? y < 4200 : onlyHeight < 800 ? y < 3600 : y < 4200) {
       setCustomStyle({
         ...customStyle,
         background: "#F2F5FB",
@@ -56,16 +57,12 @@ export default function PreguntasFrecuentes() {
 
   return (
     <div className={`${style.ContainerFAQ}`} style={customStyle}>
-      <CustomContainerMaxWidth FAQ={true}>
-        <div className={style.TitleFAQ}>
-          <div className={style.contTitle}>
-            <p className={style.Title} style={customColor}>
-              Preguntas frecuentes
-            </p>
-          </div>
-          <CustomLine color={"#ffffff"} />
-        </div>
-
+      <CustomTitleSection
+        title={"Preguntas frecuentes"}
+        textColor={"#ffffff"}
+        bgLine={"#ffffff"}
+      />
+      <CustomContainerMaxWidth>
         <div className={style.SubTitleFAQ}>
           <div className={style.ContainerSubTitle}>
             <div className={style.ButtonsInquiProp}>
