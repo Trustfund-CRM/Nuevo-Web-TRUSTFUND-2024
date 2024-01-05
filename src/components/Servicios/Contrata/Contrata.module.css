@@ -73,10 +73,6 @@
     gap: 35px;
     align-self: self-start;
 
-    @media (min-width: 451px) and (max-width: 990px) {
-        align-self: center;
-    }
-
     @media (min-width: 0px) and (max-width: 450px) {
         align-self: center;
         width: auto;
@@ -291,11 +287,58 @@
     animation: slideOut 0.5s ease-in-out;
 }
 
-.containerAnswerOpen {
-    height: var(--additional-height);
+.containerAnswerHogarOpen {
+    height: 300px;
     animation: slideIn 0.5s ease-in-out;
     overflow: visible;
     padding-bottom: 32px;
+
+    @media (min-width: 1424px) and (max-width: 1531px) {
+        height: 400px;
+    }
+
+    @media (min-width: 1045px) and (max-width: 1423px) {
+        height: 450px;
+    }
+
+    @media (min-width: 951px) and (max-width: 1044px) {
+        height: 500px;
+    }
+
+    @media (min-width: 841px) and (max-width: 950px) {
+        height: 700px;
+    }
+
+    @media (min-width: 0px) and (max-width: 840px) {
+        height: 500px;
+    }
+}
+
+.containerAnswerIncendioOpen {
+    height: 300px;
+    animation: slideIn 0.5s ease-in-out;
+    overflow: visible;
+    padding-bottom: 32px;
+
+    @media (min-width: 1424px) and (max-width: 1531px) {
+        height: 400px;
+    }
+
+    @media (min-width: 1045px) and (max-width: 1423px) {
+        height: 450px;
+    }
+
+    @media (min-width: 951px) and (max-width: 1044px) {
+        height: 500px;
+    }
+
+    @media (min-width: 841px) and (max-width: 950px) {
+        height: 700px;
+    }
+
+    @media (min-width: 0px) and (max-width: 840px) {
+        height: 650px;
+    }
 }
 
 .ContainerCubrimos {
@@ -400,11 +443,11 @@
 }
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
-    .containerAnswerOpen {
+    /* .containerAnswerOpen {
         height: auto;
         width: 100%;
         align-self: center;
-    }
+    } */
 
     .FAQ {
         width: 100%;

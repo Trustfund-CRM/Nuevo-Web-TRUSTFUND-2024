@@ -86,8 +86,8 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 1 && (
-                                <div style={{ height: '200px' }} className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    Nuestra <span className={style.boldText}>garantía de alquiler</span> cubre las <span className={style.boldText}>obligaciones establecidas en un contrato de locación</span>, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos <span className={style.boldText}>garantías de fianza en todo el territorio nacional</span> con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
+                                <div className={`${question === 1 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                    Nuestra garantía de alquiler cubre las obligaciones establecidas en un contrato de locación, siendo el respaldo más completo para resguardar los intereses de todas las partes involucradas: inquilinos, propietarios e inmobiliarias.<br></br> Otorgamos garantías de fianza en todo el territorio nacional con el aval de Delsud, lo que nos permite contar con un respaldo económico amplio, ya que poseemos fondos para financiar garantías de manera segura y flexible.
                                 </div>
                             )
                             }
@@ -100,23 +100,23 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 2 && (
-                                <div style={{ height: '250px' }} className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                <div className={`${question === 2 ? style.containerAnswerOpen : style.containerAnswer}`}>
                                     <div className={style.ContainerCubrimos}>
                                         <div className={style.RowCubrimos}>
                                             <Image src={casaPreguntas} />
-                                            <span className={style.boldText}>Alquiler y expensas.</span>
+                                            Alquiler y expensas.
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={serviciosPreguntas} />
-                                            <span className={style.boldText}>Servicios</span> (Luz, agua, electricidad y SUM).
+                                            Servicios (Luz, agua, electricidad y SUM).
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={dañosPreguntas} />
-                                            <span className={style.boldText}>Daños y roturas en el inmueble</span> (vidrios, cerraduras, grifería, calefactores y/o artefactos de aire acondicionado).
+                                            Daños y roturas en el inmueble (vidrios, cerraduras, grifería, calefactores y/o artefactos de aire acondicionado).
                                         </div>
                                         <div className={style.RowCubrimos}>
                                             <Image src={costosPreguntas} />
-                                            <span className={style.boldText}>Costos de desalojo ante posible usurpación</span> del inquilino.
+                                            Costos de desalojo ante posible usurpación del inquilino.
                                         </div>
                                     </div>
                                 </div>
@@ -131,8 +131,8 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 3 && (
-                                <div style={{ height: '75px' }} className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    <div><span className={style.boldText}>DNI - Historial crediticio favorable</span></div>
+                                <div className={`${question === 3 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                    <div>DNI - Historial crediticio favorable</div>
                                     <div>*En caso que tu historial crediticio sea desfavorable, te solicitaremos la inclusión de un co-solicitante.
                                     </div>
                                 </div>
@@ -147,10 +147,10 @@ export default function QuienesSomos() {
                                 </div>
                             </div>
                             {open && question === 4 && (
-                                <div style={{ height: '100px' }} className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
-                                    <div>• Foto del <span className={style.boldText}>frente y dorso de tu DNI.</span></div>
-                                    <div>• Elegís el <span className={style.boldText}>método de pago: </span>Descuentos de contado - Financiación en cuotas.</div>
-                                    <div>• <span className={style.boldText}>¡Listo! </span>En menos de 24hs tendrás tu garantía de alquiler.</div>
+                                <div className={`${question === 4 ? style.containerAnswerOpen : style.containerAnswer}`}>
+                                    <div>• Foto del frente y dorso de tu DNI.</div>
+                                    <div>• Elegís el método de pago: Descuentos de contado - Financiación en cuotas.</div>
+                                    <div>• ¡Listo! En menos de 24hs tendrás tu garantía de alquiler.</div>
                                 </div>
                             )
                             }
