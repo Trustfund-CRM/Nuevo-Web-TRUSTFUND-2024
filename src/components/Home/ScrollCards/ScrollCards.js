@@ -3,9 +3,9 @@ import style from "./styles/ScrollCards.module.css";
 import { inquilinos, propietarios, inmobiliarias } from "@/styles";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
+import NonScrollingCard from "./Components/NonScrollingCard";
 import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 import { ScrollAnimatedDesktop } from "./Components/ScrollAnimatedDesktop";
-import Image from "next/image";
 
 export default function ScrollCards() {
   const onlyWidth = useWindowWidth();
@@ -47,16 +47,7 @@ export default function ScrollCards() {
           {onlyWidth > 766 ? <ScrollAnimatedDesktop cards={cards} /> : null}
           {onlyWidth < 765 &&
             cards.map((card, index) => (
-              <div id={card.id} className={style.Card} key={index}>
-                <div className={style.TextoCard}>
-                  <div className={style.TitleCard}>{card.title}</div>
-                  <div className={style.DescripcionCard}>
-                    {card.descripcion}
-                  </div>
-                  {/* <Image className={style.ImagenCard} src={flechaModalBlue} /> */}
-                </div>
-                <Image className={style.cardImage} src={card.image} />
-              </div>
+              <NonScrollingCard card={card} key={index} />
             ))}
         </div>
       </CustomContainerMaxWidth>

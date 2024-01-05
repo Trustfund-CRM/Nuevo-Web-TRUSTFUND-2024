@@ -7,21 +7,16 @@
   color: #F9FAFB;
   width: -webkit-fill-available;
   position: relative;
-  padding-top: 10vh;
+  padding-top: 4vw;
   max-width: -webkit-fill-available;
 }
 
 .ElementTop {
   display: flex;
   position: absolute;
-  top: 7.2vw;
-
-  @media (min-width: 1301px) and (max-width: 1630px) {
-    top: 5.2vw;
-  }
+  top: 2.2vw;
 
   @media (min-width: 991px) and (max-width: 1300px) {
-    top: 4.2vw;
     left: -1vw;
     scale: 80%;
   }

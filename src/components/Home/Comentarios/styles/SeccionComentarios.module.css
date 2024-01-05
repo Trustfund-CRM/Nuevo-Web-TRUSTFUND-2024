@@ -107,6 +107,10 @@
   border-radius: 100%;
 }
 
+.FlechaLeft {
+  transform: rotate(180deg);
+}
+
 .containerAux {
   display: flex;
   overflow: hidden;
