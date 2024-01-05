@@ -12,6 +12,11 @@ import rootSaga from "../redux/sagas";
 import "swiper/css";
 import Script from "next/script";
 
+import { Montserrat } from "next/font/google";
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Montserrat({ subsets: ["latin"] });
+
 export default function RootLayout({ children }) {
   const containerRef = useRef(null);
   const sagasMiddleware = createSagaMiddleware();
@@ -120,10 +125,10 @@ export default function RootLayout({ children }) {
         </Script>
         <body>
           <NavbarPrincipal />
-          
+
           {children}
 
-          <Footer/> 
+          <Footer />
         </body>
       </html>
     </Provider>

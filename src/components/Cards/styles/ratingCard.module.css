@@ -27,6 +27,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    width: 100%;
     background: linear-gradient(0deg, #009FBB -8.03%, #004993 107.68%);
 }
 
@@ -35,6 +36,7 @@
     z-index: -1;
     transition: all .7s cubic-bezier(0.23, 1, 0.320, 1);
     height: 100%;
+    width: 100%;
 }
 
 .CardComentario:hover .Puntaje {
@@ -75,7 +77,6 @@
     font-family: Montserrat;
     font-weight: 700;
     display: flex;
-    /* width: 75%; */
     align-self: center;
     justify-content: flex-start;
 }

@@ -1,0 +1,131 @@
+.ContainerAccordionInmoYPropie {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 15px;
+    background-color: #ECECEC;
+    border-radius: 20px;
+    height: 350px;
+}
+
+.AccordionItem {
+    background-color: transparent !important;
+    border: 0px !important;
+    width: 100%;
+    height: 80%;
+    align-self: center;
+}
+
+.AccordionItem:not(.collapsed) {
+    background-color: transparent !important;
+}
+
+.AccordionHeader {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #004994 !important;
+    font-size: 26px !important;
+    border-bottom: 2px solid #004994 !important;
+    padding: 15px 15px 15px 0px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* .AccordionHeader button::after {
+    background-image: url(../../styles/assets/flechaInicio2.png) !important;
+    font-size: 18px !important;
+} */
+
+.AccordionBodyInmoYPropie {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.BoxSelectInmoYPropie {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.inputWrapper {
+    display: flex;
+    gap: 10%;
+}
+
+.labelAccordion {
+    width: max-content;
+    font-size: 20px;
+}
+
+.inputAccordion {
+    border: none;
+    border-radius: 20px;
+}
+
+.BoxButtonEnd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-right: 2.5%;
+}
+
+.ButtonBuscar {
+    background-color: #004994;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    /* width: 100px; */
+    border: 0px;
+    transition: 0.3s;
+}
+
+.ButtonBuscar:hover {
+    background-color: #7FA4C8;
+}
+
+.BoxSelectProvinciaYLocalidad {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-right: 2.5%;
+}
+
+@media (max-width: 767px) {
+    .ContainerAccordionInmoYPropie {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .AccordionHeader button {
+        font-size: 16px !important;
+    }
+
+    .BoxSelectInmoYPropie {
+        flex-direction: column;
+    }
+
+    .BoxButtonEnd {
+        justify-content: center;
+    }
+
+    .ButtonBuscar {
+        font-size: 14px;
+    }
+
+    .BoxSelectProvinciaYLocalidad {
+        flex-direction: column;
+    }
+}

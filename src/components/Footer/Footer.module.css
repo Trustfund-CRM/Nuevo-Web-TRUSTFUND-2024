@@ -1,5 +1,5 @@
 .boxPrincipal {
-    width: 100%;
+    /* width: 100%; */
     background-color: #EAEAEA;
     display: flex;
     flex-direction: row;
@@ -9,6 +9,8 @@
     height: 50vh;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0px;
+    width: -webkit-fill-available;
 }
 
 .boxPrincipalResultado {
@@ -71,6 +73,15 @@
     column-gap: 0px;
 }
 
+.iconFacebook {
+    background: none;
+    display: flex;
+    scale: 200%;
+    width: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
 .iconRedes {
     background: none;
     display: flex;
@@ -91,9 +102,10 @@
 .subContainerFooter {
     display: flex;
     flex-direction: row;
-    width: 88%;
-    justify-content: space-between;
-    padding-top: 75px;
+    width: -webkit-fill-available;
+    max-width: 1120px;
+    justify-content: center;
+    padding-top: 7.1%;
 }
 
 .ContainerIzqFooter {
@@ -122,8 +134,18 @@
 .ContainerDerFooter {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: -webkit-fill-available;
+    gap: 22px;
     justify-content: space-between;
+
+    @media (min-width: 767px) and (max-width: 1545px) {
+        width: -webkit-fill-available;
+    }
+
+    @media (min-width: 0px) and (max-width: 1100px) {
+        align-items: center;
+    }
+
 }
 
 .ContainerRedes {
@@ -132,6 +154,7 @@
     border-bottom: 1px solid #999999;
     padding-bottom: 10px;
     gap: 24px;
+    width: auto;
 }
 
 .subContainerRedes {
@@ -157,6 +180,12 @@
 .ContainerContacto {
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: 0px) and (max-width: 1100px) {
+        align-items: center;
+        flex-direction: column;
+        gap: 16px
+    }
 }
 
 .Direccion {
@@ -175,19 +204,23 @@
     line-height: 26.10px;
     font-family: Montserrat;
     font-weight: 500;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .textoFooter {
-    color: #999999;
-    font-size: 14px;
-    line-height: 19.60px;
+    color: #1A1A1A;
     font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
     font-weight: 500;
+    line-height: 140%;
 }
 
 .bannerFooter {
     display: flex;
     width: 100%;
+    /* max-width: ; */
     justify-content: space-between;
     height: 10vh;
     background-color: #F9FAFB;
@@ -195,7 +228,8 @@
 }
 
 .subBannerFooter {
-    width: 90%;
+    width: 100%;
+    max-width: 1120px;
     display: flex;
     justify-content: space-between;
 }
@@ -224,7 +258,7 @@
 .botonesFooter {
     display: flex;
     width: 50%;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .botonFooter {
@@ -241,20 +275,22 @@
 @media only screen and (max-width: 766px) {
     .boxPrincipal {
         height: 100%;
+        padding: 80px 0px 0px 0px;
     }
 
     .ContainerIzqFooter,
     .subContainerFooter,
-    .ContainerRedes,
-    .ContainerContacto {
-        flex-direction: column;
-    }
 
     .subContainerFooter {
         gap: 69px;
+        padding: 0;
     }
 
-    .ContainerContacto,
+    .subContainerFooter, .textoFooter {
+        padding: 0px 24px;
+    }
+
+
     .Direccion,
     .ContainerDerFooter,
     .ContainerIzqFooter {
@@ -269,16 +305,21 @@
     .Contacto,
     .Direccion {
         display: flex;
+        justify-content: flex-start;
         width: auto;
     }
 
-    .ContainerContacto {
+    .ContainerRedes {
+        flex-direction: column;
+        width: 100%;
+        border: 0px;
         gap: 32px;
     }
 
-    .ContainerRedes {
-        border: 0px;
-        gap: 32px;
+    .ContainerContacto,
+    .Direccion,
+    .Contacto {
+        width: 100%;
     }
 
     .buttonSolicitar {
@@ -297,10 +338,15 @@
 
     .ContainerDerFooter {
         gap: 24px;
+        /* padding: 0px 24px; */
     }
 
     .iconRedes {
         scale: 130%;
+    }
+
+    .iconFacebook {
+        scale: 56%;
     }
 
     .boxPrincipalResultado {
@@ -313,12 +359,14 @@
 
     .subBannerFooter {
         flex-direction: column;
-        align-items: center;
-        gap: 24px;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px 24px;
+        gap: 20px;
     }
 
     .textoFooter {
-        padding: 32px 0px 32px 0px;
+        padding: 32px 24px;
     }
 
     .footerDelSud {
@@ -328,7 +376,7 @@
 
     .bannerFooter {
         padding: 24px 0px;
-        height: auto;
+        height: 144px;
     }
 
     .botonesFooter {
@@ -369,10 +417,16 @@
     }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1600px) and (max-height: 770px) {
+@media only screen and (min-width: 966px) and (max-width: 1500px) and (max-height: 800px) {
 
     .boxPrincipal {
-        height: 450px;
+        /* height: 450px; */
+        padding: 0px;
+    }
+
+    .subContainerFooter {
+        padding: 0px 5%;
+        margin-top: 75px;
     }
 
     .boxPrincipalResultado {
@@ -381,7 +435,7 @@
     }
 
     .footerDelSud {
-        width: 25%;
+        width: auto;
     }
 
     .botonesFooter {
@@ -390,11 +444,11 @@
 
     .ContainerIzqFooter {
         height: 175px;
-        width: 30%;
+        width: 33%;
     }
 
     .ContainerDerFooter {
-        width: 50%;
+        width: 100%;
     }
 
     .Suscribite {
@@ -402,5 +456,9 @@
         font-style: normal;
         font-weight: 500;
         line-height: 120%;
+    }
+
+    .Contacto {
+        width: 50%;
     }
 }

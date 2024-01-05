@@ -2,20 +2,39 @@ import Image from "next/image";
 import style from "./ScrollPrincipal.module.css";
 import { backgroundHome, flechaCirculo, scroll } from "@/styles";
 import { Button } from "react-bootstrap";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function ScrollPrincipal() {
   const [calculador, setCalculador] = useState(false);
+  const [mobile, setMobile] = useState(false);
+  const miIdRef = useRef(null);
 
-  const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window?.innerWidth < 1017) {
+        setMobile(true);
+        // setCalculador(true)
+      }
+    }
+  }, []);
 
-  const handleCalculador = () => {
-    setCalculador(true);
+  const abrirModal = () => {
+    if (mobile) {
+      const scrollAmount = 380; // por ejemplo, 200 píxeles
+
+      window.scrollTo({
+        top: 400,
+        behavior: "smooth",
+      });
+      setCalculador(true);
+    } else {
+      setCalculador(true);
+    }
   };
 
   return (
@@ -31,39 +50,30 @@ export default function ScrollPrincipal() {
             Con mínimos requisitos. Obtené tu garantía de alquiler en tan solo
             24hs.
           </div>
+
           <div className={style.containerButtons}>
-            <Button
-              className={style.ButtonHome}
-              onClick={() => handleCalculador()}
-            >
+            <div className={style.ButtonHome} onClick={() => abrirModal()}>
               Cotizá tu garantía
-            </Button>
-            <Image className={style.flecha} src={flechaCirculo} />
+            </div>
+            <Image
+              className={style.flecha}
+              src={flechaCirculo}
+              onClick={() => abrirModal()}
+            />
           </div>
         </div>
-        <div className={style.contImage}>
-          <Image
-            className={style.FotoScrollPrincipal}
-            alt="fotoPrincipal"
-            src={backgroundHome}
-          />
+        <div className={style.footerHome}>
+          <Image className={style.scrollFooter} src={scroll} alt="image" />
         </div>
-      </div>
-      <div className={style.footerHome}>
-        <Image className={style.scrollFooter} src={scroll} alt="image" />
-      </div>
 
-      {calculador ? (
-        <div
-          className={`${
-            resultadoCalc
-              ? style.ContainerSubFooterCalculador
-              : style.ContainerSubFooter
-          }`}
-        >
-          <ModalCalculador setCalculador={setCalculador} />
-        </div>
-      ) : null}
+        {calculador ? (
+          <ModalCalculador
+            ref={miIdRef}
+            id="miId"
+            setCalculador={setCalculador}
+          />
+        ) : null}
+      </div>
     </div>
   );
 }

@@ -1,19 +1,15 @@
 "use client";
-// import { Image } from 'react-bootstrap';
-import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import style from "./ScrollCards.module.css";
-import {
-  inquilinos,
-  propietarios,
-  inmobiliarias,
-  flechaModalBlue,
-} from "@/styles";
-import { useSelector } from "react-redux";
+import style from "./styles/ScrollCards.module.css";
+import { inquilinos, propietarios, inmobiliarias } from "@/styles";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
+import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
+import { ScrollAnimatedDesktop } from "./Components/ScrollAnimatedDesktop";
+import Image from "next/image";
 
 export default function ScrollCards() {
+  const onlyWidth = useWindowWidth();
+
   const cards = [
     {
       title: "Inquilinos",
@@ -38,40 +34,30 @@ export default function ScrollCards() {
     },
   ];
 
-  const resultadoCalc = useSelector(
-    (state) => state.reducerInfoGarantia.calculador
-  );
-
-  const [isCarouselVisible, setIsCarouselVisible] = useState(false);
-  const carouselRef = useRef();
-
   return (
-    <div className={`${style.ContainerGeneral}`}>
+    <div className={`${style.ContainerGeneral}`} id="carousel">
       <CustomContainerMaxWidth>
         <div className={style.ExtraContainerHeader}>
           <div className={style.TextHeader}>
             Protegemos todas las necesidades en el proceso de alquiler.{" "}
           </div>
-          <CustomLine color={'#333'} custom={{ bottom: '0px' }} />
+          <CustomLine color={"#333"} custom={{ bottom: "0px" }} />
         </div>
-        <div id="carousel" className={style.Carrousel} ref={carouselRef}>
-          {cards?.map((c, index) => {
-            return (
-              <div
-                id={c.id}
-                className={style.Card}
-                style={{ transform: `translateY(${index}em)` }}
-                key={index}
-              >
+        <div id="carousel" className={style.Carrousel}>
+          {onlyWidth > 766 ? <ScrollAnimatedDesktop cards={cards} /> : null}
+          {onlyWidth < 765 &&
+            cards.map((card, index) => (
+              <div id={card.id} className={style.Card} key={index}>
                 <div className={style.TextoCard}>
-                  <div className={style.TitleCard}>{c.title}</div>
-                  <div className={style.DescripcionCard}>{c.descripcion}</div>
+                  <div className={style.TitleCard}>{card.title}</div>
+                  <div className={style.DescripcionCard}>
+                    {card.descripcion}
+                  </div>
                   {/* <Image className={style.ImagenCard} src={flechaModalBlue} /> */}
                 </div>
-                <Image className={style.cardImage} src={c.image} />
+                <Image className={style.cardImage} src={card.image} />
               </div>
-            );
-          })}
+            ))}
         </div>
       </CustomContainerMaxWidth>
     </div>

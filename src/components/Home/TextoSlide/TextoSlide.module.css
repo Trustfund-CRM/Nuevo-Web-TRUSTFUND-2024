@@ -1,5 +1,5 @@
 .containerSlide {
-    height: 15vh;
+    height: auto;
     /* display: flex; */
     /* position: absolute;
     top: 112vh; */
@@ -7,6 +7,19 @@
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
 }
 
 .containerSlideCalculador {
@@ -17,6 +30,8 @@
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
+    display: flex;
+
 }
 
 .Slide {
@@ -26,9 +41,29 @@
     line-height: 98px;
     font-weight: 500;
     padding: 20px 15px 20px 15px;
-
-    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap:15px;
     animation: 10s slide infinite linear;
+    height:  auto;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        font-size: 22px;
+        /* border:solid 1px red; */
+        font-size: 22px;
+        height:  50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        gap:15px
+        
+    }
 }
 
 @keyframes slide {
@@ -38,43 +73,5 @@
 
     to {
         transform: translateX(-100%);
-    }
-}
-
-@media (max-width: 500px){
-    .containerSlide{
-        top: 190vh;
-    }
-
-    .containerSlideCalculador {
-        top: 276vh;
-    }
-}
-
-@media (max-height: 670px) {
-
-    .containerSlide {
-        height: 20vh;
-        top: 226vh;
-    }
-
-    .containerSlideCalculador {
-        top: 365vh;
-        height: 20vh;
-    }
-    
-}
-
-@media (max-width: 430px) {
-    .containerSlideCalculador {
-        top: 395vh;
-        height: 20vh;
-    }
-}
-
-@media (max-width: 430px) and (max-height: 800px) {
-    .containerSlideCalculador {
-        top: 315vh;
-        height: 20vh;
     }
 }

@@ -1,11 +1,9 @@
-
-
 import { mailOptions, transporter } from "../../src/config/nodemailer";
 const CONTACT_MESSAGE_FIELDS = {
   Nombre: "Nombre",
   Apellido: "Apellido",
   Dni: "Dni",
-  Provincia:"Provincia",
+  Provincia: "Provincia",
   Localidad: "Localidad",
   Email: "Email",
   Telefono: "Telefono",
@@ -17,8 +15,9 @@ const CONTACT_MESSAGE_FIELDS = {
   valorAlquiler: "valorAlquiler",
   valorExpensas: "valorExpensas",
   Motivo: "Motivo",
-  Reclamo:"Reclamo",
-  
+  Reclamo: "Reclamo",
+  contado: "contado",
+  pago: "pago",
 };
 
 const generateEmailContent = (data) => {
@@ -27,7 +26,7 @@ const generateEmailContent = (data) => {
       (str += `${CONTACT_MESSAGE_FIELDS[key]}: \n${val} \n \n`),
     ""
   );
-  
+
   const htmlData = Object.entries(data).reduce((str, [key, val]) => {
     return (str += `<h3 class="form-heading" align="left">${CONTACT_MESSAGE_FIELDS[key]}</h3><p class="form-answer" align="left">${val}</p>`);
   }, "");
@@ -39,12 +38,9 @@ const generateEmailContent = (data) => {
 };
 
 const handler = async (req, res) => {
-  console.log('entró a handler back')
   if (req.method === "POST") {
     const data = req.body;
-    console.log('data por body: ', data)
     if (!data) {
-      console.log('no hay data master')
       return res.status(400).send({ message: "Bad request" });
     }
 
@@ -54,10 +50,8 @@ const handler = async (req, res) => {
         ...generateEmailContent(data),
         subject: data.subject,
       });
-      console.log('se mando todo joya')
       return res.status(200).json({ success: true });
     } catch (err) {
-      console.log(err);
       return res.status(400).json({ message: err.message });
     }
   }

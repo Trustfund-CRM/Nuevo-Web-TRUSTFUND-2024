@@ -1,0 +1,19 @@
+.contImagePartner {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 110px;
+
+    @media (min-width: 0px) and (max-width: 1200px) {
+        width: 120px;
+    }
+}
+
+.contImagePartner .imgPartner {
+    filter: grayscale(0%);
+    transition: filter 0.5s;
+}
+
+.contImagePartner:hover .imgPartner {
+    filter: grayscale(0%);
+}

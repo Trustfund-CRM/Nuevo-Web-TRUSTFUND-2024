@@ -9,21 +9,108 @@
         opacity: 1;
     }
 }
+.ContainerAux{
+    width: 1122px;
+    height: auto;
+    padding: 65px 28px 39px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: var(--Escala-de-grises-1, #F2F2F2);
+    gap:34px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: all 0.3s linear;
+
+    @media screen and (max-height: 780px) and (min-width: 500px) {
+        /* Cuando la altura es menor o igual a 780px y el ancho es mayor o igual a 500px */
+        padding: 30px 28px 30px 28px;
+        transform: scale(0.78);
+        margin-top: 9vh;
+      }
+
+}
+@media (min-width: 0px) and (max-width: 1017px) {
+    .ContainerAux{
+        width: -webkit-fill-available;
+        padding: 30px 28px 30px 28px;
+        gap:16px;
+    }
+}
+
+.SolicitalaText{
+    color: #FFF;
+    width:auto;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 30px */
+}
+.contentIconPubli{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: flex-start;
+    align-content: flex-end;
+    justify-content: flex-start;
+}
+.ContentPublicidad{
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+    width: auto;
+    align-items: center;
+    justify-content: flex-end;
+}
+.ContentPublicidadLineWhite{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: auto;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: solid 2px #FFFFFF;
+}
+
 
 .ContainerModalCalculador {
-    background-color: #F2F2F2;
-    border-radius: 20px;
-    width: 1122px;
-    height: 351px;
+    
+    backdrop-filter: blur(3px);
+    width: -webkit-fill-available;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     animation: modal-animation 0.3s ease-in-out;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
     z-index: 99;
-    padding: 0px 0px 28px 0px;
-    left: 40vh;
-    bottom: 25vh;
+    top:0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 500px) and (max-width: 1017px) {
+        position: initial;
+        height: auto;
+        backdrop-filter: none;
+        border:solid 1px red;
+        margin-top:50px;
+    }
+    @media (min-width: 0px) and (max-width: 500px) {
+        position: initial;
+        height: auto;
+        backdrop-filter: none;
+        /* border:solid 1px red; */
+        margin-top:16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px !important;
+    }
+
 }
 
 .ContainerCruzModal {
@@ -40,56 +127,102 @@
     height: 600px;
     display: flex;
     flex-direction: column;
-
     justify-content: space-around;
     position: absolute;
     z-index: 99;
     padding: 28px 0px 28px 0px;
     left: 40vh;
     bottom: 10vh;
+    
 }
 
 .TitleCalculador {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    width:-webkit-fill-available;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
 }
 
 .Title {
-    color: #004993;
-    line-height: 46.80px;
-    font-size: 39px;
+    width: 439px;
+    color: var(--Azul-principal, #004993);
     font-family: Montserrat;
+    font-size: 39px;
+    font-style: normal;
     font-weight: 700;
+    line-height: 120%; /* 46.8px */
+    @media (min-width: 500px) and (max-width: 600px) {
+        width: auto;
+        font-size: 35px;
+        };
+        @media (min-width: 0px) and (max-width: 500px) {
+            width: auto;
+            font-size: 25px;
+            }
 }
 
 .subTextCalculador {
     color: #1A1A1A;
-    font-size: 18px;
-    font-family: Montserrat;
-    font-weight: 500;
-    line-height: 26.10px;
     width: 548px;
-    height: 47px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 145%; /* 26.1px */
+    letter-spacing: -0.09px;
+    opacity: 0.6;
+    @media (min-width: 0px) and (max-width: 600px) {
+    width: auto;
+    }
 }
 
 .ContainerInputs {
     display: flex;
-    flex-direction: row;
-    width: 90%;
+    flex-direction: column;
+    width: -webkit-fill-available;
     justify-content: space-between;
     align-self: center;
 }
-
+.ContenedorInputsForm{
+    width: -webkit-fill-available;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+    justify-content: space-between;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    
+}
 .ContainerValores {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     background-color: #F9FAFB;
     border-radius: 10px;
-    padding: 18px 18px 18px 0px;
-    width: 435px;
+  
+    width: auto;
+    max-height: 53px !important;
+    height: 53px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+     width: -webkit-fill-available ;
+     /* border:solid 1px red; */
+     flex-direction: column;
+     max-height: none !important;
+     height: auto;
+     background-color: transparent !important;
+     padding: 0px 0px 0px 0px;
+    }
 }
 
 .input1 {
@@ -97,7 +230,63 @@
     width: 222px;
     border: none;
     background-color: #F9FAFB;
-    border-right: 1px solid #004993;
+    outline: none;
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    border-radius: 10px;
+    max-height: 53px !important;
+    height: 53px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: 100%;
+        border-radius: 8px;
+        padding: 16px 36px 16px 36px;
+        max-height: 23px !important;
+        height: 23px;
+    }
+}
+
+.input1::placeholder {
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    color: #1A1A1A; /* Puedes ajustar el color según tus preferencias */
+}
+
+.input2::placeholder {
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    color: #1A1A1A; /* Puedes ajustar el color según tus preferencias */
+}
+
+.lineaAzul{
+    background: #004993;
+    height: 37px;
+    width:2px;
+    max-height: 37px !important;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        display: none;
+    }
+}
+
+.bolitaBlanca{
+    width:10px;
+    height:10px;
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    top: 24px;
+    right: 50%;;
 }
 
 .input2 {
@@ -105,24 +294,66 @@
     width: 222px;
     border: none;
     background-color: #F9FAFB;
+    outline: none;
+    color: #1A1A1A;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    box-sizing: border-box; 
+    border-radius: 10px;
+    max-height: 53px !important;
+    height: 53px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: 100%;
+        border-radius: 8px;
+        padding: 16px 36px 16px 36px;
+    } 
+}
+
+.input2 option {
+    font-family: Montserrat; /* Puedes ajustar esto según tus necesidades */
+    font-size: 16px; /* Puedes ajustar esto según tus necesidades */
+    width: 200px !important;
+    max-width: 200px !important;
 }
 
 .flechaCalcula {
     background-color: #004993;
     border: none;
-    border-radius: 30px;
-    padding: 18px;
+    border-radius: 100%;
+
+    width: 56px;
+    height: 56px;
+    max-height: 56px !important;
+    max-width: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px !important;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        max-width: 100px !important;
+        border-radius: 30px !important;
+        width: 100px;
+
+    } 
 }
 
 .ContainerPasos {
     display: flex;
     flex-direction: row;
-    width: 90%;
     justify-content: space-between;
     align-self: center;
-    background-image: url('../../styles/assets/bg_Modal.png');
+    background-image: url(/_next/static/media/bg_Modal.84e91f94.png);
     color: #F2F2F2;
     border-radius: 20px;
+    background-repeat: no-repeat;
+    padding: 32px 22px;
+    width: -webkit-fill-available;
+    background-size: cover;
+    background-position: center;
 }
 
 .Paso {
@@ -130,6 +361,7 @@
     align-items: center;
     width: -webkit-fill-available;
     height: 44px;
+    max-height: 44px !important;
     border: 2px solid #F9FAFB;
     margin: 15px;
     border-radius: 15px;
@@ -141,14 +373,21 @@
 .ContainerCards {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 95%;
+    justify-content: space-between;
+    width: -webkit-fill-available;
     align-self: center;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        flex-direction: column;
+        gap:16px;
+
+    } 
 }
 
 .ExtraContainerCards {
     display: flex;
     flex-direction: column;
+    width:-webkit-fill-available;
+    gap:35px;
 }
 
 .cardCuota {
@@ -158,9 +397,17 @@
     gap: 5px;
     background-color: #FFFFFF;
     border-radius: 20px;
-    margin: 25px 0px 25px 0px;
+    margin: 0px 0px 0px 0px;
     justify-content: space-between;
-    width: 20%;
+    width: auto;
+    min-width: 230px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: auto;
+        width: auto;
+        min-width: -webkit-fill-available;
+        padding: 20px 50px 20px 50px;
+
+    } 
 }
 
 .activo {
@@ -170,9 +417,16 @@
     gap: 5px;
     background-color: #004994;
     border-radius: 20px;
-    margin: 25px 0px 25px 0px;
+    margin: 0px 0px 0px 0px;
     justify-content: space-between;
-    width: 20%;
+    width: auto;
+    min-width: 230px;
+    @media (min-width: 0px) and (max-width: 1017px) {
+        width: auto;
+        min-width: -webkit-fill-available;
+ 
+
+    } 
 }
 
 .titleCard {
@@ -301,30 +555,32 @@
 }
 
 .flechaCard {
-    padding: 10px;
     display: flex;
     justify-content: center;
-    z-index: 2;
-    position: relative;
-    left: 0px;
     transition: 1s;
     background-color: #FFFFFF;
 }
 
 .flechaCardActiva {
-    padding: 6px;
-    /* border: 1px solid #FFFFFF; */
-    /* border-radius: 30px; */
-    scale: 80%;
+    display: none;
+    align-self: center;
+    width: auto;
+    height: auto;
+}
+
+.contFlechaSolicitar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #004993;
+    border-radius: 100%;
 }
 
 .flechaSolicitar {
-    padding: 10px;
-    border: 2px solid #004993;
-    border-radius: 30px;
-    display: flex;
-    align-self: center;
-    scale: 150%;
+    width: 24px;
+    height: 24px;
 }
 
 .containerButtonCard {
@@ -332,7 +588,8 @@
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-
+    width: -webkit-fill-available;
+    cursor: pointer;
 }
 
 .buttonSolicitar {
@@ -352,10 +609,25 @@
     font-family: Montserrat;
     font-weight: 700;
     background-color: #004993;
-    padding: 13px 36px 13px 36px;
+    padding: 0px 20px;
     border-radius: 30px;
     border: none;
+    cursor:pointer;
+    border:solid 2px #004993;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
+
+.buttonSolicitarDisabled:hover {
+    color:#004993;
+    background-color: #FFFFFF;
+    border:solid 2px #004993;
+}
+
 
 .buttonSolicitar:hover {
     background-color: #0076B9;
@@ -367,7 +639,6 @@
 
 .textSeleccionar {
     display: none;
-    z-index: 1;
     width: 0%;
     color: #FFFFFF;
     font-weight: 500;
@@ -384,21 +655,26 @@
 .ButtonSeleccionar {
     border: 1px solid #004993;
     border-radius: 30px;
-    width: 17%;
-    transition: 1s;
+    width: 30px;
+    transition: 0.5s;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
+    height: 30px;
+    max-height: 30px !important;
 }
 
 .ButtonSeleccionado {
     border: 1px solid #004993;
     border-radius: 30px;
-    width: 70%;
-    transition: 1s;
+    width: 78%;
+    transition: 0.5s;
     display: flex;
     align-items: center;
     overflow: hidden;
+    flex-direction: row;
 }
 
 .textoCalculador {
@@ -406,34 +682,34 @@
     font-size: 18px;
     font-family: Montserrat;
     font-weight: 700;
+    width: auto;
 }
 
 .cardCuota:hover .ButtonSeleccionar {
-    padding: 0px 10px 0px 10px;
-    width: 60%;
+    padding: 0px 10px 0px 15px;
+    width: 65%;
     background-color: #004993;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: end;
 }
 
 .cardCuota:hover .textSeleccionar {
     display: flex;
+    width: auto;
+    /* border:solid 1px white */
 }
 
 .cardCuota:hover .flechaCard {
-    left: 98px;
+
     background-color: #004993;
-    scale: 80%;
-    padding: 6px;
+    display: none;
 }
 
 @media (max-width: 500px) {
-    .ContainerModalCalculador {
-        /* left: auto; */
-        /* bottom: auto; */
-        position: initial;
-        width: -webkit-fill-available;
-        height: 650px;
-        margin: 40px 15px 15px 15px;
-    }
+
 
     .ContainerModalCalculadorResultado {
         /* left: auto; */
@@ -454,20 +730,14 @@
         gap: 20px;
     }
 
-    .subTextCalculador {
-        font-size: 16px;
-        width: 90%;
-    }
+
 
     .ContainerInputs {
         flex-direction: column;
         gap: 20px;
     }
 
-    .ContainerValores {
-        width: 95%;
-        flex-direction: column;
-    }
+
 
     .input1 {
         border-right: none;
@@ -478,6 +748,7 @@
     .input2 {
         align-self: flex-start;
         width: -webkit-fill-available;
+     
     }
 
     .flechaCalcula {
@@ -492,35 +763,12 @@
         gap: 40px;
     }
 
-    .ContainerCards {
-        flex-direction: column;
-        margin-top: 20px;
-        align-items: center;
-    }
+ 
 
-    .cardCuota {
-        width: 65%;
-        padding: 20px 50px 20px 50px;
-        margin: 20px 0px 0px 0px;
-    }
 
     .activo {
         width: 65%;
         padding: 20px 50px 20px 50px;
         margin: 20px 0px 0px 0px;
-    }
-}
-
-@media (max-width: 430px) {
-    .subTextCalculador {
-        height: 125px;
-    }
-
-    .ButtonSeleccionar {
-        width: 20%;
-    }
-
-    .ButtonSeleccionado {
-        width: 80%;
     }
 }

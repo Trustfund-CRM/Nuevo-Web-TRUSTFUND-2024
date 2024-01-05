@@ -1,8 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
-
 import "../utils/bootstrap";
-
 import ButtonWsp from "@/components/ButtonWsp/ButtonWsp";
 import SeccionComentarios from "@/components/Home/Comentarios/SeccionComentarios";
 import PreguntasFrecuentes from "@/components/Home/FAQ/PreguntasFrecuentes";
@@ -11,19 +8,11 @@ import ScrollPrincipal from "@/components/Home/ScrollPrincipal/ScrollPrincipal";
 import ScrollVentajas from "@/components/Home/ScrollVentajas/ScrollVentajas";
 import TextoSlide from "@/components/Home/TextoSlide/TextoSlide";
 import ModalCalculador from "@/components/ModalCalculador/ModalCalculador";
+import FormNewsletter from "@/components/FormNewsletter/FormNewsletter";
+import { useDispatch, useSelector } from "react-redux";
+import { setCalculador } from "@/redux/Actions/actionCalculadorPrincipal";
 
 export default function Home() {
-  const [mobile, setMobile] = useState(false);
-  const [calculador, setCalculador] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (window?.innerWidth < 765) {
-        setMobile(true);
-      }
-    }
-  }, []);
-
   return (
     <div
       style={{
@@ -34,17 +23,15 @@ export default function Home() {
       }}
     >
       <ScrollPrincipal />
-      {mobile && (
-        <ModalCalculador
-          setCalculador={setCalculador}
-          calculador={calculador}
-        />
-      )}
       <TextoSlide />
       <ScrollCards />
       <ScrollVentajas />
       <SeccionComentarios />
       <PreguntasFrecuentes />
+      {/* {modalSuscribe && (
+        <FormNewsletter />
+      )
+      } */}
       <ButtonWsp />
     </div>
   );
