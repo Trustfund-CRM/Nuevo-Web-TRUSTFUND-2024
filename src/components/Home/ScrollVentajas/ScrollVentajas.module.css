@@ -7,22 +7,8 @@
   color: #F9FAFB;
   width: -webkit-fill-available;
   position: relative;
-  /* border:solid 5px black; */
+  padding-top: 10vh;
   max-width: -webkit-fill-available;
-}
-
-.ContainerTop {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  gap: 50px;
-  position: relative;
-}
-
-.TitleTop {
-  display: flex;
-  flex-direction: row;
 }
 
 .ElementTop {
@@ -55,20 +41,6 @@
   @media (min-width: 0px) and (max-width: 990px) {
     display: none;
   }
-}
-
-.TitleVentajas {
-  color: #F9FAFB;
-  font-family: Montserrat;
-  font-size: 49px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 11vw;
-  padding-top: 13.2vw;
-  padding-bottom: 3.3vw;
 }
 
 .ContainerBottom {
@@ -193,25 +165,9 @@
 
 @media only screen and (max-width: 360px) {
   .ContainerScrollVentajas {
-    padding: 0px 24px;
     width: -webkit-fill-available;
     padding-bottom: 100px;
     height: 100%;
-  }
-
-  .TitleVentajas {
-    padding: 0;
-    width: 100%;
-    font-size: 32px;
-  }
-
-  .TitleTop {
-    margin-bottom: 20px;
-  }
-
-  .ContainerTop {
-    margin-top: 100px;
-    gap: 24px;
   }
 
   .ContainerBottom,
@@ -226,6 +182,8 @@
     gap: 0px;
     padding: 0;
     margin-top: 50px;
+    padding: 0px 24px;
+
   }
 
   .subTitle {
@@ -259,26 +217,9 @@
     height: -webkit-fill-available;
   }
 
-  .ContainerTop {
-    font-size: 36px;
-    width: 100%;
-    padding: 0px 24px;
-    display: flex;
-    align-self: center;
-    margin-top: 135px;
-  }
-
-  .TitleVentajas {
-    width: 100%;
-    margin-bottom: 25px;
-    font-size: 36px;
-    line-height: 120%;
-    padding: 0;
-  }
-
   .ContainerBottom {
     align-self: center;
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 0px 24px 150px 24px;
     margin-top: 47px;
     height: -webkit-fill-available;
@@ -300,7 +241,7 @@
 
   .subTextLeft,
   .subTextRight {
-    width: 100%;
+    width: -webkit-fill-available;
     display: flex;
     align-self: flex-start;
     font-size: 20px;
@@ -357,11 +298,6 @@
 
   .ContainerTop {
     justify-content: center;
-    /* padding: 0% 5%; */
-  }
-
-  .TitleVentajas {
-    width: 80%;
   }
 
   .subContainerBottom {

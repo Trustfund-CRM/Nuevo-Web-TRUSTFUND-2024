@@ -9,6 +9,7 @@ import { handleQuestions } from "./objectText";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
 import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 import { useWindowScroll } from "@uidotdev/usehooks";
+import { CustomTitleSection } from "@/components/CustomTitleSection/CustomTitleSection";
 
 export default function PreguntasFrecuentes() {
   const onlyWidth = useWindowWidth();
@@ -19,69 +20,69 @@ export default function PreguntasFrecuentes() {
 
   const { QuestionsInqui, QuestionsProp } = handleQuestions(onlyWidth);
 
-
   const [customStyle, setCustomStyle] = useState({
-    background: '#F2F5FB',
-    transition: 'background 1s ease'
+    background: "#F2F5FB",
+    transition: "background 1s ease",
   });
 
   const [customColor, setCustomColor] = useState({
-    color: '#000000',
-    transition: 'background 1s ease'
+    color: "#000000",
+    transition: "background 1s ease",
   });
 
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 480 ? y > 3200 : onlyHeight < 800 ? y > 3600 : y > 4200) {
+    if (onlyWidth < 480 ? y > 4200 : onlyHeight < 800 ? y > 3600 : y > 4200) {
       setCustomStyle({
         ...customStyle,
-        background: '#0076b9'
+        background: "#0076b9",
       });
       setCustomColor({
         ...customColor,
-        color: '#ffffff'
+        color: "#ffffff",
       });
     }
-    if (onlyWidth < 480 ? y < 3200 : onlyHeight < 800 ? y < 3600 : y < 4200) {
+    if (onlyWidth < 480 ? y < 4200 : onlyHeight < 800 ? y < 3600 : y < 4200) {
       setCustomStyle({
         ...customStyle,
-        background: '#F2F5FB'
+        background: "#F2F5FB",
       });
       setCustomColor({
         ...customColor,
-        color: '#000000'
+        color: "#000000",
       });
     }
   }, [y]);
 
-
   return (
     <div className={`${style.ContainerFAQ}`} style={customStyle}>
-      <CustomContainerMaxWidth FAQ={true}>
-        <div className={style.TitleFAQ}>
-          <p className={style.Title} style={customColor}>Preguntas frecuentes</p>
-          <CustomLine color={"#ffffff"} />
-        </div>
-
+      <CustomTitleSection
+        title={"Preguntas frecuentes"}
+        textColor={"#ffffff"}
+        bgLine={"#ffffff"}
+      />
+      <CustomContainerMaxWidth>
         <div className={style.SubTitleFAQ}>
           <div className={style.ContainerSubTitle}>
             <div className={style.ButtonsInquiProp}>
               <div
-                className={`${inquilinosOPropietarios === "inquilinos"
+                className={`${
+                  inquilinosOPropietarios === "inquilinos"
                     ? style.ButtonInquiActivo
                     : style.ButtonInqui
-                  }`}
+                }`}
                 onClick={() => setInquilinosOPropietarios("inquilinos")}
               >
                 Inquilinos
               </div>
               <div className={style.line}></div>
               <div
-                className={`${inquilinosOPropietarios === "propietarios"
+                className={`${
+                  inquilinosOPropietarios === "propietarios"
                     ? style.ButtonPropActivo
                     : style.ButtonProp
-                  }`}
+                }`}
                 onClick={() => setInquilinosOPropietarios("propietarios")}
               >
                 Propietarios e Inmobiliarias
@@ -103,11 +104,11 @@ export default function PreguntasFrecuentes() {
             >
               {inquilinosOPropietarios === "inquilinos"
                 ? QuestionsInqui.map((obj, index) => (
-                  <CustomAccordion object={obj} key={index} />
-                ))
+                    <CustomAccordion object={obj} key={index} />
+                  ))
                 : QuestionsProp.map((obj, index) => (
-                  <CustomAccordion object={obj} key={index} />
-                ))}
+                    <CustomAccordion object={obj} key={index} />
+                  ))}
             </div>
 
             {inquilinosOPropietarios === "inquilinos" ? (

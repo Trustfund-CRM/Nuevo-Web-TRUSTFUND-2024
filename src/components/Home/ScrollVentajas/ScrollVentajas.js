@@ -1,13 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import { useWindowScroll } from "@uidotdev/usehooks";
-import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
-import style from "./ScrollVentajas.module.css"; 
-import "./effectLetters.css";
-import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
-import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
-import { CustomLine } from "@/components/CustomLine/CustomLine";
-import { VectorVentajas, VectorVentajasBlue } from "@/styles";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useWindowScroll } from "@uidotdev/usehooks";
+import { VectorVentajas, VectorVentajasBlue } from "@/styles";
+import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
+import { CustomTitleSection } from "@/components/CustomTitleSection/CustomTitleSection";
+import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import style from "./ScrollVentajas.module.css";
+import "./effectLetters.css";
 
 export default function ScrollVentajas() {
   const onlyWidth = useWindowWidth();
@@ -21,7 +20,7 @@ export default function ScrollVentajas() {
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 480 ? y > 1200 : onlyHeight < 800 ? y > 1400 : y > 1400) {
+    if (onlyWidth < 480 ? y > 1900 : onlyHeight < 800 ? y > 1400 : y > 1400) {
       // console.log('ENTRE')
 
       setCustomStyle({
@@ -29,7 +28,7 @@ export default function ScrollVentajas() {
         background: "#009FBB",
       });
     }
-    if (onlyWidth < 480 ? y < 1200 : onlyHeight < 800 ? y < 1400 : y < 1400) {
+    if (onlyWidth < 480 ? y < 1900 : onlyHeight < 800 ? y < 1400 : y < 1400) {
       // console.log('ENTRE')
       setCustomStyle({
         ...customStyle,
@@ -38,26 +37,21 @@ export default function ScrollVentajas() {
     }
   }, [y]);
 
-  console.log('Y', y)
+  console.log("Y", y);
 
   return (
     <div
       className={`${style.ContainerScrollVentajas}`}
       style={customStyle}
       id="miComponenteVisible"
-      // ref={miComponenteRef}
     >
+      <CustomTitleSection
+        title={"Ventajas de utilizar Trust Fund"}
+        textColor={"#ffffff"}
+        bgLine={"#ffffff"}
+      />
       <CustomContainerMaxWidth ventajas={true}>
-        <div className={style.ContainerTop}>
-          <div className={style.TitleTop}>
-            <Image className={style.ElementTop} src={VectorVentajas} />
-            <div className={style.TitleVentajas}>
-              Ventajas de utilizar Trust Fund
-            </div>
-          </div>
-          <CustomLine color={"#d3d5da"} custom={{ bottom: "0px" }} />
-        </div>
-
+        <Image className={style.ElementTop} src={VectorVentajas} />
         <div className={style.ContainerBottom}>
           <div className={style.subContainerBottom}>
             <div className={style.subTitle}>

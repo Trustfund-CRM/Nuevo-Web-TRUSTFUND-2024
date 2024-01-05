@@ -7,6 +7,7 @@ import { RatingCard } from "@/components/Cards/RatingCard";
 import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
 import { CustomLine } from "@/components/CustomLine/CustomLine";
 import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import { CustomTitleSection } from "@/components/CustomTitleSection/CustomTitleSection";
 
 export default function SeccionCards() {
   const [startIdx, setStartIdx] = useState(0);
@@ -27,14 +28,12 @@ export default function SeccionCards() {
 
   return (
     <div className={style.ContainerComentarios}>
+      <CustomTitleSection
+        title={"Que dicen nuestros clientes"}
+        textColor={"#1A1A1A"}
+        bgLine={"#004993"}
+      />
       <CustomContainerMaxWidth>
-        <div className={style.TitleComentarios}>
-          <div className={style.ContainerTitle}>
-            <div className={style.Title}>Que dicen nuestros clientes</div>
-          </div>
-          <CustomLine color={'#004993'} />
-        </div>
-
         <div className={style.ContainerSlideComentarios}>
           <div className={style.ContainerSubText}>
             <div className={style.SubTexts}>
@@ -55,18 +54,22 @@ export default function SeccionCards() {
 
           <div className={style.ContainerSlideCards}>
             <div className={style.ContainerFlechas}>
-              <Image
-                className={style.FlechaLeft}
-                src={flechaModal}
-                alt="img"
-                onClick={handlePrevClick}
-              />
-              <Image
-                className={style.FlechaRight}
-                src={flechaModal}
-                alt="img"
-                onClick={handleNextClick}
-              />
+              <div className={style.contIcon}>
+                <Image
+                  className={style.FlechaLeft}
+                  src={flechaModal}
+                  alt="img"
+                  onClick={handlePrevClick}
+                />
+              </div>
+              <div className={style.contIcon}>
+                <Image
+                  className={style.FlechaRight}
+                  src={flechaModal}
+                  alt="img"
+                  onClick={handleNextClick}
+                />
+              </div>
             </div>
             <div className={style.containerAux}>
               <div
