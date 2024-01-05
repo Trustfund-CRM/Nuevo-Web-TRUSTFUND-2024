@@ -83,8 +83,8 @@ export default function Footer() {
             <div className={style.ExtraSubContainerRedes}>
               <div className={style.subContainerRedes}>
                 <a
-                  className={style.iconRedes}
-                  style={mobile ? { scale: "55%" } : { scale: "200%" }}
+                  className={style.iconFacebook}
+                  // style={mobile ? { scale: "55%" } : { scale: "200%" }}
                   href="https://www.facebook.com/garantiastrustfund?ref=pages_you_manage%2F"
                 >
                   <Image
@@ -156,7 +156,6 @@ export default function Footer() {
             <div className={style.textoDelSud}>Una empresa de </div>
             <Image className={style.logoDelSud} src={FooterDelSud} />
           </div>
-
           <div className={style.botonesFooter}>
             {/* <Link href="/" className={style.botonFooter}>Términos y condiciones</Link> */}
             <div onClick={handleDownloadPDF} className={style.botonFooter}>Ver modelo de contrato</div>

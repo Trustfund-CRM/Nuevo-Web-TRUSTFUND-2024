@@ -412,10 +412,30 @@
 }
 
 .containerAnswerOpen {
-    height: var(--additional-height);
+    height: 300px;
     animation: slideIn 0.5s ease-in-out;
     overflow: visible;
     padding-bottom: 32px;
+
+    @media (min-width: 1424px) and (max-width: 1531px) {
+        height: 400px;
+    }
+
+    @media (min-width: 1045px) and (max-width: 1423px) {
+        height: 450px;
+    }
+
+    @media (min-width: 951px) and (max-width: 1044px) {
+        height: 500px;
+    }
+
+    @media (min-width: 841px) and (max-width: 950px) {
+        height: 700px;
+    }
+
+    @media (min-width: 0px) and (max-width: 840px) {
+        height: 500px;
+    }
 }
 
 .ContainerCubrimos {
@@ -474,7 +494,7 @@
     font-weight: 700;
 }
 
-@media only screen and (min-width: 361px) and (max-width: 480px) {
+@media only screen and (min-width: 0px) and (max-width: 480px) {
     .containerAnswerOpen {
         height: auto;
         width: 100%;

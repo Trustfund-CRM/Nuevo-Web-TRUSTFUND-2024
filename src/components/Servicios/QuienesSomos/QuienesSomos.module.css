@@ -80,7 +80,7 @@
     align-self: self-start;
 
     @media (min-width: 0px) and (max-width: 990px) {
-        align-self: center;
+        align-self: flex-start;
     }
 
     @media (min-width: 0px) and (max-width: 450px) {
@@ -234,6 +234,34 @@
     animation: slideIn 0.5s ease-in-out;
     overflow: visible;
     padding-bottom: 32px;
+
+    @media (min-width: 1424px) and (max-width: 1531px) {
+        height: 200px;
+    }
+
+    @media (min-width: 1121px) and (max-width: 1423px) {
+        height: 250px;
+    }
+
+    @media (min-width: 991px) and (max-width: 1120px) {
+        height: 300px;
+    }
+
+    @media (min-width: 551px) and (max-width: 990px) {
+        height: 250px;
+    }
+
+    @media (min-width: 391px) and (max-width: 550px) {
+        height: 350px;
+        width: 100%;
+        align-self: center;
+    }
+
+    @media (min-width: 0px) and (max-width: 390px) {
+        height: 450px;
+        width: 100%;
+        align-self: center;
+    }
 }
 
 .ContainerCubrimos {
@@ -288,11 +316,11 @@
 }
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
-    .containerAnswerOpen {
+    /* .containerAnswerOpen {
         height: auto;
         width: 100%;
         align-self: center;
-    }
+    } */
 
     .FAQ {
         width: 100%;

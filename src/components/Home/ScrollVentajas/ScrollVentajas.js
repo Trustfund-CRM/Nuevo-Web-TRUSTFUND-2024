@@ -1,84 +1,74 @@
-import style from "./ScrollVentajas.module.css";
-import "./effectLetters.css";
-import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
-import { ButtonSlider } from "@/components/ButtonSlider/ButtonSlider";
-import { CustomLine } from "@/components/CustomLine/CustomLine";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useWindowScroll } from "@uidotdev/usehooks";
-import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
 import { VectorVentajas, VectorVentajasBlue } from "@/styles";
-import Image from "next/image";
+import { useWindowHeight, useWindowWidth } from "@react-hook/window-size";
+import { CustomTitleSection } from "@/components/CustomTitleSection/CustomTitleSection";
+import { CustomContainerMaxWidth } from "@/components/CustomConteinerMaxWidth/CustomContainerMaxWidth";
+import style from "./ScrollVentajas.module.css";
+import "./effectLetters.css";
 
 export default function ScrollVentajas() {
-
-  const onlyWidth = useWindowWidth()
-  const onlyHeight = useWindowHeight()
+  const onlyWidth = useWindowWidth();
+  const onlyHeight = useWindowHeight();
 
   const [customStyle, setCustomStyle] = useState({
-    background: '#F2F5FB',
-    transition: 'background 1s ease'
-  });
-
-  const [customColor, setCustomColor] = useState({
-    color: '#000000',
-    transition: 'background 1s ease'
+    background: "#F2F5FB",
+    transition: "background 1s ease",
   });
 
   const [{ x, y }, scrollTo] = useWindowScroll();
 
   useEffect(() => {
-    if (onlyWidth < 280 ? y > 2800 : onlyHeight < 800 ? y > 1800 : y > 2000) {
+    if (onlyWidth < 480 ? y > 1900 : onlyHeight < 800 ? y > 1400 : y > 1400) {
+      // console.log('ENTRE')
+
       setCustomStyle({
         ...customStyle,
-        background: '#009FBB'
-      });
-      setCustomColor({
-        ...customColor,
-        color: '#ffffff'
+        background: "#009FBB",
       });
     }
-    if (onlyWidth < 280 ? y < 2800 : onlyHeight < 800 ? y < 1800 : y < 2000) {
+    if (onlyWidth < 480 ? y < 1900 : onlyHeight < 800 ? y < 1400 : y < 1400) {
+      // console.log('ENTRE')
       setCustomStyle({
         ...customStyle,
-        background: '#F2F5FB'
-      });
-      setCustomColor({
-        ...customColor,
-        color: '#000000'
+        background: "#F2F5FB",
       });
     }
   }, [y]);
 
-  return (
-    <div className={`${style.ContainerScrollVentajas}`} style={customStyle}>
-      <CustomContainerMaxWidth ventajas={true}>
-        <div className={style.ContainerTop}>
-          <div className={style.TitleTop}>
-            <Image className={style.ElementTop} src={VectorVentajas} />
-            <div className={style.TitleVentajas} style={customColor}>
-              Ventajas de utilizar Trust Fund
-            </div>
-          </div>
-          <CustomLine color={"#d3d5da"} custom={{ bottom: "0px" }} />
-        </div>
+  console.log("Y", y);
 
+  return (
+    <div
+      className={`${style.ContainerScrollVentajas}`}
+      style={customStyle}
+      id="miComponenteVisible"
+    >
+      <CustomTitleSection
+        title={"Ventajas de utilizar Trust Fund"}
+        textColor={"#ffffff"}
+        bgLine={"#ffffff"}
+      />
+      <CustomContainerMaxWidth ventajas={true}>
+        <Image className={style.ElementTop} src={VectorVentajas} />
         <div className={style.ContainerBottom}>
           <div className={style.subContainerBottom}>
             <div className={style.subTitle}>
-              <div className={style.subTextLeft} style={customColor}>
+              <div className={style.subTextLeft}>
                 Rápido para el inquilino, seguro para el propietario, confiable
                 para la inmobiliaria.
               </div>
-              <div className={style.subTextRight} style={customColor}>
+              <div className={style.subTextRight}>
                 Alquilá con tranquilidad, con Trust Fund estás protegido.
               </div>
             </div>
-            <ButtonSlider
+            {/* <ButtonSlider
               text={"Ver más"}
               customBackground={{ background: "#E6EAEE", color: "#004993" }}
               route={"/nuestra-garantia"}
               suscribe={false}
-            />
+            /> */}
           </div>
 
           <div className={style.ContainerScrollingText}>
@@ -94,7 +84,7 @@ export default function ScrollVentajas() {
             </div>
           </div>
         </div>
-        <Image className={style.ElementBottom} src={VectorVentajasBlue}/>
+        <Image className={style.ElementBottom} src={VectorVentajasBlue} />
       </CustomContainerMaxWidth>
     </div>
   );

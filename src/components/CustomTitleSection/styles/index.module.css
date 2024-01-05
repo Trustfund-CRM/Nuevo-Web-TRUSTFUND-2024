@@ -1,0 +1,44 @@
+.containerGeneralTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 49px;
+    line-height: 58.80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    @media (min-width: 0px) and (max-width: 1430px) {
+      font-size: 36px;
+      padding-right: 0vw;
+    }
+  
+    @media (min-width: 481px) and (max-width: 1055px) {
+      font-size: 31px;
+    }
+}
+
+.containerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    width: -webkit-fill-available;
+    /* max-width: 1440px; */
+    margin-bottom: 3vw;
+    margin-left: 11vw;
+}
+
+@media only screen and (max-width: 766px) {
+    .containerGeneralTitle {
+        width: -webkit-fill-available;
+        padding: 0px 24px;
+    }
+}

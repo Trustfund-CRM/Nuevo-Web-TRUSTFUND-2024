@@ -40,6 +40,7 @@
 
     @media (min-width: 0px) and (max-width: 450px) {
         width: auto;
+        font-size: 36px;
     }
 }
 
